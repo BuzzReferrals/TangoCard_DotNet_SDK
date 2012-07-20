@@ -1,0 +1,11 @@
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\bin\Debug\TestStore.exe.config
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\obj\x86\Debug\TestStore.exe
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\obj\x86\Debug\TestStore.pdb
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\bin\Debug\TangoCard.Sdk.dll.config
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\bin\Debug\thawte_Server_CA.pem
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\bin\Debug\TestStore.exe
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\bin\Debug\TestStore.pdb
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\bin\Debug\TangoCard.Sdk.dll
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\bin\Debug\TangoCard.Sdk.pdb
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Examples\obj\x86\Debug\ResolveAssemblyReference.cache

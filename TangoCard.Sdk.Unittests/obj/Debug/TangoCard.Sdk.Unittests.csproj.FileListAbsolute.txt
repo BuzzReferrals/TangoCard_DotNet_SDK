@@ -1,0 +1,11 @@
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\bin\Debug\TangoCard.Sdk.Unittests.dll
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\bin\Debug\TangoCard.Sdk.Unittests.pdb
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\obj\Debug\TangoCard.Sdk.Unittests.dll
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\obj\Debug\TangoCard.Sdk.Unittests.pdb
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\bin\Debug\TangoCard.Sdk.dll.config
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\bin\Debug\thawte_Server_CA.pem
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\bin\Debug\TangoCard.Sdk.dll
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\bin\Debug\TangoCard.Sdk.pdb
+C:\Users\Jeff\Documents\Tasks\2012_07\18\TangoCard_DotNet_SDK\TangoCard.Sdk.Unittests\bin\Debug\TangoCard.Sdk.Unittests.dll.config
