@@ -27,6 +27,7 @@ using System.Configuration;
 using System.Text;
 
 using TangoCard.Sdk.Request;
+using TangoCard.Sdk.Response.Success;
 
 namespace TangoCard.Sdk.TestConsole
 {
@@ -57,12 +58,20 @@ namespace TangoCard.Sdk.TestConsole
                 Console.WriteLine("======== Get Available Balance ========");
 
                 var request = new GetAvailableBalanceRequest();
-                var result = request.execute();
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                double dollarsAvailableBalance = result.AvailableBalance / 100;
-                Console.WriteLine("\n- Available Balance: {0:C}\n", dollarsAvailableBalance);
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                GetAvailableBalanceResponse response = null;
+                if (request.execute(ref response) && (null != response))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    double dollarsAvailableBalance = response.AvailableBalance / 100;
+                    Console.WriteLine("\n- Available Balance: {0:C}\n", dollarsAvailableBalance);
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Failed getting Available Balance ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
             }
             catch (Exception ex)
             {
@@ -87,11 +96,24 @@ namespace TangoCard.Sdk.TestConsole
                     CardValue = 100,    // $1.00 value
                     TcSend = false
                 };
-                var result = request.execute();
-                
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\n- Purchased Card (No Delivery): {{ Card Number: {0}, Card Pin: {1}, Card Token {2}, Order Number: {3} }}\n", result.CardNumber, result.CardPin, result.CardToken, result.ReferenceOrderId);
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                PurchaseCardResponse response = null;
+                if (request.execute(ref response) && (null != response))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("\n- Purchased Card (No Delivery): {{ Card Number: {0}, Card Pin: {1}, Card Token {2}, Order Number: {3} }}\n",
+                        response.CardNumber,
+                        response.CardPin,
+                        response.CardToken,
+                        response.ReferenceOrderId
+                        );
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Failed Purchasing Card (No Delivery) ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
             }
             catch (Exception ex)
             {
@@ -120,11 +142,22 @@ namespace TangoCard.Sdk.TestConsole
                     TcSend = true
                 };
 
-                var result = request.execute();
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\n- Purchased Card (Delivery): {{ Card Token {0}, Order Number: {1} }}\n", result.CardToken, result.ReferenceOrderId);
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                PurchaseCardResponse response = null;
+                if (request.execute(ref response) && (null != response))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("\n- Purchased Card (Delivery): {{ Card Token {0}, Order Number: {1} }}\n",
+                        response.CardToken, 
+                        response.ReferenceOrderId
+                        );
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Failed Purchasing Card (Delivery) ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
             }
             catch (Exception ex)
             {
@@ -142,12 +175,20 @@ namespace TangoCard.Sdk.TestConsole
                 Console.WriteLine("======== Get Updated Available Balance ========");
 
                 var request = new GetAvailableBalanceRequest();
-                var result = request.execute();
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                double dollarsAvailableBalance = result.AvailableBalance / 100;
-                Console.WriteLine("\n- Updated Available Balance: {0:C}\n", dollarsAvailableBalance);
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                GetAvailableBalanceResponse response = null;
+                if (request.execute(ref response) && (null != response))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    double dollarsAvailableBalance = response.AvailableBalance / 100;
+                    Console.WriteLine("\n- Updated Available Balance: {0:C}\n", dollarsAvailableBalance);
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Failed getting Available Balance ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
             }
             catch (Exception ex)
             {
@@ -187,12 +228,20 @@ namespace TangoCard.Sdk.TestConsole
                     Password = app_password,
                     IsProductionMode = is_production_mode
                 };
-                var result = request.execute();
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                double dollarsAvailableBalance = result.AvailableBalance / 100;
-                Console.WriteLine("\n- Available Balance: {0:C}\n", dollarsAvailableBalance);
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                GetAvailableBalanceResponse response = null;
+                if (request.execute(ref response) && (null != response))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    double dollarsAvailableBalance = response.AvailableBalance / 100;
+                    Console.WriteLine("\n- Available Balance: {0:C}\n", dollarsAvailableBalance);
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Failed getting Available Balance ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
             }
             catch (Exception ex)
             {
@@ -220,11 +269,24 @@ namespace TangoCard.Sdk.TestConsole
                     CardValue = 100,    // $1.00 value
                     TcSend = false
                 };
-                var result = request.execute();
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\n- Purchased Card (No Delivery): {{ Card Number: {0}, Card Pin: {1}, Card Token {2}, Order Number: {3} }}\n", result.CardNumber, result.CardPin, result.CardToken, result.ReferenceOrderId);
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                PurchaseCardResponse response = null;
+                if (request.execute(ref response) && (null != response))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("\n- Purchased Card (No Delivery): {{ Card Number: {0}, Card Pin: {1}, Card Token {2}, Order Number: {3} }}\n",
+                        response.CardNumber,
+                        response.CardPin,
+                        response.CardToken,
+                        response.ReferenceOrderId
+                        );
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Failed Purchasing Card (No Delivery) ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
             }
             catch (Exception ex)
             {
@@ -256,11 +318,22 @@ namespace TangoCard.Sdk.TestConsole
                     TcSend = true
                 };
 
-                var result = request.execute();
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\n- Purchased Card (Delivery): {{ Card Token {0}, Order Number: {1} }}\n", result.CardToken, result.ReferenceOrderId);
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                PurchaseCardResponse response = null;
+                if (request.execute(ref response) && (null != response))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("\n- Purchased Card (Delivery): {{ Card Token {0}, Order Number: {1} }}\n",
+                        response.CardToken,
+                        response.ReferenceOrderId
+                        );
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Failed Purchasing Card (Delivery) ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
             }
             catch (Exception ex)
             {
@@ -283,12 +356,20 @@ namespace TangoCard.Sdk.TestConsole
                     Password = app_password,
                     IsProductionMode = is_production_mode
                 };
-                var result = request.execute();
-
-                Console.ForegroundColor = ConsoleColor.Green;
-                double dollarsAvailableBalance = result.AvailableBalance / 100;
-                Console.WriteLine("\n- Updated Available Balance: {0:C}\n", dollarsAvailableBalance);
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                GetAvailableBalanceResponse response = null;
+                if (request.execute(ref response) && (null != response))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    double dollarsAvailableBalance = response.AvailableBalance / 100;
+                    Console.WriteLine("\n- Updated Available Balance: {0:C}\n", dollarsAvailableBalance);
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Failed getting Available Balance ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
             }
             catch (Exception ex)
             {

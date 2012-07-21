@@ -64,7 +64,7 @@ namespace TangoCard.Sdk.Common
             {
                 SdkConfig appConfig = SdkConfig.Instance;
 
-                string version = appConfig["tc_sdk_version"]; 
+                string version = appConfig["tc_sdk_version"];
 
                 this._base_url = requestObject.IsProductionMode
                     ? appConfig["tc_sdk_environment_production_url"]
@@ -78,7 +78,7 @@ namespace TangoCard.Sdk.Common
             }
             catch (Exception ex)
             {
-                throw ex; 
+                throw ex;
             }
         }
 
@@ -114,28 +114,30 @@ namespace TangoCard.Sdk.Common
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private string invoke()
+        private bool invoke(ref string resultJsonBody)
         {
-            string result = null;
+            bool isSuccess = false;
+            resultJsonBody = null;
             try
             {
-
                 string certFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "thawte_Server_CA.pem");
-                if ( !File.Exists(certFile) ) {
-                    throw new SystemException( message: "Missing CA cert file" );
+                if (!File.Exists(certFile))
+                {
+                    throw new SystemException(message: "Missing CA cert file");
                 }
 
                 X509Certificate x509certificate = X509Certificate.CreateFromCertFile(certFile);
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(this._path);
-                request.ClientCertificates.Add(x509certificate); 
+                request.ClientCertificates.Add(x509certificate);
                 this.writeRequestPostData(ref request);
-                
+
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
                 using (Stream receiveStream = response.GetResponseStream())
                 {
                     StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-                    result = readStream.ReadToEnd();
+                    resultJsonBody = readStream.ReadToEnd();
+                    isSuccess = true;
                 }
             }
             catch (WebException ex)
@@ -151,7 +153,7 @@ namespace TangoCard.Sdk.Common
 
                     using (var streamReader = new StreamReader(response.GetResponseStream()))
                     {
-                        result = streamReader.ReadToEnd();
+                        resultJsonBody = streamReader.ReadToEnd();
                     }
                 }
             }
@@ -164,7 +166,7 @@ namespace TangoCard.Sdk.Common
                 throw new ApplicationException("Failed while trying to Invoke Service", ex);
             }
 
-            return result;
+            return isSuccess;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -175,25 +177,39 @@ namespace TangoCard.Sdk.Common
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public T Request<T>() where T : BaseResponse
+        public bool Request<T>(ref T response) where T : BaseResponse
         {
-            string jsonBody = this.invoke();
-            /*
-             * Json Deserealizer cannot convert to valid DateTime, replacing in case 
-             * this value exists replace.
-             */
-            jsonBody = jsonBody.Replace("0000-00-00 00:00:00", "0001-01-01 00:00:00");
+            bool isSuccess = false;
+            response = default(T);
+            string resultJsonBody = null;
+            try
+            {
+                if (this.invoke(ref resultJsonBody))
+                {
+                    /*
+                     * Json Deserealizer cannot convert to valid DateTime, replacing in case 
+                     * this value exists replace.
+                     */
+                    resultJsonBody = resultJsonBody.Replace("0000-00-00 00:00:00", "0001-01-01 00:00:00");
 
-            Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings();
-            jsonSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
-            jsonSettings.MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore;
-            jsonSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
+                    Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings();
+                    jsonSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+                    jsonSettings.MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore;
+                    jsonSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
 
-            ServiceException<FailureResponse>.ThrowOnError(jsonBody, jsonSettings);
+                    ServiceException<FailureResponse>.ThrowOnError(resultJsonBody, jsonSettings);
 
-            var result = JsonConvert.DeserializeObject<ServiceReponse<T>>(jsonBody, jsonSettings);
+                    var result = JsonConvert.DeserializeObject<ServiceReponse<T>>(resultJsonBody, jsonSettings);
 
-            return result.Response;
+                    response = result.Response;
+                    isSuccess = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Failed parsing JSON response.", ex);
+            }
+            return isSuccess;
         }
     }
 }

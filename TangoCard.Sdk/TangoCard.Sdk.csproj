@@ -63,6 +63,7 @@
   <ItemGroup>
     <Content Include="TangoCard.Sdk.dll.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>

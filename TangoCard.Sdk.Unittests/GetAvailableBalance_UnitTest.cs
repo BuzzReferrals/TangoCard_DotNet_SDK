@@ -38,6 +38,8 @@ namespace TangoCard.Sdk.Unittests
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     [TestClass]
+    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\TangoCard.Sdk.dll.config")]
+    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\thawte_Server_CA.pem")] 
     public class GetAvailableBalance_UnitTest
     {
         private string app_username = null;
@@ -66,20 +68,21 @@ namespace TangoCard.Sdk.Unittests
         [TestMethod]
         public void TestAvailableBalance_Default()
         {
-            var result = new Object();
+            bool isSuccess = false;
+            GetAvailableBalanceResponse response = null;
             try
             {
                 var request = new GetAvailableBalanceRequest();
-                result = request.execute();             
+                isSuccess = request.execute(ref response);             
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(result); 
-            Assert.IsTrue(result is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)result).AvailableBalance >= 0);
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response.AvailableBalance >= 0);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -89,7 +92,8 @@ namespace TangoCard.Sdk.Unittests
         [TestMethod]
         public void TestAvailableBalance_Config()
         {
-            var result = new Object();
+            bool isSuccess = false;
+            GetAvailableBalanceResponse response = null;
             try
             {
                 var request = new GetAvailableBalanceRequest
@@ -99,16 +103,17 @@ namespace TangoCard.Sdk.Unittests
                     IsProductionMode = this.is_production_mode
                 };
 
-                result = request.execute();
+                isSuccess = request.execute(ref response);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(result);
-            Assert.IsTrue(result is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)result).AvailableBalance >= 0);
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)response).AvailableBalance >= 0);
         }
     }
 }

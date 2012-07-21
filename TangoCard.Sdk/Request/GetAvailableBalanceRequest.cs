@@ -43,9 +43,9 @@ namespace TangoCard.Sdk.Request
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public GetAvailableBalanceResponse execute()
+        public bool execute(ref GetAvailableBalanceResponse response)
         {
-            return base.execute<GetAvailableBalanceResponse>();
+            return base.execute<GetAvailableBalanceResponse>(ref response);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -39,6 +39,8 @@ namespace TangoCard.Sdk.Unittests
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     [TestClass]
+    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\TangoCard.Sdk.dll.config")]
+    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\thawte_Server_CA.pem")] 
     public class PurchaseCard_UnitTest
     {
         private string app_username = null;
@@ -69,25 +71,27 @@ namespace TangoCard.Sdk.Unittests
         [TestMethod]
         public void TestPurchaseCardNoDelivery_Default()
         {
-            var resultAvailableBalance = new Object();
+            bool isSuccess = false;
+            GetAvailableBalanceResponse responseAvailableBalance = null;
             try
             {
                 var request = new GetAvailableBalanceRequest();
-                resultAvailableBalance = request.execute();
+                isSuccess = request.execute(ref responseAvailableBalance);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultAvailableBalance);
-            Assert.IsTrue(resultAvailableBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)resultAvailableBalance).AvailableBalance >= 0);
-            int availableBalance = ((GetAvailableBalanceResponse)resultAvailableBalance).AvailableBalance;
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responseAvailableBalance);
+            Assert.IsTrue(responseAvailableBalance is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance >= 0);
+            int availableBalance = ((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance;
 
             int cardValue = 100; // $1.00 
 
-            var resultPurchaseCard = new Object();
+            PurchaseCardResponse responsePurchaseCard = null;
             try
             {
                 var request = new PurchaseCardRequest()
@@ -97,51 +101,53 @@ namespace TangoCard.Sdk.Unittests
                     TcSend = false
                 };
 
-                resultPurchaseCard = request.execute();
+                isSuccess = request.execute(ref responsePurchaseCard);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultPurchaseCard);
-            Assert.IsTrue(resultPurchaseCard is PurchaseCardResponse);
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responsePurchaseCard);
+            Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
 
-            var cardNumber = ((PurchaseCardResponse)resultPurchaseCard).CardNumber;
+            var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
             Assert.IsNotNull(cardNumber);
             Assert.IsTrue(cardNumber is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardNumber));
 
-            var cardPin = ((PurchaseCardResponse)resultPurchaseCard).CardPin;
+            var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
             Assert.IsNotNull(cardPin);
             Assert.IsTrue(cardPin is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardPin));
 
-            var cardToken = ((PurchaseCardResponse)resultPurchaseCard).CardToken;
+            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
             Assert.IsNotNull(cardToken);
             Assert.IsTrue(cardToken is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
 
-            var referenceOrderId = ((PurchaseCardResponse)resultPurchaseCard).ReferenceOrderId;
+            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
             Assert.IsNotNull(referenceOrderId);
             Assert.IsTrue(referenceOrderId is String);
             Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
 
-            var resultUpdatedBalance = new Object();
+            GetAvailableBalanceResponse responseUpdatedBalance = null;
             try
             {
                 var request = new GetAvailableBalanceRequest();
-                resultUpdatedBalance = request.execute();
+                isSuccess = request.execute(ref responseUpdatedBalance);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultUpdatedBalance);
-            Assert.IsTrue(resultUpdatedBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)resultUpdatedBalance).AvailableBalance >= 0);
-            int updatedBalance = ((GetAvailableBalanceResponse)resultUpdatedBalance).AvailableBalance;
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responseUpdatedBalance);
+            Assert.IsTrue(responseUpdatedBalance is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance >= 0);
+            int updatedBalance = ((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance;
 
             Assert.AreNotEqual(availableBalance, updatedBalance);
             Assert.IsTrue(availableBalance - cardValue == updatedBalance);
@@ -156,7 +162,8 @@ namespace TangoCard.Sdk.Unittests
         [TestMethod]
         public void TestPurchaseCardNoDelivery_Config()
         {
-            var resultAvailableBalance = new Object();
+            GetAvailableBalanceResponse responseAvailableBalance = null;
+            bool isSuccess = false;
             try
             {
                 var request = new GetAvailableBalanceRequest
@@ -165,21 +172,22 @@ namespace TangoCard.Sdk.Unittests
                     Password = this.app_password,
                     IsProductionMode = this.is_production_mode
                 };
-                resultAvailableBalance = request.execute();
+                isSuccess = request.execute(ref responseAvailableBalance);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultAvailableBalance);
-            Assert.IsTrue(resultAvailableBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)resultAvailableBalance).AvailableBalance >= 0);
-            int availableBalance = ((GetAvailableBalanceResponse)resultAvailableBalance).AvailableBalance;
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responseAvailableBalance);
+            Assert.IsTrue(responseAvailableBalance is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance >= 0);
+            int availableBalance = ((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance;
 
             int cardValue = 100; // $1.00 
 
-            var resultPurchaseCard = new Object();
+            PurchaseCardResponse responsePurchaseCard = null;
             try
             {
                 var request = new PurchaseCardRequest()
@@ -192,37 +200,38 @@ namespace TangoCard.Sdk.Unittests
                     TcSend = false
                 };
 
-                resultPurchaseCard = request.execute();
+                isSuccess = request.execute(ref responsePurchaseCard);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultPurchaseCard);
-            Assert.IsTrue(resultPurchaseCard is PurchaseCardResponse);
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responsePurchaseCard);
+            Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
 
-            var cardNumber = ((PurchaseCardResponse)resultPurchaseCard).CardNumber;
+            var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
             Assert.IsNotNull(cardNumber);
             Assert.IsTrue(cardNumber is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardNumber));
 
-            var cardPin = ((PurchaseCardResponse)resultPurchaseCard).CardPin;
+            var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
             Assert.IsNotNull(cardPin);
             Assert.IsTrue(cardPin is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardPin));
 
-            var cardToken = ((PurchaseCardResponse)resultPurchaseCard).CardToken;
+            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
             Assert.IsNotNull(cardToken);
             Assert.IsTrue(cardToken is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
 
-            var referenceOrderId = ((PurchaseCardResponse)resultPurchaseCard).ReferenceOrderId;
+            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
             Assert.IsNotNull(referenceOrderId);
             Assert.IsTrue(referenceOrderId is String);
             Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
 
-            var resultUpdatedBalance = new Object();
+            GetAvailableBalanceResponse responseUpdatedBalance = null;
             try
             {
                 var request = new GetAvailableBalanceRequest
@@ -231,17 +240,18 @@ namespace TangoCard.Sdk.Unittests
                     Password = this.app_password,
                     IsProductionMode = this.is_production_mode
                 };
-                resultUpdatedBalance = request.execute();
+                isSuccess = request.execute(ref responseUpdatedBalance);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultUpdatedBalance);
-            Assert.IsTrue(resultUpdatedBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)resultUpdatedBalance).AvailableBalance >= 0);
-            int updatedBalance = ((GetAvailableBalanceResponse)resultUpdatedBalance).AvailableBalance;
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responseUpdatedBalance);
+            Assert.IsTrue(responseUpdatedBalance is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance >= 0);
+            int updatedBalance = ((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance;
 
             Assert.AreNotEqual(availableBalance, updatedBalance);
             Assert.IsTrue(availableBalance - cardValue == updatedBalance);
@@ -256,25 +266,27 @@ namespace TangoCard.Sdk.Unittests
         [TestMethod]
         public void TestPurchaseCardDelivery_Default()
         {
-            var resultAvailableBalance = new Object();
+            GetAvailableBalanceResponse responseAvailableBalance = null;
+            bool isSuccess = false;
             try
             {
                 var request = new GetAvailableBalanceRequest();
-                resultAvailableBalance = request.execute();
+                isSuccess = request.execute(ref responseAvailableBalance);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultAvailableBalance);
-            Assert.IsTrue(resultAvailableBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)resultAvailableBalance).AvailableBalance >= 0);
-            int availableBalance = ((GetAvailableBalanceResponse)resultAvailableBalance).AvailableBalance;
+            Assert.IsTrue(isSuccess); 
+            Assert.IsNotNull(responseAvailableBalance);
+            Assert.IsTrue(responseAvailableBalance is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance >= 0);
+            int availableBalance = ((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance;
 
             int cardValue = 100; // $1.00 
 
-            var resultPurchaseCard = new Object();
+            PurchaseCardResponse responsePurchaseCard = null;
             try
             {
                 var request = new PurchaseCardRequest()
@@ -288,47 +300,49 @@ namespace TangoCard.Sdk.Unittests
                     TcSend = true
                 };
 
-                resultPurchaseCard = request.execute();
+                isSuccess = request.execute(ref responsePurchaseCard);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultPurchaseCard);
-            Assert.IsTrue(resultPurchaseCard is PurchaseCardResponse);
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responsePurchaseCard);
+            Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
 
-            var cardNumber = ((PurchaseCardResponse)resultPurchaseCard).CardNumber;
+            var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
             Assert.IsNull(cardNumber);
 
-            var cardPin = ((PurchaseCardResponse)resultPurchaseCard).CardPin;
+            var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
             Assert.IsNull(cardPin);
 
-            var cardToken = ((PurchaseCardResponse)resultPurchaseCard).CardToken;
+            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
             Assert.IsNotNull(cardToken);
             Assert.IsTrue(cardToken is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
 
-            var referenceOrderId = ((PurchaseCardResponse)resultPurchaseCard).ReferenceOrderId;
+            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
             Assert.IsNotNull(referenceOrderId);
             Assert.IsTrue(referenceOrderId is String);
             Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
 
-            var resultUpdatedBalance = new Object();
+            GetAvailableBalanceResponse responseUpdatedBalance = null;
             try
             {
                 var request = new GetAvailableBalanceRequest();
-                resultUpdatedBalance = request.execute();
+                isSuccess = request.execute(ref responseUpdatedBalance);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultUpdatedBalance);
-            Assert.IsTrue(resultUpdatedBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)resultUpdatedBalance).AvailableBalance >= 0);
-            int updatedBalance = ((GetAvailableBalanceResponse)resultUpdatedBalance).AvailableBalance;
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responseUpdatedBalance);
+            Assert.IsTrue(responseUpdatedBalance is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance >= 0);
+            int updatedBalance = ((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance;
 
             Assert.AreNotEqual(availableBalance, updatedBalance);
             Assert.IsTrue(availableBalance - cardValue == updatedBalance);
@@ -343,7 +357,8 @@ namespace TangoCard.Sdk.Unittests
         [TestMethod]
         public void TestPurchaseCardDelivery_Config()
         {
-            var resultAvailableBalance = new Object();
+            GetAvailableBalanceResponse responseAvailableBalance = null;
+            bool isSuccess = false;
             try
             {
                 var request = new GetAvailableBalanceRequest
@@ -352,21 +367,22 @@ namespace TangoCard.Sdk.Unittests
                     Password = this.app_password,
                     IsProductionMode = this.is_production_mode
                 };
-                resultAvailableBalance = request.execute();
+                isSuccess = request.execute(ref responseAvailableBalance);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultAvailableBalance);
-            Assert.IsTrue(resultAvailableBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)resultAvailableBalance).AvailableBalance >= 0);
-            int availableBalance = ((GetAvailableBalanceResponse)resultAvailableBalance).AvailableBalance;
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responseAvailableBalance);
+            Assert.IsTrue(responseAvailableBalance is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance >= 0);
+            int availableBalance = ((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance;
 
             int cardValue = 100; // $1.00 
 
-            var resultPurchaseCard = new Object();
+            PurchaseCardResponse responsePurchaseCard = null;
             try
             {
                 var request = new PurchaseCardRequest()
@@ -383,33 +399,34 @@ namespace TangoCard.Sdk.Unittests
                     TcSend = true
                 };
 
-                resultPurchaseCard = request.execute();
+                isSuccess = request.execute(ref responsePurchaseCard);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultPurchaseCard);
-            Assert.IsTrue(resultPurchaseCard is PurchaseCardResponse);
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responsePurchaseCard);
+            Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
 
-            var cardNumber = ((PurchaseCardResponse)resultPurchaseCard).CardNumber;
+            var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
             Assert.IsNull(cardNumber);
 
-            var cardPin = ((PurchaseCardResponse)resultPurchaseCard).CardPin;
+            var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
             Assert.IsNull(cardPin);
 
-            var cardToken = ((PurchaseCardResponse)resultPurchaseCard).CardToken;
+            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
             Assert.IsNotNull(cardToken);
             Assert.IsTrue(cardToken is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
 
-            var referenceOrderId = ((PurchaseCardResponse)resultPurchaseCard).ReferenceOrderId;
+            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
             Assert.IsNotNull(referenceOrderId);
             Assert.IsTrue(referenceOrderId is String);
             Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
 
-            var resultUpdatedBalance = new Object();
+            GetAvailableBalanceResponse responseUpdatedBalance = null;
             try
             {
                 var request = new GetAvailableBalanceRequest
@@ -418,17 +435,18 @@ namespace TangoCard.Sdk.Unittests
                     Password = this.app_password,
                     IsProductionMode = this.is_production_mode
                 };
-                resultUpdatedBalance = request.execute();
+                isSuccess = request.execute(ref responseUpdatedBalance);
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsNotNull(resultUpdatedBalance);
-            Assert.IsTrue(resultUpdatedBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)resultUpdatedBalance).AvailableBalance >= 0);
-            int updatedBalance = ((GetAvailableBalanceResponse)resultUpdatedBalance).AvailableBalance;
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(responseUpdatedBalance);
+            Assert.IsTrue(responseUpdatedBalance is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance >= 0);
+            int updatedBalance = ((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance;
 
             Assert.AreNotEqual(availableBalance, updatedBalance);
             Assert.IsTrue(availableBalance - cardValue == updatedBalance);

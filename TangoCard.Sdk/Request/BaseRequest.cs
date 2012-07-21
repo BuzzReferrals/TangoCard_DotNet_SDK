@@ -142,10 +142,10 @@ namespace TangoCard.Sdk.Request
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public virtual T execute<T>() where T : BaseResponse
+        public virtual bool execute<T>(ref T response) where T : BaseResponse
         {
             var proxy = new TangoServiceProxy(this);
-            return proxy.Request<T>();
+            return proxy.Request<T>(ref response);
         }
     }
 }

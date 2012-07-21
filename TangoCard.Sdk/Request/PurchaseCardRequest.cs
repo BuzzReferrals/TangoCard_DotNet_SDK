@@ -122,17 +122,23 @@ namespace TangoCard.Sdk.Request
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public PurchaseCardResponse execute() {
+        public bool execute(ref PurchaseCardResponse response) {
             if (string.IsNullOrEmpty(CardSku))
+            {
                 throw new ArgumentException("cardSku");
+            }
 
-            if (CardSku.Length > 255)
+            if (CardSku.Length > 255) 
+            {
                 throw new ArgumentException("cardSku must have a length less than 255");
+            }
 
             if (CardValue < 1)
+            {
                 throw new ArgumentException("cardValue must be greater than 1");
+            }
 
-            return base.execute<PurchaseCardResponse>();
+            return base.execute<PurchaseCardResponse>(ref response);
         }
     }
 }

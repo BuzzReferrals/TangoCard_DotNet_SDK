@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
+using System.IO;
 
 namespace TangoCard.Sdk.Common
 {
@@ -33,8 +34,18 @@ namespace TangoCard.Sdk.Common
             }
             catch (Exception ex)
             {
-                throw new Exception(message: "DLL is missing configuration file", innerException: ex);
-            } 
+                throw new Exception(message: "Error opening DLL's configuration file.", innerException: ex);
+            }
+
+            if (null == this.config)
+            {
+                throw new NullReferenceException(message: "Failed opening DLL's configuration file.");
+            }
+
+            if (!File.Exists(this.config.FilePath))
+            {
+                throw new FileNotFoundException(message: this.config.FilePath);
+            }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
