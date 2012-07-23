@@ -20,16 +20,12 @@
 //  THE SOFTWARE.
 // 
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
-
-namespace TangoCard.Sdk.Response.Failure
+namespace TangoCard.Sdk.Service
 {
-    public class SystemFailureResponse : FailureResponse
+    public enum ServiceEndpointEnum
     {
-        [JsonProperty(PropertyName = "errorCode")]
-        public string ErrorCode { get; set; }
+        UNDEFINED = 0,
+        INTEGRATION,
+        PRODUCTION
     }
 }

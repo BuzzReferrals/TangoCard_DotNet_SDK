@@ -27,7 +27,7 @@ using Newtonsoft.Json;
 
 namespace TangoCard.Sdk.Response.Failure
 {
-    class InvalidCredentialsResponse : FailureResponse
+    public class InvalidCredentialsResponse : FailureResponse
     {
         [JsonProperty(PropertyName = "message")]
         public string Message { get; set; }

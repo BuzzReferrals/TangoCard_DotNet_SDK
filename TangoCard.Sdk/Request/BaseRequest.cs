@@ -29,6 +29,7 @@ using Newtonsoft.Json;
 
 using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Common;
+using TangoCard.Sdk.Service;
 
 namespace TangoCard.Sdk.Request
 {
@@ -38,9 +39,22 @@ namespace TangoCard.Sdk.Request
 
     public abstract class BaseRequest
     {
-        private string username = null;
-        private string password = null;
-        private int production_mode = -1;
+        private ServiceEndpointEnum _endpoint = ServiceEndpointEnum.UNDEFINED;
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Constructor. </summary>
+        ///
+        /// <param name="username"> The username. </param>
+        /// <param name="password"> The password. </param>
+        /// <param name="endpoint"> The endpoint. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public BaseRequest( string username, string password, ServiceEndpointEnum endpoint )
+        {
+            this.Username = username;
+            this.Password = password;
+            this.Endpoint = endpoint;
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the username. </summary>
@@ -48,24 +62,7 @@ namespace TangoCard.Sdk.Request
         /// <value> The username. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         [JsonProperty(PropertyName = "username")]
-        public string Username
-        {
-            get 
-            {
-                if (String.IsNullOrEmpty(this.username))
-                {
-                    SdkConfig appConfig = SdkConfig.Instance;
-                    return (string)appConfig["tc_sdk_username"];
-                }
-
-                return this.username;
-            }
-
-            set
-            {
-                this.username = value;
-            }
-        }
+        public string Username { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the password. </summary>
@@ -74,22 +71,23 @@ namespace TangoCard.Sdk.Request
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [JsonProperty(PropertyName = "password")]
-        public string Password
+        public string Password { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the endpoint. </summary>
+        ///
+        /// <value> The endpoint. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public ServiceEndpointEnum Endpoint
         {
-            get 
+            get
             {
-                if (String.IsNullOrEmpty(this.password))
-                {
-                    SdkConfig appConfig = SdkConfig.Instance;
-                    return (string)appConfig["tc_sdk_password"];
-                }
-
-                return this.password;
+                return this._endpoint;
             }
-
             set
             {
-                this.password = value;
+                this._endpoint = value;
             }
         }
 
@@ -104,7 +102,7 @@ namespace TangoCard.Sdk.Request
         {
             get
             {
-                if (-1 == this.production_mode)
+                if (this.Endpoint.Equals(ServiceEndpointEnum.UNDEFINED))
                 {
                     SdkConfig appConfig = SdkConfig.Instance;
                     bool tc_sdk_production_mode = false;
@@ -113,12 +111,12 @@ namespace TangoCard.Sdk.Request
                     return tc_sdk_production_mode;
                 }
 
-                return (1 == this.production_mode);
+                return this.Endpoint.Equals(ServiceEndpointEnum.PRODUCTION);
             }
 
             set
             {
-                this.production_mode = value ? 1 : 0;
+                this._endpoint = value ? ServiceEndpointEnum.PRODUCTION : ServiceEndpointEnum.INTEGRATION;
             }
         }
 
@@ -144,7 +142,7 @@ namespace TangoCard.Sdk.Request
 
         public virtual bool execute<T>(ref T response) where T : BaseResponse
         {
-            var proxy = new TangoServiceProxy(this);
+            var proxy = new ServiceProxy(this);
             return proxy.Request<T>(ref response);
         }
     }

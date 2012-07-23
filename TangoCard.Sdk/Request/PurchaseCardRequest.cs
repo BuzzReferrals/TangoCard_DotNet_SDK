@@ -28,6 +28,7 @@ using System.Configuration;
 using Newtonsoft.Json;
 
 using TangoCard.Sdk.Response.Success;
+using TangoCard.Sdk.Service;
 
 namespace TangoCard.Sdk.Request
 {
@@ -39,6 +40,44 @@ namespace TangoCard.Sdk.Request
 
     public class PurchaseCardRequest : BaseRequest
     {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Constructor. </summary>
+        ///
+        /// <param name="username">         The username. </param>
+        /// <param name="password">         The password. </param>
+        /// <param name="endpoint">         The endpoint. </param>
+        /// <param name="cardSku">          The card sku. </param>
+        /// <param name="cardValue">        The card value. </param>
+        /// <param name="tcSend">           true to tc send. </param>
+        /// <param name="recipientName">    Name of the recipient. </param>
+        /// <param name="recipientEmail">   The recipient email. </param>
+        /// <param name="giftMessage">      Message describing the gift. </param>
+        /// <param name="giftFrom">         The gift from. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public PurchaseCardRequest(
+            string username,
+            string password,
+            ServiceEndpointEnum endpoint,
+            string cardSku,
+            int cardValue,
+            bool tcSend = false,
+            string recipientName = null,
+            string recipientEmail = null,
+            string giftMessage = null,
+            string giftFrom = null
+            )
+            : base(username, password, endpoint)
+        {
+            this.CardSku = cardSku;
+            this.CardValue = cardValue;
+            this.TcSend = tcSend;
+            this.RecipientName = recipientName;
+            this.RecipientEmail = recipientEmail;
+            this.GiftMessage = giftMessage;
+            this.GiftFrom = giftFrom;
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets or sets the card sku. </summary>
         ///

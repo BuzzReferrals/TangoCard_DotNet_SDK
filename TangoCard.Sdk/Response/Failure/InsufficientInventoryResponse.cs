@@ -27,7 +27,7 @@ using Newtonsoft.Json;
 
 namespace TangoCard.Sdk.Response.Failure
 {
-    class InsufficientInventoryResponse : FailureResponse
+    public class InsufficientInventoryResponse : FailureResponse
     {
         [JsonProperty(PropertyName = "sku")]
         public string Sku { get; set; }

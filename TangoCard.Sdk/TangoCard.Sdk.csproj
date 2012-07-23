@@ -46,19 +46,22 @@
     <Compile Include="Request\PurchaseCardRequest.cs" />
     <Compile Include="Request\GetAvailableBalanceRequest.cs" />
     <Compile Include="Request\BaseRequest.cs" />
+    <Compile Include="Service\ServiceEndpointEnum.cs" />
     <Compile Include="Response\Failure\FailureResponse.cs" />
     <Compile Include="Response\Failure\InsufficientFundsResponse.cs" />
     <Compile Include="Response\Failure\InsufficientInventoryResponse.cs" />
     <Compile Include="Response\Failure\InvalidCredentialsResponse.cs" />
     <Compile Include="Response\Failure\InvalidInputResponse.cs" />
     <Compile Include="Response\Failure\SystemErrorResponse.cs" />
+    <Compile Include="Response\Failure\WebFailureResponse.cs" />
+    <Compile Include="Response\ServiceResponseEnum.cs" />
     <Compile Include="Response\Success\GetAvailableBalanceResponse.cs" />
     <Compile Include="Response\Success\PurchaseCardResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response\BaseResponse.cs" />
     <Compile Include="Response\ServiceResponse.cs" />
-    <Compile Include="Common\ServiceException.cs" />
-    <Compile Include="Common\TangoServiceProxy.cs" />
+    <Compile Include="Service\TangoCardServiceException.cs" />
+    <Compile Include="Service\ServiceProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TangoCard.Sdk.dll.config">
@@ -71,6 +74,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

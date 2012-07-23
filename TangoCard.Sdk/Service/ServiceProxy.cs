@@ -32,18 +32,18 @@ using System.Security;
 using Newtonsoft.Json;
 
 using TangoCard.Sdk;
+using TangoCard.Sdk.Common;
 using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Response.Failure;
 using System.Security.Cryptography.X509Certificates;
 
-
-namespace TangoCard.Sdk.Common
+namespace TangoCard.Sdk.Service
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Tango service proxy. </summary>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    internal class TangoServiceProxy
+    internal class ServiceProxy
     {
         private string _base_url;
         private string _controller;
@@ -58,7 +58,7 @@ namespace TangoCard.Sdk.Common
         /// <param name="requestObject">    The request object. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public TangoServiceProxy(Request.BaseRequest requestObject)
+        public ServiceProxy(Request.BaseRequest requestObject)
         {
             try
             {
@@ -89,20 +89,45 @@ namespace TangoCard.Sdk.Common
         /// <param name="webRequest">   [in,out]. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private void writeRequestPostData(ref HttpWebRequest webRequest)
+        private bool mapRequest(ref HttpWebRequest webRequest)
         {
-            StringBuilder postDataStringBuilder = new StringBuilder();
-
-            webRequest.Method = "POST";
-            webRequest.ContentType = "application/json";
-
-            byte[] data = UTF8Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(this._requestObject));
-            webRequest.ContentLength = data.Length;
-            using (Stream requestDataStream = webRequest.GetRequestStream())
+            if (null == webRequest)
             {
-                requestDataStream.Write(data, 0, data.Length);
-                requestDataStream.Close();
+                throw new ArgumentNullException(paramName: "webRequest");
             }
+            if (null == this._requestObject)
+            {
+                throw new NullReferenceException(message: "Member variable '_requestObject' is null.");
+            }
+            
+            bool isSuccess = false;
+            try
+            {
+                StringBuilder postDataStringBuilder = new StringBuilder();
+
+                webRequest.Method = "POST";
+                webRequest.ContentType = "application/json";
+
+                byte[] data = UTF8Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(this._requestObject));
+                webRequest.ContentLength = data.Length;
+                using (Stream requestDataStream = webRequest.GetRequestStream())
+                {
+                    requestDataStream.Write(data, 0, data.Length);
+                    requestDataStream.Close();
+                }
+
+                isSuccess = true;
+            }
+            catch (ApplicationException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Failed to map request: " + ex.Message, ex);
+            }
+
+            return isSuccess;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -114,10 +139,15 @@ namespace TangoCard.Sdk.Common
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private bool invoke(ref string resultJsonBody)
+        private bool postRequest(ref string responseBodyJSON)
         {
+            if (String.IsNullOrEmpty(this._path))
+            {
+                throw new NullReferenceException(message: "_path is not set.");
+            }
+
             bool isSuccess = false;
-            resultJsonBody = null;
+            responseBodyJSON = null;
             try
             {
                 string certFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "thawte_Server_CA.pem");
@@ -127,16 +157,17 @@ namespace TangoCard.Sdk.Common
                 }
 
                 X509Certificate x509certificate = X509Certificate.CreateFromCertFile(certFile);
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(this._path);
-                request.ClientCertificates.Add(x509certificate);
-                this.writeRequestPostData(ref request);
-
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
-                using (Stream receiveStream = response.GetResponseStream())
+                HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(this._path);
+                webRequest.ClientCertificates.Add(x509certificate);
+                if (this.mapRequest(ref webRequest))
                 {
-                    StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-                    resultJsonBody = readStream.ReadToEnd();
+                    HttpWebResponse response = (HttpWebResponse)webRequest.GetResponse();
+                    using (Stream receiveStream = response.GetResponseStream())
+                    {
+                        StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+                        responseBodyJSON = readStream.ReadToEnd();                        
+                    }
+
                     isSuccess = true;
                 }
             }
@@ -153,17 +184,17 @@ namespace TangoCard.Sdk.Common
 
                     using (var streamReader = new StreamReader(response.GetResponseStream()))
                     {
-                        resultJsonBody = streamReader.ReadToEnd();
+                        responseBodyJSON = streamReader.ReadToEnd();
                     }
                 }
             }
-            catch (ApplicationException)
+            catch (ApplicationException ex)
             {
-                throw;
+                throw ex;
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Failed while trying to Invoke Service", ex);
+                throw new ApplicationException("Failed to post request: " + ex.Message, ex);
             }
 
             return isSuccess;
@@ -181,33 +212,49 @@ namespace TangoCard.Sdk.Common
         {
             bool isSuccess = false;
             response = default(T);
-            string resultJsonBody = null;
+            string responseBodyJSON = null;
             try
             {
-                if (this.invoke(ref resultJsonBody))
+                if (this.postRequest(ref responseBodyJSON))
                 {
                     /*
                      * Json Deserealizer cannot convert to valid DateTime, replacing in case 
                      * this value exists replace.
                      */
-                    resultJsonBody = resultJsonBody.Replace("0000-00-00 00:00:00", "0001-01-01 00:00:00");
+                    responseBodyJSON = responseBodyJSON.Replace("0000-00-00 00:00:00", "0001-01-01 00:00:00");
 
                     Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings();
                     jsonSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
                     jsonSettings.MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore;
                     jsonSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
 
-                    ServiceException<FailureResponse>.ThrowOnError(resultJsonBody, jsonSettings);
+                    TangoCardServiceException.ThrowOnError(responseBodyJSON, jsonSettings);
 
-                    var result = JsonConvert.DeserializeObject<ServiceReponse<T>>(resultJsonBody, jsonSettings);
+                    var result = JsonConvert.DeserializeObject<ServiceResponse<T>>(responseBodyJSON, jsonSettings);
 
                     response = result.Response;
                     isSuccess = true;
                 }
             }
+            catch (WebException ex)
+            {
+                WebFailureResponse responseServiceFailure = new WebFailureResponse
+                {
+                    Message = String.Format("{0}: {1}", ex.Status, ex.Message)
+                };
+                throw new TangoCardServiceException(responseType: ServiceResponseEnum.WEB_ERROR, response: responseServiceFailure, message: ex.Message);
+            }
+            catch (TangoCardServiceException ex)
+            {
+                throw ex;
+            }
+            catch (ApplicationException ex)
+            {
+                throw ex;
+            }
             catch (Exception ex)
             {
-                throw new ApplicationException("Failed parsing JSON response.", ex);
+                throw new ApplicationException("Failed to process request: " + ex.Message, ex);
             }
             return isSuccess;
         }

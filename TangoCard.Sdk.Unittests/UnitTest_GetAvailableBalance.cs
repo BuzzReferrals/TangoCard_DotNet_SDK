@@ -29,7 +29,10 @@ using System.Configuration;
 
 using TangoCard.Sdk.Request;
 using TangoCard.Sdk.Common;
+using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Response.Success;
+using TangoCard.Sdk.Response.Failure;
+using TangoCard.Sdk.Service;
 
 namespace TangoCard.Sdk.Unittests
 {
@@ -40,7 +43,7 @@ namespace TangoCard.Sdk.Unittests
     [TestClass]
     [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\TangoCard.Sdk.dll.config")]
     [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\thawte_Server_CA.pem")] 
-    public class GetAvailableBalance_UnitTest
+    public class UnitTest_GetAvailableBalance
     {
         private string app_username = null;
         private string app_password = null;
@@ -51,7 +54,7 @@ namespace TangoCard.Sdk.Unittests
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestInitialize()]
-        public void GetAvailableBalance_UnitTest_Initialize()
+        public void TestInitialize_GetAvailableBalance()
         {
             this.app_username = ConfigurationManager.AppSettings["app_username"];
             this.app_password = ConfigurationManager.AppSettings["app_password"];
@@ -66,42 +69,18 @@ namespace TangoCard.Sdk.Unittests
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
-        public void TestAvailableBalance_Default()
-        {
-            bool isSuccess = false;
-            GetAvailableBalanceResponse response = null;
-            try
-            {
-                var request = new GetAvailableBalanceRequest();
-                isSuccess = request.execute(ref response);             
-            }
-            catch (Exception ex)
-            {
-                Assert.Fail(message: ex.Message);
-            }
-
-            Assert.IsTrue(isSuccess);
-            Assert.IsNotNull(response);
-            Assert.IsTrue(response.AvailableBalance >= 0);
-        }
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Tests available balance. </summary>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        [TestMethod]
-        public void TestAvailableBalance_Config()
+        public void Test_GetAvailableBalance_Config()
         {
             bool isSuccess = false;
             GetAvailableBalanceResponse response = null;
             try
             {
                 var request = new GetAvailableBalanceRequest
-                {
-                    Username = this.app_username,
-                    Password = this.app_password,
-                    IsProductionMode = this.is_production_mode
-                };
+                (
+                    username: this.app_username,
+                    password: this.app_password,
+                    endpoint: ServiceEndpointEnum.INTEGRATION
+                );
 
                 isSuccess = request.execute(ref response);
             }
@@ -114,6 +93,68 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsNotNull(response);
             Assert.IsTrue(response is GetAvailableBalanceResponse);
             Assert.IsTrue(((GetAvailableBalanceResponse)response).AvailableBalance >= 0);
+        }
+
+        [TestMethod]
+        public void Test_GetAvailableBalance_InvalidCredentials()
+        {
+            bool isSuccess = false;
+            GetAvailableBalanceResponse response = null;
+            try
+            {
+                var request = new GetAvailableBalanceRequest
+                (
+                    username: "test@test.com",
+                    password: "password",
+                    endpoint: ServiceEndpointEnum.INTEGRATION
+                );
+
+                isSuccess = request.execute(ref response);
+
+                Assert.Fail(message: "Expected 'ServiceException' thrown");
+            }
+            catch (TangoCardServiceException ex)
+            {
+                Assert.IsTrue( condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_CREDENTIAL) );
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(message: ex.Message);
+            }
+
+            Assert.IsFalse(isSuccess);
+            Assert.IsNull(response);
+        }
+
+        [TestMethod]
+        public void Test_GetAvailableBalance_InsufficientFunds()
+        {
+            bool isSuccess = false;
+            GetAvailableBalanceResponse response = null;
+            try
+            {
+                var request = new GetAvailableBalanceRequest
+                (
+                    username: "empty@tangocard.com",
+                    password: "password",
+                    endpoint: ServiceEndpointEnum.INTEGRATION
+                );
+
+                isSuccess = request.execute(ref response);
+            }
+            catch (TangoCardServiceException ex)
+            {
+                Assert.Fail(message: ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(message: ex.Message);
+            }
+
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)response).AvailableBalance == 0);
         }
     }
 }

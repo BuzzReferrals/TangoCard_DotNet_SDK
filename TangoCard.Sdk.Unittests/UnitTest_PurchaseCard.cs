@@ -30,7 +30,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using TangoCard.Sdk.Request;
 using TangoCard.Sdk.Common;
+using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Response.Success;
+using TangoCard.Sdk.Response.Failure;
+using TangoCard.Sdk.Service;
 
 namespace TangoCard.Sdk.Unittests
 {
@@ -41,7 +44,7 @@ namespace TangoCard.Sdk.Unittests
     [TestClass]
     [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\TangoCard.Sdk.dll.config")]
     [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\thawte_Server_CA.pem")] 
-    public class PurchaseCard_UnitTest
+    public class UnitTest_PurchaseCard
     {
         private string app_username = null;
         private string app_password = null;
@@ -52,7 +55,7 @@ namespace TangoCard.Sdk.Unittests
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestInitialize()]
-        public void PurchaseCard_UnitTest_Initialize()
+        public void TestInitialize_PurchaseCard()
         {
             this.app_username = ConfigurationManager.AppSettings["app_username"];
             this.app_password = ConfigurationManager.AppSettings["app_password"];
@@ -63,94 +66,121 @@ namespace TangoCard.Sdk.Unittests
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Tests purchase card no delivery default. </summary>
-        ///
-        /// <remarks>   Jeff, 7/19/2012. </remarks>
+        /// <summary>   Tests purchase card invalid credentials. </summary>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
-        public void TestPurchaseCardNoDelivery_Default()
+        public void Test_PurchaseCard_InvalidCredentials()
         {
             bool isSuccess = false;
-            GetAvailableBalanceResponse responseAvailableBalance = null;
+
+            PurchaseCardResponse responsePurchaseCard = null;
             try
             {
-                var request = new GetAvailableBalanceRequest();
-                isSuccess = request.execute(ref responseAvailableBalance);
+                var request = new PurchaseCardRequest
+                (
+                    username: "test@test.com",
+                    password: "password",
+                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    cardSku: "tango-card",
+                    cardValue: 100,    // $1.00 value
+                    tcSend: false
+                );
+
+                isSuccess = request.execute(ref responsePurchaseCard);
+
+                Assert.Fail(message: "Expected 'ServiceException' thrown");
+            }
+            catch (TangoCardServiceException ex)
+            {
+                Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_CREDENTIAL));
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsTrue(isSuccess);
-            Assert.IsNotNull(responseAvailableBalance);
-            Assert.IsTrue(responseAvailableBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance >= 0);
-            int availableBalance = ((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance;
+            Assert.IsFalse(isSuccess);
+            Assert.IsNull(responsePurchaseCard);
+        }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Tests purchase card insufficient funds. </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [TestMethod]
+        public void Test_PurchaseCard_InsufficientFunds()
+        {
+            bool isSuccess = false;
+
+            PurchaseCardResponse responsePurchaseCard = null;
+            try
+            {
+                var request = new PurchaseCardRequest
+                (
+                    username: "empty@tangocard.com",
+                    password: "password",
+                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    cardSku: "tango-card",
+                    cardValue: 100,    // $1.00 value
+                    tcSend: false
+                );
+
+                isSuccess = request.execute(ref responsePurchaseCard);
+
+                Assert.Fail(message: "Expected 'ServiceException' thrown");
+            }
+            catch (TangoCardServiceException ex)
+            {
+                Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INS_FUNDS));
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(message: ex.Message);
+            }
+
+            Assert.IsFalse(isSuccess);
+            Assert.IsNull(responsePurchaseCard);
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Tests purchase card invalid input. </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [TestMethod]
+        public void Test_PurchaseCard_InvalidInput()
+        {
+            bool isSuccess = false;
             int cardValue = 100; // $1.00 
 
             PurchaseCardResponse responsePurchaseCard = null;
             try
             {
-                var request = new PurchaseCardRequest()
-                {
-                    CardSku = "tango-card",
-                    CardValue = cardValue,
-                    TcSend = false
-                };
+                var request = new PurchaseCardRequest
+                (
+                    username: this.app_username,
+                    password: this.app_password,
+                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    cardSku: "mango-card",
+                    cardValue: cardValue,
+                    tcSend: false
+                );
 
                 isSuccess = request.execute(ref responsePurchaseCard);
+
+                Assert.Fail(message: "Expected 'ServiceException' thrown");
+            }
+            catch (TangoCardServiceException ex)
+            {
+                Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_INPUT));
             }
             catch (Exception ex)
             {
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsTrue(isSuccess);
-            Assert.IsNotNull(responsePurchaseCard);
-            Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
-
-            var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
-            Assert.IsNotNull(cardNumber);
-            Assert.IsTrue(cardNumber is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(cardNumber));
-
-            var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
-            Assert.IsNotNull(cardPin);
-            Assert.IsTrue(cardPin is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(cardPin));
-
-            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
-            Assert.IsNotNull(cardToken);
-            Assert.IsTrue(cardToken is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
-
-            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
-            Assert.IsNotNull(referenceOrderId);
-            Assert.IsTrue(referenceOrderId is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
-
-            GetAvailableBalanceResponse responseUpdatedBalance = null;
-            try
-            {
-                var request = new GetAvailableBalanceRequest();
-                isSuccess = request.execute(ref responseUpdatedBalance);
-            }
-            catch (Exception ex)
-            {
-                Assert.Fail(message: ex.Message);
-            }
-
-            Assert.IsTrue(isSuccess);
-            Assert.IsNotNull(responseUpdatedBalance);
-            Assert.IsTrue(responseUpdatedBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance >= 0);
-            int updatedBalance = ((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance;
-
-            Assert.AreNotEqual(availableBalance, updatedBalance);
-            Assert.IsTrue(availableBalance - cardValue == updatedBalance);
+            Assert.IsFalse(isSuccess);
+            Assert.IsNull(responsePurchaseCard);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -160,18 +190,18 @@ namespace TangoCard.Sdk.Unittests
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
-        public void TestPurchaseCardNoDelivery_Config()
+        public void Test_PurchaseCard_NoDelivery_Config()
         {
             GetAvailableBalanceResponse responseAvailableBalance = null;
             bool isSuccess = false;
             try
             {
                 var request = new GetAvailableBalanceRequest
-                {
-                    Username = this.app_username,
-                    Password = this.app_password,
-                    IsProductionMode = this.is_production_mode
-                };
+                (
+                    username: this.app_username,
+                    password: this.app_password,
+                    endpoint: ServiceEndpointEnum.INTEGRATION
+                );
                 isSuccess = request.execute(ref responseAvailableBalance);
             }
             catch (Exception ex)
@@ -190,15 +220,15 @@ namespace TangoCard.Sdk.Unittests
             PurchaseCardResponse responsePurchaseCard = null;
             try
             {
-                var request = new PurchaseCardRequest()
-                {
-                    Username = this.app_username,
-                    Password = this.app_password,
-                    IsProductionMode = this.is_production_mode,
-                    CardSku = "tango-card",
-                    CardValue = cardValue,
-                    TcSend = false
-                };
+                var request = new PurchaseCardRequest
+                (
+                    username: this.app_username,
+                    password: this.app_password,
+                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    cardSku: "tango-card",
+                    cardValue: cardValue,
+                    tcSend: false
+                );
 
                 isSuccess = request.execute(ref responsePurchaseCard);
             }
@@ -235,102 +265,11 @@ namespace TangoCard.Sdk.Unittests
             try
             {
                 var request = new GetAvailableBalanceRequest
-                {
-                    Username = this.app_username,
-                    Password = this.app_password,
-                    IsProductionMode = this.is_production_mode
-                };
-                isSuccess = request.execute(ref responseUpdatedBalance);
-            }
-            catch (Exception ex)
-            {
-                Assert.Fail(message: ex.Message);
-            }
-
-            Assert.IsTrue(isSuccess);
-            Assert.IsNotNull(responseUpdatedBalance);
-            Assert.IsTrue(responseUpdatedBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance >= 0);
-            int updatedBalance = ((GetAvailableBalanceResponse)responseUpdatedBalance).AvailableBalance;
-
-            Assert.AreNotEqual(availableBalance, updatedBalance);
-            Assert.IsTrue(availableBalance - cardValue == updatedBalance);
-        }
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Tests purchase card delivery default. </summary>
-        ///
-        /// <remarks>   Jeff, 7/19/2012. </remarks>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        [TestMethod]
-        public void TestPurchaseCardDelivery_Default()
-        {
-            GetAvailableBalanceResponse responseAvailableBalance = null;
-            bool isSuccess = false;
-            try
-            {
-                var request = new GetAvailableBalanceRequest();
-                isSuccess = request.execute(ref responseAvailableBalance);
-            }
-            catch (Exception ex)
-            {
-                Assert.Fail(message: ex.Message);
-            }
-
-            Assert.IsTrue(isSuccess); 
-            Assert.IsNotNull(responseAvailableBalance);
-            Assert.IsTrue(responseAvailableBalance is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance >= 0);
-            int availableBalance = ((GetAvailableBalanceResponse)responseAvailableBalance).AvailableBalance;
-
-            int cardValue = 100; // $1.00 
-
-            PurchaseCardResponse responsePurchaseCard = null;
-            try
-            {
-                var request = new PurchaseCardRequest()
-                {
-                    CardSku = "tango-card",
-                    CardValue = cardValue,            
-                    GiftFrom = "From",
-                    GiftMessage = "Message",
-                    RecipientEmail = "test00tangocard@gmail.com",
-                    RecipientName = "Test Tangocard",
-                    TcSend = true
-                };
-
-                isSuccess = request.execute(ref responsePurchaseCard);
-            }
-            catch (Exception ex)
-            {
-                Assert.Fail(message: ex.Message);
-            }
-
-            Assert.IsTrue(isSuccess);
-            Assert.IsNotNull(responsePurchaseCard);
-            Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
-
-            var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
-            Assert.IsNull(cardNumber);
-
-            var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
-            Assert.IsNull(cardPin);
-
-            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
-            Assert.IsNotNull(cardToken);
-            Assert.IsTrue(cardToken is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
-
-            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
-            Assert.IsNotNull(referenceOrderId);
-            Assert.IsTrue(referenceOrderId is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
-
-            GetAvailableBalanceResponse responseUpdatedBalance = null;
-            try
-            {
-                var request = new GetAvailableBalanceRequest();
+                (
+                    username: this.app_username,
+                    password: this.app_password,
+                    endpoint: ServiceEndpointEnum.INTEGRATION
+                );
                 isSuccess = request.execute(ref responseUpdatedBalance);
             }
             catch (Exception ex)
@@ -350,23 +289,21 @@ namespace TangoCard.Sdk.Unittests
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Tests purchase card delivery configuration. </summary>
-        ///
-        /// <remarks>   Jeff, 7/19/2012. </remarks>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
-        public void TestPurchaseCardDelivery_Config()
+        public void Test_PurchaseCard_Delivery_Config()
         {
             GetAvailableBalanceResponse responseAvailableBalance = null;
             bool isSuccess = false;
             try
             {
                 var request = new GetAvailableBalanceRequest
-                {
-                    Username = this.app_username,
-                    Password = this.app_password,
-                    IsProductionMode = this.is_production_mode
-                };
+                (
+                    username: this.app_username,
+                    password: this.app_password,
+                    endpoint: ServiceEndpointEnum.INTEGRATION
+                );
                 isSuccess = request.execute(ref responseAvailableBalance);
             }
             catch (Exception ex)
@@ -385,19 +322,19 @@ namespace TangoCard.Sdk.Unittests
             PurchaseCardResponse responsePurchaseCard = null;
             try
             {
-                var request = new PurchaseCardRequest()
-                {
-                    Username = this.app_username,
-                    Password = this.app_password,
-                    IsProductionMode = this.is_production_mode,
-                    CardSku = "tango-card",
-                    CardValue = cardValue,
-                    GiftFrom = "From",
-                    GiftMessage = "Message",
-                    RecipientEmail = "test00tangocard@gmail.com",
-                    RecipientName = "Test Tangocard",
-                    TcSend = true
-                };
+                var request = new PurchaseCardRequest
+                (
+                    username: this.app_username,
+                    password: this.app_password,
+                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    cardSku: "tango-card",
+                    cardValue: cardValue,
+                    tcSend: true,
+                    giftFrom: "From",
+                    giftMessage: "Message",
+                    recipientEmail: "test00tangocard@gmail.com",
+                    recipientName: "Test Tangocard"
+                );
 
                 isSuccess = request.execute(ref responsePurchaseCard);
             }
@@ -430,11 +367,11 @@ namespace TangoCard.Sdk.Unittests
             try
             {
                 var request = new GetAvailableBalanceRequest
-                {
-                    Username = this.app_username,
-                    Password = this.app_password,
-                    IsProductionMode = this.is_production_mode
-                };
+                (
+                    username: this.app_username,
+                    password: this.app_password,
+                    endpoint: ServiceEndpointEnum.INTEGRATION
+                );
                 isSuccess = request.execute(ref responseUpdatedBalance);
             }
             catch (Exception ex)

@@ -26,6 +26,7 @@ using System.Text;
 using System.Configuration;
 
 using TangoCard.Sdk.Response.Success;
+using TangoCard.Sdk.Service;
 
 namespace TangoCard.Sdk.Request
 {
@@ -37,6 +38,24 @@ namespace TangoCard.Sdk.Request
 
     public class GetAvailableBalanceRequest : BaseRequest
     {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Constructor. </summary>
+        ///
+        /// <param name="username"> The username. </param>
+        /// <param name="password"> The password. </param>
+        /// <param name="endpoint"> The endpoint. </param>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public GetAvailableBalanceRequest( 
+            string username, 
+            string password, 
+            ServiceEndpointEnum endpoint
+            ) 
+            : base(username, password, endpoint)
+        {
+
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the execute. </summary>
         ///

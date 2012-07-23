@@ -28,22 +28,12 @@ using TangoCard.Sdk.Response.Failure;
 
 namespace TangoCard.Sdk.Response
 {
-    public class ServiceReponse<T> where T : BaseResponse
+    public class ServiceResponse<T> where T : BaseResponse
     {
         [JsonProperty(PropertyName = "responseType")]
-        public ResponseType ResponseType { get; set; }
+        public ServiceResponseEnum ResponseType { get; set; }
 
         [JsonProperty(PropertyName = "response")]
         public T Response { get; set; }
-    }
-
-    public enum ResponseType
-    {
-        SUCCESS,
-        INS_FUNDS,
-        INV_CREDENTIAL,
-        SYS_ERROR,
-        INV_INPUT,
-        INS_INV
     }
 }

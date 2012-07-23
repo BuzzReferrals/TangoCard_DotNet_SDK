@@ -27,7 +27,7 @@ using Newtonsoft.Json;
 
 namespace TangoCard.Sdk.Response.Failure
 {
-    class InvalidInputResponse : FailureResponse
+    public class InvalidInputResponse : FailureResponse
     {
         [JsonProperty(PropertyName = "invalid")]
         public Dictionary<string, string> Invalid { get; set; }
