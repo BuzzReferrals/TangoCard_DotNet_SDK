@@ -25,6 +25,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using System.Configuration;
+using System.Web;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -34,6 +35,7 @@ using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Response.Success;
 using TangoCard.Sdk.Response.Failure;
 using TangoCard.Sdk.Service;
+using System.Net;
 
 namespace TangoCard.Sdk.Unittests
 {
@@ -46,9 +48,10 @@ namespace TangoCard.Sdk.Unittests
     [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\thawte_Server_CA.pem")] 
     public class UnitTest_PurchaseCard
     {
-        private string app_username = null;
-        private string app_password = null;
-        private bool is_production_mode = false;
+        private string _app_username = null;
+        private string _app_password = null;
+        private string _app_company_identifier = null;
+        private bool _is_production_mode = false;
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the available balance unit test initialize. </summary>
@@ -57,12 +60,13 @@ namespace TangoCard.Sdk.Unittests
         [TestInitialize()]
         public void TestInitialize_PurchaseCard()
         {
-            this.app_username = ConfigurationManager.AppSettings["app_username"];
-            this.app_password = ConfigurationManager.AppSettings["app_password"];
+            this._app_username = ConfigurationManager.AppSettings["app_username"];
+            this._app_password = ConfigurationManager.AppSettings["app_password"];
+            this._app_company_identifier = ConfigurationManager.AppSettings["app_company_identifier"];
 
             string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
-            this.is_production_mode = false;
-            Boolean.TryParse(app_production_mode, out this.is_production_mode);
+            this._is_production_mode = false;
+            Boolean.TryParse(app_production_mode, out this._is_production_mode);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -79,9 +83,10 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new PurchaseCardRequest
                 (
+                    isProductionMode: this._is_production_mode,
                     username: "test@test.com",
                     password: "password",
-                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    companyIdentifier: this._app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: 100,    // $1.00 value
                     tcSend: false
@@ -95,9 +100,13 @@ namespace TangoCard.Sdk.Unittests
             {
                 Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_CREDENTIAL));
             }
+            catch (WebException ex)
+            {
+                Assert.Fail(message: "WebException: " + ex.Message);
+            }
             catch (Exception ex)
             {
-                Assert.Fail(message: ex.Message);
+                Assert.Fail(message: "Exception: " + ex.Message);
             }
 
             Assert.IsFalse(isSuccess);
@@ -118,9 +127,10 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new PurchaseCardRequest
                 (
+                    isProductionMode: this._is_production_mode,
                     username: "empty@tangocard.com",
                     password: "password",
-                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    companyIdentifier: this._app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: 100,    // $1.00 value
                     tcSend: false
@@ -158,9 +168,10 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new PurchaseCardRequest
                 (
-                    username: this.app_username,
-                    password: this.app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password,
+                    companyIdentifier: this._app_company_identifier,
                     cardSku: "mango-card",
                     cardValue: cardValue,
                     tcSend: false
@@ -198,9 +209,9 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new GetAvailableBalanceRequest
                 (
-                    username: this.app_username,
-                    password: this.app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password
                 );
                 isSuccess = request.execute(ref responseAvailableBalance);
             }
@@ -222,9 +233,10 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new PurchaseCardRequest
                 (
-                    username: this.app_username,
-                    password: this.app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password,
+                    companyIdentifier: this._app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: cardValue,
                     tcSend: false
@@ -266,9 +278,9 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new GetAvailableBalanceRequest
                 (
-                    username: this.app_username,
-                    password: this.app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password
                 );
                 isSuccess = request.execute(ref responseUpdatedBalance);
             }
@@ -300,9 +312,9 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new GetAvailableBalanceRequest
                 (
-                    username: this.app_username,
-                    password: this.app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password
                 );
                 isSuccess = request.execute(ref responseAvailableBalance);
             }
@@ -324,9 +336,10 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new PurchaseCardRequest
                 (
-                    username: this.app_username,
-                    password: this.app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password,
+                    companyIdentifier: this._app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: cardValue,
                     tcSend: true,
@@ -368,9 +381,9 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new GetAvailableBalanceRequest
                 (
-                    username: this.app_username,
-                    password: this.app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password
                 );
                 isSuccess = request.execute(ref responseUpdatedBalance);
             }

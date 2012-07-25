@@ -46,7 +46,7 @@
     <Compile Include="Request\PurchaseCardRequest.cs" />
     <Compile Include="Request\GetAvailableBalanceRequest.cs" />
     <Compile Include="Request\BaseRequest.cs" />
-    <Compile Include="Service\ServiceEndpointEnum.cs" />
+    <Compile Include="Response\Success\SuccessResponse.cs" />
     <Compile Include="Response\Failure\FailureResponse.cs" />
     <Compile Include="Response\Failure\InsufficientFundsResponse.cs" />
     <Compile Include="Response\Failure\InsufficientInventoryResponse.cs" />

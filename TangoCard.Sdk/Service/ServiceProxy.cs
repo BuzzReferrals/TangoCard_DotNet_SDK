@@ -1,4 +1,8 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//
+//  ServiceProxy.cs
+//  TangoCard_DotNet_SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -139,7 +143,7 @@ namespace TangoCard.Sdk.Service
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private bool postRequest(ref string responseBodyJSON)
+        private bool postRequest(ref string responseJsonEncoded)
         {
             if (String.IsNullOrEmpty(this._path))
             {
@@ -147,7 +151,7 @@ namespace TangoCard.Sdk.Service
             }
 
             bool isSuccess = false;
-            responseBodyJSON = null;
+            responseJsonEncoded = null;
             try
             {
                 string certFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "thawte_Server_CA.pem");
@@ -159,13 +163,14 @@ namespace TangoCard.Sdk.Service
                 X509Certificate x509certificate = X509Certificate.CreateFromCertFile(certFile);
                 HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(this._path);
                 webRequest.ClientCertificates.Add(x509certificate);
+
                 if (this.mapRequest(ref webRequest))
                 {
                     HttpWebResponse response = (HttpWebResponse)webRequest.GetResponse();
                     using (Stream receiveStream = response.GetResponseStream())
                     {
                         StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-                        responseBodyJSON = readStream.ReadToEnd();                        
+                        responseJsonEncoded = readStream.ReadToEnd();                        
                     }
 
                     isSuccess = true;
@@ -184,7 +189,7 @@ namespace TangoCard.Sdk.Service
 
                     using (var streamReader = new StreamReader(response.GetResponseStream()))
                     {
-                        responseBodyJSON = streamReader.ReadToEnd();
+                        responseJsonEncoded = streamReader.ReadToEnd();
                     }
                 }
             }
@@ -208,31 +213,31 @@ namespace TangoCard.Sdk.Service
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public bool Request<T>(ref T response) where T : BaseResponse
+        public bool executeRequest<T>(ref T response) where T : BaseResponse
         {
             bool isSuccess = false;
             response = default(T);
-            string responseBodyJSON = null;
+            string responseJsonEncoded = null;
             try
             {
-                if (this.postRequest(ref responseBodyJSON))
+                if (this.postRequest(ref responseJsonEncoded))
                 {
                     /*
                      * Json Deserealizer cannot convert to valid DateTime, replacing in case 
                      * this value exists replace.
                      */
-                    responseBodyJSON = responseBodyJSON.Replace("0000-00-00 00:00:00", "0001-01-01 00:00:00");
+                    responseJsonEncoded = responseJsonEncoded.Replace("0000-00-00 00:00:00", "0001-01-01 00:00:00");
 
                     Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings();
                     jsonSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
                     jsonSettings.MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore;
                     jsonSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
 
-                    TangoCardServiceException.ThrowOnError(responseBodyJSON, jsonSettings);
+                    TangoCardServiceException.ThrowOnError(responseJsonEncoded, jsonSettings);
 
-                    var result = JsonConvert.DeserializeObject<ServiceResponse<T>>(responseBodyJSON, jsonSettings);
+                    var responseService = JsonConvert.DeserializeObject<ServiceResponse<T>>(responseJsonEncoded, jsonSettings);
 
-                    response = result.Response;
+                    response = responseService.Response;
                     isSuccess = true;
                 }
             }

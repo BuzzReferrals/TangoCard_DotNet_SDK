@@ -1,4 +1,8 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//  
+//  FailureResponse.cs
+//  TangoCard_DotNet_SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,6 +31,14 @@ using Newtonsoft.Json;
 
 namespace TangoCard.Sdk.Response.Failure
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>   Failure response. </summary>
+    ///
+    /// <remarks>   Jeff, 7/23/2012. </remarks>
+    ///
+    /// <seealso cref="TangoCard.Sdk.Response.BaseResponse"/>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public class FailureResponse : BaseResponse
     {
         public override string ToString()

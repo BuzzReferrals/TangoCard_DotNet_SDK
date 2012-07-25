@@ -1,4 +1,8 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//  
+//  GetAvailableBalanceRequest.cs
+//  TangoCard_DotNet_SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,17 +45,19 @@ namespace TangoCard.Sdk.Request
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
-        /// <param name="username"> The username. </param>
-        /// <param name="password"> The password. </param>
-        /// <param name="endpoint"> The endpoint. </param>
+        /// <remarks>   Jeff, 7/24/2012. </remarks>
+        ///
+        /// <param name="isProductionMode"> true if this object is production mode. </param>
+        /// <param name="username">         The username. </param>
+        /// <param name="password">         The password. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public GetAvailableBalanceRequest( 
+        public GetAvailableBalanceRequest(
+            bool isProductionMode,
             string username, 
-            string password, 
-            ServiceEndpointEnum endpoint
-            ) 
-            : base(username, password, endpoint)
+            string password
+            )
+            : base(isProductionMode, username, password)
         {
 
         }

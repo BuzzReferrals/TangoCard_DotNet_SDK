@@ -1,4 +1,8 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//
+//  GetAvailableBalanceResponse.cs
+//  TangoCard_DotNet_SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +37,7 @@ namespace TangoCard.Sdk.Response.Success
     /// <seealso cref="TangoCard.Sdk.Response.BaseResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public class GetAvailableBalanceResponse : BaseResponse
+    public class GetAvailableBalanceResponse : SuccessResponse
     {
         [JsonProperty(PropertyName = "availableBalance")]
         public int AvailableBalance { get; set; }

@@ -1,4 +1,8 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//
+//  SuccessResponse.cs
+//  TangoCard_DotNet_SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,12 +24,13 @@
 //  THE SOFTWARE.
 // 
 
-namespace TangoCard.Sdk.Service
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TangoCard.Sdk.Response.Success
 {
-    public enum ServiceEndpointEnum
+    public class SuccessResponse : BaseResponse
     {
-        UNDEFINED = 0,
-        INTEGRATION,
-        PRODUCTION
     }
 }

@@ -29,6 +29,7 @@ using System.Text;
 using TangoCard.Sdk.Request;
 using TangoCard.Sdk.Response.Success;
 using TangoCard.Sdk.Service;
+using System.Net;
 
 namespace TangoCard.Sdk.TestConsole
 {
@@ -52,8 +53,13 @@ namespace TangoCard.Sdk.TestConsole
             // Test Available Balance
             Console.WriteLine("== Using app.config Credentials ====\n");
 
-            string app_username = ConfigurationManager.AppSettings["app_username"];
-            string app_password = ConfigurationManager.AppSettings["app_password"];
+            string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
+            bool is_production_mode = false;
+            Boolean.TryParse(app_production_mode, out is_production_mode);
+
+            string app_username             = ConfigurationManager.AppSettings["app_username"];
+            string app_password             = ConfigurationManager.AppSettings["app_password"];
+            string app_company_identifier   = ConfigurationManager.AppSettings["app_company_identifier"];
 
             Console.ForegroundColor = ConsoleColor.Cyan;
             try
@@ -62,9 +68,9 @@ namespace TangoCard.Sdk.TestConsole
 
                 var request = new GetAvailableBalanceRequest
                 (
+                    isProductionMode: is_production_mode,
                     username: app_username,
-                    password: app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    password: app_password
                 );
                 GetAvailableBalanceResponse response = null;
                 if (request.execute(ref response) && (null != response))
@@ -100,9 +106,10 @@ namespace TangoCard.Sdk.TestConsole
 
                 var request = new PurchaseCardRequest
                 (
+                    isProductionMode: is_production_mode,
                     username: app_username,
                     password: app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    companyIdentifier: app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: 100,    // $1.00 value
                     tcSend: false
@@ -144,9 +151,10 @@ namespace TangoCard.Sdk.TestConsole
 
                 var request = new PurchaseCardRequest
                 (
+                    isProductionMode: is_production_mode,
                     username: app_username,
                     password: app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION,
+                    companyIdentifier: app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: 100,    // $1.00 value
                     tcSend: true,
@@ -190,9 +198,9 @@ namespace TangoCard.Sdk.TestConsole
 
                 var request = new GetAvailableBalanceRequest
                 (
+                    isProductionMode: is_production_mode,
                     username: app_username,
-                    password: app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    password: app_password
                 );
                 GetAvailableBalanceResponse response = null;
                 if (request.execute(ref response) && (null != response))
@@ -208,7 +216,7 @@ namespace TangoCard.Sdk.TestConsole
                     Console.WriteLine("=== Failed getting Available Balance ===");
                     Console.ForegroundColor = ConsoleColor.Cyan;
                 }
-            }
+            }          
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;

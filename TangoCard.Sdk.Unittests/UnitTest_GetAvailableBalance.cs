@@ -45,9 +45,9 @@ namespace TangoCard.Sdk.Unittests
     [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\thawte_Server_CA.pem")] 
     public class UnitTest_GetAvailableBalance
     {
-        private string app_username = null;
-        private string app_password = null;
-        private bool is_production_mode = false;
+        private string _app_username = null;
+        private string _app_password = null;
+        private bool _is_production_mode = false;
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the available balance unit test initialize. </summary>
@@ -56,12 +56,12 @@ namespace TangoCard.Sdk.Unittests
         [TestInitialize()]
         public void TestInitialize_GetAvailableBalance()
         {
-            this.app_username = ConfigurationManager.AppSettings["app_username"];
-            this.app_password = ConfigurationManager.AppSettings["app_password"];
+            this._app_username = ConfigurationManager.AppSettings["app_username"];
+            this._app_password = ConfigurationManager.AppSettings["app_password"];
 
             string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
-            this.is_production_mode = false;
-            Boolean.TryParse(app_production_mode, out this.is_production_mode);
+            this._is_production_mode = false;
+            Boolean.TryParse(app_production_mode, out this._is_production_mode);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,9 +77,9 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new GetAvailableBalanceRequest
                 (
-                    username: this.app_username,
-                    password: this.app_password,
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password
                 );
 
                 isSuccess = request.execute(ref response);
@@ -104,9 +104,9 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new GetAvailableBalanceRequest
                 (
+                    isProductionMode: this._is_production_mode,
                     username: "test@test.com",
-                    password: "password",
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    password: "password"
                 );
 
                 isSuccess = request.execute(ref response);
@@ -126,6 +126,10 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsNull(response);
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Tests get available balance insufficient funds. </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         [TestMethod]
         public void Test_GetAvailableBalance_InsufficientFunds()
         {
@@ -135,9 +139,9 @@ namespace TangoCard.Sdk.Unittests
             {
                 var request = new GetAvailableBalanceRequest
                 (
+                    isProductionMode: this._is_production_mode,
                     username: "empty@tangocard.com",
-                    password: "password",
-                    endpoint: ServiceEndpointEnum.INTEGRATION
+                    password: "password"
                 );
 
                 isSuccess = request.execute(ref response);

@@ -1,4 +1,8 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//  
+//  BaseRequest.cs
+//  TangoCard_DotNet_SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -39,21 +43,42 @@ namespace TangoCard.Sdk.Request
 
     public abstract class BaseRequest
     {
-        private ServiceEndpointEnum _endpoint = ServiceEndpointEnum.UNDEFINED;
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
-        /// <param name="username"> The username. </param>
-        /// <param name="password"> The password. </param>
-        /// <param name="endpoint"> The endpoint. </param>
+        /// <remarks>   Jeff, 7/24/2012. </remarks>
+        ///
+        /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
+        ///                                             null. </exception>
+        ///
+        /// <param name="isProductionMode"> true if this object is production mode. </param>
+        /// <param name="username">         The username. </param>
+        /// <param name="password">         The password. </param>
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public BaseRequest( string username, string password, ServiceEndpointEnum endpoint )
-        {
+        public BaseRequest( 
+            bool isProductionMode,
+            string username, 
+            string password
+        ) {
+            // -----------------------------------------------------------------
+            // validate inputs
+            // -----------------------------------------------------------------
+            // username and password
+            if (String.IsNullOrEmpty(username))
+            {
+                throw new ArgumentNullException(paramName: "username");
+            }
+            if (String.IsNullOrEmpty(password))
+            {
+                throw new ArgumentNullException(paramName: "password");
+            }
+
+            this.IsProductionMode = isProductionMode;
             this.Username = username;
             this.Password = password;
-            this.Endpoint = endpoint;
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -74,51 +99,13 @@ namespace TangoCard.Sdk.Request
         public string Password { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets or sets the endpoint. </summary>
-        ///
-        /// <value> The endpoint. </value>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        public ServiceEndpointEnum Endpoint
-        {
-            get
-            {
-                return this._endpoint;
-            }
-            set
-            {
-                this._endpoint = value;
-            }
-        }
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets or sets a value indicating whether the production mode. </summary>
         ///
         /// <value> true if production mode, false if not. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [JsonIgnore]
-        public bool IsProductionMode
-        {
-            get
-            {
-                if (this.Endpoint.Equals(ServiceEndpointEnum.UNDEFINED))
-                {
-                    SdkConfig appConfig = SdkConfig.Instance;
-                    bool tc_sdk_production_mode = false;
-                    Boolean.TryParse(appConfig["tc_sdk_production_mode"], out tc_sdk_production_mode);
-
-                    return tc_sdk_production_mode;
-                }
-
-                return this.Endpoint.Equals(ServiceEndpointEnum.PRODUCTION);
-            }
-
-            set
-            {
-                this._endpoint = value ? ServiceEndpointEnum.PRODUCTION : ServiceEndpointEnum.INTEGRATION;
-            }
-        }
+        public bool IsProductionMode { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the full pathname of the request file. </summary>
@@ -143,7 +130,7 @@ namespace TangoCard.Sdk.Request
         public virtual bool execute<T>(ref T response) where T : BaseResponse
         {
             var proxy = new ServiceProxy(this);
-            return proxy.Request<T>(ref response);
+            return proxy.executeRequest<T>(ref response);
         }
     }
 }

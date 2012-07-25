@@ -27,6 +27,14 @@ using Newtonsoft.Json;
 
 namespace TangoCard.Sdk.Response.Failure
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>   Insufficient funds response. </summary>
+    ///
+    /// <remarks>   Jeff, 7/23/2012. </remarks>
+    ///
+    /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public class InsufficientFundsResponse : FailureResponse
     {
         [JsonProperty(PropertyName = "availableBalance")]

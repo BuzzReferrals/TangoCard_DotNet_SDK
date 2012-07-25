@@ -1,0 +1,11 @@
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\obj\Release\ResolveAssemblyReference.cache
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.dll.config
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\thawte_Server_CA.pem
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.Unittests.dll.config
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.Unittests.dll
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.Unittests.pdb
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.dll
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\Newtonsoft.Json.dll
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.pdb
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\obj\Release\TangoCard.Sdk.Unittests.dll
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\obj\Release\TangoCard.Sdk.Unittests.pdb

@@ -27,6 +27,14 @@ using Newtonsoft.Json;
 
 namespace TangoCard.Sdk.Response.Failure
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>   Invalid input response. </summary>
+    ///
+    /// <remarks>   Jeff, 7/23/2012. </remarks>
+    ///
+    /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public class InvalidInputResponse : FailureResponse
     {
         [JsonProperty(PropertyName = "invalid")]
