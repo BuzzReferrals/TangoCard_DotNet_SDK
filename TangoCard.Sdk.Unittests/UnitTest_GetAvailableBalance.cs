@@ -1,8 +1,9 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿//  
+//  UnitTest_GetAvailableBalance.cs
+//  TangoCard_DotNet_SDK
+//  
+//  VisualStudio 2010 Unit Test
+//  
 //  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
@@ -24,8 +25,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 // 
-
+// 
+using System;
+using System.Text;
+using System.Collections.Generic;
+using System.Linq;
 using System.Configuration;
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using TangoCard.Sdk.Request;
 using TangoCard.Sdk.Common;

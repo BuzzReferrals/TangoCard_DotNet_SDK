@@ -112,15 +112,19 @@ namespace TangoCard.Sdk.Service
                 webRequest.Method = "POST";
                 webRequest.ContentType = "application/json";
 
-                byte[] data = UTF8Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(this._requestObject));
-                webRequest.ContentLength = data.Length;
-                using (Stream requestDataStream = webRequest.GetRequestStream())
+                string requestJsonSerialized = JsonConvert.SerializeObject(this._requestObject);
+                if (!String.IsNullOrEmpty(requestJsonSerialized))
                 {
-                    requestDataStream.Write(data, 0, data.Length);
-                    requestDataStream.Close();
-                }
+                    byte[] data = UTF8Encoding.UTF8.GetBytes(requestJsonSerialized);
+                    webRequest.ContentLength = data.Length;
+                    using (Stream requestDataStream = webRequest.GetRequestStream())
+                    {
+                        requestDataStream.Write(data, 0, data.Length);
+                        requestDataStream.Close();
+                    }
 
-                isSuccess = true;
+                    isSuccess = true;
+                }
             }
             catch (ApplicationException ex)
             {
@@ -154,15 +158,16 @@ namespace TangoCard.Sdk.Service
             responseJsonEncoded = null;
             try
             {
-                string certFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "thawte_Server_CA.pem");
-                if (!File.Exists(certFile))
-                {
-                    throw new SystemException(message: "Missing CA cert file");
-                }
+                // root certificate authority (CA) certificate
+                //string certFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "thawte_Server_CA.pem");
+                //if (!File.Exists(certFile))
+                //{
+                //    throw new SystemException(message: "Missing CA cert file");
+                //}
 
-                X509Certificate x509certificate = X509Certificate.CreateFromCertFile(certFile);
-                HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(this._path);
-                webRequest.ClientCertificates.Add(x509certificate);
+                //X509Certificate x509certificate = X509Certificate.CreateFromCertFile(certFile);
+                HttpWebRequest webRequest = (HttpWebRequest) WebRequest.Create(this._path);
+                //webRequest.ClientCertificates.Add(x509certificate);
 
                 if (this.mapRequest(ref webRequest))
                 {

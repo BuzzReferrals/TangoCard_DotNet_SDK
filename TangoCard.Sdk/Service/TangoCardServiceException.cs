@@ -40,8 +40,6 @@ namespace TangoCard.Sdk.Service
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Exception for signalling tango card service errors. </summary>
     ///
-    /// <remarks>   Jeff, 7/23/2012. </remarks>
-    ///
     /// <seealso cref="System.Exception"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -92,8 +90,6 @@ namespace TangoCard.Sdk.Service
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
-        /// <remarks>   Jeff, 7/22/2012. </remarks>
-        ///
         /// <param name="responseType">     The result. </param>
         /// <param name="responseCategory"> Category the response belongs to. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -104,8 +100,6 @@ namespace TangoCard.Sdk.Service
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
-        ///
-        /// <remarks>   Jeff, 7/22/2012. </remarks>
         ///
         /// <param name="responseType">     The result. </param>
         /// <param name="responseCategory"> Category the response belongs to. </param>

@@ -45,8 +45,6 @@ namespace TangoCard.Sdk.Request
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
-        /// <remarks>   Jeff, 7/24/2012. </remarks>
-        ///
         /// <param name="isProductionMode"> true if this object is production mode. </param>
         /// <param name="username">         The username. </param>
         /// <param name="password">         The password. </param>

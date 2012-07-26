@@ -1,4 +1,10 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//  
+//  UnitTest_PurchaseCard.cs
+//  TangoCard_DotNet_SDK
+//
+//  VisualStudio 2010 Unit Test
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,7 +56,6 @@ namespace TangoCard.Sdk.Unittests
     {
         private string _app_username = null;
         private string _app_password = null;
-        private string _app_company_identifier = null;
         private bool _is_production_mode = false;
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -62,8 +67,6 @@ namespace TangoCard.Sdk.Unittests
         {
             this._app_username = ConfigurationManager.AppSettings["app_username"];
             this._app_password = ConfigurationManager.AppSettings["app_password"];
-            this._app_company_identifier = ConfigurationManager.AppSettings["app_company_identifier"];
-
             string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
             this._is_production_mode = false;
             Boolean.TryParse(app_production_mode, out this._is_production_mode);
@@ -86,7 +89,6 @@ namespace TangoCard.Sdk.Unittests
                     isProductionMode: this._is_production_mode,
                     username: "test@test.com",
                     password: "password",
-                    companyIdentifier: this._app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: 100,    // $1.00 value
                     tcSend: false
@@ -99,6 +101,10 @@ namespace TangoCard.Sdk.Unittests
             catch (TangoCardServiceException ex)
             {
                 Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_CREDENTIAL));
+            }
+            catch (ArgumentException ex)
+            {
+                Assert.Fail(message: "ArgumentException: " + ex.Message);
             }
             catch (WebException ex)
             {
@@ -130,7 +136,6 @@ namespace TangoCard.Sdk.Unittests
                     isProductionMode: this._is_production_mode,
                     username: "empty@tangocard.com",
                     password: "password",
-                    companyIdentifier: this._app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: 100,    // $1.00 value
                     tcSend: false
@@ -171,7 +176,6 @@ namespace TangoCard.Sdk.Unittests
                     isProductionMode: this._is_production_mode,
                     username: this._app_username,
                     password: this._app_password,
-                    companyIdentifier: this._app_company_identifier,
                     cardSku: "mango-card",
                     cardValue: cardValue,
                     tcSend: false
@@ -196,8 +200,6 @@ namespace TangoCard.Sdk.Unittests
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Tests purchase card no delivery configuration. </summary>
-        ///
-        /// <remarks>   Jeff, 7/19/2012. </remarks>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
@@ -236,7 +238,6 @@ namespace TangoCard.Sdk.Unittests
                     isProductionMode: this._is_production_mode,
                     username: this._app_username,
                     password: this._app_password,
-                    companyIdentifier: this._app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: cardValue,
                     tcSend: false
@@ -339,14 +340,13 @@ namespace TangoCard.Sdk.Unittests
                     isProductionMode: this._is_production_mode,
                     username: this._app_username,
                     password: this._app_password,
-                    companyIdentifier: this._app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: cardValue,
                     tcSend: true,
-                    giftFrom: "From",
-                    giftMessage: "Message",
-                    recipientEmail: "test00tangocard@gmail.com",
-                    recipientName: "Test Tangocard"
+                    giftFrom: "Bill Test Giver",
+                    giftMessage: "Happy Birthday",
+                    recipientEmail: "sue_test_recipient@test.com",
+                    recipientName: "Sue Test Recipient"
                 );
 
                 isSuccess = request.execute(ref responsePurchaseCard);
@@ -361,10 +361,10 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
 
             var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
-            Assert.IsNull(cardNumber);
+            Assert.IsNotNull(cardNumber);
 
             var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
-            Assert.IsNull(cardPin);
+            Assert.IsNotNull(cardPin);
 
             var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
             Assert.IsNotNull(cardToken);

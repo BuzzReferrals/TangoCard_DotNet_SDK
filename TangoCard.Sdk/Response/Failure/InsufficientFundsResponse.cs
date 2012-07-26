@@ -1,4 +1,8 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//  
+//  InsufficientFundsResponse.cs
+//  TangoCard_DotNet_SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,8 +33,6 @@ namespace TangoCard.Sdk.Response.Failure
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Insufficient funds response. </summary>
-    ///
-    /// <remarks>   Jeff, 7/23/2012. </remarks>
     ///
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////

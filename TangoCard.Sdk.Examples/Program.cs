@@ -1,4 +1,10 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//  
+//  Program.cs
+//  TangoCard_DotNet_SDK
+//  
+//  Example program using Tango Card SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,7 +65,6 @@ namespace TangoCard.Sdk.TestConsole
 
             string app_username             = ConfigurationManager.AppSettings["app_username"];
             string app_password             = ConfigurationManager.AppSettings["app_password"];
-            string app_company_identifier   = ConfigurationManager.AppSettings["app_company_identifier"];
 
             Console.ForegroundColor = ConsoleColor.Cyan;
             try
@@ -97,7 +102,6 @@ namespace TangoCard.Sdk.TestConsole
 
             Console.WriteLine("===== End Get Available Balance ====\n\n\n");
 
-
             // Test Purchase Card no delivery
             Console.ForegroundColor = ConsoleColor.Cyan;
             try
@@ -109,7 +113,6 @@ namespace TangoCard.Sdk.TestConsole
                     isProductionMode: is_production_mode,
                     username: app_username,
                     password: app_password,
-                    companyIdentifier: app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: 100,    // $1.00 value
                     tcSend: false
@@ -154,21 +157,22 @@ namespace TangoCard.Sdk.TestConsole
                     isProductionMode: is_production_mode,
                     username: app_username,
                     password: app_password,
-                    companyIdentifier: app_company_identifier,
                     cardSku: "tango-card",
                     cardValue: 100,    // $1.00 value
                     tcSend: true,
-                    giftFrom: "From",
-                    giftMessage: "Message",
-                    recipientEmail: "test00tangocard@gmail.com",
-                    recipientName: "Test Tangocard"
+                    giftFrom:       "Bill Test Giver",
+                    giftMessage:    "Happy Birthday",
+                    recipientEmail: "sue_test_recipient@test.com",
+                    recipientName:  "Sue Test Recipient"
                 );
 
                 PurchaseCardResponse response = null;
                 if (request.execute(ref response) && (null != response))
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\n- Purchased Card (Delivery): {{ \nCard Token {0}, \nOrder Number: {1} \n}}\n",
+                    Console.WriteLine("\n- Purchased Card (Delivery): {{ \nCard Number: {0}, \nCard Pin: {1}, \nCard Token {2}, \nOrder Number: {3} \n}}\n",
+                        response.CardNumber,
+                        response.CardPin,
                         response.CardToken,
                         response.ReferenceOrderId
                         );

@@ -47,8 +47,6 @@ namespace TangoCard.Sdk.Request
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
-        /// <remarks>   Jeff, 7/24/2012. </remarks>
-        ///
         /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
         ///                                             null. </exception>
         ///
@@ -69,11 +67,11 @@ namespace TangoCard.Sdk.Request
             // username and password
             if (String.IsNullOrEmpty(username))
             {
-                throw new ArgumentNullException(paramName: "username");
+                throw new ArgumentException(message: "Parameter 'username' must be a defined.");
             }
             if (String.IsNullOrEmpty(password))
             {
-                throw new ArgumentNullException(paramName: "password");
+                throw new ArgumentException(message: "Parameter 'password' must be a defined.");
             }
 
             this.IsProductionMode = isProductionMode;

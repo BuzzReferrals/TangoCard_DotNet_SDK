@@ -1,4 +1,8 @@
-﻿//  © 2012 Tango Card, Inc
+﻿//  
+//  InsufficientInventoryResponse.cs
+//  TangoCard_DotNet_SDK
+//  
+//  © 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,15 +34,25 @@ namespace TangoCard.Sdk.Response.Failure
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Insufficient inventory response. </summary>
     ///
-    /// <remarks>   Jeff, 7/23/2012. </remarks>
-    ///
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public class InsufficientInventoryResponse : FailureResponse
     {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the sku. </summary>
+        ///
+        /// <value> The sku. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         [JsonProperty(PropertyName = "sku")]
         public string Sku { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the value. </summary>
+        ///
+        /// <value> The value. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [JsonProperty(PropertyName = "value")]
         public int Value { get; set; }
