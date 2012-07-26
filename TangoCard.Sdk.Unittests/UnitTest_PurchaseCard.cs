@@ -50,8 +50,7 @@ namespace TangoCard.Sdk.Unittests
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     [TestClass]
-    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\TangoCard.Sdk.dll.config")]
-    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\thawte_Server_CA.pem")] 
+    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\TangoCard_DotNet_SDK.dll.config")]
     public class UnitTest_PurchaseCard
     {
         private string _app_username = null;
@@ -94,13 +93,15 @@ namespace TangoCard.Sdk.Unittests
                     tcSend: false
                 );
 
-                isSuccess = request.execute(ref responsePurchaseCard);
+                isSuccess = request.Execute(ref responsePurchaseCard);
 
                 Assert.Fail(message: "Expected 'ServiceException' thrown");
             }
             catch (TangoCardServiceException ex)
             {
                 Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_CREDENTIAL));
+                string message = ex.Message;
+                Assert.IsNotNull(message);
             }
             catch (ArgumentException ex)
             {
@@ -141,13 +142,15 @@ namespace TangoCard.Sdk.Unittests
                     tcSend: false
                 );
 
-                isSuccess = request.execute(ref responsePurchaseCard);
+                isSuccess = request.Execute(ref responsePurchaseCard);
 
                 Assert.Fail(message: "Expected 'ServiceException' thrown");
             }
             catch (TangoCardServiceException ex)
             {
                 Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INS_FUNDS));
+                string message = ex.Message;
+                Assert.IsNotNull(message);
             }
             catch (Exception ex)
             {
@@ -163,7 +166,7 @@ namespace TangoCard.Sdk.Unittests
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
-        public void Test_PurchaseCard_InvalidInput()
+        public void Test_PurchaseCard_InvalidInput_Sku()
         {
             bool isSuccess = false;
             int cardValue = 100; // $1.00 
@@ -181,13 +184,15 @@ namespace TangoCard.Sdk.Unittests
                     tcSend: false
                 );
 
-                isSuccess = request.execute(ref responsePurchaseCard);
+                isSuccess = request.Execute(ref responsePurchaseCard);
 
                 Assert.Fail(message: "Expected 'ServiceException' thrown");
             }
             catch (TangoCardServiceException ex)
             {
                 Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_INPUT));
+                string message = ex.Message;
+                Assert.IsNotNull(message);
             }
             catch (Exception ex)
             {
@@ -197,6 +202,48 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsFalse(isSuccess);
             Assert.IsNull(responsePurchaseCard);
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Tests purchase card insufficient funds 10000000. </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [TestMethod]
+        public void Test_PurchaseCard_InsufficientFunds_10000000()
+        {
+            bool isSuccess = false;
+
+            PurchaseCardResponse responsePurchaseCard = null;
+            try
+            {
+                var request = new PurchaseCardRequest
+                (
+                    isProductionMode: this._is_production_mode,
+                    username: this._app_username,
+                    password: this._app_password,
+                    cardSku: "tango-card",
+                    cardValue: 10000000,    // $100000.00 value
+                    tcSend: false
+                );
+
+                isSuccess = request.Execute(ref responsePurchaseCard);
+
+                Assert.Fail(message: "Expected 'ServiceException' thrown");
+            }
+            catch (TangoCardServiceException ex)
+            {
+                Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INS_FUNDS));
+                string message = ex.Message;
+                Assert.IsNotNull(message);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(message: ex.Message);
+            }
+
+            Assert.IsFalse(isSuccess);
+            Assert.IsNull(responsePurchaseCard);
+        }
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Tests purchase card no delivery configuration. </summary>
@@ -215,7 +262,7 @@ namespace TangoCard.Sdk.Unittests
                     username: this._app_username,
                     password: this._app_password
                 );
-                isSuccess = request.execute(ref responseAvailableBalance);
+                isSuccess = request.Execute(ref responseAvailableBalance);
             }
             catch (Exception ex)
             {
@@ -243,7 +290,7 @@ namespace TangoCard.Sdk.Unittests
                     tcSend: false
                 );
 
-                isSuccess = request.execute(ref responsePurchaseCard);
+                isSuccess = request.Execute(ref responsePurchaseCard);
             }
             catch (Exception ex)
             {
@@ -283,7 +330,7 @@ namespace TangoCard.Sdk.Unittests
                     username: this._app_username,
                     password: this._app_password
                 );
-                isSuccess = request.execute(ref responseUpdatedBalance);
+                isSuccess = request.Execute(ref responseUpdatedBalance);
             }
             catch (Exception ex)
             {
@@ -317,7 +364,7 @@ namespace TangoCard.Sdk.Unittests
                     username: this._app_username,
                     password: this._app_password
                 );
-                isSuccess = request.execute(ref responseAvailableBalance);
+                isSuccess = request.Execute(ref responseAvailableBalance);
             }
             catch (Exception ex)
             {
@@ -349,7 +396,7 @@ namespace TangoCard.Sdk.Unittests
                     recipientName: "Sue Test Recipient"
                 );
 
-                isSuccess = request.execute(ref responsePurchaseCard);
+                isSuccess = request.Execute(ref responsePurchaseCard);
             }
             catch (Exception ex)
             {
@@ -385,7 +432,7 @@ namespace TangoCard.Sdk.Unittests
                     username: this._app_username,
                     password: this._app_password
                 );
-                isSuccess = request.execute(ref responseUpdatedBalance);
+                isSuccess = request.Execute(ref responseUpdatedBalance);
             }
             catch (Exception ex)
             {

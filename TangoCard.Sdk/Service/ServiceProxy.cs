@@ -64,6 +64,10 @@ namespace TangoCard.Sdk.Service
 
         public ServiceProxy(Request.BaseRequest requestObject)
         {
+            if (null == requestObject)
+            {
+                throw new ArgumentNullException(paramName: "requestObject");
+            }
             try
             {
                 SdkConfig appConfig = SdkConfig.Instance;
@@ -126,13 +130,13 @@ namespace TangoCard.Sdk.Service
                     isSuccess = true;
                 }
             }
-            catch (ApplicationException ex)
+            catch (TangoCardSdkException ex)
             {
                 throw ex;
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Failed to map request: " + ex.Message, ex);
+                throw new TangoCardSdkException("Failed to map request: " + ex.Message, ex);
             }
 
             return isSuccess;
@@ -142,7 +146,7 @@ namespace TangoCard.Sdk.Service
         /// <summary>   Makes the actual call to Service. </summary>
         ///
         /// <exception cref="WebException">         Thrown when a web error condition occurs. </exception>
-        /// <exception cref="ApplicationException"> Thrown when an application error condition occurs. </exception>
+        /// <exception cref="TangoCardSdkException"> Thrown when an application error condition occurs. </exception>
         ///
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -158,16 +162,7 @@ namespace TangoCard.Sdk.Service
             responseJsonEncoded = null;
             try
             {
-                // root certificate authority (CA) certificate
-                //string certFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "thawte_Server_CA.pem");
-                //if (!File.Exists(certFile))
-                //{
-                //    throw new SystemException(message: "Missing CA cert file");
-                //}
-
-                //X509Certificate x509certificate = X509Certificate.CreateFromCertFile(certFile);
                 HttpWebRequest webRequest = (HttpWebRequest) WebRequest.Create(this._path);
-                //webRequest.ClientCertificates.Add(x509certificate);
 
                 if (this.mapRequest(ref webRequest))
                 {
@@ -198,13 +193,13 @@ namespace TangoCard.Sdk.Service
                     }
                 }
             }
-            catch (ApplicationException ex)
+            catch (TangoCardSdkException ex)
             {
                 throw ex;
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Failed to post request: " + ex.Message, ex);
+                throw new TangoCardSdkException("Failed to post request: " + ex.Message, ex);
             }
 
             return isSuccess;
@@ -218,7 +213,7 @@ namespace TangoCard.Sdk.Service
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public bool executeRequest<T>(ref T response) where T : BaseResponse
+        public bool ExecuteRequest<T>(ref T response) where T : BaseResponse
         {
             bool isSuccess = false;
             response = default(T);
@@ -258,13 +253,13 @@ namespace TangoCard.Sdk.Service
             {
                 throw ex;
             }
-            catch (ApplicationException ex)
+            catch (TangoCardSdkException ex)
             {
                 throw ex;
             }
             catch (Exception ex)
             {
-                throw new ApplicationException("Failed to process request: " + ex.Message, ex);
+                throw new TangoCardSdkException("Failed to process request: " + ex.Message, ex);
             }
             return isSuccess;
         }

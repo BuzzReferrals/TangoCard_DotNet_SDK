@@ -39,7 +39,36 @@ namespace TangoCard.Sdk.Response.Failure
 
     public class InvalidInputResponse : FailureResponse
     {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the invalid. </summary>
+        ///
+        /// <value> The invalid. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         [JsonProperty(PropertyName = "invalid")]
         public Dictionary<string, string> Invalid { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets the message. </summary>
+        ///
+        /// <value> The message. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public override string Message
+        {
+            get
+            {
+                string message = null;
+                foreach (string key in this.Invalid.Keys)
+                {
+                    message += String.Format("{0}: {1}, ", key, this.Invalid[key]);
+                }
+                return message;
+            }
+            set
+            {
+                string ignore = value;
+            }
+        }
     }
 }

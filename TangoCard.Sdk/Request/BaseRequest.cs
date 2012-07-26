@@ -67,11 +67,11 @@ namespace TangoCard.Sdk.Request
             // username and password
             if (String.IsNullOrEmpty(username))
             {
-                throw new ArgumentException(message: "Parameter 'username' must be a defined.");
+                throw new ArgumentNullException(paramName: "username" );
             }
             if (String.IsNullOrEmpty(password))
             {
-                throw new ArgumentException(message: "Parameter 'password' must be a defined.");
+                throw new ArgumentNullException(paramName: "password" );
             }
 
             this.IsProductionMode = isProductionMode;
@@ -125,10 +125,10 @@ namespace TangoCard.Sdk.Request
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public virtual bool execute<T>(ref T response) where T : BaseResponse
+        public virtual bool Execute<T>(ref T response) where T : BaseResponse
         {
             var proxy = new ServiceProxy(this);
-            return proxy.executeRequest<T>(ref response);
+            return proxy.ExecuteRequest<T>(ref response);
         }
     }
 }

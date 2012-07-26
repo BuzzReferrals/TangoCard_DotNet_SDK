@@ -39,6 +39,8 @@ namespace TangoCard.Sdk.Response.Failure
 
     public class InvalidCredentialsResponse : FailureResponse
     {
+        private string _message = null;
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets or sets the message. </summary>
         ///
@@ -46,6 +48,21 @@ namespace TangoCard.Sdk.Response.Failure
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [JsonProperty(PropertyName = "message")]
-        public string Message { get; set; }
+        public override string Message
+        {
+            get
+            {
+                if (this._message.Equals("TCP:PNPA:3"))
+                {
+                    return "Provided user credentials are not valid.";
+                }
+
+                return this._message;
+            }
+            set
+            {
+                this._message = value;
+            }
+        }
     }
 }

@@ -59,8 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DeploymentItems\TangoCard.Sdk.dll.config" />
-    <None Include="DeploymentItems\thawte_Server_CA.pem" />
+    <None Include="DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -42,8 +42,8 @@ namespace TangoCard.Sdk.Service
     ///
     /// <seealso cref="System.Exception"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    public class TangoCardServiceException : Exception
+    [Serializable]
+    public class TangoCardServiceException : System.Exception
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets or sets the type of the response. </summary>
@@ -83,7 +83,7 @@ namespace TangoCard.Sdk.Service
         {
             get
             {
-                return string.Format("{0} - {1}: {2}", ResponseType, Response, base.Message).Trim();
+                return Response.Message.Trim();
             }
         }
 

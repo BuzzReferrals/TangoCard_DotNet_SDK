@@ -83,7 +83,7 @@ namespace TangoCard.Sdk.Request
             // cardSku
             if (String.IsNullOrEmpty(cardSku))
             {
-                throw new ArgumentException( message: "Parameter 'cardSku' must be a string.");
+                throw new ArgumentNullException(paramName: "cardSku");
             }
             if (cardSku.Length < 1)
             {
@@ -95,17 +95,9 @@ namespace TangoCard.Sdk.Request
             }
 
             // cardValue
-            if (0 != (cardValue % 100))
-            {
-                throw new ArgumentException(message: "Parameter 'cardValue' must be in multiples of 100.");
-            }
             if (cardValue < 1)
             {
-                throw new ArgumentException(message: "Parameter 'cardValue' must have a value which is greater than or equal to 100.");
-            }
-            if (cardValue > 10000)
-            {
-                throw new ArgumentException(message: "Parameter 'cardValue' must have a value which is less than or equal to 10000.");
+                throw new ArgumentException(message: "Parameter 'cardValue' must have a value which is greater than or equal to 1.");
             }
 
             if (tcSend)
@@ -113,7 +105,7 @@ namespace TangoCard.Sdk.Request
                 // recipientName
                 if (String.IsNullOrEmpty(recipientName))
                 {
-                    throw new ArgumentException( message: "Parameter 'recipientName' must be present (not null) if tcSend is set to true.");
+                    throw new ArgumentNullException(paramName: "recipientName");
                 }
                 if (recipientName.Length < 1)
                 {
@@ -127,7 +119,7 @@ namespace TangoCard.Sdk.Request
                 // recipientEmail
                 if (String.IsNullOrEmpty(recipientEmail))
                 {
-                    throw new ArgumentException( message: "Parameter 'recipientEmail' must be present (not null) if tcSend is set to true.");
+                    throw new ArgumentNullException(paramName: "recipientEmail");
                 }
                 if (recipientEmail.Length < 3)
                 {
@@ -141,7 +133,7 @@ namespace TangoCard.Sdk.Request
                 // giftFrom
                 if (String.IsNullOrEmpty(giftFrom))
                 {
-                    throw new ArgumentException( message: "Parameter 'giftFrom' must be present (not null) if tcSend is set to true.");
+                    throw new ArgumentNullException(paramName: "giftFrom");
                 }
                 if (giftFrom.Length < 1)
                 {
@@ -263,9 +255,9 @@ namespace TangoCard.Sdk.Request
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public bool execute(ref PurchaseCardResponse response) 
+        public bool Execute(ref PurchaseCardResponse response) 
         {
-            return base.execute<PurchaseCardResponse>(ref response);
+            return base.Execute<PurchaseCardResponse>(ref response);
         }
     }
 }

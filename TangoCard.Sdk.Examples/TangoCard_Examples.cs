@@ -1,6 +1,8 @@
 ﻿//  
-//  WebFailureResponse.cs
+//  Program.cs
 //  TangoCard_DotNet_SDK
+//  
+//  Example program using Tango Card SDK
 //  
 //  © 2012 Tango Card, Inc
 //  All rights reserved.
@@ -26,36 +28,28 @@
 
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+
 using System.Text;
+using System.Net;
 
-namespace TangoCard.Sdk.Response.Failure
+namespace TangoCard.Sdk.Examples
 {
-    ////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// <summary>   Web failure response. </summary>
-    ///
-    /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
-    ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    class WebFailureResponse : FailureResponse
+    class Program
     {
-        private string _message = null;
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets or sets the message. </summary>
-        ///
-        /// <value> The message. </value>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        public override string Message
+        static void Main(string[] args)
         {
-            get
-            {
-                return this._message;
-            }
-            set
-            {
-                this._message = value;
-            }
+            TangoCard_Store_Example.Execute();
+
+            TangoCard_Failures_Example.Execute();
+
+            Console.WriteLine("Press Any Key to Close this program.");
+
+            Console.ReadLine();
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Tango Card store using application configuration. </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }

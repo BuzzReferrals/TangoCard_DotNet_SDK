@@ -39,10 +39,41 @@ namespace TangoCard.Sdk.Response.Failure
 
     public class InsufficientFundsResponse : FailureResponse
     {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the available balance. </summary>
+        ///
+        /// <value> The available balance. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         [JsonProperty(PropertyName = "availableBalance")]
         public int AvailableBalance { get;set;}
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the order cost. </summary>
+        ///
+        /// <value> The order cost. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         [JsonProperty(PropertyName = "orderCost")]
         public int OrderCost { get;set;}
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets the message. </summary>
+        ///
+        /// <value> The message. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public override string Message
+        {
+            get
+            {
+                return String.Format("Available Balance: {0}, Order Cost: {1}", this.AvailableBalance, this.OrderCost);
+            }
+            set
+            {
+                string ignore = value;
+            }
+        }
     }
+
 }

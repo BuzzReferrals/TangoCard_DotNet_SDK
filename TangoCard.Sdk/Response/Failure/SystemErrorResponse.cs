@@ -39,7 +39,31 @@ namespace TangoCard.Sdk.Response.Failure
 
     public class SystemFailureResponse : FailureResponse
     {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the error code. </summary>
+        ///
+        /// <value> The error code. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         [JsonProperty(PropertyName = "errorCode")]
         public string ErrorCode { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets the message. </summary>
+        ///
+        /// <value> The message. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public override string Message
+        {
+            get
+            {
+                return String.Format("ErrorCode: {0}", this.ErrorCode);
+            }
+            set
+            {
+                string ignore = value;
+            }
+        }
     }
 }

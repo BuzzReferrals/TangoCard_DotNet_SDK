@@ -66,9 +66,9 @@ namespace TangoCard.Sdk.Request
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public bool execute(ref GetAvailableBalanceResponse response)
+        public bool Execute(ref GetAvailableBalanceResponse response)
         {
-            return base.execute<GetAvailableBalanceResponse>(ref response);
+            return base.Execute<GetAvailableBalanceResponse>(ref response);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -58,17 +58,17 @@ namespace TangoCard.Sdk.Common
             }
             catch (Exception ex)
             {
-                throw new Exception(message: "Error opening DLL's configuration file.", innerException: ex);
+                throw new TangoCardSdkException(message: "Error opening DLL's configuration file.", innerException: ex);
             }
 
             if (null == this.config)
             {
-                throw new NullReferenceException(message: "Failed opening DLL's configuration file.");
+                throw new TangoCardSdkException(message: "Failed opening DLL's configuration file.");
             }
 
             if (!File.Exists(this.config.FilePath))
             {
-                throw new FileNotFoundException(message: this.config.FilePath);
+                throw new TangoCardSdkException(message: "SDK Configuration file not found: " + this.config.FilePath);
             }
         }
 

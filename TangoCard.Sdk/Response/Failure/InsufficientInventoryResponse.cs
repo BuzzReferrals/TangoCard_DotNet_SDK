@@ -56,5 +56,23 @@ namespace TangoCard.Sdk.Response.Failure
 
         [JsonProperty(PropertyName = "value")]
         public int Value { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets the message. </summary>
+        ///
+        /// <value> The message. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public override string Message
+        {
+            get
+            {
+                return String.Format("SKU {0}, Value {1}", this.Sku, this.Value);
+            }
+            set
+            {
+                string ignore = value;
+            }
+        }
     }
 }

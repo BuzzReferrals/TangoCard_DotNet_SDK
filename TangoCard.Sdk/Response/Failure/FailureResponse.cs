@@ -39,9 +39,28 @@ namespace TangoCard.Sdk.Response.Failure
 
     public class FailureResponse : BaseResponse
     {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>
+        /// Returns a <see cref="T:System.String" /> that represents the current
+        /// <see cref="T:System.Object" />.
+        /// </summary>
+        ///
+        /// <seealso cref="System.Object.ToString()"/>
+        ///
+        /// ### <returns>
+        /// A <see cref="T:System.String" /> that represents the current <see cref="T:System.Object" />.
+        /// </returns>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         public override string ToString()
         {
             return this.GetType().Name + ": " + JsonConvert.SerializeObject(this);
+        }
+
+        public virtual string Message
+        {
+            get;
+            set;
         }
     }
 }

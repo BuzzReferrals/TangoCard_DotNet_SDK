@@ -26,6 +26,7 @@
 //  THE SOFTWARE.
 // 
 // 
+
 using System;
 using System.Text;
 using System.Collections.Generic;
@@ -48,8 +49,7 @@ namespace TangoCard.Sdk.Unittests
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     [TestClass]
-    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\TangoCard.Sdk.dll.config")]
-    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\thawte_Server_CA.pem")] 
+    [DeploymentItem("TangoCard.Sdk.Unittests\\DeploymentItems\\TangoCard_DotNet_SDK.dll.config")]
     public class UnitTest_GetAvailableBalance
     {
         private string _app_username = null;
@@ -89,7 +89,7 @@ namespace TangoCard.Sdk.Unittests
                     password: this._app_password
                 );
 
-                isSuccess = request.execute(ref response);
+                isSuccess = request.Execute(ref response);
             }
             catch (Exception ex)
             {
@@ -101,6 +101,10 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsTrue(response is GetAvailableBalanceResponse);
             Assert.IsTrue(((GetAvailableBalanceResponse)response).AvailableBalance >= 0);
         }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Tests get available balance invalid credentials. </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
         public void Test_GetAvailableBalance_InvalidCredentials()
@@ -116,13 +120,15 @@ namespace TangoCard.Sdk.Unittests
                     password: "password"
                 );
 
-                isSuccess = request.execute(ref response);
+                isSuccess = request.Execute(ref response);
 
                 Assert.Fail(message: "Expected 'ServiceException' thrown");
             }
             catch (TangoCardServiceException ex)
             {
                 Assert.IsTrue( condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_CREDENTIAL) );
+                string message = ex.Message;
+                Assert.IsNotNull(message);
             }
             catch (Exception ex)
             {
@@ -151,7 +157,7 @@ namespace TangoCard.Sdk.Unittests
                     password: "password"
                 );
 
-                isSuccess = request.execute(ref response);
+                isSuccess = request.Execute(ref response);
             }
             catch (TangoCardServiceException ex)
             {
