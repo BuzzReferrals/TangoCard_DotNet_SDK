@@ -77,7 +77,6 @@ There are also failure-case response objects. Each Request will explain (in the 
 
 A service will return the following failure responses as enumerated by `TangoCard\Sdk\Response\ServiceResponseEnum`:
 
-```xml
 <table>
 	<tr><td>Insufficient Funds</td><td>INS_FUNDS</td><td>`TangoCard\Sdk\Response\Failure\InsufficientFundsResponse`</td></tr>
 	<tr><td>Insufficient Inventory</td><td>INS_INV</td><td>`TangoCard\Sdk\Response\Failure\InsufficientInventoryResponse`</td></tr> 
@@ -85,7 +84,7 @@ A service will return the following failure responses as enumerated by `TangoCar
 	<tr><td>Invalid Input</td><td>INV_INPUT</td><td>`TangoCard\Sdk\Response\Failure\InvalidInputResponse`</td></tr>
 	<tr><td>System Failure</td><td>SYS_ERROR</td><td>`TangoCard\Sdk\Response\Failure\SystemFailureResponse`</td></tr>
 </table>
-```
+
 
 ![Tango Card SDK Service Response Failures](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocard_sdk_service_failure_response.png "Tango Card SDK Service Response Failures")
 
