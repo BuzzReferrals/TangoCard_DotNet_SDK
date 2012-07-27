@@ -172,8 +172,8 @@ The SDK's unittests have been written to use [Visual Studio 2010][UnitTest Proje
 This is the heart of the SDK... the src sub-directory is where all of the code lies. 
 
 # Requirements #
-[Visual Studio 2010]
-[Newtonsoft.JSON]
+[Visual Studio 2010](http://www.microsoft.com/visualstudio/en-us/products/2010-editions)  
+[Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)  
 
 # License #
 The Tango Card .NET 4.0/C-Sharp SDK is free to use, given some restrictions. Please see the LICENSE file for details.
