@@ -18,8 +18,8 @@ This request is defined by `class TangoCard\Sdk\Request\GetAvailableBalanceReque
 	var request = new GetAvailableBalanceRequest
 	(
 		isProductionMode: is_production_mode,
-		username: app_username,
-		password: app_password
+		username: username,
+		password: password
 	);
 	
 	// make the request
@@ -41,8 +41,8 @@ This request is defined by `class TangoCard\Sdk\Request\PurchaseCardRequest`
 	var request = new PurchaseCardRequest
 	(
 		isProductionMode: is_production_mode,
-		username: app_username,
-		password: app_password,
+		username: username,
+		password: password,
 		cardSku: "tango-card",
 		cardValue: cardValue,    // $1.00 value
 		tcSend: true,
@@ -67,6 +67,31 @@ This request is defined by `class TangoCard\Sdk\Request\PurchaseCardRequest`
 
 Its response `$requestPurchaseCardRequest_Delivery` will now be (assuming success) a `TangoCard\Sdk\Response\Success\PurchaseCardResponse` type object.
 
+### `PurchaseCardRequest` Constructor Parameters ###
+
+<dl>
+  <dt>boolean is_production_mode</dt>
+  <dd>- Selecting which Tango Card Service to make requests. Set to true for accessing Tango Card Production API service, and false for accessing Tango Card Integration API service</dd>
+  <dt>string username</dt>
+  <dd>- User email address, and a SDK Integration test username is defined in application configuration file _app_config.properties_ within *app_username*</dd>
+  <dt>string password</dt>
+  <dd>- User password, and a SDK Integration test password is defined in application configuration file _app_config.properties_ within *app_password*</dd>
+  <dt>string cardSku</dt>
+  <dd>- Card brand request, and the Tango Card brand's card sku *tango-card* is defined in application configuration file _app_config.properties_ within *app_card_sku*</dd>
+  <dt>int cardValue</dt>
+  <dd>- Card value in cents; a value of 100 (cent) is $1.00 dollar card. Minimum value is 1 (cent).</dd>
+  <dt>boolean tcSend</dt>
+  <dd>- Tango Card Service delivers by Email requested card. Set to true for email delivery, and false for no delivery.</dd>
+  <dt>string recipientName</dt>
+  <dd>- Full name of recipient receiving gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
+  <dt>string recipientEmail</dt>
+  <dd>- Valid email address of recipient receiving gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
+  <dt>string giftMessage</dt>
+  <dd>- [Optional] Gift message to be applied to gift card's email. Set this value with either a string (length minumum 1 character to maximum of 255 characters) or null if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
+  <dt>string giftFrom</dt>
+  <dd>- Full name of giver of gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
+</dl>
+
 # Tango Card Error Handling #
 
 There are also failure-case response objects. Each Request will explain (in the documentation) what type of possible failure-case response objects can be expected.
@@ -78,6 +103,7 @@ There are also failure-case response objects. Each Request will explain (in the 
 A service will return the following failure responses as enumerated by `TangoCard\Sdk\Response\ServiceResponseEnum`:
 
 <table>
+	<tr><th>Failure</th><th>Reponse Type</th><th>Response</th></tr>
 	<tr><td>Insufficient Funds</td><td>INS_FUNDS</td><td>`TangoCard\Sdk\Response\Failure\InsufficientFundsResponse`</td></tr>
 	<tr><td>Insufficient Inventory</td><td>INS_INV</td><td>`TangoCard\Sdk\Response\Failure\InsufficientInventoryResponse`</td></tr> 
 	<tr><td>Invalid Credentials</td><td>INV_CREDENTIAL</td><td>`TangoCard\Sdk\Response\Failure\InvalidCredentialsResponse`</td></tr> 
@@ -137,6 +163,25 @@ Wrap every Tango Card request call within a try/catch block, followed by first c
 
 # SDK Structure #
 There are four directories in the SDK: `doc`, `TangoCard.Sdk.Examples`, `TangoCard.Sdk.Unittests`, and `TangoCard.Sdk`.
+
+## C# .NET IDE ##
+
+* Visual Studio 2010 Ultimate
+* .NET 4.0
+* NuGET Newtonsoft.JSON
+
+## config ##
+
+There a several configuration files that are referenced by either the provide application examples, unittests, and SDK itself.
+
+<dl>
+	<dt>TangoCard.Sdk.Examples\app.config</dt>
+	<dd>- Application configuration file for `TangoCard.Sdk.Examples`</dd>
+	<dt>TangoCard.Sdk.Unittests\app.config</dt>
+	<dd>- Application configuration file for `TangoCard.Sdk.Unittests`</dd>
+	<dt>TangoCard.Sdk\TangoCard_DotNet_SDK.dll.config</dt>
+	<dd>- SDK configuration file referenced by `TangoCard.Sdk\Common\SdkConfig.cs`. **DO NOT MODIFY**</dd>
+</dl>
 
 ## doc ##
 The docs sub-directory maintains the up-to-date documentation for the classes (and functions) that are included in the SDK.
