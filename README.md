@@ -161,16 +161,18 @@ Wrap every Tango Card request call within a try/catch block, followed by first c
 	}
 ```
 
-# SDK Structure #
-There are four directories in the SDK: `doc`, `TangoCard.Sdk.Examples`, `TangoCard.Sdk.Unittests`, and `TangoCard.Sdk`.
-
-## C# .NET IDE ##
+# C# .NET IDE #
 
 * Visual Studio 2010 Ultimate
 * .NET 4.0
 * NuGET Newtonsoft.JSON
 
-## config ##
+# SDK Structure #
+There are four directories in the SDK: `doc`, `TangoCard.Sdk.Examples`, `TangoCard.Sdk.Unittests`, `TangoCard.Sdk`, and key `configuration files`.
+
+
+
+## configuration files ##
 
 There a several configuration files that are referenced by either the provide application examples, unittests, and SDK itself.
 
