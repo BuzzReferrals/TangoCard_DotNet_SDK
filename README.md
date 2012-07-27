@@ -13,7 +13,7 @@ The Tango Card SDK, every Request has a corresponding success-case Response obje
 ## Get Available Balance ##
 
 This request is defined by `class TangoCard\Sdk\Request\GetAvailableBalanceRequest`
-
+```C#
 	// set up the request
 	var request = new GetAvailableBalanceRequest
 	(
@@ -29,13 +29,14 @@ This request is defined by `class TangoCard\Sdk\Request\GetAvailableBalanceReque
 		double dollarsAvailableBalance = response.AvailableBalance / 100;
 		Console.WriteLine("\n- Available Balance: {0:C}\n", dollarsAvailableBalance);
 	}	
+```
 
 Its response `$responseAvailableBalance` will now be (assuming success) a `TangoCard\Sdk\Response\Success\GetAvailableBalanceResponse` type object.
 
 ## Purchase Tango Card ##
 
 This request is defined by `class TangoCard\Sdk\Request\PurchaseCardRequest`
-
+```C#
     // set up the request
 	var request = new PurchaseCardRequest
 	(
@@ -62,7 +63,8 @@ This request is defined by `class TangoCard\Sdk\Request\PurchaseCardRequest`
 			response.ReferenceOrderId
 			);
 	}
-	
+```
+
 Its response `$requestPurchaseCardRequest_Delivery` will now be (assuming success) a `TangoCard\Sdk\Response\Success\PurchaseCardResponse` type object.
 
 # Tango Card Error Handling #
@@ -75,6 +77,7 @@ There are also failure-case response objects. Each Request will explain (in the 
 
 A service will return the following failure responses as enumerated by `TangoCard\Sdk\Response\ServiceResponseEnum`:
 
+```xml
 <table>
 	<tr><td>Insufficient Funds</td><td>INS_FUNDS</td><td>`TangoCard\Sdk\Response\Failure\InsufficientFundsResponse`</td></tr>
 	<tr><td>Insufficient Inventory</td><td>INS_INV</td><td>`TangoCard\Sdk\Response\Failure\InsufficientInventoryResponse`</td></tr> 
@@ -82,6 +85,7 @@ A service will return the following failure responses as enumerated by `TangoCar
 	<tr><td>Invalid Input</td><td>INV_INPUT</td><td>`TangoCard\Sdk\Response\Failure\InvalidInputResponse`</td></tr>
 	<tr><td>System Failure</td><td>SYS_ERROR</td><td>`TangoCard\Sdk\Response\Failure\SystemFailureResponse`</td></tr>
 </table>
+```
 
 ![Tango Card SDK Service Response Failures](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocard_sdk_service_failure_response.png "Tango Card SDK Service Response Failures")
 
@@ -96,7 +100,7 @@ Along with standard `InvalidArgumentException` for catching parameter entry erro
 ## Handling Errors ##
 
 Wrap every Tango Card request call within a try/catch block, followed by first catching `TangoCard\Sdk\Service\TangoCardServiceException`, then by `\TangoCard\Sdk\Common\TangoCardSdkException`, and finally by standard `Exception`.
-
+```C#
 	try
 	{
 		// set up the request
@@ -130,6 +134,7 @@ Wrap every Tango Card request call within a try/catch block, followed by first c
 		Console.WriteLine("=== Unexpected Error ===");
 		Console.WriteLine("{0} :: {1}", ex.GetType().ToString(), ex.Message);
 	}
+```
 
 # SDK Structure #
 There are four directories in the SDK: `doc`, `TangoCard.Sdk.Examples`, `TangoCard.Sdk.Unittests`, and `TangoCard.Sdk`.
