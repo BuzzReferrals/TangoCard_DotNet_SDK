@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.4.0" projectFile="C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\TangoCard.Sdk.Sandcastle.shfbproj" started="7/26/2012 9:33:42 PM">
+<buildStep step="Initializing">
+</buildStep>
+<buildStep step="FindingTools">
+Finding tools...
+Found Sandcastle tools in &#39;C:\Program Files (x86)\Sandcastle\&#39;
+Searching for HTML Help 1 compiler...
+Found HTML Help 1 compiler in &#39;C:\Program Files (x86)\HTML Help Workshop\&#39;
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\TangoCard.Sdk.csproj
+    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\TangoCard.Sdk.csproj&#39;
+
+Parsing project files
+    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\bin\Debug\TangoCard_DotNet_SDK.dll&#39;
+
+References to use:
+    Newtonsoft.Json
+    System
+    System.configuration
+    System.Data
+    System.Security
+    System.Xml
+SHFB: Warning BE0062: No XML comments files found.  The help file will not contain any member comments.
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, English (United States))...
+    Last step completed in 00:00:00.0040
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  MRefBuilder (v2.7.0.0)
+  Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Loaded 1 assemblies for reflection and 7 dependency assemblies.
+  Info: Wrote information on 6 namespaces, 17 types, and 67 members
+  XslTransform (v2.7.0.0)
+  Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
+    Last step completed in 00:00:01.6451
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00.0010
+</buildStep>
+<buildStep step="ApplyVisibilityProperties">
+Applying visibility properties to reflection information file
+    25 attribute nodes removed
+    0 explicit interface implementations removed
+    0 local and base class EII elements removed
+    Last step completed in 00:00:00.1350
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  XslTransform (v2.7.0.0)
+  Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\AddGuidFilenames.xsl&#39;.
+  XslTransform (v2.7.0.0)
+  Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+    Last step completed in 00:00:01.4591
+</buildStep>
+<buildStep step="ModifyHelpTopicFilenames">
+Modifying help topic filenames in reflection information file
+    No changes required
+    Last step completed in 00:00:00.0060
+</buildStep>
+<buildStep step="CopyStandardContent">
+Copying standard help content...
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\adm.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\adm_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\adm_dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\adm_dev_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\alert_caution.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\alert_note.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\alert_security.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\big_adm.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\big_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\big_dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\big_kw.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\box.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\box.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\Caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\Caution.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\CFW.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\CFW.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\collall.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collapse.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\collapse.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collapse_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\collapse_all.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\copycode.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\copycode.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\copycodeHighlight.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\copycodeHighlight.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\dev_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dropdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\dropdown.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dropdownHover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\dropdownHover.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\drpdown.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown_orange.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\drpdown_orange.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown_orange_up.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\drpdown_orange_up.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpup.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\drpup.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\exp.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\exp.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\expall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\expall.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\expand_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\expand_all.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\filter1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\filter1a.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\filter1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\filter1c.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\footer.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\footer.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\gradient.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\gradient.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\greencheck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\greencheck.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\greychck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\greychck.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_prev_next.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\header_prev_next.jpg
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_blank.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\header_sql_tutorial_blank.jpg
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_logo.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\header_sql_tutorial_logo.GIF
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\kw.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\kw_adm.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\kw_adm_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\kw_adm_dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\kw_adm_dev_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\kw_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\kw_dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\kw_dev_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\LastChild.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\LastChild.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\load.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\load.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\load_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\load_hover.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\note.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pencil.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pencil.GIF
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privenumeration.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privextension.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\privstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protenumeration.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protextension.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protoperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protoperator.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\protstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubenumeration.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubextension.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\puboperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\puboperator.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\pubstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\requirements1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\requirements1a.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\requirements1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\requirements1c.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\save.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\save.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\save_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\save_hover.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\security.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\seealso1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\seealso1a.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\seealso1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\seealso1c.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\slMobile.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\slMobile.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\static.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\static.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\xna.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\icons\xna.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\CheckboxMenu.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\scripts\CheckboxMenu.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\CommonUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\scripts\CommonUtilities.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\Dropdown.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\scripts\Dropdown.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\EventUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\scripts\EventUtilities.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\script_feedBack.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\scripts\script_feedBack.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\scripts\script_manifold.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\scripts\SplitScreen.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\styles\Presentation.css
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\styles\Whidbey\Presentation.css
+    Last step completed in 00:00:00.2160
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+No additional content to copy
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  XslTransform (v2.7.0.0)
+  Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\CreateVSToc.xsl&#39;.
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:00.3270
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00.0030
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\sandcastle.config
+    Last step completed in 00:00:00.0760
+</buildStep>
+<buildStep step="BuildReferenceTopics">
+Building reference help topics...
+[c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  BuildAssembler (v2.7.0.0)
+  Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
+  Info: CopyFromFileComponent: Instantiating component.
+  Info: CopyFromFileComponent: Loading data file &#39;C:\Program Files (x86)\Sandcastle\Presentation\vs2005\Transforms\skeleton.xml&#39;.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Searching for files that match &#39;*.xml&#39; in &#39;C:\Program Files (x86)\Sandcastle\Data\Reflection&#39;.
+  Info: CopyFromIndexComponent: Searching for files that match &#39;reflection.xml&#39;.
+  Info: CopyFromIndexComponent: Indexed 194825 elements in 420 files.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Instantiating component.
+  Info: ForEachComponent: Loading subcomponents.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Loaded 1 subcomponents.
+  Info: ForEachComponent: Instantiating component.
+  Info: ForEachComponent: Loading subcomponents.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Loaded 1 subcomponents.
+  Info: ForEachComponent: Instantiating component.
+  Info: ForEachComponent: Loading subcomponents.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Loaded 1 subcomponents.
+  Info: ForEachComponent: Instantiating component.
+  Info: ForEachComponent: Loading subcomponents.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Loaded 1 subcomponents.
+  Info: ForEachComponent: Instantiating component.
+  Info: ForEachComponent: Loading subcomponents.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Loaded 1 subcomponents.
+  Info: ForEachComponent: Instantiating component.
+  Info: ForEachComponent: Loading subcomponents.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Loaded 1 subcomponents.
+  Info: ForEachComponent: Instantiating component.
+  Info: ForEachComponent: Loading subcomponents.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Loaded 1 subcomponents.
+  Info: IfThenComponent: Instantiating component.
+  Info: SyntaxComponent: Instantiating component.
+  Info: SyntaxComponent: Loaded 3 syntax generators.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Searching for files that match &#39;*.xml&#39; in &#39;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0&#39;.
+  Info: CopyFromIndexComponent: Searching for files that match &#39;*.xml&#39; in &#39;C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\2.0\Runtime\v4.0&#39;.
+  Info: CopyFromIndexComponent: Searching for files that match &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\_ProjNS_.xml&#39;.
+  Info: CopyFromIndexComponent: Indexed 145416 elements in 128 files.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Instantiating component.
+  Info: ForEachComponent: Loading subcomponents.
+  Info: IfThenComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ForEachComponent: Loaded 2 subcomponents.
+  Info: CopyFromIndexComponent: Instantiating component.
+  Info: CopyFromIndexComponent: Loaded 0 copy components.
+  Info: ShowMissingComponent: Instantiating component.
+  Info: ShowMissingComponent: 
+      [Sandcastle Help File Builder, version 1.9.4.0]
+      Show Missing Documentation Component. Copyright c 2006-2012, Eric Woodruff, All Rights Reserved
+      http://SHFB.CodePlex.com
+  Info: VersionInfoComponent: Instantiating component.
+  Info: VersionInfoComponent: 
+      [Sandcastle Help File Builder, version 1.9.4.0]
+      Version Information Component. Copyright c 2006-2012, Eric Woodruff, All Rights Reserved
+      http://SHFB.CodePlex.com
+  Info: CodeBlockComponent: Instantiating component.
+  Info: CodeBlockComponent: 
+      [Sandcastle Help File Builder, version 1.9.4.0]
+      Code Block Component. Copyright c 2006-2012, Eric Woodruff, All Rights Reserved.
+      Portions copyright (c) 2003, Jonathan de Halleux, All rights reserved.
+      http://SHFB.CodePlex.com
+  Info: TransformComponent: Instantiating component.
+  Info: PostTransformComponent: Instantiating component.
+  Info: PostTransformComponent: 
+      [Sandcastle Help File Builder, version 1.9.4.0]
+      Post-Transform Component. Copyright c 2006-2012, Eric Woodruff, All Rights Reserved
+      http://SHFB.CodePlex.com
+  Info: MultiFormatOutputComponent: Instantiating component.
+  Info: MultiFormatOutputComponent: 
+      [Sandcastle Help File Builder, version 1.9.4.0]
+      Multi-Format Output Component. Copyright c 2006-2012, Eric Woodruff, All Rights Reserved
+      http://SHFB.CodePlex.com
+  Info: MultiFormatOutputComponent: Loading components for HtmlHelp1 format
+  Info: SharedContentComponent: Instantiating component.
+  Info: SharedContentComponent: Searching for files that match &#39;C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\shared_content.xml&#39;.
+  Info: SharedContentComponent: Loading shared content file &#39;C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\shared_content.xml&#39;.
+  Info: SharedContentComponent: Found 1 files in C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\shared_content.xml.
+  Info: SharedContentComponent: Searching for files that match &#39;C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\reference_content.xml&#39;.
+  Info: SharedContentComponent: Loading shared content file &#39;C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\reference_content.xml&#39;.
+  Info: SharedContentComponent: Found 1 files in C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\reference_content.xml.
+  Info: SharedContentComponent: Searching for files that match &#39;C:\Program Files (x86)\Sandcastle\Presentation\shared\content\syntax_content.xml&#39;.
+  Info: SharedContentComponent: Loading shared content file &#39;C:\Program Files (x86)\Sandcastle\Presentation\shared\content\syntax_content.xml&#39;.
+  Info: SharedContentComponent: Found 1 files in C:\Program Files (x86)\Sandcastle\Presentation\shared\content\syntax_content.xml.
+  Info: SharedContentComponent: Searching for files that match &#39;C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\feedback_content.xml&#39;.
+  Info: SharedContentComponent: Loading shared content file &#39;C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\feedBack_content.xml&#39;.
+  Info: SharedContentComponent: Found 1 files in C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\feedback_content.xml.
+  Info: SharedContentComponent: Searching for files that match &#39;SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Loading shared content file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;roottopictitle&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;runningheadertext&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;locationinformation&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;assemblynameandmodule&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;copycode&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;locale&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Found 1 files in SharedBuilderContent.xml.
+  Info: SharedContentComponent: Searching for files that match &#39;PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Loading shared content file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;header&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;footer&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_alias&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_product&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_body&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_send&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_headerfeedback&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;feedback_alias&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;feedback_product&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;feedback_body&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Found 1 files in PresentationStyleBuilderContent.xml.
+  Info: SharedContentComponent: Loaded 641 shared content items.
+  Info: ResolveConceptualLinksComponent: Instantiating component.
+  Info: ResolveConceptualLinksComponent: Collected 1 targets directories.
+  Info: ResolveReferenceLinksComponent2: Instantiating component.
+  Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
+  Info: ResolveReferenceLinksComponent2: Searching directory &#39;C:\Program Files (x86)\Sandcastle\Data\Reflection&#39; for targets files of the form &#39;*.xml&#39;.
+  Info: ResolveReferenceLinksComponent2: Searching directory &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working&#39; for targets files of the form &#39;reflection.xml&#39;.
+  Info: ResolveReferenceLinksComponent2: Loaded 194825 reference targets.
+  Info: SaveComponent: Instantiating component.
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Common
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:TangoCard.Sdk.Common
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Common.TangoCardSdkException
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Common.TangoCardSdkException
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Common.TangoCardSdkException
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Common.TangoCardSdkException
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Common.TangoCardSdkException
+  Info: BuildAssembler: Building topic Events.T:TangoCard.Sdk.Common.TangoCardSdkException
+  Info: BuildAssembler: Building topic Overload:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;si&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;sc&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String)
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;message&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String)
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String,System.Exception)
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String,System.Exception)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;message&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String,System.Exception)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;innerException&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String,System.Exception)
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Request
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:TangoCard.Sdk.Request
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Request.BaseRequest
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Request.BaseRequest
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Request.BaseRequest
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Request.BaseRequest.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Request.BaseRequest
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Request.BaseRequest
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Request.BaseRequest.#ctor(System.Boolean,System.String,System.String)
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Request.BaseRequest.#ctor(System.Boolean,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;isProductionMode&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.#ctor(System.Boolean,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;username&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.#ctor(System.Boolean,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;password&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.#ctor(System.Boolean,System.String,System.String)
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
+  Warn: ShowMissingComponent: Missing &lt;typeparam name=&quot;T&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.BaseRequest.IsProductionMode
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.BaseRequest.IsProductionMode
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.BaseRequest.Password
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.BaseRequest.Password
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.BaseRequest.RequestAction
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.BaseRequest.RequestAction
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.BaseRequest.Username
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.BaseRequest.Username
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Request.GetAvailableBalanceRequest
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Request.GetAvailableBalanceRequest
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Request.GetAvailableBalanceRequest
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Request.GetAvailableBalanceRequest
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Request.GetAvailableBalanceRequest
+  Info: BuildAssembler: Building topic Overload:TangoCard.Sdk.Request.GetAvailableBalanceRequest.Execute
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.#ctor(System.Boolean,System.String,System.String)
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.#ctor(System.Boolean,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;isProductionMode&quot;/&gt; documentation for M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.#ctor(System.Boolean,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;username&quot;/&gt; documentation for M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.#ctor(System.Boolean,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;password&quot;/&gt; documentation for M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.#ctor(System.Boolean,System.String,System.String)
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.Execute(TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.Execute(TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.Execute(TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.Request.GetAvailableBalanceRequest.Execute(TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.GetAvailableBalanceRequest.RequestAction
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.GetAvailableBalanceRequest.RequestAction
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Request.PurchaseCardRequest
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Request.PurchaseCardRequest
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Request.PurchaseCardRequest
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Request.PurchaseCardRequest
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Request.PurchaseCardRequest
+  Info: BuildAssembler: Building topic Overload:TangoCard.Sdk.Request.PurchaseCardRequest.Execute
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;isProductionMode&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;username&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;password&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;cardSku&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;cardValue&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;tcSend&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;recipientName&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;recipientEmail&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;giftMessage&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;giftFrom&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.#ctor(System.Boolean,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String)
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.PurchaseCardRequest.CardSku
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.PurchaseCardRequest.CardSku
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.PurchaseCardRequest.CardValue
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.PurchaseCardRequest.CardValue
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Request.PurchaseCardRequest.Execute(TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.Execute(TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.Execute(TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.Request.PurchaseCardRequest.Execute(TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.PurchaseCardRequest.GiftFrom
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.PurchaseCardRequest.GiftFrom
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.PurchaseCardRequest.GiftMessage
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.PurchaseCardRequest.GiftMessage
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.PurchaseCardRequest.RecipientEmail
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.PurchaseCardRequest.RecipientEmail
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.PurchaseCardRequest.RecipientName
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.PurchaseCardRequest.RecipientName
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.PurchaseCardRequest.RequestAction
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.PurchaseCardRequest.RequestAction
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.PurchaseCardRequest.TcSend
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.PurchaseCardRequest.TcSend
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Response
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:TangoCard.Sdk.Response
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.BaseResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.BaseResponse
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.ServiceResponse`1
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.ServiceResponse`1
+  Warn: ShowMissingComponent: Missing &lt;typeparam name=&quot;T&quot;/&gt; documentation for T:TangoCard.Sdk.Response.ServiceResponse`1
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.ServiceResponse`1
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.ServiceResponse`1.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.ServiceResponse`1
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.ServiceResponse`1
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.ServiceResponse`1.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.ServiceResponse`1.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.ServiceResponse`1.Response
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.ServiceResponse`1.Response
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.ServiceResponse`1.ResponseType
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.ServiceResponse`1.ResponseType
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.ServiceResponseEnum
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.ServiceResponseEnum
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Response.Failure
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:TangoCard.Sdk.Response.Failure
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.FailureResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.FailureResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.FailureResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.FailureResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.FailureResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Failure.FailureResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.FailureResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.FailureResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.FailureResponse.Message
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.FailureResponse.Message
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.FailureResponse.ToString
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.Response.Failure.FailureResponse.ToString
+  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:TangoCard.Sdk.Response.Failure.FailureResponse.ToString
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.AvailableBalance
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.AvailableBalance
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.Message
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.Message
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.OrderCost
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.OrderCost
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Message
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Message
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Sku
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Sku
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Value
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Value
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.Message
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.Message
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InvalidInputResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.InvalidInputResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InvalidInputResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InvalidInputResponse.Invalid
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InvalidInputResponse.Invalid
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InvalidInputResponse.Message
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InvalidInputResponse.Message
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.SystemFailureResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.SystemFailureResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.SystemFailureResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.SystemFailureResponse.ErrorCode
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.SystemFailureResponse.ErrorCode
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.SystemFailureResponse.Message
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.SystemFailureResponse.Message
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Response.Success
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:TangoCard.Sdk.Response.Success
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.AvailableBalance
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.AvailableBalance
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.PurchaseCardResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Success.PurchaseCardResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.PurchaseCardResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardNumber
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardNumber
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardPin
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardPin
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardToken
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardToken
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.ReferenceOrderId
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.ReferenceOrderId
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Success.SuccessResponse
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Success.SuccessResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Success.SuccessResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.SuccessResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Success.SuccessResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Success.SuccessResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.SuccessResponse.#ctor
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Service
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for N:TangoCard.Sdk.Service
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Service.TangoCardServiceException
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Service.TangoCardServiceException
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Service.TangoCardServiceException
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Service.TangoCardServiceException
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Service.TangoCardServiceException
+  Info: BuildAssembler: Building topic Events.T:TangoCard.Sdk.Service.TangoCardServiceException
+  Info: BuildAssembler: Building topic Overload:TangoCard.Sdk.Service.TangoCardServiceException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse)
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;responseType&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse)
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;responseType&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;message&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Service.TangoCardServiceException.Message
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Service.TangoCardServiceException.Message
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Service.TangoCardServiceException.Response
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Service.TangoCardServiceException.Response
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Service.TangoCardServiceException.ResponseType
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Service.TangoCardServiceException.ResponseType
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Service.TangoCardServiceException.ThrowOnError(System.String,Newtonsoft.Json.JsonSerializerSettings)
+  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.ThrowOnError(System.String,Newtonsoft.Json.JsonSerializerSettings)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;responseJsonEncoded&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.ThrowOnError(System.String,Newtonsoft.Json.JsonSerializerSettings)
+  Warn: ShowMissingComponent: Missing &lt;param name=&quot;jsonSettings&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.ThrowOnError(System.String,Newtonsoft.Json.JsonSerializerSettings)
+  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;.
+  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;.
+  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;.
+  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;.
+  Info: Processed 132 topics
+    Last step completed in 00:00:35.9351
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00.0040
+</buildStep>
+<buildStep step="ExtractingHtmlInfo">
+Extracting HTML info for HTML Help 1 and/or website...
+[c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+Sandcastle Help File Builder, version 1.9.4.0
+Copyright c 2006-2012, Eric Woodruff, All Rights Reserved
+E-Mail: Eric@EWoodruff.us
+
+Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
+
+Processing Help 1 files in C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1
+Processed 132 HTML files
+Sorting keywords and generating See Also indices
+Saving HTML Help 1 keyword index to C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\TangoCard.Sdk.Sandcastle.hhk
+Saving HTML Help 1 table of contents to C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\TangoCard.Sdk.Sandcastle.hhc
+    Last step completed in 00:00:00.3530
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Generating HTML Help 1 table of contents file...
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="GenerateHelpFileIndex">
+Generating HTML Help 1 index file...
+    Last step completed in 00:00:00.0000
+</buildStep>
+<buildStep step="GenerateHelpProject">
+Generating HTML Help 1 project file...
+    Last step completed in 00:00:00.0040
+</buildStep>
+<buildStep step="CompilingHelpFile">
+Compiling HTML Help 1 file...
+[c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
+  Microsoft HTML Help Compiler 4.74.8702
+  
+  
+  
+  Compiling c:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\TangoCard.Sdk.Sandcastle.chm
+  
+  
+  
+  
+  
+  Compile time: 0 minutes, 1 second
+  
+  134	Topics
+  
+  1,693	Local links
+  
+  935	Internet links
+  
+  0	Graphics
+  
+  
+  
+  
+  
+  Created c:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Sandcastle\Help\Working\Output\HtmlHelp1\TangoCard.Sdk.Sandcastle.chm, 285,200 bytes
+  
+  Compression decreased file by 1,720,301 bytes.
+  
+    Last step completed in 00:00:02.6061
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00.1050
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 07/26/2012 09:34 PM.  Total time: 00:00:42.9945
+
+</buildStep>
+</shfbBuild>
