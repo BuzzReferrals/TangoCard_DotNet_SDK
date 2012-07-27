@@ -19,8 +19,26 @@
     <HtmlHelpName>TangoCard.Sdk.Sandcastle</HtmlHelpName>
     <Language>en-US</Language>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\TangoCard.Sdk\TangoCard.Sdk.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\TangoCard.Sdk\TangoCard.Sdk.csproj" />
+      <DocumentationSource sourceFile="..\TangoCard.Sdk.Unittests\TangoCard.Sdk.Unittests.csproj" />
+      <DocumentationSource sourceFile="..\TangoCard.Sdk.Examples\TangoCard.Sdk.Examples.csproj" />
     </DocumentationSources>
+    <BuildAssemblerVerbosity>AllMessages</BuildAssemblerVerbosity>
+    <HelpFileFormat>Website</HelpFileFormat>
+    <IndentHtml>False</IndentHtml>
+    <FrameworkVersion>.NET 4.0.30319</FrameworkVersion>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <CleanIntermediates>True</CleanIntermediates>
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <PresentationStyle>vs2010</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>TangoCard_DotNet_SDK Documentation</HelpTitle>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in
        order for Visual Studio to perform the build.  The others are optional
