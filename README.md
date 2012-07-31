@@ -58,7 +58,7 @@ This request is defined by static method call `TangoCard.Sdk.TangoCardServiceApi
 	}	
 ```
 
-The `out` parameter `responseGetAvailableBalance` will now be (assuming success) a `TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse` type object.
+Assuming success, the `out` parameter `response` will be an instance of `TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse`.
 
 ### static method `TangoCard.Sdk.TangoCardServiceApi.GetAvailableBalance()` ###
 
@@ -74,7 +74,7 @@ The `out` parameter `responseGetAvailableBalance` will now be (assuming success)
   <dd>- User password, and the SDK Integration test password is defined in TangoCard.Sdk.Examples' configuration file *app.config* within *app_password*</dd>
 
   <dt>TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse response</dt>
-  <dd>- This `out` parameter will provide a valid success response object if this method returns true upon success.</dd>
+  <dd>- This <i>out</i> parameter will provide a valid success response object if this method returns true upon success.</dd>
 </dl>
 
 ### `TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse` Properties ###
@@ -121,7 +121,7 @@ This request is defined by static method call `TangoCard.Sdk.TangoCardServiceApi
 	}
 ```
 
-Its response `$requestPurchaseCardRequest_Delivery` will now be (assuming success) a `TangoCard.Sdk.Response.Success.PurchaseCardResponse` type object.
+Assuming success, the `out` parameter `response` will be an instance of `TangoCard.Sdk.Response.Success.PurchaseCardResponse`.
 
 ### `TangoCard.Sdk.TangoCardServiceApi.PurchaseCard()` Method ###
 
@@ -159,7 +159,7 @@ Its response `$requestPurchaseCardRequest_Delivery` will now be (assuming succes
   <dd>- Full name of giver of gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
 
   <dt>TangoCard.Sdk.Response.Success.PurchaseCardResponse response</dt>
-  <dd>- This `out` parameter will provide a valid success response object if this method returns true upon success.</dd>
+  <dd>- This <i>out</i> parameter will provide a valid success response object if this method returns true upon success.</dd>
 </dl>
 
 ### `TangoCard.Sdk.Response.Success.PurchaseCardResponse` Properties ###
