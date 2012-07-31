@@ -73,7 +73,7 @@ The `out` parameter `responseGetAvailableBalance` will now be (assuming success)
   <dd>- User password, and the SDK Integration test password is defined in TangoCard.Sdk.Examples' configuration file *app.config* within *app_password*</dd>
 
   <dt>TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse response</dt>
-  <dd>- This `out` paramter will provide a valid success response object if this method returns true upon success.</dd>
+  <dd>- This `out` parameter will provide a valid success response object if this method returns true upon success.</dd>
 </dl>
 
 ### `TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse` Properties ###
@@ -158,7 +158,7 @@ Its response `$requestPurchaseCardRequest_Delivery` will now be (assuming succes
   <dd>- Full name of giver of gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
 
   <dt>TangoCard.Sdk.Response.Success.PurchaseCardResponse response</dt>
-  <dd>- This out paramter will provide a valid success response object if this method returns true upon success.</dd>
+  <dd>- This `out` parameter will provide a valid success response object if this method returns true upon success.</dd>
 </dl>
 
 ### `TangoCard.Sdk.Response.Success.PurchaseCardResponse` Properties ###
@@ -291,8 +291,19 @@ This .NET 4.0 SDK was built using:
 * .NET 4.0
 * NuGET Newtonsoft.JSON
 
-# SDK Structure #
-There are four directories in the SDK: `doc`, `TangoCard.Sdk.Examples`, `TangoCard.Sdk.Unittests`, `TangoCard.Sdk`, and key `configuration files`.
+# .NET 4.0 SDK Structure #
+The contents of this .NET 4.0 SDK are:
+
+* _configuration files_
+	+ TangoCard.Sdk.Examples\app.config
+	+ TangoCard.Sdk.Unittests\app.config
+	+ TangoCard.Sdk\TangoCard_DotNet_SDK.dll.config
+* doc
+    + images
+    + help
+* TangoCard.Sdk.Examples 
+* TangoCard.Sdk.Unittests 
+* TangoCard.Sdk
 
 
 
@@ -312,7 +323,7 @@ There a several configuration files that are referenced by either the provide ap
 </dl>
 
 ## doc ##
-The docs sub-directory maintains the up-to-date documentation for the classes (and functions) that are included in the SDK.
+The `doc\help` sub-directory maintains the up-to-date documentation for the classes (and functions) that are included in the SDK.
 
 ## TangoCard.Sdk.Examples ##
 The examples sub-directory contains full "start to finish" examples of all of the supported methods. This includes catching all of the possible failure modes, etc. 
