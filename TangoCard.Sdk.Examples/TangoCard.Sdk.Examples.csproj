@@ -68,12 +68,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TangoCard.Sdk\TangoCard.Sdk.csproj">
-      <Project>{49040311-3BB2-4B9E-9F4D-B8A9629B694D}</Project>
-      <Name>TangoCard.Sdk</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
@@ -94,6 +88,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TangoCard.Sdk\TangoCard.Sdk.csproj">
+      <Project>{49040311-3BB2-4B9E-9F4D-B8A9629B694D}</Project>
+      <Name>TangoCard.Sdk</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

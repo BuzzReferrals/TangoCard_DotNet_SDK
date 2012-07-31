@@ -52,14 +52,14 @@
     <Compile Include="UnitTest_PurchaseCard.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\TangoCard.Sdk\TangoCard.Sdk.csproj">
       <Project>{49040311-3BB2-4B9E-9F4D-B8A9629B694D}</Project>
       <Name>TangoCard.Sdk</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

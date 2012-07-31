@@ -1,7 +1,0 @@
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\bin\Debug\TangoCard_DotNet_SDK.dll.config
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\bin\Debug\TangoCard_DotNet_SDK.dll
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\bin\Debug\TangoCard_DotNet_SDK.pdb
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\bin\Debug\Newtonsoft.Json.dll
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\obj\Debug\ResolveAssemblyReference.cache
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\obj\Debug\TangoCard_DotNet_SDK.dll
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\obj\Debug\TangoCard_DotNet_SDK.pdb
