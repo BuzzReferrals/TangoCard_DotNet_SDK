@@ -16,8 +16,9 @@ The wrapper class `TangoCard.Sdk.TangoCardServiceApi` currently handles the foll
 ![Tango Card Service Api](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocardserviceapi.png "Tango Card Service Api")
 
 # Requirements #
-[Visual Studio 2010](http://www.microsoft.com/visualstudio/en-us/products/2010-editions)  
-[Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)  
+* [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
+* [Visual Studio 2010](http://www.microsoft.com/visualstudio/en-us/products/2010-editions)  
+* [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)  
 
 # Tango Card Service Requests #
 
@@ -287,9 +288,9 @@ Wrap every Tango Card request call within a try/catch block, followed by first c
 # .NET 4.0 SDK Development Environment #
 This .NET 4.0 SDK was built using:
 
-* Visual Studio 2010 Ultimate
-* .NET 4.0
-* NuGET Newtonsoft.JSON
+* [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
+* [Visual Studio 2010 Ultimate](http://www.microsoft.com/visualstudio/en-us/products/2010-editions/ultimate/overview)
+* [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)  
 
 # .NET 4.0 SDK Structure #
 The contents of this .NET 4.0 SDK are:
