@@ -77,11 +77,10 @@ namespace TangoCard.Sdk.Examples
         {
             Console.WriteLine("== Using app.config Credentials ====\n");
 
-            string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
-            bool is_production_mode = false;
-            Boolean.TryParse(app_production_mode, out is_production_mode);
+            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum) Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
 
-           string username = "test@test.com";
+           string username = "burt@example.com";
            string password = "password";
 
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -89,14 +88,12 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Get Available Balance ========");
 
-                var request = new GetAvailableBalanceRequest
-                (
-                    isProductionMode: is_production_mode,
-                    username: username,
-                    password: password
-                );
                 GetAvailableBalanceResponse response = null;
-                if (request.Execute(ref response) && (null != response))
+                if (TangoCardServiceApi.GetAvailableBalance(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: username,
+                        password: password,
+                        response: out response) && (null != response))
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("=== Expected failure ===");
@@ -137,9 +134,8 @@ namespace TangoCard.Sdk.Examples
         {
             Console.WriteLine("== Using app.config Credentials ====\n");
 
-            string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
-            bool is_production_mode = false;
-            Boolean.TryParse(app_production_mode, out is_production_mode);
+            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
 
             string username = "empty@tangocard.com";
             string password = "password";
@@ -149,19 +145,22 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Purchase Card ========");
 
-                var request = new PurchaseCardRequest
-                (
-                    isProductionMode: is_production_mode,
-                    username: username,
-                    password: password,
-                    cardSku: "tango-card",
-                    cardValue: 100,    // $1.00 value
-                    tcSend: false
-                );
-
                 PurchaseCardResponse response = null;
-                if (request.Execute(ref response) && (null != response))
-                {
+                if (TangoCardServiceApi.PurchaseCard(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: username,
+                        password: password,
+                        cardSku: "tango-card",
+                        cardValue: 100,    // $1.00 value
+                        tcSend: false,
+                        recipientName: null,
+                        recipientEmail: null,
+                        giftFrom: null,
+                        giftMessage: null,
+                        response: out response
+                    )  
+                    && (null != response)
+                ) {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("=== Expected failure ===");
                     Console.ForegroundColor = ConsoleColor.Cyan;
@@ -203,9 +202,8 @@ namespace TangoCard.Sdk.Examples
 
         static public void Example_PurchaseCard_InvalidInput_Sku()
         {
-            string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
-            bool is_production_mode = false;
-            Boolean.TryParse(app_production_mode, out is_production_mode);
+            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
 
             string app_username = ConfigurationManager.AppSettings["app_username"];
             string app_password = ConfigurationManager.AppSettings["app_password"];
@@ -215,19 +213,22 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Purchase Card ========");
 
-                var request = new PurchaseCardRequest
-                (
-                    isProductionMode: is_production_mode,
-                    username: app_username,
-                    password: app_password,
-                    cardSku: "mango-card",
-                    cardValue: 100,    // $1.00 value
-                    tcSend: false
-                );
-
                 PurchaseCardResponse response = null;
-                if (request.Execute(ref response) && (null != response))
-                {
+                if (TangoCardServiceApi.PurchaseCard(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: app_username,
+                        password: app_password,
+                        cardSku: "mango-card",
+                        cardValue: 100,    // $1.00 value
+                        tcSend: false,
+                        giftFrom: null,
+                        giftMessage: null,
+                        recipientEmail: null,
+                        recipientName: null,
+                        response: out response
+                    )
+                    && (null != response)
+                ) {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("=== Expected failure ===");
                     Console.ForegroundColor = ConsoleColor.Cyan;
@@ -272,9 +273,8 @@ namespace TangoCard.Sdk.Examples
 
             int cardValue = 1000000000; // $10000000.00
 
-            string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
-            bool is_production_mode = false;
-            Boolean.TryParse(app_production_mode, out is_production_mode);
+            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
 
             string app_username = ConfigurationManager.AppSettings["app_username"];
             string app_password = ConfigurationManager.AppSettings["app_password"];
@@ -284,18 +284,22 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Purchase Card ========");
 
-                var request = new PurchaseCardRequest
-                (
-                    isProductionMode: is_production_mode,
-                    username: app_username,
-                    password: app_password,
-                    cardSku: "tango-card",
-                    cardValue: cardValue,
-                    tcSend: false
-                );
-
                 PurchaseCardResponse response = null;
-                if (request.Execute(ref response) && (null != response))
+                if (TangoCardServiceApi.PurchaseCard(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: app_username,
+                        password: app_password,
+                        cardSku: "tango-card",
+                        cardValue: cardValue,
+                        tcSend: false,
+                        giftFrom: null,
+                        giftMessage: null,
+                        recipientEmail: null,
+                        recipientName: null,
+                        response: out response
+                    )
+                    && (null != response)
+                )
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("=== Expected failure ===");

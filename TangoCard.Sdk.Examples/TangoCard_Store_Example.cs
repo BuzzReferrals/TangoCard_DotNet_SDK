@@ -54,9 +54,8 @@ namespace TangoCard.Sdk.Examples
 
             Console.WriteLine("== Using app.config Credentials ====\n");
 
-            string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
-            bool is_production_mode = false;
-            Boolean.TryParse(app_production_mode, out is_production_mode);
+            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
 
             string app_username = ConfigurationManager.AppSettings["app_username"];
             string app_password = ConfigurationManager.AppSettings["app_password"];
@@ -66,15 +65,14 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Get Available Balance ========");
 
-                var request = new GetAvailableBalanceRequest
-                (
-                    isProductionMode: is_production_mode,
-                    username: app_username,
-                    password: app_password
-                );
                 GetAvailableBalanceResponse response = null;
-                if (request.Execute(ref response) && (null != response))
-                {
+                if (TangoCardServiceApi.GetAvailableBalance(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: app_username,
+                        password: app_password,
+                        response: out response) 
+                        && (null != response)
+                ) {
                     Console.ForegroundColor = ConsoleColor.Green;
                     double dollarsAvailableBalance = response.AvailableBalance / 100;
                     Console.WriteLine("\n- Available Balance: {0:C}\n", dollarsAvailableBalance);
@@ -97,7 +95,7 @@ namespace TangoCard.Sdk.Examples
 
             Console.WriteLine("===== End Get Available Balance ====\n\n\n");
 
-            int cardValue = 100; // $1.00 
+            int cardValueTangoCardCents = 100; // $1.00 
 
             // Test Purchase Card no delivery
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -105,18 +103,22 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("===== Purchase Card (No Delivery) =====");
 
-                var request = new PurchaseCardRequest
-                (
-                    isProductionMode: is_production_mode,
-                    username: app_username,
-                    password: app_password,
-                    cardSku: "tango-card",
-                    cardValue: cardValue,    // $1.00 value
-                    tcSend: false
-                );
                 PurchaseCardResponse response = null;
-                if (request.Execute(ref response) && (null != response))
-                {
+                if (TangoCardServiceApi.PurchaseCard(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: app_username,
+                        password: app_password,
+                        cardSku: "tango-card",
+                        cardValue: cardValueTangoCardCents,
+                        tcSend: false,
+                        recipientName: null,
+                        recipientEmail: null,
+                        giftFrom: null,
+                        giftMessage: null,
+                        response: out response
+                    )  
+                    && (null != response)
+                ) {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("\n- Purchased Card (No Delivery): {{ \nCard Number: {0}, \nCard Pin: {1}, \nCard Token {2}, \nOrder Number: {3} \n}}\n",
                         response.CardNumber,
@@ -149,23 +151,22 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Purchase Card (Delivery) ========");
 
-                var request = new PurchaseCardRequest
-                (
-                    isProductionMode: is_production_mode,
-                    username: app_username,
-                    password: app_password,
-                    cardSku: "tango-card",
-                    cardValue: cardValue,    // $1.00 value
-                    tcSend: true,
-                    giftFrom: "Bill Test Giver",
-                    giftMessage: "Happy Birthday",
-                    recipientEmail: "sue_test_recipient@test.com",
-                    recipientName: "Sue Test Recipient"
-                );
-
                 PurchaseCardResponse response = null;
-                if (request.Execute(ref response) && (null != response))
-                {
+                if (TangoCardServiceApi.PurchaseCard(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: app_username,
+                        password: app_password,
+                        cardSku: "tango-card",
+                        cardValue: cardValueTangoCardCents,
+                        tcSend: true,
+                        giftFrom: "Bill Example",
+                        giftMessage: "Happy Birthday",
+                        recipientEmail: "sally@example.com",
+                        recipientName: "Sally Example",
+                        response: out response
+                    )
+                    && (null != response)
+                ) {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("\n- Purchased Card (Delivery): {{ \nCard Number: {0}, \nCard Pin: {1}, \nCard Token {2}, \nOrder Number: {3} \n}}\n",
                         response.CardNumber,
@@ -197,14 +198,12 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Get Updated Available Balance ========");
 
-                var request = new GetAvailableBalanceRequest
-                (
-                    isProductionMode: is_production_mode,
-                    username: app_username,
-                    password: app_password
-                );
                 GetAvailableBalanceResponse response = null;
-                if (request.Execute(ref response) && (null != response))
+                if (TangoCardServiceApi.GetAvailableBalance(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: app_username,
+                        password: app_password,
+                        response: out response) && (null != response))
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     double dollarsAvailableBalance = response.AvailableBalance / 100;

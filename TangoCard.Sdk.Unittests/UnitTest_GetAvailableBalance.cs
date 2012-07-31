@@ -54,7 +54,7 @@ namespace TangoCard.Sdk.Unittests
     {
         private string _app_username = null;
         private string _app_password = null;
-        private bool _is_production_mode = false;
+        private TangoCardServiceApiEnum _enumTangoCardServiceApi = TangoCardServiceApiEnum.UNDEFINED;
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the available balance unit test initialize. </summary>
@@ -66,30 +66,57 @@ namespace TangoCard.Sdk.Unittests
             this._app_username = ConfigurationManager.AppSettings["app_username"];
             this._app_password = ConfigurationManager.AppSettings["app_password"];
 
-            string app_production_mode = ConfigurationManager.AppSettings["app_production_mode"];
-            this._is_production_mode = false;
-            Boolean.TryParse(app_production_mode, out this._is_production_mode);
+            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
+            this._enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Tests available balance. </summary>
+        /// <summary>   Tests get available balance api. </summary>
+        ///
+        /// <remarks>   Jeff, 7/30/2012. </remarks>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
-        public void Test_GetAvailableBalance_Config()
+        public void Test_GetAvailableBalance_Api()
         {
             bool isSuccess = false;
             GetAvailableBalanceResponse response = null;
             try
             {
-                var request = new GetAvailableBalanceRequest
-                (
-                    isProductionMode: this._is_production_mode,
+                isSuccess = TangoCardServiceApi.GetAvailableBalance(
+                    enumTangoCardServiceApi: this._enumTangoCardServiceApi,
                     username: this._app_username,
-                    password: this._app_password
-                );
+                    password: this._app_password,
+                    response: out response
+                    );
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(message: ex.Message);
+            }
 
-                isSuccess = request.Execute(ref response);
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)response).AvailableBalance >= 0);
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Tests get available balance request. </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [TestMethod]
+        public void Test_GetAvailableBalance_Request()
+        {
+            bool isSuccess = false;
+            GetAvailableBalanceResponse response = null;
+            try
+            {
+                isSuccess = TangoCardServiceApi.GetAvailableBalance(
+                        enumTangoCardServiceApi: this._enumTangoCardServiceApi,
+                        username: this._app_username,
+                        password: this._app_password,
+                        response: out response);
             }
             catch (Exception ex)
             {
@@ -113,14 +140,11 @@ namespace TangoCard.Sdk.Unittests
             GetAvailableBalanceResponse response = null;
             try
             {
-                var request = new GetAvailableBalanceRequest
-                (
-                    isProductionMode: this._is_production_mode,
-                    username: "test@test.com",
-                    password: "password"
-                );
-
-                isSuccess = request.Execute(ref response);
+                isSuccess = TangoCardServiceApi.GetAvailableBalance(
+                        enumTangoCardServiceApi: this._enumTangoCardServiceApi,
+                        username: "burt@example.com",
+                        password: "password",
+                        response: out response);
 
                 Assert.Fail(message: "Expected 'ServiceException' thrown");
             }
@@ -150,14 +174,11 @@ namespace TangoCard.Sdk.Unittests
             GetAvailableBalanceResponse response = null;
             try
             {
-                var request = new GetAvailableBalanceRequest
-                (
-                    isProductionMode: this._is_production_mode,
-                    username: "empty@tangocard.com",
-                    password: "password"
-                );
-
-                isSuccess = request.Execute(ref response);
+                isSuccess = TangoCardServiceApi.GetAvailableBalance(
+                        enumTangoCardServiceApi: this._enumTangoCardServiceApi,
+                        username: "empty@tangocard.com",
+                        password: "password",
+                        response: out response);
             }
             catch (TangoCardServiceException ex)
             {

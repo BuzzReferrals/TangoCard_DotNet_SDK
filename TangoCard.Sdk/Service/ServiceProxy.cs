@@ -59,6 +59,12 @@ namespace TangoCard.Sdk.Service
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
+        /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
+        ///                                             null. </exception>
+        /// <exception cref="TangoCardSdkException">    Thrown when a tango card sdk error condition
+        ///                                             occurs. </exception>
+        /// <exception cref="Exception">                Thrown when an exception error condition occurs. </exception>
+        ///
         /// <param name="requestObject">    The request object. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -74,9 +80,25 @@ namespace TangoCard.Sdk.Service
 
                 string version = appConfig["tc_sdk_version"];
 
-                this._base_url = requestObject.IsProductionMode
-                    ? appConfig["tc_sdk_environment_production_url"]
-                    : appConfig["tc_sdk_environment_integration_url"];
+                this._base_url = null;
+                switch (requestObject.TangoCardServiceApi)
+                {
+                    case TangoCardServiceApiEnum.INTEGRATION:
+                        this._base_url = appConfig["tc_sdk_environment_integration_url"];
+                        break;
+
+                    case TangoCardServiceApiEnum.PRODUCTION:
+                        this._base_url = appConfig["tc_sdk_environment_production_url"];
+                        break;
+
+                    default:
+                        throw new TangoCardSdkException(message: "Unexpected Tango Card Service API request: " + requestObject.TangoCardServiceApi.ToString());
+                }
+
+                if (null == this._base_url)
+                {
+                    throw new TangoCardSdkException(message: "Tango Card Service API URL was not assigned.");
+                }
 
                 this._controller = appConfig["tc_sdk_controller"];
 
@@ -213,7 +235,7 @@ namespace TangoCard.Sdk.Service
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public bool ExecuteRequest<T>(ref T response) where T : BaseResponse
+        public bool ExecuteRequest<T>(out T response) where T : BaseResponse
         {
             bool isSuccess = false;
             response = default(T);

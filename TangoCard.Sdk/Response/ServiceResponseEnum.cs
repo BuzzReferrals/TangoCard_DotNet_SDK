@@ -26,15 +26,26 @@
 
 namespace TangoCard.Sdk.Response
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary> Enumeration of expected response types from Tango Card Service API. </summary>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
     public enum ServiceResponseEnum
     {
         UNDEFINED = 0,
+        // Success
         SUCCESS,
+        // Failure - Insufficient Funds
         INS_FUNDS,
+        // Failure - Invalid Credentials
         INV_CREDENTIAL,
-        SYS_ERROR,
+        // Failure - Invalid Input
         INV_INPUT,
+        // Failure - Insufficient Inventory
         INS_INV,
+        // Failure - Service System Error
+        SYS_ERROR,
+        // Failure - Problem accessing Service
         WEB_ERROR
     }
 }

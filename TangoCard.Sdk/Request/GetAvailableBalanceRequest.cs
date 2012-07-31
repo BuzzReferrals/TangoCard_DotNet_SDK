@@ -40,35 +40,37 @@ namespace TangoCard.Sdk.Request
     /// <seealso cref="TangoCard.Sdk.Request.BaseRequest"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public class GetAvailableBalanceRequest : BaseRequest
+    internal class GetAvailableBalanceRequest : BaseRequest
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
-        /// <param name="isProductionMode"> true if this object is production mode. </param>
-        /// <param name="username">         The username. </param>
-        /// <param name="password">         The password. </param>
+        /// <param name="enumTangoCardServiceApi">  The enum tango card service api. </param>
+        /// <param name="username">                 The username. </param>
+        /// <param name="password">                 The password. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public GetAvailableBalanceRequest(
-            bool isProductionMode,
+            TangoCardServiceApiEnum enumTangoCardServiceApi,
             string username, 
             string password
             )
-            : base(isProductionMode, username, password)
+            : base(enumTangoCardServiceApi, username, password)
         {
 
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets the execute. </summary>
+        /// <summary>   Executes the given out GetAvailableBalanceResponse. </summary>
         ///
-        /// <returns>   . </returns>
+        /// <param name="response"> [out] The response. </param>
+        ///
+        /// <returns>   true if it succeeds, false if it fails. </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public bool Execute(ref GetAvailableBalanceResponse response)
+        public bool Execute(out GetAvailableBalanceResponse response)
         {
-            return base.Execute<GetAvailableBalanceResponse>(ref response);
+            return base.Execute<GetAvailableBalanceResponse>(out response);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

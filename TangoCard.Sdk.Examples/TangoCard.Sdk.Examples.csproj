@@ -8,8 +8,8 @@
     <ProjectGuid>{6A11EF88-2329-4194-8951-CE5B46BE94E5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestStore</RootNamespace>
-    <AssemblyName>TestStore</AssemblyName>
+    <RootNamespace>TangoCard.Sdk.Examples</RootNamespace>
+    <AssemblyName>TangoCard.Sdk.Examples</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>

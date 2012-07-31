@@ -38,7 +38,7 @@ using TangoCard.Sdk.Response.Success;
 namespace TangoCard.Sdk.Service
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// <summary>   Exception for signalling tango card service errors. </summary>
+    /// <summary> TangoCardServiceException is thrown when the Tango Card Service API return a Failure Response for a given Request.</summary>
     ///
     /// <seealso cref="System.Exception"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////

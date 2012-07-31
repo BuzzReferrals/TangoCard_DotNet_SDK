@@ -42,28 +42,30 @@ namespace TangoCard.Sdk.Request
     /// <seealso cref="TangoCard.Sdk.Request.BaseRequest"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public class PurchaseCardRequest : BaseRequest
+    internal class PurchaseCardRequest : BaseRequest
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
-        /// <exception cref="ArgumentException">    Thrown when one or more arguments have unsupported or
-        ///                                         illegal values. </exception>
+        /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
+        ///                                             null. </exception>
+        /// <exception cref="ArgumentException">        Thrown when one or more arguments have
+        ///                                             unsupported or illegal values. </exception>
         ///
-        /// <param name="isProductionMode"> true if this object is production mode. </param>
-        /// <param name="username">         The username. </param>
-        /// <param name="password">         The password. </param>
-        /// <param name="cardSku">          The card sku. </param>
-        /// <param name="cardValue">        The card value. </param>
-        /// <param name="tcSend">           true to tc send. </param>
-        /// <param name="recipientName">    Name of the recipient. </param>
-        /// <param name="recipientEmail">   The recipient email. </param>
-        /// <param name="giftMessage">      Message describing the gift. </param>
-        /// <param name="giftFrom">         The gift from. </param>
+        /// <param name="enumTangoCardServiceApi">  The enum tango card service api. </param>
+        /// <param name="username">                 The username. </param>
+        /// <param name="password">                 The password. </param>
+        /// <param name="cardSku">                  The card sku. </param>
+        /// <param name="cardValue">                The card value. </param>
+        /// <param name="tcSend">                   (optional) the tc send. </param>
+        /// <param name="recipientName">            (optional) name of the recipient. </param>
+        /// <param name="recipientEmail">           (optional) the recipient email. </param>
+        /// <param name="giftMessage">              (optional) message describing the gift. </param>
+        /// <param name="giftFrom">                 (optional) the gift from. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public PurchaseCardRequest(
-            bool isProductionMode,
+            TangoCardServiceApiEnum enumTangoCardServiceApi,
             string username,
             string password,
             string cardSku,
@@ -74,7 +76,7 @@ namespace TangoCard.Sdk.Request
             string giftMessage = null,
             string giftFrom = null
             )
-            : base(isProductionMode, username, password)
+            : base(enumTangoCardServiceApi, username, password)
         {
             // -----------------------------------------------------------------
             // validate inputs
@@ -247,17 +249,16 @@ namespace TangoCard.Sdk.Request
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets the execute. </summary>
+        /// <summary>   Executes the given out PurchaseCardResponse. </summary>
         ///
-        /// <exception cref="ArgumentException">    Thrown when one or more arguments have unsupported or
-        ///                                         illegal values. </exception>
+        /// <param name="response"> [out] The response. </param>
         ///
-        /// <returns>   . </returns>
+        /// <returns>   true if it succeeds, false if it fails. </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public bool Execute(ref PurchaseCardResponse response) 
+        public bool Execute(out PurchaseCardResponse response) 
         {
-            return base.Execute<PurchaseCardResponse>(ref response);
+            return base.Execute<PurchaseCardResponse>(out response);
         }
     }
 }

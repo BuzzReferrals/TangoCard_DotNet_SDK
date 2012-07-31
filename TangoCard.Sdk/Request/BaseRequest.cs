@@ -43,38 +43,47 @@ namespace TangoCard.Sdk.Request
 
     public abstract class BaseRequest
     {
-
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Constructor. </summary>
         ///
+        /// <exception cref="ArgumentException">        Thrown when one or more arguments have
+        ///                                             unsupported or illegal values. </exception>
         /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
         ///                                             null. </exception>
         ///
-        /// <param name="isProductionMode"> true if this object is production mode. </param>
-        /// <param name="username">         The username. </param>
-        /// <param name="password">         The password. </param>
-
+        /// <param name="enumTangoCardServiceApi">  The enum tango card service api. </param>
+        /// <param name="username">                 The username. </param>
+        /// <param name="password">                 The password. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public BaseRequest( 
-            bool isProductionMode,
+        public BaseRequest(
+            TangoCardServiceApiEnum enumTangoCardServiceApi,
             string username, 
             string password
         ) {
             // -----------------------------------------------------------------
             // validate inputs
             // -----------------------------------------------------------------
-            // username and password
+
+            // enumTangoCardServiceApi
+            if (enumTangoCardServiceApi.Equals(TangoCardServiceApiEnum.UNDEFINED))
+            {
+                throw new ArgumentException(message: "Parameter 'enumTangoCardServiceApi' is not a defined service environment." );
+            }
+
+            // username
             if (String.IsNullOrEmpty(username))
             {
                 throw new ArgumentNullException(paramName: "username" );
             }
+
+            // password
             if (String.IsNullOrEmpty(password))
             {
                 throw new ArgumentNullException(paramName: "password" );
             }
 
-            this.IsProductionMode = isProductionMode;
+            this.TangoCardServiceApi = enumTangoCardServiceApi;
             this.Username = username;
             this.Password = password;
         }
@@ -97,13 +106,13 @@ namespace TangoCard.Sdk.Request
         public string Password { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets or sets a value indicating whether the production mode. </summary>
+        /// <summary>   Gets or sets the tango card service api. </summary>
         ///
-        /// <value> true if production mode, false if not. </value>
+        /// <value> The tango card service api. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [JsonIgnore]
-        public bool IsProductionMode { get; set; }
+        public TangoCardServiceApiEnum TangoCardServiceApi { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the full pathname of the request file. </summary>
@@ -118,17 +127,18 @@ namespace TangoCard.Sdk.Request
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets the execute. </summary>
+        /// <summary>   Executes the given out T. </summary>
         ///
         /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="response"> [out] The response. </param>
         ///
-        /// <returns>   . </returns>
+        /// <returns>   true if it succeeds, false if it fails. </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public virtual bool Execute<T>(ref T response) where T : BaseResponse
+        public virtual bool Execute<T>(out T response) where T : BaseResponse
         {
             var proxy = new ServiceProxy(this);
-            return proxy.ExecuteRequest<T>(ref response);
+            return proxy.ExecuteRequest<T>(out response);
         }
     }
 }

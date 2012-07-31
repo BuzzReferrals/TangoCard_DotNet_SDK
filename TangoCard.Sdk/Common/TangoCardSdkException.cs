@@ -23,14 +23,15 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 // 
-// 
+//
+
 using System;
 using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Common
 {
     /// <summary>
-    /// Description of TangoCardSdkException
+    /// TangoCardSdkException is thrown when the Tango Card SDK has detected an error within its code, regardless of any given Request.
     /// </summary>
     [Serializable]
     public class TangoCardSdkException : System.Exception

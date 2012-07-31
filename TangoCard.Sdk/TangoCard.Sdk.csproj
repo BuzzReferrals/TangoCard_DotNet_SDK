@@ -66,8 +66,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response\BaseResponse.cs" />
     <Compile Include="Response\ServiceResponse.cs" />
+    <Compile Include="Service\TangoCardServiceApiEnum.cs" />
     <Compile Include="Service\TangoCardServiceException.cs" />
     <Compile Include="Service\ServiceProxy.cs" />
+    <Compile Include="TangoCardServiceApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TangoCard_DotNet_SDK.dll.config">
