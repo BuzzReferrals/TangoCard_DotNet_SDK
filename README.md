@@ -6,7 +6,7 @@ TangoCard .Net/C-Sharp SDK
 	<li><a href="#introduction">Introduction</a>
 		<ul>
 			<li><a href="#Incorporate_tango_card">Incorporate Tango Card Gift Cards</a></li>
-			<li><a href="#open_account">Open Tango Card Account/a></li>
+			<li><a href="#open_account">Open Tango Card Account</a></li>
 			<li><a href="#sdk_support">SDK Support</a></li>
 		</ul>
 	</li>
