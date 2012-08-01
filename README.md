@@ -3,8 +3,15 @@ TangoCard .Net/C-Sharp SDK
 
 # Table of Contents #
 <ul>
-	<li><a href="#overview">Overview</a></li>
-	<li><a href="#requirements">Requirements</a></li>
+	<li><a href="#introduction">Introduction</a>
+		<ul>
+			<li><a href="#Incorporate_tango_card">Incorporate Tango Card Gift Cards</a></li>
+			<li><a href="#open_account">Open Tango Card Account/a></li>
+			<li><a href="#sdk_support">SDK Support</a></li>
+		</ul>
+	</li>
+	<li><a href="#sdk_overview">SDK Overview</a></li>
+	<li><a href="#sdk_requirements">SDK Requirements</a></li>
 	<li><a href="#tango_card_service_requests">Tango Card Service Requests</a>
 		<ul>
 			<li><a href="#tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
@@ -33,8 +40,24 @@ TangoCard .Net/C-Sharp SDK
 	<li><a href="#production_deployment">Production Deployment</a></li>
 </ul>
 
-<a name="overview"></a>
-# Overview #
+<a name="introduction"></a>
+# Introduction #
+
+<a name="Incorporate_tango_card"></a>
+## Incorporate Tango Card Gift Cards  ##
+Tango Card’s Extend SDKs allow you to quickly incorporate the innovative Tango Card gift card into your reward, loyalty, and engagement applications. Tango Card is the “exactly what you want” gift card and allows the recipient to use their value exactly how they want – they can select a premier gift card, they can divide their value among Brands, they can use some today and save the rest for another day. They can also donate to a non-profit organization. Tango Card value can be used via the web or from almost any mobile device. There are no fees or expiration dates of any kind. It’s great for the recipient, and even better for you because it is an entire gift card program delivered in one card allowing you to focus on your core business. Tango Card solutions are already used by Microsoft Bing, FedEx, Extole, Plink, beintoo, Lead Valu, Getty Images, and many others. 
+
+<a name="open_account"></a>
+## Open Tango Card Account ##
+Within minutes of download, our Extend SDKs will allow you to check the balance on your pre-funded Tango Card account, send Tango Card gift cards directly to recipients via email, and return live gift card codes for you to customize and redistribute. With Tango Card and Retailer Brand approval, there is also the ability to order retailer Brand gift cards via the SDK. Simply use the supplied credentials to see how easy it is. When you’re ready to move into production, sign up for an account at https://www.tangocard.com/user/register. Use these credentials in your SDK and you’re done!
+
+<a name="sdk_support"></a>
+## SDK Support ##
+If you have any questions, please contact us at sdk@tangocard.com.
+
+<a name="sdk_overview"></a>
+# SDK Overview #
+
 The Tango Card .NET 4.0/C# SDK is a wrapper around the Tango Card Service API environments. As such, it has two primary types of objects, Requests and Responses; which are handled by a wrapper class `TangoCard.Sdk.TangoCardServiceApi`.
 
 The wrapper class `TangoCard.Sdk.TangoCardServiceApi` currently handles the following static methods:
@@ -48,12 +71,12 @@ The wrapper class `TangoCard.Sdk.TangoCardServiceApi` currently handles the foll
 
 ![Tango Card Service Api](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocardserviceapi.png "Tango Card Service Api")
 
-<a name="requirements"></a>
-# Requirements #
+<a name="sdk_requirements"></a>
+# SDK Requirements #
+
 * [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
 * [Visual Studio 2010](http://www.microsoft.com/visualstudio/en-us/products/2010-editions)  
 * [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)  
-
 
 <a name="tango_card_service_requests"></a>
 # Tango Card Service Requests #
