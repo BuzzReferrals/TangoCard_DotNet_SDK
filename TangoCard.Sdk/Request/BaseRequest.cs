@@ -38,22 +38,18 @@ using TangoCard.Sdk.Service;
 namespace TangoCard.Sdk.Request
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// <summary>   Request base. </summary>
+    /// <summary>
+    /// Abstract request base.
+    /// </summary>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public abstract class BaseRequest
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Constructor. </summary>
-        ///
-        /// <exception cref="ArgumentException">        Thrown when one or more arguments have
-        ///                                             unsupported or illegal values. </exception>
-        /// <exception cref="ArgumentNullException">    Thrown when one or more required arguments are
-        ///                                             null. </exception>
-        ///
-        /// <param name="enumTangoCardServiceApi">  The enum tango card service api. </param>
-        /// <param name="username">                 The username. </param>
-        /// <param name="password">                 The password. </param>
+        /// <summary>Constructor</summary>
+        /// <param name="enumTangoCardServiceApi">The enum tango card service api.</param>
+        /// <param name="username">The username.</param>
+        /// <param name="password">The password.</param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public BaseRequest(

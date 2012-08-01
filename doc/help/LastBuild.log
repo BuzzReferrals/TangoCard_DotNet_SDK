@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="1.9.4.0" projectFile="C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Help\TangoCard.Sdk.Help.shfbproj" started="7/30/2012 11:43:20 PM">
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.4.0" projectFile="C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Help\TangoCard.Sdk.Help.shfbproj" started="7/31/2012 12:25:57 PM">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -10,22 +10,31 @@ Found Sandcastle tools in &#39;C:\Program Files (x86)\Sandcastle\&#39;
 Validating and copying documentation source information
 Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\TangoCard.Sdk.csproj
     Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\TangoCard.Sdk.csproj&#39;
+Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Examples\TangoCard.Sdk.Examples.csproj
+    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Examples\TangoCard.Sdk.Examples.csproj&#39;
+Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\TangoCard.Sdk.Unittests.csproj
+    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\TangoCard.Sdk.Unittests.csproj&#39;
 
 Parsing project files
-    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\bin\Debug\TangoCard_DotNet_SDK.dll&#39;
+    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\..\bin\Release\TangoCard_DotNet_SDK.dll&#39;
+    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Examples\bin\Release\TangoCard.Sdk.Examples.exe&#39;
+    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.Unittests.dll&#39;
 
 References to use:
+    Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
     Newtonsoft.Json
     System
     System.configuration
+    System.Core
     System.Data
     System.Security
+    System.Web
     System.Xml
 SHFB: Warning BE0062: No XML comments files found.  The help file will not contain any member comments.
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
-    Last step completed in 00:00:00.0030
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
@@ -36,12 +45,12 @@ Generating reflection information...
 [c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe]
   MRefBuilder (v2.7.0.0)
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
-  Info: Loaded 1 assemblies for reflection and 7 dependency assemblies.
-  Info: Wrote information on 6 namespaces, 14 types, and 51 members
+  Info: Loaded 3 assemblies for reflection and 9 dependency assemblies.
+  Info: Wrote information on 9 namespaces, 20 types, and 76 members
   XslTransform (v2.7.0.0)
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
-    Last step completed in 00:00:01.2671
+    Last step completed in 00:00:01.3430
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
@@ -49,10 +58,10 @@ Generating namespace summary information...
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
-    13 attribute nodes removed
+    35 attribute nodes removed
     0 explicit interface implementations removed
     0 local and base class EII elements removed
-    Last step completed in 00:00:00.1310
+    Last step completed in 00:00:00.1700
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -64,12 +73,12 @@ Transforming reflection output...
   XslTransform (v2.7.0.0)
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
-    Last step completed in 00:00:01.0251
+    Last step completed in 00:00:01.0261
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
     No changes required
-    Last step completed in 00:00:00.0040
+    Last step completed in 00:00:00.0060
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
@@ -180,12 +189,12 @@ C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\script_manifold.js
 C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\SplitScreen.js
 C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\styles\Presentation.css
 C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\styles\Whidbey\Presentation.css
-    Last step completed in 00:00:00.0920
+    Last step completed in 00:00:00.0930
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
@@ -198,17 +207,17 @@ Generating intermediate table of contents file...
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\CreateVSToc.xsl&#39;.
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.2940
+    Last step completed in 00:00:00.2960
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0160
+    Last step completed in 00:00:00.0030
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\sandcastle.config
-    Last step completed in 00:00:00.0870
+    Last step completed in 00:00:00.1140
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -220,7 +229,7 @@ Building reference help topics...
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Searching for files that match &#39;*.xml&#39; in &#39;C:\Program Files (x86)\Sandcastle\Data\Reflection&#39;.
   Info: CopyFromIndexComponent: Searching for files that match &#39;reflection.xml&#39;.
-  Info: CopyFromIndexComponent: Indexed 194792 elements in 420 files.
+  Info: CopyFromIndexComponent: Indexed 194840 elements in 420 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
@@ -266,7 +275,7 @@ Building reference help topics...
   Info: CopyFromIndexComponent: Searching for files that match &#39;*.xml&#39; in &#39;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0&#39;.
   Info: CopyFromIndexComponent: Searching for files that match &#39;*.xml&#39; in &#39;C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\2.0\Runtime\v4.0&#39;.
   Info: CopyFromIndexComponent: Searching for files that match &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\_ProjNS_.xml&#39;.
-  Info: CopyFromIndexComponent: Indexed 145416 elements in 128 files.
+  Info: CopyFromIndexComponent: Indexed 145419 elements in 128 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
   Info: ForEachComponent: Loading subcomponents.
@@ -348,45 +357,16 @@ Building reference help topics...
   Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
   Info: ResolveReferenceLinksComponent2: Searching directory &#39;C:\Program Files (x86)\Sandcastle\Data\Reflection&#39; for targets files of the form &#39;*.xml&#39;.
   Info: ResolveReferenceLinksComponent2: Searching directory &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working&#39; for targets files of the form &#39;reflection.xml&#39;.
-  Info: ResolveReferenceLinksComponent2: Loaded 194792 reference targets.
+  Info: ResolveReferenceLinksComponent2: Loaded 194840 reference targets.
   Info: SaveComponent: Instantiating component.
   Info: BuildAssembler: Building topic N:TangoCard.Sdk
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.TangoCardServiceApi
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.TangoCardServiceApi
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.TangoCardServiceApi
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.TangoCardServiceApi
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.TangoCardServiceApi.GetAvailableBalance(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.GetAvailableBalance(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.GetAvailableBalance(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;enumTangoCardServiceApi&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.GetAvailableBalance(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;username&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.GetAvailableBalance(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;password&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.GetAvailableBalance(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.GetAvailableBalance(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse@)
-  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse&#39;.
-  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse&#39;.
-  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse&#39;.
-  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse&#39;.
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;enumTangoCardServiceApi&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;username&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;password&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;cardSku&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;cardValue&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;tcSend&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;recipientName&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;recipientEmail&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;giftMessage&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;giftFrom&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.TangoCardServiceApi.PurchaseCard(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String,System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,TangoCard.Sdk.Response.Success.PurchaseCardResponse@)
-  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:TangoCard.Sdk.Response.Success.PurchaseCardResponse&#39;.
-  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:TangoCard.Sdk.Response.Success.PurchaseCardResponse&#39;.
-  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:TangoCard.Sdk.Response.Success.PurchaseCardResponse&#39;.
-  Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:TangoCard.Sdk.Response.Success.PurchaseCardResponse&#39;.
   Info: BuildAssembler: Building topic N:TangoCard.Sdk.Common
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Common.TangoCardSdkException
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Common.TangoCardSdkException
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Common.TangoCardSdkException
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
@@ -404,46 +384,34 @@ Building reference help topics...
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;si&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;sc&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String)
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;message&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String)
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String,System.Exception)
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String,System.Exception)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;message&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String,System.Exception)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;innerException&quot;/&gt; documentation for M:TangoCard.Sdk.Common.TangoCardSdkException.#ctor(System.String,System.Exception)
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Examples
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Examples.TangoCard_Store_Example
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Examples.TangoCard_Store_Example
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Examples.TangoCard_Store_Example.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Examples.TangoCard_Store_Example
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Examples.TangoCard_Store_Example.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Examples.TangoCard_Store_Example.#ctor
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Examples.TangoCard_Store_Example.Execute
   Info: BuildAssembler: Building topic N:TangoCard.Sdk.Request
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Request.BaseRequest
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Request.BaseRequest
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Request.BaseRequest
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Request.BaseRequest.#ctor
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Request.BaseRequest
   Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Request.BaseRequest
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Request.BaseRequest.#ctor(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String)
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Request.BaseRequest.#ctor(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;enumTangoCardServiceApi&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.#ctor(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;username&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.#ctor(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;password&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.#ctor(TangoCard.Sdk.Service.TangoCardServiceApiEnum,System.String,System.String)
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
-  Warn: ShowMissingComponent: Missing &lt;typeparam name=&quot;T&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.Request.BaseRequest.Execute``1(``0@)
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.BaseRequest.Password
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.BaseRequest.Password
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.BaseRequest.RequestAction
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.BaseRequest.RequestAction
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.BaseRequest.TangoCardServiceApi
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.BaseRequest.TangoCardServiceApi
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Request.BaseRequest.Username
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Request.BaseRequest.Username
   Info: BuildAssembler: Building topic N:TangoCard.Sdk.Response
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.BaseResponse
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.BaseResponse
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.ServiceResponse`1
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.ServiceResponse`1
-  Warn: ShowMissingComponent: Missing &lt;typeparam name=&quot;T&quot;/&gt; documentation for T:TangoCard.Sdk.Response.ServiceResponse`1
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.ServiceResponse`1
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.ServiceResponse`1.#ctor
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.ServiceResponse`1
@@ -451,14 +419,10 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.ServiceResponse`1.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.ServiceResponse`1.#ctor
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.ServiceResponse`1.Response
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.ServiceResponse`1.Response
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.ServiceResponse`1.ResponseType
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.ServiceResponse`1.ResponseType
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.ServiceResponseEnum
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.ServiceResponseEnum
   Info: BuildAssembler: Building topic N:TangoCard.Sdk.Response.Failure
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.FailureResponse
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.FailureResponse
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.FailureResponse
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.FailureResponse.#ctor
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.FailureResponse
@@ -466,12 +430,8 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.FailureResponse.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.FailureResponse.#ctor
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.FailureResponse.Message
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.FailureResponse.Message
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.FailureResponse.ToString
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.Response.Failure.FailureResponse.ToString
-  Warn: ShowMissingComponent: Missing &lt;returns&gt; documentation for M:TangoCard.Sdk.Response.Failure.FailureResponse.ToString
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.#ctor
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse
@@ -479,13 +439,9 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.#ctor
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.AvailableBalance
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.AvailableBalance
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.Message
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.Message
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.OrderCost
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientFundsResponse.OrderCost
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.#ctor
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse
@@ -493,13 +449,9 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.#ctor
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Message
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Message
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Sku
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Sku
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Value
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse.Value
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.#ctor
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse
@@ -507,9 +459,7 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.#ctor
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.Message
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse.Message
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InvalidInputResponse.#ctor
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.InvalidInputResponse
@@ -517,11 +467,8 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.InvalidInputResponse.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.InvalidInputResponse.#ctor
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InvalidInputResponse.Invalid
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InvalidInputResponse.Invalid
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.InvalidInputResponse.Message
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.InvalidInputResponse.Message
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.SystemFailureResponse.#ctor
   Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Failure.SystemFailureResponse
@@ -529,14 +476,36 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Failure.SystemFailureResponse.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Failure.SystemFailureResponse.#ctor
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.SystemFailureResponse.ErrorCode
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.SystemFailureResponse.ErrorCode
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Failure.SystemFailureResponse.Message
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Response.Failure.SystemFailureResponse.Message
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Response.Success
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse.AvailableBalance
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.PurchaseCardResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Info: BuildAssembler: Building topic Properties.T:TangoCard.Sdk.Response.Success.PurchaseCardResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Success.PurchaseCardResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.PurchaseCardResponse.#ctor
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardNumber
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardPin
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.CardToken
+  Info: BuildAssembler: Building topic P:TangoCard.Sdk.Response.Success.PurchaseCardResponse.ReferenceOrderId
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Response.Success.SuccessResponse
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Response.Success.SuccessResponse
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.SuccessResponse.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Response.Success.SuccessResponse
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Response.Success.SuccessResponse.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Response.Success.SuccessResponse.#ctor
   Info: BuildAssembler: Building topic N:TangoCard.Sdk.Service
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Service.TangoCardServiceApiEnum
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Service.TangoCardServiceApiEnum
   Info: BuildAssembler: Building topic T:TangoCard.Sdk.Service.TangoCardServiceException
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for T:TangoCard.Sdk.Service.TangoCardServiceException
   Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Service.TangoCardServiceException
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor
@@ -548,35 +517,50 @@ Building reference help topics...
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse)
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;responseType&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse)
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
   Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;responseType&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;response&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;message&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.#ctor(TangoCard.Sdk.Response.ServiceResponseEnum,TangoCard.Sdk.Response.Failure.FailureResponse,System.String)
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Service.TangoCardServiceException.Message
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Service.TangoCardServiceException.Message
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Service.TangoCardServiceException.Response
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Service.TangoCardServiceException.Response
   Info: BuildAssembler: Building topic P:TangoCard.Sdk.Service.TangoCardServiceException.ResponseType
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for P:TangoCard.Sdk.Service.TangoCardServiceException.ResponseType
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Service.TangoCardServiceException.ThrowOnError(System.String,Newtonsoft.Json.JsonSerializerSettings)
-  Warn: ShowMissingComponent: Missing &lt;summary&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.ThrowOnError(System.String,Newtonsoft.Json.JsonSerializerSettings)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;responseJsonEncoded&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.ThrowOnError(System.String,Newtonsoft.Json.JsonSerializerSettings)
-  Warn: ShowMissingComponent: Missing &lt;param name=&quot;jsonSettings&quot;/&gt; documentation for M:TangoCard.Sdk.Service.TangoCardServiceException.ThrowOnError(System.String,Newtonsoft.Json.JsonSerializerSettings)
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;.
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;.
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;.
   Warn: ResolveReferenceLinksComponent2: Unknown reference link target &#39;T:Newtonsoft.Json.JsonSerializerSettings&#39;.
-  Info: Processed 96 topics
-    Last step completed in 00:00:35.2430
+  Info: BuildAssembler: Building topic N:TangoCard.Sdk.Unittests
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance.#ctor
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance.Test_GetAvailableBalance_Api
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance.Test_GetAvailableBalance_InsufficientFunds
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance.Test_GetAvailableBalance_InvalidCredentials
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance.Test_GetAvailableBalance_Request
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance.TestInitialize_GetAvailableBalance
+  Info: BuildAssembler: Building topic T:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard
+  Info: BuildAssembler: Building topic AllMembers.T:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.#ctor
+  Info: BuildAssembler: Building topic Methods.T:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.#ctor
+  Info: ShowMissingComponent: Auto-documenting constructor M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.#ctor
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.Test_PurchaseCard_InsufficientFunds
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.Test_PurchaseCard_InsufficientFunds_10000000
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.Test_PurchaseCard_InvalidCredentials
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.Test_PurchaseCard_InvalidInput_Sku
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.Test_PurchaseCard_with_Delivery
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.Test_PurchaseCard_with_NoDelivery
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.Test_PurchaseCard_with_NoDelivery_Api
+  Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.TestInitialize_PurchaseCard
+  Info: Processed 144 topics
+    Last step completed in 00:00:29.7277
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
 
 Clearing any prior web output
-    Last step completed in 00:00:00.0610
+    Last step completed in 00:00:00.0030
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -588,11 +572,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing website files in C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website
-Processed 96 HTML files
+Processed 144 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\WebKI.xml
 Saving website table of contents to C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\WebTOC.xml
-    Last step completed in 00:00:00.4750
+    Last step completed in 00:00:00.5440
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
@@ -601,7 +585,7 @@ Generating website table of contents file...
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
-    Last step completed in 00:00:00.5840
+    Last step completed in 00:00:00.6920
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
@@ -632,20 +616,26 @@ C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\ft
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_Files.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_Files.json
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\03df05cc-ce9b-fa2c-da9e-abca49919c00.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\03df05cc-ce9b-fa2c-da9e-abca49919c00.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\072f2f60-b7d9-684c-0d00-22f9e1195907.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\072f2f60-b7d9-684c-0d00-22f9e1195907.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\085f41c6-685a-806c-b6e8-faac70cdcae6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\085f41c6-685a-806c-b6e8-faac70cdcae6.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0c96e2e7-86ec-fc82-e84e-e640ccbc948d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0c96e2e7-86ec-fc82-e84e-e640ccbc948d.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0d286782-166d-41f3-bb2a-803567edda08.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0d286782-166d-41f3-bb2a-803567edda08.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0e2156cb-eab1-27d2-2feb-8478fecb972b.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0e2156cb-eab1-27d2-2feb-8478fecb972b.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0e9a5448-3282-bca4-3a90-4a890d643ec8.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0e9a5448-3282-bca4-3a90-4a890d643ec8.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\110a7d32-57c1-aa75-1612-48364f15cd5a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\110a7d32-57c1-aa75-1612-48364f15cd5a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\110efa42-4671-4701-5f4b-cb532c31bf62.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\110efa42-4671-4701-5f4b-cb532c31bf62.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1132718b-e871-2fee-3b80-86fd0ea049c9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1132718b-e871-2fee-3b80-86fd0ea049c9.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\13e4be4e-99bc-e7a4-de83-c31b80202bd7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\13e4be4e-99bc-e7a4-de83-c31b80202bd7.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\13e825e0-46a9-2aaf-c567-aca66066b9c1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\13e825e0-46a9-2aaf-c567-aca66066b9c1.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\13fe4f3d-f077-1555-6443-aeeeefc386ae.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\13fe4f3d-f077-1555-6443-aeeeefc386ae.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\150e6c01-ff75-2192-117c-b3a540ba7581.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\150e6c01-ff75-2192-117c-b3a540ba7581.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1533a398-f00a-c947-dfeb-c8b364a7cf71.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1533a398-f00a-c947-dfeb-c8b364a7cf71.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1596ba7c-13ac-643b-bf29-adef8fc3475d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1596ba7c-13ac-643b-bf29-adef8fc3475d.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\181f70f2-8958-2ecf-7da4-a40756441ab6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\181f70f2-8958-2ecf-7da4-a40756441ab6.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\18950a39-6c5b-0999-f501-d4798e891ff7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\18950a39-6c5b-0999-f501-d4798e891ff7.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1d4f2041-893e-bcb1-cb02-dce1d39dfb59.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1d4f2041-893e-bcb1-cb02-dce1d39dfb59.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1e7bee31-e095-810e-5cfb-f2e2f52aa158.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1e7bee31-e095-810e-5cfb-f2e2f52aa158.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1f27b2e6-ace6-4737-046c-5428a2cdec3c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1f27b2e6-ace6-4737-046c-5428a2cdec3c.htm
@@ -653,75 +643,117 @@ C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\ht
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\2192db16-696a-3e5f-d806-a27ad9a2ece0.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\2192db16-696a-3e5f-d806-a27ad9a2ece0.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\21ae91b3-74ec-0e94-a087-07892946c63a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\21ae91b3-74ec-0e94-a087-07892946c63a.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\275361f9-a5df-8826-0433-413ccd3a7bea.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\275361f9-a5df-8826-0433-413ccd3a7bea.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\28a375be-8d3a-d349-e263-caa08788b009.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\28a375be-8d3a-d349-e263-caa08788b009.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\28aed5a3-9622-9f7f-f430-453dd18d3806.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\28aed5a3-9622-9f7f-f430-453dd18d3806.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\292c8e63-bf7d-a7ac-2738-c2f4effda19f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\292c8e63-bf7d-a7ac-2738-c2f4effda19f.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\2b33f578-6679-7f23-08a0-4b36b707e937.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\2b33f578-6679-7f23-08a0-4b36b707e937.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\2d09cc40-ae21-bd44-ee83-26fd5febc5d5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\2d09cc40-ae21-bd44-ee83-26fd5febc5d5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\2f144793-c1f3-d798-b9a9-d2ef1215cbf5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\2f144793-c1f3-d798-b9a9-d2ef1215cbf5.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\317048c2-3844-7d1e-8f4c-dd705ba78c5c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\317048c2-3844-7d1e-8f4c-dd705ba78c5c.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\34b7e44d-8860-0d2f-1c64-b2f0c8690763.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\34b7e44d-8860-0d2f-1c64-b2f0c8690763.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\35edcbad-98fe-3926-613a-ea25b2cc7f64.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\35edcbad-98fe-3926-613a-ea25b2cc7f64.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\36d298d5-bbee-39b3-64fc-fe616161469f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\36d298d5-bbee-39b3-64fc-fe616161469f.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\3857e9ba-eee1-4dbc-8f9a-c6663f7a6421.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\3857e9ba-eee1-4dbc-8f9a-c6663f7a6421.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\3c9782bc-a02a-611b-efb4-640dd2a6ea4e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\3c9782bc-a02a-611b-efb4-640dd2a6ea4e.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\3ea230c7-8df3-f6f3-24ce-9caafe1195b2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\3ea230c7-8df3-f6f3-24ce-9caafe1195b2.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\3fd28f2c-356d-4485-831e-ffad521c12c1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\3fd28f2c-356d-4485-831e-ffad521c12c1.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4123e900-bb7f-c406-32e5-fe6b2e7add91.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4123e900-bb7f-c406-32e5-fe6b2e7add91.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\41a87f39-9078-c729-c301-0f1fc177ec84.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\41a87f39-9078-c729-c301-0f1fc177ec84.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\426f7447-88bf-ae45-9e87-4048599cc953.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\426f7447-88bf-ae45-9e87-4048599cc953.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\432ef87e-eedd-571a-730b-a5c3ebc88ae1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\432ef87e-eedd-571a-730b-a5c3ebc88ae1.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\440b5ad2-169f-3589-0c8a-3ca003c53774.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\440b5ad2-169f-3589-0c8a-3ca003c53774.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4659b26c-c522-c60d-f5c4-9c77fcd7c23e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4659b26c-c522-c60d-f5c4-9c77fcd7c23e.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4ba8200a-dead-6154-defb-91177308d5be.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4ba8200a-dead-6154-defb-91177308d5be.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4c60517f-9add-89f9-9d11-7bafdef02e86.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4c60517f-9add-89f9-9d11-7bafdef02e86.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4dcd3964-3b56-c56e-84af-c6323c0171a5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4dcd3964-3b56-c56e-84af-c6323c0171a5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4feca5d0-6651-4fe0-4fb3-398d0fe14370.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4feca5d0-6651-4fe0-4fb3-398d0fe14370.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\576b652c-743e-3665-2ba1-cbcd987ad160.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\576b652c-743e-3665-2ba1-cbcd987ad160.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\5e251519-6297-b26e-fa2e-2231b6ca7285.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\5e251519-6297-b26e-fa2e-2231b6ca7285.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\5f341bcb-5701-3835-d2a0-6f20a7224c57.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\5f341bcb-5701-3835-d2a0-6f20a7224c57.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\5f432f0d-d40d-8773-11fd-1d7034ea0ea4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\5f432f0d-d40d-8773-11fd-1d7034ea0ea4.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\642b6d95-0ed8-d773-560c-62818d25aa47.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\642b6d95-0ed8-d773-560c-62818d25aa47.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\65fa9c1b-7a8e-a428-5190-a0acc579dcf7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\65fa9c1b-7a8e-a428-5190-a0acc579dcf7.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\66211f2a-1e24-b2e1-e0c9-820f456d4447.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\66211f2a-1e24-b2e1-e0c9-820f456d4447.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\689963bf-b0f7-ba1f-7765-b97c7450165d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\689963bf-b0f7-ba1f-7765-b97c7450165d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\698c8ade-2c83-1ee7-0b0e-311ce8c7ee5a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\698c8ade-2c83-1ee7-0b0e-311ce8c7ee5a.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\6e5085c4-c227-cfb6-bd9c-df1d4d1b09eb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\6e5085c4-c227-cfb6-bd9c-df1d4d1b09eb.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\6f76932d-8f13-9a7b-8ffb-a86f4505a51f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\6f76932d-8f13-9a7b-8ffb-a86f4505a51f.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7081929e-df89-6acb-161e-6926de37e4d2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7081929e-df89-6acb-161e-6926de37e4d2.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\74300007-a011-2e65-6c53-467fd5a2c15d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\74300007-a011-2e65-6c53-467fd5a2c15d.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7635c5c8-4726-a53a-cd28-6679aef47eea.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7635c5c8-4726-a53a-cd28-6679aef47eea.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\767dfc64-4495-91b1-4730-5cd15946eb15.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\767dfc64-4495-91b1-4730-5cd15946eb15.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\76c1b3bb-808a-e14a-49f1-b69b1d682dff.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\76c1b3bb-808a-e14a-49f1-b69b1d682dff.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\77876329-dcac-9f29-f160-fd063a408cfd.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\77876329-dcac-9f29-f160-fd063a408cfd.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7ac281b4-34a1-f6ec-7fab-46736b40afce.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7ac281b4-34a1-f6ec-7fab-46736b40afce.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7b224b0e-5020-a6e1-5ee4-b73997473992.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7b224b0e-5020-a6e1-5ee4-b73997473992.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7c659455-a41e-ff52-b8ba-4cc6210a51cf.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7c659455-a41e-ff52-b8ba-4cc6210a51cf.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\84531e12-546e-fae4-dd7e-f56d39c3ccbb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\84531e12-546e-fae4-dd7e-f56d39c3ccbb.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\86216453-165d-1fb6-da2d-ad21e242dd10.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\86216453-165d-1fb6-da2d-ad21e242dd10.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\86e354b8-43ed-d35b-c8fc-67c06c974580.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\86e354b8-43ed-d35b-c8fc-67c06c974580.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\87474c76-fcf8-df66-b37c-3ac1c2028d06.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\87474c76-fcf8-df66-b37c-3ac1c2028d06.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\87e33e91-6c5d-f529-2dd5-39ae65d29b99.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\87e33e91-6c5d-f529-2dd5-39ae65d29b99.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\896bdd9f-2e8f-9c95-df1d-c587890790ae.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\896bdd9f-2e8f-9c95-df1d-c587890790ae.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\8a6a19cc-a3e4-5fb3-8b22-1e43e6bd380d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\8a6a19cc-a3e4-5fb3-8b22-1e43e6bd380d.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\8af2dab2-3df2-2f35-e54e-9383a71d150d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\8af2dab2-3df2-2f35-e54e-9383a71d150d.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\8b39ab04-f0dd-ff5e-0608-a7ef0a1f330d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\8b39ab04-f0dd-ff5e-0608-a7ef0a1f330d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\92a445d7-71d8-94a1-d43d-e90dfe624fdf.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\92a445d7-71d8-94a1-d43d-e90dfe624fdf.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\96a21b6b-13cb-5229-6643-e2e0785f2961.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\96a21b6b-13cb-5229-6643-e2e0785f2961.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9958fe3f-f151-8b16-bb3c-f460b26895e0.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9958fe3f-f151-8b16-bb3c-f460b26895e0.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9b4ca1b8-a8ad-f6ff-41bc-f25c3329af24.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9b4ca1b8-a8ad-f6ff-41bc-f25c3329af24.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9d232d20-0b02-afc4-7471-828bdb27d9fc.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9d232d20-0b02-afc4-7471-828bdb27d9fc.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9e965038-db1d-043e-38d6-bbdf648aed47.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9e965038-db1d-043e-38d6-bbdf648aed47.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a07cb93e-aad1-9b97-727f-a1421b368150.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a07cb93e-aad1-9b97-727f-a1421b368150.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a34219e0-1dc9-62b8-7850-903922739f1a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a34219e0-1dc9-62b8-7850-903922739f1a.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a6633175-059a-ff88-7472-388db1fdade2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a6633175-059a-ff88-7472-388db1fdade2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a690ab81-f8a3-d2ae-e8bf-a0495230e282.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a690ab81-f8a3-d2ae-e8bf-a0495230e282.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a966c943-ef1d-b542-06a9-ba88588110ad.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a966c943-ef1d-b542-06a9-ba88588110ad.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b0262d3c-67db-c70e-baa7-375c74c05fc5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b0262d3c-67db-c70e-baa7-375c74c05fc5.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b11885dc-de55-3f98-1db8-c18738682c70.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b11885dc-de55-3f98-1db8-c18738682c70.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b1580b35-243b-0ac0-e18d-d8f26b315614.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b1580b35-243b-0ac0-e18d-d8f26b315614.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b890e8c6-30a1-e62d-4e11-ec0dc8e76dc5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b890e8c6-30a1-e62d-4e11-ec0dc8e76dc5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ba951576-cadd-00f1-af58-4e359f981ea6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ba951576-cadd-00f1-af58-4e359f981ea6.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\bb157126-9975-6126-1f42-982a31b83fb2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\bb157126-9975-6126-1f42-982a31b83fb2.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\bd599e3f-2b09-fdf9-e566-92c36db1592e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\bd599e3f-2b09-fdf9-e566-92c36db1592e.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\c16d35af-6c11-e447-dd79-f9f6b7699d51.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\c16d35af-6c11-e447-dd79-f9f6b7699d51.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\c1ec7979-0741-bde6-b9bc-59e1d7eb1a83.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\c1ec7979-0741-bde6-b9bc-59e1d7eb1a83.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\c77ca27c-b553-9904-665d-6bf7eabc7819.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\c77ca27c-b553-9904-665d-6bf7eabc7819.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\cefc4cea-e990-6784-a6c4-6ae138cb79a9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\cefc4cea-e990-6784-a6c4-6ae138cb79a9.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\cf2bddfc-848e-3050-a169-2b0457fe144c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\cf2bddfc-848e-3050-a169-2b0457fe144c.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d0155dd8-7e99-31dd-5722-c2bdcdbfbcef.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d0155dd8-7e99-31dd-5722-c2bdcdbfbcef.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d1e92f4f-43a0-fde5-0767-65825b662709.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d1e92f4f-43a0-fde5-0767-65825b662709.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d31d044c-4cb9-404f-a862-b25a095f57b2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d31d044c-4cb9-404f-a862-b25a095f57b2.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d6acf6f0-ac2d-32a7-4497-a34dfb0f7af4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d6acf6f0-ac2d-32a7-4497-a34dfb0f7af4.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d6ba4458-7564-3b59-59b9-235dd4b0458e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d6ba4458-7564-3b59-59b9-235dd4b0458e.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d893d911-afcc-f060-14a1-962c4ee12de3.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d893d911-afcc-f060-14a1-962c4ee12de3.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\db6166d4-254b-4c87-0a7d-865dc62e304a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\db6166d4-254b-4c87-0a7d-865dc62e304a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\df252480-0d85-5335-d4be-602e26264f6e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\df252480-0d85-5335-d4be-602e26264f6e.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e2552ad5-e1c2-d5e7-c506-64a3338c8559.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e2552ad5-e1c2-d5e7-c506-64a3338c8559.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e6434195-187b-a54a-adaf-cf098a520f29.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e6434195-187b-a54a-adaf-cf098a520f29.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e6b97213-2079-7e82-12d2-2313ba8fb430.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e6b97213-2079-7e82-12d2-2313ba8fb430.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e6da2878-eb85-9d30-60cd-51df3ad60240.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e6da2878-eb85-9d30-60cd-51df3ad60240.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e7a64d89-1a05-f431-2a50-964f6a1763ed.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e7a64d89-1a05-f431-2a50-964f6a1763ed.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e98c97e8-d4f8-bc00-66ca-ad9267b6b9b7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e98c97e8-d4f8-bc00-66ca-ad9267b6b9b7.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ec0f37fb-07bd-8b77-45ab-695b97c65cfa.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ec0f37fb-07bd-8b77-45ab-695b97c65cfa.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ed42388b-2b04-f80d-b077-5d96d078e01c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ed42388b-2b04-f80d-b077-5d96d078e01c.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f016491e-949c-f8a0-59ef-1b3c5a04c4b5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f016491e-949c-f8a0-59ef-1b3c5a04c4b5.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f210f47d-e780-4591-bdbc-ce0aa83b7aeb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f210f47d-e780-4591-bdbc-ce0aa83b7aeb.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f4983791-12ee-ca79-98a0-232e4508f5c2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f4983791-12ee-ca79-98a0-232e4508f5c2.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f80f8136-2ead-63ef-4323-f94de47723ab.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f80f8136-2ead-63ef-4323-f94de47723ab.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f91562cc-24d0-4244-0db4-7e1cfb88c76a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f91562cc-24d0-4244-0db4-7e1cfb88c76a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\fa2fbee7-84a3-09a0-bce2-28741e3991f9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\fa2fbee7-84a3-09a0-bce2-28741e3991f9.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\fea3aee9-3e3d-6d4f-4227-728690ed05a1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\fea3aee9-3e3d-6d4f-4227-728690ed05a1.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\fed4bb75-0814-e566-3cb5-af0b77a76fcc.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\fed4bb75-0814-e566-3cb5-af0b77a76fcc.htm
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm
@@ -833,15 +865,15 @@ C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\sc
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\scripts\SplitScreen.js
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\styles\Presentation.css
 C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\styles\Whidbey\Presentation.css
-    Last step completed in 00:00:00.3100
+    Last step completed in 00:00:00.2650
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.0570
+    Last step completed in 00:00:00.0690
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 07/30/2012 11:44 PM.  Total time: 00:00:39.7452
+Build completed successfully at 07/31/2012 12:26 PM.  Total time: 00:00:34.4689
 
 </buildStep>
 </shfbBuild>

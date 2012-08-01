@@ -20,6 +20,8 @@
     <Language>en-US</Language>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\TangoCard.Sdk\TangoCard.Sdk.csproj" xmlns="" />
+      <DocumentationSource sourceFile="..\TangoCard.Sdk.Examples\TangoCard.Sdk.Examples.csproj" />
+      <DocumentationSource sourceFile="..\TangoCard.Sdk.Unittests\TangoCard.Sdk.Unittests.csproj" />
     </DocumentationSources>
     <BuildAssemblerVerbosity>AllMessages</BuildAssemblerVerbosity>
     <HelpFileFormat>Website</HelpFileFormat>
@@ -30,13 +32,14 @@
     <CppCommentsFixup>False</CppCommentsFixup>
     <CleanIntermediates>True</CleanIntermediates>
     <NamespaceSummaries>
-      <NamespaceSummaryItem name="TangoCard.Sdk" isDocumented="True" xmlns="">Tango Card Service API</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TangoCard.Sdk.Common" isDocumented="True" xmlns="">Common helpers</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TangoCard.Sdk.Request" isDocumented="True" xmlns="">Requests to the Tango Card Service API</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TangoCard.Sdk.Response" isDocumented="True" xmlns="">Responses from the Tango Card Service API</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TangoCard.Sdk.Response.Failure" isDocumented="True" xmlns="">Failure responses from the Tango Card Service API</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TangoCard.Sdk.Response.Success" isDocumented="False" xmlns="">Success responses from the Tango Card Service API</NamespaceSummaryItem>
-<NamespaceSummaryItem name="TangoCard.Sdk.Service" isDocumented="True" xmlns="">Tango Card Service API Handler</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="TangoCard.Sdk" isDocumented="True">Tango Card Service API</NamespaceSummaryItem>
+<NamespaceSummaryItem name="TangoCard.Sdk.Common" isDocumented="True">Common helpers</NamespaceSummaryItem>
+<NamespaceSummaryItem name="TangoCard.Sdk.Request" isDocumented="True">Requests to the Tango Card Service API</NamespaceSummaryItem>
+<NamespaceSummaryItem name="TangoCard.Sdk.Response" isDocumented="True">Responses from the Tango Card Service API</NamespaceSummaryItem>
+<NamespaceSummaryItem name="TangoCard.Sdk.Response.Failure" isDocumented="True">Failure responses from the Tango Card Service API</NamespaceSummaryItem>
+<NamespaceSummaryItem name="TangoCard.Sdk.Response.Success" isDocumented="True">Success responses from the Tango Card Service API</NamespaceSummaryItem>
+<NamespaceSummaryItem name="TangoCard.Sdk.Service" isDocumented="True">Tango Card Service API Handler</NamespaceSummaryItem></NamespaceSummaries>
+    <MissingTags>AutoDocumentCtors, AutoDocumentDispose</MissingTags>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in
        order for Visual Studio to perform the build.  The others are optional

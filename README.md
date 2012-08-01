@@ -1,6 +1,39 @@
 TangoCard .Net/C-Sharp SDK
 =================
 
+# Table of Contents #
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<li><a href="#requirements">Requirements</a></li>
+	<li><a href="#tango_card_service_requests">Tango Card Service Requests</a>
+		<ul>
+			<li><a href="#tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
+			<li><a href="#get_available_balance">Get Available Balance</a></li>
+			<li><a href="#purchase_card">Purchase Card</a></li>
+		</ul>
+	</li>
+	<li><a href="#tango_card_error_handling">Tango Card Error Handling</a>
+		<ul>
+			<li><a href="#service_failure_responses">Service Failure Responses</a></li>
+			<li><a href="#sdk_error_responses">SDK Error Responses</a></li>
+			<li><a href="#handling_errors">Handling Errors</a></li>
+		</ul>
+	</li>
+	<li><a href="#sdk_contents">SDK Contents</a>
+		<ul>
+			<li><a href="#lib">TangoCard.Sdk</a></li>
+			<li><a href="#configuration_files">configuration files</a></li>
+			<li><a href="#doc">doc</a></li>
+			<li><a href="#examples">TangoCard.Sdk.Examples</a></li>		
+			<li><a href="#unittests">TangoCard.Sdk.Unittests</a></li>
+		</ul>
+	</li>
+	<li><a href="#sdk_development_environment">SDK Development Environment</a></li>
+	<li><a href="#license">License</a></li>
+	<li><a href="#production_deployment">Production Deployment</a></li>
+</ul>
+
+<a name="overview"></a>
 # Overview #
 The Tango Card .NET 4.0/C# SDK is a wrapper around the Tango Card Service API environments. As such, it has two primary types of objects, Requests and Responses; which are handled by a wrapper class `TangoCard.Sdk.TangoCardServiceApi`.
 
@@ -15,16 +48,20 @@ The wrapper class `TangoCard.Sdk.TangoCardServiceApi` currently handles the foll
 
 ![Tango Card Service Api](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocardserviceapi.png "Tango Card Service Api")
 
+<a name="requirements"></a>
 # Requirements #
 * [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
 * [Visual Studio 2010](http://www.microsoft.com/visualstudio/en-us/products/2010-editions)  
 * [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)  
 
+
+<a name="tango_card_service_requests"></a>
 # Tango Card Service Requests #
 
 The Tango Card SDK, every Request has a corresponding success-case Response object.
 
-## Tango Card Service API ##
+<a name="tango_card_service_api_endpoints"></a>
+## Tango Card Service API Endpoints ##
 
 Available are two endpoints that provide the Tango Card Service API, as defined by `enum TangoCard.Sdk.Service.TangoCardServiceApiEnum` :
 * `INTEGRATION` - Expected to be used for development and testing purposes.
@@ -32,6 +69,7 @@ Available are two endpoints that provide the Tango Card Service API, as defined 
 
 Requests are secure HTTP POST using SSL.
 
+<a name="get_available_balance"></a>
 ## Get Available Balance ##
 
 ![Tango Card Service API - GetAvailableBalance()](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocardserviceapi_getavailablebalance.png "Tango Card Service API - GetAvailableBalance()")
@@ -84,6 +122,7 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
   <dd>- Returns available balance of username's account in cents: 100 is $1.00 dollar.</dd>
 </dl>
 
+<a name="purchase_card"></a>
 ## Purchase Card ##
 
 ![Tango Card Service API - PurchaseCard()](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocardserviceapi_purchasecard.png "Tango Card Service API - PurchaseCard()")
@@ -178,6 +217,7 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
   <dd>- Card pin provided to the recipient used to validate provided Card number a redemption upon the www.tangocard.com site.</dd>
 </dl>
 
+<a name="tango_card_error_handling"></a>
 # Tango Card Error Handling #
 
 The Tango Card Service API SDK handles its errors by throwing the following exceptions:
@@ -188,6 +228,7 @@ The Tango Card Service API SDK handles its errors by throwing the following exce
 
 ![Tango Card SDK Exceptions](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocard_sdk_exceptions.png "Tango Card SDK Exceptions")
 
+<a name="service_failure_responses"></a>
 ## Service Failure Responses ##
 
 A service will return the following failure responses as enumerated by `TangoCard.Sdk.Response.ServiceResponseEnum`:
@@ -238,12 +279,14 @@ Each Request will have the following possible Failure Responses as a property va
 	</tr>
 </table>
 
+<a name="sdk_error_responses"></a>
 ## SDK Error Responses ##
 
 This SDK throws it own custom exception `TangoCard.Sdk.Common.TangoCardSdkException` when detecting errors that pertain to itself.
 
 ![Tango Card SDK Error Detection](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/dev/doc/images/tangocard_sdk_error_detected.png "Tango Card SDK Error Detection")
 
+<a name="handling_errors"></a>
 ## Handling Errors ##
 
 Wrap every Tango Card request call within a try/catch block, followed by first catching `TangoCard.Sdk.Service.TangoCardServiceException`, then by `TangoCard.Sdk.Common.TangoCardSdkException`, and finally by standard `Exception`.
@@ -283,31 +326,24 @@ Wrap every Tango Card request call within a try/catch block, followed by first c
 		Console.WriteLine("=== Unexpected Error ===");
 		Console.WriteLine("{0} :: {1}", ex.GetType().ToString(), ex.Message);
 	}
-```
+``` 
 
-# .NET 4.0 SDK Development Environment #
-This .NET 4.0 SDK was built using:
+<a name="sdk_contents"></a>
+# SDK Contents #
+This section details the provided sources of this SDK.
 
-* [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
-* [Visual Studio 2010 Ultimate](http://www.microsoft.com/visualstudio/en-us/products/2010-editions/ultimate/overview)
-* [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)  
+<a name="tangoCard_sdk"></a>
+## TangoCard.Sdk ##
+This is the heart of the SDK which contains the sources, and here is a listing of its directories:
 
-# .NET 4.0 SDK Structure #
-The contents of this .NET 4.0 SDK are:
+* TangoCard.Sdk\Common
+* TangoCard.Sdk\Request
+* TangoCard.Sdk\Response
+* TangoCard.Sdk\Response\Failure
+* TangoCard.Sdk\Response\Success
+* TangoCard.Sdk\Service
 
-* _configuration files_
-	+ TangoCard.Sdk.Examples\app.config
-	+ TangoCard.Sdk.Unittests\app.config
-	+ TangoCard.Sdk\TangoCard_DotNet_SDK.dll.config
-* doc
-    + images
-    + help
-* TangoCard.Sdk.Examples 
-* TangoCard.Sdk.Unittests 
-* TangoCard.Sdk
-
-
-
+<a name="configuration_files"></a>
 ## configuration files ##
 
 There a several configuration files that are referenced by either the provide application examples, unittests, and SDK itself.
@@ -323,9 +359,12 @@ There a several configuration files that are referenced by either the provide ap
 	<dd>- SDK configuration file referenced by `TangoCard.Sdk\Common\SdkConfig.cs`. **DO NOT MODIFY**</dd>
 </dl>
 
+<a name="doc"></a>
 ## doc ##
+
 The `doc\help` sub-directory maintains the up-to-date documentation for the classes (and functions) that are included in the SDK.
 
+<a name="examples"></a>
 ## TangoCard.Sdk.Examples ##
 The examples sub-directory contains full "start to finish" examples of all of the supported methods. This includes catching all of the possible failure modes, etc. 
 
@@ -431,6 +470,7 @@ Example of how the SDK handles various failure responses, such as:
 	Press Any Key to Close this program.
 ```
 
+<a name="unittests"></a>
 ## TangoCard.Sdk.Unittests ##
 
 The SDK's unittests have been written to use [Visual Studio 2010][UnitTest Project].
@@ -477,12 +517,21 @@ To do this, click Start, point to All Programs, point to Microsoft Visual Studio
 	  Total   11
 ```
 
+<a name="sdk_development_environment"></a>
+# SDK Development Environment #
 
-## lib ##
-This is the heart of the SDK... the src sub-directory is where all of the code lies. 
+This .NET 4.0 SDK was built using:
 
+* [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
+* [Visual Studio 2010 Ultimate](http://www.microsoft.com/visualstudio/en-us/products/2010-editions/ultimate/overview)
+* [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx) 
+
+<a name="license"></a>
 # License #
+
 The Tango Card .NET 4.0/C# SDK is free to use, given some restrictions. Please see the LICENSE file for details.
 
-# Integration #
+<a name="production_deployment"></a>
+# Production Deployment #
+
 When you're ready to go live, email [sales@tangocard.com](mailto:sales@tangocard.com). We'll get you set up with a contract and everything else you need, including linking your account so that transactions served via your integration will draw down on your Tango Card account. 
