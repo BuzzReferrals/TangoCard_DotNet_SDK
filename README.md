@@ -362,7 +362,9 @@ There a several configuration files that are referenced by either the provide ap
 <a name="doc"></a>
 ## doc ##
 
-The `doc\help` sub-directory maintains the up-to-date documentation for the classes (and functions) that are included in the SDK.
+The `doc\help\Index.html` accesses the up-to-date [Sandcastle Documentation Compiler](http://sandcastle.codeplex.com/) generated documentation for the classes (and functions) that are included in the SDK.
+
+See [Visual Studio 2010 Sandcastle Help File Builder](http://shfb.codeplex.com/) project `TangoCard.Sdk.Help`.
 
 <a name="examples"></a>
 ## TangoCard.Sdk.Examples ##
