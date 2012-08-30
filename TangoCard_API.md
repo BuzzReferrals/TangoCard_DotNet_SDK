@@ -4,17 +4,17 @@
 
 # Table of Contents #
 <ul>
-    <li><a href="#introduction">Introduction</a>
+<li><a href="#introduction">Introduction</a>
     </li>
-    <li><a href="#request_methods">Requests</a>
-        <ul>
-            <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
-            <li><a href="#request_getavailablecards">GetAvailableCards</a></li>
-            <li><a href="#request_getcardinventory">GetCardInventory</a></li>
-            <li><a href="#request_purchasecard">PurchaseCard</a></li>
-        </ul>
+<li><a href="#request_methods">Requests</a>
+<ul>
+<li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
+<li><a href="#request_getavailablecards">GetAvailableCards</a></li>
+<li><a href="#request_getcardinventory">GetCardInventory</a></li>
+<li><a href="#request_purchasecard">PurchaseCard</a></li>
+</ul>
     </li>
-    <li><a href="#responses">Responses</a>
+<li><a href="#responses">Responses</a>
     </li>
 </ul>
 
@@ -58,19 +58,19 @@ None
 ### Outputs ###
 
 
-      <ul>
-        <li>availableBalance - integer - The balance available to the user in cents (100 = $1.00).</li>
-      </ul>
+<ul>
+<li>availableBalance - integer - The balance available to the user in cents (100 = $1.00).</li>
+</ul>
     
 
 ### Possible Errors ###
 
 
-      <ul>
-        <li>SYS_ERROR</li>
+<ul>
+<li>SYS_ERROR</li>
 
-        <li>INV_CREDENTIAL</li>
-      </ul>
+<li>INV_CREDENTIAL</li>
+</ul>
     
   
 
@@ -89,26 +89,24 @@ None
 ### Outputs ###
 
 
-      <ul>
-        <li>array of:
+<ul>
+<li>array of:
+<ul>
+<li>description - A human-readable name for the card (e.g. "Tango Card").</li>
 
-          <ul>
-            <li>description - A human-readable name for the card (e.g.
-            "Tango Card").</li>
-
-            <li>sku - A top-level SKU for the card.</li>
-          </ul>
-        </li>
-      </ul>
+<li>sku - A top-level SKU for the card.</li>
+</ul>
+</li>
+</ul>
     
 
 ### Possible Errors ###
 
-        <ul>
-            <li>SYS_ERROR</li>
+<ul>
+<li>SYS_ERROR</li>
 
-            <li>INV_CREDENTIAL</li> 
-        </ul>    
+<li>INV_CREDENTIAL</li> 
+</ul>    
     
     
 <a name="request_getcardinventory" id= "request_getcardinventory"></a> 
@@ -120,33 +118,32 @@ Find the available denominations for a given SKU.
 
 ### Inputs ###
 
-
-      <ul>
-        <li>sku - string - A SKU as supplied by GetAvailableCards.</li>
-      </ul>
+<ul>
+<li>sku - string - A SKU as supplied by GetAvailableCards.</li>
+</ul>
     
 
 ### Outputs ###
 
 
-      <ul>
-        <li>availableValues - array of integers - Each integer denotes an increment that
+<ul>
+<li>availableValues - array of integers - Each integer denotes an increment that
         the card can be purchased in. -1 (negative one) denotes that the card is, so
         called, variable. This means that it’s available in
         (theoretically) any denomination.</li>
-      </ul>
+</ul>
     
 
 ### Possible Errors ###
 
 
-      <ul>
-        <li>SYS_ERROR</li>
+<ul>
+<li>SYS_ERROR</li>
 
-        <li>INV_CREDENTIAL</li>
+<li>INV_CREDENTIAL</li>
 
-        <li>INV_INPUT</li>
-      </ul>
+<li>INV_INPUT</li>
+</ul>
     
   
   
@@ -161,65 +158,65 @@ Purchase a single card to be delivered as described.
 ### Inputs ###
 
 
-      <ul>
-        <li>cardSku - string - The SKU of the card to purchase.</li>
+<ul>
+<li>cardSku - string - The SKU of the card to purchase.</li>
 
-        <li>CardValue - integer - The value of the card to purchase.</li>
+<li>CardValue - integer - The value of the card to purchase.</li>
 
-        <li>tcSend - boolean - Whether Tango Card will send the email to the user.</li>
+<li>tcSend - boolean - Whether Tango Card will send the email to the user.</li>
 
-        <li>recipientName - string (length 1 - 255, required if tcSend=true) - The name of the person receiving the card. Recipient</li>
+<li>recipientName - string (length 1 - 255, required if tcSend=true) - The name of the person receiving the card. Recipient</li>
 
-        <li>Email - string (length 3 - 255, required if tcSend=true) - The email address of the person receiving the card.</li>
+<li>Email - string (length 3 - 255, required if tcSend=true) - The email address of the person receiving the card.</li>
 
-        <li>giftMessage - string (length 1 - 255, required if tcSend=true) - A message from the sender of the card to the recipient. May be null, but must exist if tcSend = true.</li>
+<li>giftMessage - string (length 1 - 255, required if tcSend=true) - A message from the sender of the card to the recipient. May be null, but must exist if tcSend = true.</li>
 
-        <li>giftFrom - string (length 1 - 255, required if tcSend=true) - The name of the person sending the card.</li>
-      </ul>
+<li>giftFrom - string (length 1 - 255, required if tcSend=true) - The name of the person sending the card.</li>
+</ul>
     
 
 ### Outputs ###
 
 
-      <ul>
-        <li>If tcSend was set to true:
+<ul>
+<li>If tcSend was set to true:
 
-          <ul>
-            <li>referenceOrderId - string - A unique token that we can use to look up the order.</li>
+<ul>
+<li>referenceOrderId - string - A unique token that we can use to look up the order.</li>
 
-            <li>cardToken - string - A unique token that we can use to look up the card.</li>
-          </ul>
+<li>cardToken - string - A unique token that we can use to look up the card.</li>
+  </ul>
         </li>
 
-        <li>If tcSend was set to false:
+<li>If tcSend was set to false:
 
-          <ul>
-            <li>referenceOrderId - string - A unique token that we can use to look up the order.</li>
+<ul>
+<li>referenceOrderId - string - A unique token that we can use to look up the order.</li>
 
-            <li>cardToken - string - A unique token that we can use to look up the card.</li>
+<li>cardToken - string - A unique token that we can use to look up the card.</li>
 
-            <li>cardNumber - string - The card’s "number".</li>
+<li>cardNumber - string - The card’s "number".</li>
 
-            <li>cardPin - string - The card’s "pin", may be null.</li>
-          </ul>
+<li>cardPin - string - The card’s "pin", may be null.</li>
+  </ul>
         </li>
-      </ul>
+</ul>
     
 
 ### Possible Errors ###
 
 
-      <ul>
-        <li>SYS_ERROR</li>
+<ul>
+<li>SYS_ERROR</li>
 
-        <li>INV_CREDENTIAL</li>
+<li>INV_CREDENTIAL</li>
 
-        <li>INV_INPUT</li>
+<li>INV_INPUT</li>
 
-        <li>INS_INV</li>
+<li>INS_INV</li>
 
-        <li>INS_FUNDS</li>
-      </ul>
+<li>INS_FUNDS</li>
+</ul>
     
   
   
@@ -228,11 +225,11 @@ Purchase a single card to be delivered as described.
   
   All responses are a JSON-encoded object with the format of:
 
-  <ul>
-    <li>"responseType":STRING</li>
+<ul>
+<li>"responseType":STRING</li>
 
-    <li>"response":OBJECT</li>
-  </ul>
+<li>"response":OBJECT</li>
+</ul>
   
 The value of responseType will influence the format of the object in response. For "SUCCESS" cases the object will have properties as outlined in the "Outputs" section for the method. For the other cases the format is as follows:
 
@@ -240,38 +237,31 @@ The value of responseType will influence the format of the object in response. F
 ### SYS_ERROR ###
 
 
-  An error happened on our end. The call may may be re-tried, however if the error
-      persists please contact us.
+  An error happened on our end. The call may may be re-tried, however if the error persists please contact us.
 
-      <ul>
-        <li>errorCode - string - An internal error code that we can use to track down
-        where the error occurred.</li>
-      </ul>
+<ul>
+<li>errorCode - string - An internal error code that we can use to track down where the error occurred.</li>
+</ul>
     
 
 ### INV_INPUT ###
 
 
-  One (or more) of the supplied inputs didn’t meet the
-      requirements. The request should be altered before resubmitting.
+  One (or more) of the supplied inputs didn’t meet the requirements. The request should be altered before resubmitting.
 
-      <ul>
-        <li>invalid - object - The object’s properties are the name of
-        the invalid field, the value of the property is description of the associated
-        problem.</li>
-      </ul>
+<ul>
+<li>invalid - object - The object’s properties are the name of the invalid field, the value of the property is description of the associated problem.</li>
+</ul>
     
 
 ### INV_CREDENTIAL ###
 
 
-  The credential was either missing, or something was wrong with it. The request
-      should be altered before resubmitting.
+  The credential was either missing, or something was wrong with it. The request should be altered before resubmitting.
 
-      <ul>
-        <li>message - string - A description of what appeared to be wrong with the
-        supplied credential.</li>
-      </ul>
+<ul>
+<li>message - string - A description of what appeared to be wrong with the supplied credential.</li>
+</ul>
     
 
 ### INS_INV ###
@@ -280,11 +270,11 @@ The value of responseType will influence the format of the object in response. F
   We don’t have enough available inventory to fulfill the request.
       The request should be altered before resubmitting.
 
-      <ul>
-        <li>sku - string - The SKU that we couldn’t fulfill.</li>
+<ul>
+<li>sku - string - The SKU that we couldn’t fulfill.</li>
 
-        <li>value - int - The value that we couldn’t fulfill.</li>
-      </ul>
+<li>value - int - The value that we couldn’t fulfill.</li>
+</ul>
     
 
 ### INS_FUNDS ###
@@ -293,13 +283,11 @@ The value of responseType will influence the format of the object in response. F
     have enough available balance to cover the cost of the purchase. ###
 
 
-      <ul>
-        <li>availableBalance - int - The balance currently available in cents (100 =
-        $1.00).</li>
+<ul>
+<li>availableBalance - int - The balance currently available in cents (100 = $1.00).</li>
 
-        <li>orderCost - int "&ldquo; The amount the order would cost to
-        complete in cents (100 = $1.00).</li>
-      </ul>
+<li>orderCost - int - The amount the order would cost to complete in cents (100 = $1.00).</li>
+</ul>
     
   
 
