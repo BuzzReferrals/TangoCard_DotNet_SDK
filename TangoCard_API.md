@@ -5,9 +5,9 @@
 # Table of Contents #
 <ul>
 <li><a href="#introduction">Introduction</a>
-    </li>
+</li>
 <li><a href="#overview">Overview</a>
-    </li>
+</li>
 <li><a href="#request_methods">Requests</a>
 <ul>
 <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
@@ -15,9 +15,9 @@
 <li><a href="#request_getcardinventory">GetCardInventory</a></li>
 <li><a href="#request_purchasecard">PurchaseCard</a></li>
 </ul>
-    </li>
+</li>
 <li><a href="#responses">Responses</a>
-    </li>
+</li>
 </ul>
 
 <a name="introduction"></a>
@@ -194,7 +194,7 @@ Purchase a single card to be delivered as described.
 
 <li>cardToken - string - A unique token that we can use to look up the card.</li>
   </ul>
-        </li>
+    </li>
 
 <li>If tcSend was set to false:
 
@@ -207,7 +207,7 @@ Purchase a single card to be delivered as described.
 
 <li>cardPin - string - The card’s "pin", may be null.</li>
   </ul>
-        </li>
+    </li>
 </ul>
     
 
