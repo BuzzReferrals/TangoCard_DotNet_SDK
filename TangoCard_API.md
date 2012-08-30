@@ -42,7 +42,7 @@ Production URL format is https://api.tangocard.com/ThirdParty/[method] where [me
 All requests are via JSON-encoded objects as the payload of a HTTP POST call on a specified method. As an example, if the input listed below was "sku" then the POST body might look like:
 
 ```json
-{"sku" : "tango-card"}
+{"sku":"tango-card"}
 ```
 
 Note, however that since this is an HTTP POST that this should be <a href="http://en.wikipedia.org/wiki/Percent-encoding">"percent-encoded"</a>, as normal, so the actual body might actually look more like:
@@ -229,9 +229,9 @@ Purchase a single card to be delivered as described.
   
   
 <a name="responses" id="responses"></a>
-# Responses # 
+# Responses #
   
-  All responses are a JSON-encoded object with the format of:
+All responses are a JSON-encoded object with the format of:
 
 <ul>
 <li>"responseType":STRING</li>
@@ -242,7 +242,7 @@ Purchase a single card to be delivered as described.
 The value of responseType will influence the format of the object in response. For "SUCCESS" cases the object will have properties as outlined in the "Outputs" section for the method. For the other cases the format is as follows:
 
   
-### SYS_ERROR ###
+## SYS_ERROR ##
 
 
   An error happened on our end. The call may may be re-tried, however if the error persists please contact us.
@@ -252,7 +252,7 @@ The value of responseType will influence the format of the object in response. F
 </ul>
     
 
-### INV_INPUT ###
+## INV_INPUT ##
 
 
   One (or more) of the supplied inputs didn’t meet the requirements. The request should be altered before resubmitting.
@@ -262,7 +262,7 @@ The value of responseType will influence the format of the object in response. F
 </ul>
     
 
-### INV_CREDENTIAL ###
+## INV_CREDENTIAL ##
 
 
   The credential was either missing, or something was wrong with it. The request should be altered before resubmitting.
@@ -272,7 +272,7 @@ The value of responseType will influence the format of the object in response. F
 </ul>
     
 
-### INS_INV ###
+## INS_INV ##
 
 
   We don’t have enough available inventory to fulfill the request.
@@ -285,7 +285,7 @@ The value of responseType will influence the format of the object in response. F
 </ul>
     
 
-### INS_FUNDS ###
+## INS_FUNDS ##
 
 The account associated with the authenticated user doesn’t have enough available balance to cover the cost of the purchase.
 
