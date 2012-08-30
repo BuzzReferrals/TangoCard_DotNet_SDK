@@ -6,6 +6,8 @@
 <ul>
 <li><a href="#introduction">Introduction</a>
     </li>
+<li><a href="#overview">Overview</a>
+    </li>
 <li><a href="#request_methods">Requests</a>
 <ul>
 <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
@@ -23,7 +25,9 @@
 
 Tango Card's API is flexible, secure, and straightforward. It allows any server to purchase gift cards and is intended for users requiring high volume transactions and processes. While simple enough that developers can start integrating within 15 minutes, it is robust enough so developers don't have to deal with JSON or setting up secure network connections with our server.
 
-All calls are made via TLS/SSL and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
+<a name="overview"></a>
+# Overview #
+All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
 
 Testing (integration) URL format is https://int.tangocard.com/ThirdParty/[method] where [method] is to be replaced with one of the methods below.
 
@@ -31,13 +35,13 @@ Production URL format is https://api.tangocard.com/ThirdParty/[method] where [me
 
 <a name="request_methods"></a>
 # Requests #
-All requests are via JSON-encoded objects as the payload of a HTTP POST call on a specified method. As an example, if the input listed below was ‘sku’ then the POST body might look like:
+All requests are via JSON-encoded objects as the payload of a HTTP POST call on a specified method. As an example, if the input listed below was "sku" then the POST body might look like:
 
 ```json
-{"sku":"tango-card"}
+{"sku" : "tango-card"}
 ```
 
-Note, however that since this is an HTTP POST that this should be “percent-encoded”, as normal, so the actual body might actually look more like:
+Note, however that since this is an HTTP POST that this should be <a href="http://en.wikipedia.org/wiki/Percent-encoding">"percent-encoded"</a>, as normal, so the actual body might actually look more like:
 
 ```text
 %7B%22sku%22%3A%22tango-card%22%7D
