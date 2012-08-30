@@ -47,15 +47,15 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 ## GetAvailableBalance ##
 
   
-    ### Description: ### 
+### Description: ### 
 
     <p>Shows the available balance to the user whose authentication was supplied.</p>
 
-    ### Inputs: ### 
+### Inputs: ### 
 
     <p>None</p>
 
-    ### Outputs: ### 
+### Outputs: ### 
 
     <p>
       <ul>
@@ -63,7 +63,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### Possible Errors: ### 
+### Possible Errors: ### 
 
     <p>
       <ul>
@@ -78,15 +78,15 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 ## GetAvailableCards ##
 
   
-    ### Description: ### 
+### Description: ### 
 
     <p>Shows a list of cards that authenticated user is allowed to purchase.</p>
 
-    ### Inputs: ### 
+### Inputs: ### 
 
     <p>None</p>
 
-    ### Outputs: ### 
+### Outputs: ### 
 
     <p>
       <ul>
@@ -102,7 +102,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### Possible Errors: ### 
+### Possible Errors: ### 
     <p>
         <ul>
             <li>SYS_ERROR</li>
@@ -115,11 +115,11 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 ## GetCardInventory ##
 
   
-    ### Description: ### 
+### Description: ### 
 
     <p>Find the available denominations for a given SKU.</p>
 
-    ### Inputs: ### 
+### Inputs: ### 
 
     <p>
       <ul>
@@ -127,7 +127,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### Outputs: ### 
+### Outputs: ### 
 
     <p>
       <ul>
@@ -138,7 +138,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### Possible Errors: ### 
+### Possible Errors: ### 
 
     <p>
       <ul>
@@ -155,11 +155,11 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
   ## PurchaseCard ##
 
   
-    ### Description: ### 
+### Description: ### 
 
     <p>Purchase a single card to be delivered as described.</p>
 
-    ### Inputs: ### 
+### Inputs: ### 
 
     <p>
       <ul>
@@ -179,7 +179,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### Outputs: ### 
+### Outputs: ### 
 
     <p>
       <ul>
@@ -207,7 +207,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### Possible Errors: ### 
+### Possible Errors: ### 
 
     <p>
       <ul>
@@ -238,7 +238,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
     <p>The value of responseType will influence the format of the object in response. For "SUCCESS" cases the object will have properties as outlined in the "Outputs" section for the method. For the other cases the format is as follows:</p>
 
   
-    ### SYS_ERROR ### 
+### SYS_ERROR ### 
 
     <p>
       <p>An error happened on our end. The call may may be re-tried, however if the error
@@ -250,7 +250,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### INV_INPUT ### 
+### INV_INPUT ### 
 
     <p>
       <p>One (or more) of the supplied inputs didn’t meet the
@@ -263,7 +263,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### INV_CREDENTIAL ### 
+### INV_CREDENTIAL ### 
 
     <p>
       <p>The credential was either missing, or something was wrong with it. The request
@@ -275,7 +275,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### INS_INV ### 
+### INS_INV ### 
 
     <p>
       <p>We don’t have enough available inventory to fulfill the request.
@@ -288,9 +288,9 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-    ### INS_FUNDS ### 
+### INS_FUNDS ### 
 
-    ### The account associated with the authenticated user doesn’t
+### The account associated with the authenticated user doesn’t
     have enough available balance to cover the cost of the purchase. ### 
 
     <p>
