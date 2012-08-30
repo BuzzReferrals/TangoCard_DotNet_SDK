@@ -31,9 +31,9 @@ To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 # Overview #
 All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
 
-Testing (integration) URL format is https://int.tangocard.com/Version2/[method] where [method] is to be replaced with one of the methods below.
+*Testing (integration) URL* format is `https://int.tangocard.com/Version2/[method]` where `[method]` is to be replaced with one of the methods below.
 
-Production URL format is https://api.tangocard.com/Version2/[method] where [method] is to be replaced with one of the methods below.
+*Production URL* format is `https://api.tangocard.com/Version2/[method]` where `[method]` is to be replaced with one of the methods below.
 
 <a name="request_methods"></a>
 # Request Methods #
