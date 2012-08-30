@@ -25,6 +25,10 @@
 
 Tango Card's API is flexible, secure, and straightforward. It allows any server to purchase gift cards and is intended for users requiring high volume transactions and processes. While simple enough that developers can start integrating within 15 minutes, it is robust enough so developers don't have to deal with JSON or setting up secure network connections with our server.
 
+### Contact Us ###
+
+To learn more about Tango Card integration solutions, call 1.877.55.TANGO
+
 <a name="overview"></a>
 # Overview #
 All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
@@ -283,8 +287,7 @@ The value of responseType will influence the format of the object in response. F
 
 ### INS_FUNDS ###
 
-### The account associated with the authenticated user doesn’t
-    have enough available balance to cover the cost of the purchase. ###
+The account associated with the authenticated user doesn’t have enough available balance to cover the cost of the purchase.
 
 
 <ul>
@@ -295,4 +298,3 @@ The value of responseType will influence the format of the object in response. F
     
   
 
-Update 3.21.12 | To learn more about Tango Card integration solutions, call 1.877.55.TANGO
