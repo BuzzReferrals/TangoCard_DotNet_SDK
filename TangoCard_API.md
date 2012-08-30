@@ -47,25 +47,25 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 ## GetAvailableBalance ##
 
   
-### Description: ### 
+### Description ### 
 
-    <p>Shows the available balance to the user whose authentication was supplied.</p>
+<p>Shows the available balance to the user whose authentication was supplied.</p>
 
-### Inputs: ### 
+### Inputs ### 
 
-    <p>None</p>
+<p>None</p>
 
-### Outputs: ### 
+### Outputs ### 
 
-    <p>
+<p>
       <ul>
         <li>availableBalance - integer - The balance available to the user in cents (100 = $1.00).</li>
       </ul>
     </p>
 
-### Possible Errors: ### 
+### Possible Errors ### 
 
-    <p>
+<p>
       <ul>
         <li>SYS_ERROR</li>
 
@@ -78,17 +78,17 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 ## GetAvailableCards ##
 
   
-### Description: ### 
+### Description ### 
 
-    <p>Shows a list of cards that authenticated user is allowed to purchase.</p>
+<p>Shows a list of cards that authenticated user is allowed to purchase.</p>
 
-### Inputs: ### 
+### Inputs ### 
 
-    <p>None</p>
+<p>None</p>
 
-### Outputs: ### 
+### Outputs ### 
 
-    <p>
+<p>
       <ul>
         <li>array of:
 
@@ -102,8 +102,8 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-### Possible Errors: ### 
-    <p>
+### Possible Errors ### 
+<p>
         <ul>
             <li>SYS_ERROR</li>
 
@@ -115,21 +115,21 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 ## GetCardInventory ##
 
   
-### Description: ### 
+### Description ### 
 
-    <p>Find the available denominations for a given SKU.</p>
+<p>Find the available denominations for a given SKU.</p>
 
-### Inputs: ### 
+### Inputs ### 
 
-    <p>
+<p>
       <ul>
         <li>sku - string - A SKU as supplied by GetAvailableCards.</li>
       </ul>
     </p>
 
-### Outputs: ### 
+### Outputs ### 
 
-    <p>
+<p>
       <ul>
         <li>availableValues - array of integers - Each integer denotes an increment that
         the card can be purchased in. -1 (negative one) denotes that the card is, so
@@ -138,9 +138,9 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-### Possible Errors: ### 
+### Possible Errors ### 
 
-    <p>
+<p>
       <ul>
         <li>SYS_ERROR</li>
 
@@ -155,13 +155,13 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
   ## PurchaseCard ##
 
   
-### Description: ### 
+### Description ### 
 
-    <p>Purchase a single card to be delivered as described.</p>
+<p>Purchase a single card to be delivered as described.</p>
 
-### Inputs: ### 
+### Inputs ### 
 
-    <p>
+<p>
       <ul>
         <li>cardSku - string - The SKU of the card to purchase.</li>
 
@@ -179,9 +179,9 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-### Outputs: ### 
+### Outputs ### 
 
-    <p>
+<p>
       <ul>
         <li>If tcSend was set to true:
 
@@ -207,9 +207,9 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
       </ul>
     </p>
 
-### Possible Errors: ### 
+### Possible Errors ### 
 
-    <p>
+<p>
       <ul>
         <li>SYS_ERROR</li>
 
@@ -235,13 +235,13 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
     <li>"response":OBJECT</li>
   </ul>
   
-    <p>The value of responseType will influence the format of the object in response. For "SUCCESS" cases the object will have properties as outlined in the "Outputs" section for the method. For the other cases the format is as follows:</p>
+<p>The value of responseType will influence the format of the object in response. For "SUCCESS" cases the object will have properties as outlined in the "Outputs" section for the method. For the other cases the format is as follows:</p>
 
   
 ### SYS_ERROR ### 
 
-    <p>
-      <p>An error happened on our end. The call may may be re-tried, however if the error
+<p>
+  <p>An error happened on our end. The call may may be re-tried, however if the error
       persists please contact us.</p>
 
       <ul>
@@ -252,8 +252,8 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 
 ### INV_INPUT ### 
 
-    <p>
-      <p>One (or more) of the supplied inputs didn’t meet the
+<p>
+  <p>One (or more) of the supplied inputs didn’t meet the
       requirements. The request should be altered before resubmitting.</p>
 
       <ul>
@@ -265,8 +265,8 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 
 ### INV_CREDENTIAL ### 
 
-    <p>
-      <p>The credential was either missing, or something was wrong with it. The request
+<p>
+  <p>The credential was either missing, or something was wrong with it. The request
       should be altered before resubmitting.</p>
 
       <ul>
@@ -277,8 +277,8 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 
 ### INS_INV ### 
 
-    <p>
-      <p>We don’t have enough available inventory to fulfill the request.
+<p>
+  <p>We don’t have enough available inventory to fulfill the request.
       The request should be altered before resubmitting.</p>
 
       <ul>
@@ -293,7 +293,7 @@ Note, however that since this is an HTTP POST that this should be “percent-encod
 ### The account associated with the authenticated user doesn’t
     have enough available balance to cover the cost of the purchase. ### 
 
-    <p>
+<p>
       <ul>
         <li>availableBalance - int - The balance currently available in cents (100 =
         $1.00).</li>
