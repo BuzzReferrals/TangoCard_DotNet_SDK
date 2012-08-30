@@ -8,7 +8,7 @@
 </li>
 <li><a href="#overview">Overview</a>
 </li>
-<li><a href="#request_methods">Requests</a>
+<li><a href="#request_methods">Request Methods</a>
 <ul>
 <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
 <li><a href="#request_getavailablecards">GetAvailableCards</a></li>
@@ -27,7 +27,7 @@ Tango Card's API is flexible, secure, and straightforward. It allows any server 
 
 ### Contact Us ###
 
-To learn more about Tango Card integration solutions, call 1.877.55.TANGO
+To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 
 <a name="overview"></a>
 # Overview #
@@ -38,7 +38,7 @@ Testing (integration) URL format is https://int.tangocard.com/ThirdParty/[method
 Production URL format is https://api.tangocard.com/ThirdParty/[method] where [method] is to be replaced with one of the methods below.
 
 <a name="request_methods"></a>
-# Requests #
+# Request Methods #
 All requests are via JSON-encoded objects as the payload of a HTTP POST call on a specified method. As an example, if the input listed below was "sku" then the POST body might look like:
 
 ```json
