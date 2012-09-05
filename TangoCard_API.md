@@ -13,7 +13,19 @@
             <li><a href="#contact_us">Contact Us</a></li>
         </ul>
     </li>
+    <li><a href="#tango_card_api_overview">Tango Card API Overview</a>
+        <ul>
+            <li><a name="tango_card_service_requests">Tango Card Service Requests</a></li>
+            <li><a name="tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
+            <li><a name="tango_card_service_api_security">Tango Card Service API Security</a></li>
+        </ul>
+    </li>
+    <li><a name="tango_card_api_methods">Tango Card API Methods
     <li><a href="#overview">Overview</a>
+        <ul>
+            <li><a name="get_available_balance">Get Available Balance</a></li>
+            <li><a name="purchase_card">Purchase Card</a></li>
+        </ul>
     </li>
     <li><a href="#request_methods">Request Methods</a>
     <ul>
@@ -80,8 +92,11 @@ If you have any questions, please contact us at sdk@tangocard.com.
 
 To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 
+<a name="tango_card_api_overview"></a>
+# Tango Card API Overview #
+
 <a name="tango_card_service_requests"></a>
-# Tango Card Service Requests #
+## Tango Card Service Requests ##
 
 The Tango Card SDK, every Request has a corresponding success-case Response object.
 
@@ -94,19 +109,27 @@ Available are two endpoints that provide the Tango Card Service API, as defined 
     <dd>
         <ul>
             <li>Expected to be used for development and testing purposes.</li>
-            <li>`https://int.tangocard.com/Version2/[method]`</li>
+            <li>https://int.tangocard.com/Version2/[method]</li>
         </ul>
     </dd>
     <dt>PRODUCTION</dt>
     <dd>
         <ul>
             <li>Performs actual card purchase requests.</li>
-            <li>`https://api.tangocard.com/Version2/[method]`</li>
+            <li>https://api.tangocard.com/Version2/[method]</li>
         </ul>
     </dd>
 </dl>
 
+<a name="tango_card_service_api_security"></a>
+## Tango Card Service API Security ##
+
 Requests are secure HTTP POST using SSL.
+
+All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
+
+<a name="tango_card_api_methods"></a>
+# Tango Card API Methods #
 
 <a name="get_available_balance"></a>
 ## Get Available Balance ##
