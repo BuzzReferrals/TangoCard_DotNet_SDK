@@ -114,13 +114,15 @@ The available request methods through our API endpoints are:
 
 <a name="response_body"></a>
 ### Response Body ###
-  
+
 All responses are a JSON-encoded object with the format of:
 
 <ul>
 <li>"responseType":STRING</li>
 <li>"response":OBJECT</li>
 </ul>
+  
+The value of responseType will influence the format of the object in response. For "SUCCESS" cases the object will have properties as outlined in the "Outputs" section for the method. For the other cases the format is as follows:
 
 <a name="tango_card_service_api_endpoints"></a>
 ## Tango Card Service API Endpoints ##
@@ -209,7 +211,6 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
     <dd>integer - The value of the card to purchase.</dd>
     <dt>tcSend</dt>
     <dd>boolean - Whether Tango Card will send the email to the user.</dd>
-
     <dt>recipientName</dt>
     <dd>string (length 1 - 255, required if tcSend=true) - The name of the person receiving the card.</dd>
     <dt>recipientEmail</dt>
@@ -224,44 +225,34 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
 ### Response Types ###
 
 <dl>
-    <dt>SUCCESS</dt>
-    <dd>
-        <dl>
-            <dt>referenceOrderId</dt>
-            <dd>string - A unique token that we can use to look up the order.</dd>
-            <dt>cardToken</dt>
-            <dd>string - A unique token that we can use to look up the card.</dd>
-            <dt>cardNumber</dt>
-            <dd>string - The card’s "number".</dd>
-            <dt>cardPin</dt>
-            <dd>string - The card’s "pin", may be null.</dd>
-        </dl>
-    </dd>
-    <dt>SYS_ERROR</dt>
-    <dd></dd>
-    <dt>INV_CREDENTIAL</dt>
-    <dd></dd>
-    <dt>INV_INPUT</dt>
-    <dd></dd>
-    <dt>INS_INV</dt>
-    <dd></dd>
-    <dt>INS_FUNDS</dt>
-    <dd></dd>
+<dt>SUCCESS</dt>
+<dd>
+    <dl>
+        <dt>referenceOrderId</dt>
+        <dd>string - A unique token that we can use to look up the order.</dd>
+        <dt>cardToken</dt>
+        <dd>string - A unique token that we can use to look up the card.</dd>
+        <dt>cardNumber</dt>
+        <dd>string - The card’s "number".</dd>
+        <dt>cardPin</dt>
+        <dd>string - The card’s "pin", may be null.</dd>
+    </dl>
+</dd>
+<dt>SYS_ERROR</dt>
+<dd></dd>
+<dt>INV_CREDENTIAL</dt>
+<dd></dd>
+<dt>INV_INPUT</dt>
+<dd></dd>
+<dt>INS_INV</dt>
+<dd></dd>
+<dt>INS_FUNDS</dt>
+<dd></dd>
 <dl>
 
 
-<a name="responses" id="responses"></a>
-# Responses #
-  
-All responses are a JSON-encoded object with the format of:
-
-<ul>
-<li>"responseType":STRING</li>
-<li>"response":OBJECT</li>
-</ul>
-  
-The value of responseType will influence the format of the object in response. For "SUCCESS" cases the object will have properties as outlined in the "Outputs" section for the method. For the other cases the format is as follows:
-
+<a name="failure_responses" ></a>
+# Failure Responses #
   
 ## SYS_ERROR ##
 
