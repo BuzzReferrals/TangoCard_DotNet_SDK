@@ -1,34 +1,112 @@
-<h1>Tango Card Integration Solutions</h1>
+<h1>Tango Card API</h1>
 <h3>Digital gift cards in minutes</h3>
 ===
 
 # Table of Contents #
 <ul>
-<li><a href="#introduction">Introduction</a>
-</li>
-<li><a href="#overview">Overview</a>
-</li>
-<li><a href="#request_methods">Request Methods</a>
-<ul>
-<li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
-<li><a href="#request_purchasecard">PurchaseCard</a></li>
-</ul>
-</li>
-<li><a href="#responses">Responses</a>
-</li>
+    <li><a href="#introduction">Introduction</a>
+        <ul>
+            <li><a href="#tango_card_api">Tango Card API</a></li>
+            <li><a href="#incorporate_tango_card">Incorporate Tango Card Gift Cards</a></li>
+            <li><a href="#open_account">Open Tango Card Account</a></li>
+            <li><a href="#api_support">API Support</a></li>
+            <li><a href="#contact_us">Contact Us</a></li>
+        </ul>
+    </li>
+    <li><a href="#overview">Overview</a>
+    </li>
+    <li><a href="#request_methods">Request Methods</a>
+    <ul>
+    <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
+    <li><a href="#request_purchasecard">PurchaseCard</a></li>
+    </ul>
+    </li>
+    <li><a href="#responses">Responses</a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </ul>
 
 <a name="introduction"></a>
 # Introduction #
 
+<a name="tango_card_api"></a>
+## Tango Card API ##
 Tango Card's API is flexible, secure, and straightforward. It allows any server to purchase gift cards and is intended for users requiring high volume transactions and processes. While simple enough that developers can start integrating within 15 minutes, it is robust enough so developers don't have to deal with JSON or setting up secure network connections with our server.
 
-### Contact Us ###
+<a name="tango_card_sdks"></a>
+## Tango Card SDKs ##
+There are several Tango Card SDKs currently available that use the Tango Card API:
+<ul>
+    <li><a href="https://github.com/tangocarddev/TangoCard_DotNet_SDK" target="_blank">Tango Card C#/.Net 4.0 SDK</a></li>
+    <li><a href="https://github.com/tangocarddev/TangoCard_PHP_SDK" target="_blank">Tango Card PHP SDK</a></li>
+    <li><a href="https://github.com/tangocarddev/TangoCard_Java_SDK" target="_blank">Tango Card Java SDK</a></li>
+</ul>
+
+<a name="incorporate_tango_card"></a>
+## Incorporate Tango Card Gift Cards ##
+Tango Card’s Extend API allow you to incorporate the innovative Tango Card gift card into your reward, loyalty, and engagement applications. Tango Card is the “exactly what you want” gift card and allows the recipient to use their value exactly how they want – they can select a premier gift card, they can divide their value among Brands, they can use some today and save the rest for another day. They can also donate to a non-profit organization. Tango Card value can be used via the web or from almost any mobile device. There are no fees or expiration dates of any kind. It’s great for the recipient, and even better for you because it is an entire gift card program delivered in one card allowing you to focus on your core business. Tango Card solutions are already used by Microsoft Bing, FedEx, Extole, Plink, beintoo, Lead Valu, Getty Images, and many others.
+
+<a name="open_account"></a>
+## Open Tango Card Account ##
+Within minutes of download, our Extend SDKs will allow you to check the balance on your pre-funded Tango Card account, send Tango Card gift cards directly to recipients via email, and return live gift card codes for you to customize and redistribute. With Tango Card and Retailer Brand approval, there is also the ability to order retailer Brand gift cards via the SDK. Simply use the supplied credentials to see how easy it is. When you’re ready to move into production, sign up for an account at https://www.tangocard.com/user/register. Use these credentials in your SDK and you’re done!
+
+<a name="sdk_support"></a>
+## SDK Support ##
+If you have any questions, please contact us at sdk@tangocard.com.
+
+<a name="contact_us"></a>
+## Contact Us ##
 
 To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 
-<a name="overview"></a>
-# Overview #
+<a name="tango_card_service_requests"></a>
+# Tango Card Service Requests #
+
+The Tango Card SDK, every Request has a corresponding success-case Response object.
+
+<a name="tango_card_service_api_endpoints"></a>
+## Tango Card Service API Endpoints ##
+
+Available are two endpoints that provide the Tango Card Service API, as defined by `enum TangoCard.Sdk.Service.TangoCardServiceApiEnum` :
+<dl>
+    <dt>`INTEGRATION`</dt> 
+    <dd>Expected to be used for development and testing purposes.</dd>
+    <dt>`PRODUCTION`</dt>
+    <dd>Performs actual card purchase requests.</dd>
+</dl>
+
+Requests are secure HTTP POST using SSL.
+
+<a name="get_available_balance"></a>
+## Get Available Balance ##
+
+
+<a name="purchase_card"></a>
+## Purchase Card ##
+
+<a name="api_overview"></a>
+# API Overview #
 All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
 
 *Testing (integration) URL* format is `https://int.tangocard.com/Version2/[method]` where `[method]` is to be replaced with one of the methods below.
