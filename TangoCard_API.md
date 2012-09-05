@@ -90,10 +90,20 @@ The Tango Card SDK, every Request has a corresponding success-case Response obje
 
 Available are two endpoints that provide the Tango Card Service API, as defined by `enum TangoCard.Sdk.Service.TangoCardServiceApiEnum` :
 <dl>
-    <dt>`INTEGRATION`</dt> 
-    <dd>Expected to be used for development and testing purposes.</dd>
-    <dt>`PRODUCTION`</dt>
-    <dd>Performs actual card purchase requests.</dd>
+    <dt>INTEGRATION</dt> 
+    <dd>
+        <ul>
+            <li>Expected to be used for development and testing purposes.</li>
+            <li>`https://int.tangocard.com/Version2/[method]`</li>
+        </ul>
+    </dd>
+    <dt>PRODUCTION</dt>
+    <dd>
+        <ul>
+            <li>Performs actual card purchase requests.</li>
+            <li>`https://api.tangocard.com/Version2/[method]`</li>
+        </ul>
+    </dd>
 </dl>
 
 Requests are secure HTTP POST using SSL.
