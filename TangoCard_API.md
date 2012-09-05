@@ -100,6 +100,31 @@ To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 
 The Tango Card SDK, every Request has a corresponding success-case Response object.
 
+<a name="http_post_request_body"></a>
+### HTTP POST Request Body ###
+All requests are via JSON-encoded objects as the payload of a HTTP POST call on a specified method. As an example, if the input listed below was "sku" then the POST body might look like:
+
+```json
+{"sku":"tango-card"}
+```
+
+Note, however that since this is an HTTP POST that this should be <a href="http://en.wikipedia.org/wiki/Percent-encoding">"percent-encoded"</a>, as normal, so the actual body might actually look more like:
+
+```text
+%7B%22sku%22%3A%22tango-card%22%7D
+```
+
+<a name="request_methods"></a>
+### Request Methods ###
+
+The available request methods through our API endpoints are:
+<dl>
+    <dt>GetAvailableBalance</dt>
+    <dd></dd>
+    <dt>PurchaseCard</dt>
+    <dd></dd>
+</dl>
+
 <a name="tango_card_service_api_endpoints"></a>
 ## Tango Card Service API Endpoints ##
 
@@ -146,19 +171,7 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
 
 *Production URL* format is `https://api.tangocard.com/Version2/[method]` where `[method]` is to be replaced with one of the methods below.
 
-<a name="request_methods"></a>
-# Request Methods #
-All requests are via JSON-encoded objects as the payload of a HTTP POST call on a specified method. As an example, if the input listed below was "sku" then the POST body might look like:
 
-```json
-{"sku":"tango-card"}
-```
-
-Note, however that since this is an HTTP POST that this should be <a href="http://en.wikipedia.org/wiki/Percent-encoding">"percent-encoded"</a>, as normal, so the actual body might actually look more like:
-
-```text
-%7B%22sku%22%3A%22tango-card%22%7D
-```
 
 <a name="request_getavailablebalance" id="request_getavailablebalance"></a> 
 ## GetAvailableBalance ##
