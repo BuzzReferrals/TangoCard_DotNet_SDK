@@ -15,12 +15,17 @@
     </li>
     <li><a href="#tango_card_api_overview">Tango Card API Overview</a>
         <ul>
-            <li><a name="tango_card_service_requests">Tango Card Service Requests</a></li>
-            <li><a name="tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
-            <li><a name="tango_card_service_api_security">Tango Card Service API Security</a></li>
+            <li><a href="#tango_card_service_requests">Tango Card Service Requests</a>
+                <ul>
+                    <li><a href="#http_post_request_body">HTTP POST Request Body</a></li>
+                    <li><a href="#request_methods">Request Methods</a></li>
+                </ul>
+            </li>
+            <li><a href="#tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
+            <li><a href="#tango_card_service_api_security">Tango Card Service API Security</a></li>
         </ul>
     </li>
-    <li><a name="tango_card_api_methods">Tango Card API Methods
+    <li><a href="#tango_card_api_methods">Tango Card API Methods
     <li><a href="#overview">Overview</a>
         <ul>
             <li><a name="get_available_balance">Get Available Balance</a></li>
