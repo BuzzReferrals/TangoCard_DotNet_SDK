@@ -152,8 +152,8 @@ Requests are secure HTTP POST using SSL.
 All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
 
 
-<a name="tango_card_api_methods"></a> 
-Tango Card API Methods
+<a name="tango_card_api_methods"></a>
+# Tango Card API Methods #
 
 <a name="request_getavailablebalance" id="request_getavailablebalance"></a> 
 ## GetAvailableBalance ##
@@ -162,7 +162,14 @@ Tango Card API Methods
     <dt>Description</dt>
     <dd>Request the available balance to the user whose authentication was supplied.</dd>
     <dt>Inputs</dt>
-    <dd>None</dd>
+    <dd>
+        <dl>
+            <dt>username</dt>
+            <dd></dd>
+            <dt>password</dt>
+            <dd></dd>
+        </dl>
+    </dd>
 
     <dt>Outputs</dt>
     <dd>
