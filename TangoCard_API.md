@@ -165,24 +165,25 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
     <dd>
         <dl>
             <dt>username</dt>
-            <dd></dd>
+            <dd>https://www.tangocard.com user account's username</dd>
             <dt>password</dt>
-            <dd></dd>
+            <dd>https://www.tangocard.com user account's password</dd>
         </dl>
     </dd>
 
     <dt>Outputs</dt>
     <dd>
-        <ul>
-        <li>availableBalance - integer - The balance available to the user in cents (100 = $1.00).</li>
-        </ul>
+        <dl>
+            <dt>availableBalance - integer - The balance available to the user in cents (100 = $1.00).</dt>
+        </dl>
     </dd>
-        <dt>Possible Errors</dt>
-        <dd>
-        <ul>
-            <li>SYS_ERROR</li>
-            <li>INV_CREDENTIAL</li>
-        </ul>
+
+    <dt>Possible Errors:</dt>
+    <dd>
+        <dl>
+            <dt>SYS_ERROR</dt>
+            <dt>INV_CREDENTIAL</dt>
+        </dl>
     </dd>
 </dl>
     
