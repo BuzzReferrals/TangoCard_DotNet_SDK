@@ -19,6 +19,7 @@
                 <ul>
                     <li><a href="#http_post_request_body">HTTP POST Request Body</a></li>
                     <li><a href="#request_methods">Request Methods</a></li>
+                    <li><a href="#response_body">Response Body</a></li>
                 </ul>
             </li>
             <li><a href="#tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
@@ -110,6 +111,16 @@ The available request methods through our API endpoints are:
     <dt>PurchaseCard</dt>
     <dd>Purchase Tango Cards from account funded by user.</dd>
 </dl>
+
+<a name="response_body"></a>
+### Response Body ###
+  
+All responses are a JSON-encoded object with the format of:
+
+<ul>
+<li>"responseType":STRING</li>
+<li>"response":OBJECT</li>
+</ul>
 
 <a name="tango_card_service_api_endpoints"></a>
 ## Tango Card Service API Endpoints ##
@@ -226,9 +237,6 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
             <dd>string - The card’s "pin", may be null.</dd>
         </dl>
     </dd>
-
-
-
     <dt>SYS_ERROR</dt>
     <dd></dd>
     <dt>INV_CREDENTIAL</dt>
@@ -239,7 +247,6 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
     <dd></dd>
     <dt>INS_FUNDS</dt>
     <dd></dd>
-
 <dl>
 
 
