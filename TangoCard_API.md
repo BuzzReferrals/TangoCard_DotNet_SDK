@@ -28,10 +28,10 @@
         </ul>
     </li>
     <li><a href="#request_methods">Request Methods</a>
-    <ul>
-    <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
-    <li><a href="#request_purchasecard">PurchaseCard</a></li>
-    </ul>
+        <ul>
+            <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
+            <li><a href="#request_purchasecard">PurchaseCard</a></li>
+        </ul>
     </li>
     <li><a href="#responses">Responses</a>
     </li>
@@ -95,8 +95,8 @@ To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 <a name="tango_card_api_overview"></a>
 # Tango Card API Overview #
 
-<a name="tango_card_service_requests"></a>
-## Tango Card Service Requests ##
+<a name="tango_card_api_requests"></a>
+## Tango Card API Requests ##
 
 The Tango Card SDK, every Request has a corresponding success-case Response object.
 
@@ -120,9 +120,9 @@ Note, however that since this is an HTTP POST that this should be <a href="http:
 The available request methods through our API endpoints are:
 <dl>
     <dt>GetAvailableBalance</dt>
-    <dd></dd>
+    <dd>Get current available balance from account used for purchasing Tango Cards.</dd>
     <dt>PurchaseCard</dt>
-    <dd></dd>
+    <dd>Purchase Tango Cards from account funded by user.</dd>
 </dl>
 
 <a name="tango_card_service_api_endpoints"></a>
@@ -153,23 +153,6 @@ Requests are secure HTTP POST using SSL.
 
 All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
 
-<a name="tango_card_api_methods"></a>
-# Tango Card API Methods #
-
-<a name="get_available_balance"></a>
-## Get Available Balance ##
-
-
-<a name="purchase_card"></a>
-## Purchase Card ##
-
-<a name="api_overview"></a>
-# API Overview #
-All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
-
-*Testing (integration) URL* format is `https://int.tangocard.com/Version2/[method]` where `[method]` is to be replaced with one of the methods below.
-
-*Production URL* format is `https://api.tangocard.com/Version2/[method]` where `[method]` is to be replaced with one of the methods below.
 
 
 
