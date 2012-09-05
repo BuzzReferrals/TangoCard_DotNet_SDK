@@ -27,34 +27,17 @@
     </li>
     <li><a href="#tango_card_api_methods">Tango Card API Methods
         <ul>
-            <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
+            <li><a href="#request_getavailablebalance">GetAvailableBalance</a>
+                <ul>
+                    <li><a href="#getavailablebalance_request_params">Request Parameters</a></li>
+                    <li><a href="#getavailablebalance_response_types">Response Types</a></li>
+                </ul>
+            </li>
             <li><a href="#request_purchasecard">PurchaseCard</a></li>
         </ul>
     </li>
     <li><a href="#responses">Responses</a>
     </li>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 </ul>
 
 <a name="introduction"></a>
@@ -155,46 +138,47 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
 <a name="tango_card_api_methods"></a>
 # Tango Card API Methods #
 
-<a name="request_getavailablebalance" id="request_getavailablebalance"></a> 
+<a name="request_getavailablebalance"></a> 
 ## GetAvailableBalance ##
 
 <dl>
     <dt>Description</dt>
     <dd>Request the available balance to the user whose authentication was supplied.</dd>
-    <dt>Inputs</dt>
-    <dd>
-        <dl>
-            <dt>username</dt>
-            <dd>https://www.tangocard.com user account's username</dd>
-            <dt>password</dt>
-            <dd>https://www.tangocard.com user account's password</dd>
-        </dl>
-    </dd>
-
-    <dt>Outputs</dt>
-    <dd>
-        <dl>
-            <dt>availableBalance - integer - The balance available to the user in cents (100 = $1.00).</dt>
-        </dl>
-    </dd>
-
-    <dt>Possible Errors:</dt>
-    <dd>
-        <dl>
-            <dt>SYS_ERROR</dt>
-            <dt>INV_CREDENTIAL</dt>
-        </dl>
-    </dd>
 </dl>
-    
-<a name="request_purchasecard" id="request_purchasecard"></a>
+
+<a name="getavailablebalance_request_params"></a>
+### Request Parameters ###
+    <dl>
+        <dt>username</dt>
+        <dd>https://www.tangocard.com user account's username</dd>
+        <dt>password</dt>
+        <dd>https://www.tangocard.com user account's password</dd>
+    </dl>
+
+<a name="getavailablebalance_response_types"></a>
+### Response Types ###
+
+    <dl>
+        <dt>SUCCESS</dt>
+        <dd>
+            <dl>
+                <dt>availableBalance</dt>
+                <dd>integer - The balance available to the user in cents (100 = $1.00).</dd>
+            </dl>
+        </dd>
+        <dt>SYS_ERROR</dt>
+        <dt>INV_CREDENTIAL</dt>
+    </dl>
+
+<a name="request_purchasecard"></a>
 ## PurchaseCard ##
 
-### Description ###
+<dl>
+    <dt>Description ###
 
 Purchase a single card to be delivered as described.
 
-### Inputs ###
+    <dt>Inputs ###
 
 <ul>
 <li>cardSku - string - The SKU of the card to purchase.</li>
@@ -207,7 +191,7 @@ Purchase a single card to be delivered as described.
 </ul>
     
 
-### Outputs ###
+    <dt>Outputs ###
 
 <ul>
     <li>referenceOrderId - string - A unique token that we can use to look up the order.</li>
@@ -226,6 +210,8 @@ Purchase a single card to be delivered as described.
 <li>INS_INV</li>
 <li>INS_FUNDS</li>
 </ul> 
+
+<dl>
 
 <a name="responses" id="responses"></a>
 # Responses #
