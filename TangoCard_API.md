@@ -190,7 +190,7 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
         <dd>
             <dl>
                 <dt>SUCCESS</dt>
-                <dd>
+                <dd>JSON Object:
                     <dl>
                         <dt>availableBalance</dt>
                         <dd>integer - The balance available to the user in cents (100 = $1.00).</dd>
@@ -248,7 +248,7 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
 <dd>
     <dl>
         <dt>SUCCESS</dt>
-        <dd>
+        <dd>JSON Object:
             <dl>
                 <dt>referenceOrderId</dt>
                 <dd>string - A unique token that we can use to look up the order.</dd>
