@@ -26,7 +26,7 @@
             <li><a href="#tango_card_service_api_security">Tango Card Service API Security</a></li>
         </ul>
     </li>
-    <li><a href="#tango_card_api_methods">Tango Card API Methods
+    <li><a href="#tango_card_api_methods">Tango Card API Methods</a>
         <ul>
             <li><a href="#request_getavailablebalance">GetAvailableBalance</a>
                 <ul>
@@ -42,7 +42,14 @@
             </li>
         </ul>
     </li>
-    <li><a href="#responses">Responses</a>
+    <li><a href="#failure_response_types">Failure Response Types</a>
+        <ul>
+            <li><a name="failure_response_sys_error" >SYS_ERROR</a></li>
+            <li><a name="failure_response_inv_input" >INV_INPUT</a></li>
+            <li><a name="failure_response_inv_credential" >INV_CREDENTIAL</a></li>
+            <li><a name="failure_response_ins_inv" >INS_INV</a></li>
+            <li><a name="failure_response_ins_funds" >INS_FUNDS</a></li>
+        </ul>
     </li>
 </ul>
 
@@ -176,18 +183,30 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
 <a name="getavailablebalance_response_types"></a>
 ### Response Types ###
 
-<dl>
-    <dt>SUCCESS</dt>
-    <dd>
-        <dl>
-            <dt>availableBalance</dt>
-            <dd>integer - The balance available to the user in cents (100 = $1.00).</dd>
-        </dl>
-    </dd>
-    <dt>SYS_ERROR</dt>
-    <dd></dd>
-    <dt>INV_CREDENTIAL</dt>
-    <dd></dd>
+<dt>Success Response Type:</dt>
+<dd>
+    <dl>
+        <dt>SUCCESS</dt>
+        <dd>
+            <dl>
+                <dt>SUCCESS</dt>
+                <dd>
+                    <dl>
+                        <dt>availableBalance</dt>
+                        <dd>integer - The balance available to the user in cents (100 = $1.00).</dd>
+                    </dl>
+                </dd>
+            </dl>
+        </dd>
+    </dl>
+</dd>
+<dt>Failure Response Types:</dt>
+<dd>See details for each within next section.
+    <dl>
+        <dt>SYS_ERROR</dt>
+        <dt>INV_CREDENTIAL</dt>
+    </dl>
+</dd>
 </dl>
 
 <a name="request_purchasecard"></a>
@@ -225,80 +244,95 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
 ### Response Types ###
 
 <dl>
-<dt>SUCCESS</dt>
+<dt>Success Response Type:</dt>
 <dd>
     <dl>
-        <dt>referenceOrderId</dt>
-        <dd>string - A unique token that we can use to look up the order.</dd>
-        <dt>cardToken</dt>
-        <dd>string - A unique token that we can use to look up the card.</dd>
-        <dt>cardNumber</dt>
-        <dd>string - The card’s "number".</dd>
-        <dt>cardPin</dt>
-        <dd>string - The card’s "pin", may be null.</dd>
+        <dt>SUCCESS</dt>
+        <dd>
+            <dl>
+                <dt>referenceOrderId</dt>
+                <dd>string - A unique token that we can use to look up the order.</dd>
+                <dt>cardToken</dt>
+                <dd>string - A unique token that we can use to look up the card.</dd>
+                <dt>cardNumber</dt>
+                <dd>string - The card’s "number".</dd>
+                <dt>cardPin</dt>
+                <dd>string - The card’s "pin", may be null.</dd>
+            </dl>
+        </dd>
     </dl>
 </dd>
-<dt>SYS_ERROR</dt>
-<dd></dd>
-<dt>INV_CREDENTIAL</dt>
-<dd></dd>
-<dt>INV_INPUT</dt>
-<dd></dd>
-<dt>INS_INV</dt>
-<dd></dd>
-<dt>INS_FUNDS</dt>
-<dd></dd>
-<dl>
+<dt>Failure Response Types:</dt>
+<dd>See details for each within next section.
+    <dl>
+        <dt>SYS_ERROR</dt>
+        <dt>INV_CREDENTIAL</dt>
+        <dt>INV_INPUT</dt>
+        <dt>INS_INV</dt>
+        <dt>INS_FUNDS</dt>
+    </dl>
+</dd>
+</dl>
 
 
-<a name="failure_responses" ></a>
-# Failure Responses #
-  
+<a name="failure_response_types" ></a>
+# Failure Response Types #
+
+Here are the following expect failure response types that can be returned from Tango Card API endpoint.
+
+<a name="failure_response_sys_error" ></a>
 ## SYS_ERROR ##
 
 An error happened on our end. The call may may be re-tried, however if the error persists please contact us.
 
-<ul>
-<li>errorCode - string - An internal error code that we can use to track down where the error occurred.</li>
-</ul>
+<dl>
+    <dt>errorCode<dt>
+    <dd>string - An internal error code that we can use to track down where the error occurred.</dd>
+</dl>
     
-
+<a name="failure_response_inv_input" ></a>
 ## INV_INPUT ##
 
 One (or more) of the supplied inputs didn’t meet the requirements. The request should be altered before resubmitting.
 
-<ul>
-<li>invalid - object - The object’s properties are the name of the invalid field, the value of the property is description of the associated problem.</li>
-</ul>
+<dl>
+    <dt>invalid<dt>
+    <dd>JSON object - The object’s properties are the name of the invalid field, the value of the property is description of the associated problem.</dd>
+</dl>
     
-
+<a name="failure_response_inv_credential" ></a>
 ## INV_CREDENTIAL ##
 
 The credential was either missing, or something was wrong with it. The request should be altered before resubmitting.
 
-<ul>
-<li>message - string - A description of what appeared to be wrong with the supplied credential.</li>
-</ul>
+<dl>
+    <dt>message<dt>
+    <dd>string - A description of what appeared to be wrong with the supplied credential.</dd>
+</dl>
     
-
+<a name="failure_response_ins_inv" ></a>
 ## INS_INV ##
 
 We don’t have enough available inventory to fulfill the request. The request should be altered before resubmitting.
 
-<ul>
-<li>sku - string - The SKU that we couldn’t fulfill.</li>
-<li>value - int - The value that we couldn’t fulfill.</li>
-</ul>
+<dl>
+    <dt>sku<dt>
+    <dd>string - The SKU that we couldn’t fulfill.</dd>
+    <dt>value<dt>
+    <dd>integer - The value that we couldn’t fulfill.</dd>
+</dl>
     
-
+<a name="failure_response_ins_funds" ></a>
 ## INS_FUNDS ##
 
 The account associated with the authenticated user doesn’t have enough available balance to cover the cost of the purchase.
 
-<ul>
-<li>availableBalance - int - The balance currently available in cents (100 = $1.00).</li>
-<li>orderCost - int - The amount the order would cost to complete in cents (100 = $1.00).</li>
-</ul>
+<dl>
+    <dt>availableBalance<dt>
+    <dd>integer - The balance currently available in cents (100 = $1.00).</dd>
+    <dt>orderCost<dt>
+    <dd>integer - The amount the order would cost to complete in cents (100 = $1.00).</dd>
+</dl>
     
   
 
