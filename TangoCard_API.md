@@ -1,5 +1,5 @@
 <h1>Tango Card API</h1>
-<h3>Digital gift cards in minutes</h3>
+<h3>Digital gift cards in minutes through HTTP POST endpoint</h3>
 ===
 
 # Table of Contents #
@@ -187,15 +187,10 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
 <dd>
     <dl>
         <dt>SUCCESS</dt>
-        <dd>
+        <dd>JSON Object:
             <dl>
-                <dt>SUCCESS</dt>
-                <dd>JSON Object:
-                    <dl>
-                        <dt>availableBalance</dt>
-                        <dd>integer - The balance available to the user in cents (100 = $1.00).</dd>
-                    </dl>
-                </dd>
+                <dt>availableBalance</dt>
+                <dd>integer - The balance available to the user in cents (100 = $1.00).</dd>
             </dl>
         </dd>
     </dl>
