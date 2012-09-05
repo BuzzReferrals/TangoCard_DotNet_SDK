@@ -33,7 +33,12 @@
                     <li><a href="#getavailablebalance_response_types">Response Types</a></li>
                 </ul>
             </li>
-            <li><a href="#request_purchasecard">PurchaseCard</a></li>
+            <li><a href="#request_purchasecard">PurchaseCard</a>
+                <ul>
+                    <li><a href="#purchasecard_request_params">Request Parameters</a></li>
+                    <li><a href="#purchasecard_response_types">Response Types</a></li>
+                </ul>
+            </li>
         </ul>
     </li>
     <li><a href="#responses">Responses</a>
@@ -148,70 +153,95 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
 
 <a name="getavailablebalance_request_params"></a>
 ### Request Parameters ###
-    <dl>
-        <dt>username</dt>
-        <dd>https://www.tangocard.com user account's username</dd>
-        <dt>password</dt>
-        <dd>https://www.tangocard.com user account's password</dd>
-    </dl>
+<dl>
+    <dt>username</dt>
+    <dd>https://www.tangocard.com user account's username</dd>
+    <dt>password</dt>
+    <dd>https://www.tangocard.com user account's password</dd>
+</dl>
 
 <a name="getavailablebalance_response_types"></a>
 ### Response Types ###
 
-    <dl>
-        <dt>SUCCESS</dt>
-        <dd>
-            <dl>
-                <dt>availableBalance</dt>
-                <dd>integer - The balance available to the user in cents (100 = $1.00).</dd>
-            </dl>
-        </dd>
-        <dt>SYS_ERROR</dt>
-        <dt>INV_CREDENTIAL</dt>
-    </dl>
+<dl>
+    <dt>SUCCESS</dt>
+    <dd>
+        <dl>
+            <dt>availableBalance</dt>
+            <dd>integer - The balance available to the user in cents (100 = $1.00).</dd>
+        </dl>
+    </dd>
+    <dt>SYS_ERROR</dt>
+    <dd></dd>
+    <dt>INV_CREDENTIAL</dt>
+    <dd></dd>
+</dl>
 
 <a name="request_purchasecard"></a>
 ## PurchaseCard ##
 
 <dl>
-    <dt>Description ###
+    <dt>Description</dt>
+    <dd>Purchase a single card to be delivered as described.</dd>
+</dl>
 
-Purchase a single card to be delivered as described.
+<a name="purchasecard_request_params"></a>
+### Request Parameters ###
+<dl>
+    <dt>username</dt>
+    <dd>https://www.tangocard.com user account's username</dd>
+    <dt>password</dt>
+    <dd>https://www.tangocard.com user account's password</dd>
+    <dt>cardSku</dt>
+    <dd>string - The SKU of the card to purchase.</dd>
+    <dt>cardValue</dt>
+    <dd>integer - The value of the card to purchase.</dd>
+    <dt>tcSend</dt>
+    <dd>boolean - Whether Tango Card will send the email to the user.</dd>
 
-    <dt>Inputs ###
+    <dt>recipientName</dt>
+    <dd>string (length 1 - 255, required if tcSend=true) - The name of the person receiving the card.</dd>
+    <dt>recipientEmail</dt>
+    <dd>string (length 3 - 255, required if tcSend=true) - The email address of the person receiving the card.</dd>
+    <dt>giftMessage</dt>
+    <dd>string (length 1 - 255, required if tcSend=true) - A message from the sender of the card to the recipient. May be null, but must exist if tcSend = true.</dd>
+    <dt>giftFrom</dt>
+    <dd>string (length 1 - 255, required if tcSend=true) - The name of the person sending the card.</dd>
+</dl>
 
-<ul>
-<li>cardSku - string - The SKU of the card to purchase.</li>
-<li>cardValue - integer - The value of the card to purchase.</li>
-<li>tcSend - boolean - Whether Tango Card will send the email to the user.</li>
-<li>recipientName - string (length 1 - 255, required if tcSend=true) - The name of the person receiving the card.</li>
-<li>recipientEmail - string (length 3 - 255, required if tcSend=true) - The email address of the person receiving the card.</li>
-<li>giftMessage - string (length 1 - 255, required if tcSend=true) - A message from the sender of the card to the recipient. May be null, but must exist if tcSend = true.</li>
-<li>giftFrom - string (length 1 - 255, required if tcSend=true) - The name of the person sending the card.</li>
-</ul>
-    
-
-    <dt>Outputs ###
-
-<ul>
-    <li>referenceOrderId - string - A unique token that we can use to look up the order.</li>
-    <li>cardToken - string - A unique token that we can use to look up the card.</li>
-    <li>cardNumber - string - The card’s "number".</li>
-    <li>cardPin - string - The card’s "pin", may be null.</li>
-</ul>
-
-### Possible Errors ###
-
-
-<ul>
-<li>SYS_ERROR</li>
-<li>INV_CREDENTIAL</li>
-<li>INV_INPUT</li>
-<li>INS_INV</li>
-<li>INS_FUNDS</li>
-</ul> 
+<a name="purchasecard_response_types"></a>
+### Response Types ###
 
 <dl>
+    <dt>SUCCESS</dt>
+    <dd>
+        <dl>
+            <dt>referenceOrderId</dt>
+            <dd>string - A unique token that we can use to look up the order.</dd>
+            <dt>cardToken</dt>
+            <dd>string - A unique token that we can use to look up the card.</dd>
+            <dt>cardNumber</dt>
+            <dd>string - The card’s "number".</dd>
+            <dt>cardPin</dt>
+            <dd>string - The card’s "pin", may be null.</dd>
+        </dl>
+    </dd>
+
+
+
+    <dt>SYS_ERROR</dt>
+    <dd></dd>
+    <dt>INV_CREDENTIAL</dt>
+    <dd></dd>
+    <dt>INV_INPUT</dt>
+    <dd></dd>
+    <dt>INS_INV</dt>
+    <dd></dd>
+    <dt>INS_FUNDS</dt>
+    <dd></dd>
+
+<dl>
+
 
 <a name="responses" id="responses"></a>
 # Responses #
