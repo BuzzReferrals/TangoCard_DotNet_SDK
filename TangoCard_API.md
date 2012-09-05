@@ -26,13 +26,6 @@
         </ul>
     </li>
     <li><a href="#tango_card_api_methods">Tango Card API Methods
-    <li><a href="#overview">Overview</a>
-        <ul>
-            <li><a name="get_available_balance">Get Available Balance</a></li>
-            <li><a name="purchase_card">Purchase Card</a></li>
-        </ul>
-    </li>
-    <li><a href="#request_methods">Request Methods</a>
         <ul>
             <li><a href="#request_getavailablebalance">GetAvailableBalance</a></li>
             <li><a href="#request_purchasecard">PurchaseCard</a></li>
@@ -125,7 +118,7 @@ Note, however that since this is an HTTP POST that this should be <a href="http:
 The available request methods through our API endpoints are:
 <dl>
     <dt>GetAvailableBalance</dt>
-    <dd>Get current available balance from account used for purchasing Tango Cards.</dd>
+    <dd>Request the available balance to the user whose authentication was supplied..</dd>
     <dt>PurchaseCard</dt>
     <dd>Purchase Tango Cards from account funded by user.</dd>
 </dl>
@@ -159,34 +152,32 @@ Requests are secure HTTP POST using SSL.
 All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784450(v=ws.10).aspx">"TLS/SSL"</a> and authentication is handled via client-certificates. A user account will be issued a certificate that must be used to sign every request. If it is desired, the vendor may supply their own certificate as long as it comes from a trusted root CA. Vendors may have multiple certificates associated with their account, but the certificates will have to be loaded by TangoCard engineering (for the time being).
 
 
-
+<a name="tango_card_api_methods"></a> 
+Tango Card API Methods
 
 <a name="request_getavailablebalance" id="request_getavailablebalance"></a> 
 ## GetAvailableBalance ##
 
-  
-### Description ###
+<dl>
+    <dt>Description</dt>
+    <dd>Request the available balance to the user whose authentication was supplied.</dd>
+    <dt>Inputs</dt>
+    <dd>None</dd>
 
-Shows the available balance to the user whose authentication was supplied.
-
-### Inputs ###
-
-None
-
-### Outputs ###
-
-
-<ul>
-<li>availableBalance - integer - The balance available to the user in cents (100 = $1.00).</li>
-</ul>
-    
-
-### Possible Errors ###
-
-<ul>
-<li>SYS_ERROR</li>
-<li>INV_CREDENTIAL</li>
-</ul>
+    <dt>Outputs</dt>
+    <dd>
+        <ul>
+        <li>availableBalance - integer - The balance available to the user in cents (100 = $1.00).</li>
+        </ul>
+    </dd>
+        <dt>Possible Errors</dt>
+        <dd>
+        <ul>
+            <li>SYS_ERROR</li>
+            <li>INV_CREDENTIAL</li>
+        </ul>
+    </dd>
+</dl>
     
 <a name="request_purchasecard" id="request_purchasecard"></a>
 ## PurchaseCard ##
