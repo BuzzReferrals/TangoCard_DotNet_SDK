@@ -74,11 +74,11 @@
 
 <a name="tango_card_api"></a>
 ## Tango Card API ##
-Tango Card's API is flexible, secure, and straightforward. It allows any server to purchase gift cards and is intended for users requiring high volume transactions and processes.
+Tango Card's API is flexible, secure, and straightforward. It allows any server to purchase the Tango Card and is intended for users requiring high volume transactions and processes.
 
 <a name="tango_card_sdks"></a>
 ### Tango Card SDKs ###
-For those developers that do not wish to develope directly with our Tango Card API, there are several Tango Card SDKs currently available that use the Tango Card API:
+For those developers that do not wish to develop directly with our Tango Card API, there are several Tango Card SDKs currently available that use the Tango Card API:
 <ul>
     <li><a href="https://github.com/tangocarddev/TangoCard_DotNet_SDK" target="_blank">Tango Card C#/.Net 4.0 SDK</a></li>
     <li><a href="https://github.com/tangocarddev/TangoCard_PHP_SDK" target="_blank">Tango Card PHP SDK</a></li>
@@ -115,7 +115,7 @@ Second, to verify availability of your production account by using login: <a hre
 <a name="open_account_add_funds"></a>
 ### Add Funds ###
 
-Third, it order to purchase the Tango Card through the Tango Card API, there must be funds within your Tango Card account.
+Third, in order to purchase the Tango Card through the Tango Card API, there must be funds within your Tango Card account.
 
 Fund your account here either by 'wire transfer', 'check', or 'credit card': <a href="https://www.tangocard.com/user/addfunds" target="_blank">Add Funds</a>
 
