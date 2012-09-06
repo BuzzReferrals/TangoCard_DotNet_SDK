@@ -22,7 +22,7 @@
             <li><a href="#start_using">Start Using</a>
                 <ul>
                     <li><a href="#start_using_purchase">Purchase and Distribution of Gift Cards</a></li>
-                    <li><a href="#start_using_gift_cards">The Tango Card and other Retailer Brand Gift Cards </a></li>
+                    <li><a href="#start_using_gift_cards">The Tango Card and other Retailer Brand Gift Cards</a></li>
                 </ul>
             </li>
             <li><a href="#api_support">API Support</a></li>
@@ -310,7 +310,7 @@ All calls are made via <a href="http://technet.microsoft.com/en-us/library/cc784
     <dt>password</dt>
     <dd>https://www.tangocard.com user account's password</dd>
     <dt>cardSku</dt>
-    <dd>string - The SKU of the card to purchase. The SKU for the Tango Card is "tango-card".</dd>
+    <dd>string - The SKU of the card to purchase. The SKU for the Tango Card is "tango-card". For other SKUs, please refer to this section: <a href="#start_using_gift_cards">The Tango Card and other Retailer Brand Gift Cards</a></dd>
     <dt>cardValue</dt>
     <dd>integer - The value of the card to purchase.</dd>
     <dt>tcSend</dt>
