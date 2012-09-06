@@ -128,8 +128,8 @@ After opening and funding your Tango Card account, then you are ready to begin u
 ### Purchase and Distribution of Gift Cards ###
 Through the Tango Card API you can purchase Tango Card gift cards with your choice of delivery:
 <ul>
-    <li>Have Tango Card service send gift cards directly to recipients via email which will include live gift card codes.
-    <li>You take the returned live gift card codes for you to customize and redistribute.
+    <li>Have Tango Card service send gift cards directly to recipients via email which will include live gift card codes.</li>
+    <li>You take the returned live gift card codes for you to customize and redistribute.</li>
 </ul>
 
 <a name="start_using_gift_cards"></a>
@@ -199,14 +199,14 @@ The value of "responseType" will influence the format of the object in response.
 
 Available are two endpoints that provide the Tango Card Service API:
 <dl>
-    <dt>INTEGRATION</dt> 
+    <dt>Integration Endpoint</dt> 
     <dd>
         <ul>
             <li>Expected to be used for development and testing purposes.</li>
-            <li>Important: Purchases from this endpoint will: 
+            <li><b>Important:</b> Purchases from this endpoint will: 
                 <ul>
                     <li>Use funds from our test account.</li>
-                    <li>Send real emails (with fake codes), so only use recipient email addresses you control for testing purposes.<li>
+                    <li>Send real emails (with fake codes), so only use recipient email addresses you control for testing purposes.</li>
                 </ul>
             </li>
             <li>Endpoint URL: https://int.tangocard.com/Version2/[method]</li>
@@ -220,14 +220,14 @@ Available are two endpoints that provide the Tango Card Service API:
             </li>
         </ul>
     </dd>
-    <dt>PRODUCTION</dt>
+    <dt>Production Endpoint</dt>
     <dd>
         <ul>
             <li>Performs actual card purchase requests.</li>
-            <li>Important: Purchases from this endpoint will: 
+            <li><b>Important:</b> Purchases from this endpoint will: 
                 <ul>
                     <li>Use funds from <b>your Tango Card account</b>!</li>
-                    <li>Send real emails (with live codes), only use recipient email addresses you wish to deliver to.<li>
+                    <li>Send real emails (with live codes), only use recipient email addresses you wish to deliver to.</li>
                 </ul>
             </li>
             <li>Endpoint URL: https://api.tangocard.com/Version2/[method]</li>
