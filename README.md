@@ -114,7 +114,7 @@ Fund your account here either by 'wire transfer', 'check', or 'credit card': <a 
 <a name="start_using"></a>
 ## Start Using ##
 
-After opening and funding your Tango Card account, then you are ready to begin using the Tango Card API to access your account.
+After opening and funding your Tango Card account, then you are ready to begin using the Tango Card SDK to access your account.
 
 <a name="start_using_purchase"></a>
 ### Purchase and Distribution of Gift Cards ###
@@ -142,7 +142,9 @@ To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 <a name="sdk_overview"></a>
 # Tango Card SDK Overview #
 
-The Tango Card .NET 4.0/C# SDK is a wrapper around the Tango Card Service API environments. As such, it has two primary types of objects, Requests and Responses; which are handled by a wrapper class `TangoCard.Sdk.TangoCardServiceApi`.
+The Tango Card .NET 4.0/C# SDK is a wrapper around the <a href="https://github.com/tangocarddev/General/blob/master/TangoCard_API.md" target="_blank">Tango Card API</a>.
+
+As such, it has two primary types of objects, Requests and Responses; which are handled by a wrapper class `TangoCard.Sdk.TangoCardServiceApi`.
 
 The wrapper class `TangoCard.Sdk.TangoCardServiceApi` currently handles the following static methods:
 <dl>
@@ -170,7 +172,7 @@ The Tango Card SDK, every Request has a corresponding success-case Response obje
 <a name="tango_card_service_api_endpoints"></a>
 ## Tango Card Service API Endpoints ##
 
-Available are two endpoints that provide the Tango Card Service API, as defined by `enum TangoCard.Sdk.Service.TangoCardServiceApiEnum` :
+Available are two endpoints that provide the <a href="https://github.com/tangocarddev/General/blob/master/TangoCard_API.md" target="_blank">Tango Card API</a>, as defined by `enum TangoCard.Sdk.Service.TangoCardServiceApiEnum` :
 <dl>
     <dt>INTEGRATION</dt> 
     <dd>
