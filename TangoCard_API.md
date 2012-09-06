@@ -7,8 +7,20 @@
     <li><a href="#introduction">Introduction</a>
         <ul>
             <li><a href="#tango_card_api">Tango Card API</a></li>
-            <li><a href="#incorporate_tango_card">Incorporate Tango Card Gift Cards</a></li>
-            <li><a href="#open_account">Open Tango Card Account</a></li>
+            <li><a href="#incorporate_tango_card">Incorporate the Tango Card</a></li>
+            <li><a href="#open_account">Open Tango Card Account</a>
+                <ul>
+                    <li><a href="#open_account_register">Register</a></li>
+                    <li><a href="#open_account_login">Login</a></li>
+                    <li><a href="#open_account_add_funds">Add Funds</a></li>
+                </ul>
+            </li>
+            <li><a href="#start_using">Start Using</a>
+                <ul>
+                    <li><a href="#start_using_purchase">Purchase and Distribution of Gift Cards</a></li>
+                    <li><a href="#start_using_gift_cards">The Tango Card and other Retailer Brand Gift Cards </a></li>
+                </ul>
+            </li>
             <li><a href="#api_support">API Support</a></li>
             <li><a href="#contact_us">Contact Us</a></li>
         </ul>
@@ -70,44 +82,58 @@ There are several Tango Card SDKs currently available that use the Tango Card AP
 </ul>
 
 <a name="incorporate_tango_card"></a>
-## Incorporate Tango Card Gift Cards Into Your Web Application ##
-Tango Card API allows you to incorporate the innovative the Tango Card into your reward, loyalty, and engagement applications. Tango Card is the “exactly what you want” gift card and allows the recipient to use their value exactly how they want – they can select a premier gift card, they can divide their value among Brands, they can use some today and save the rest for another day. They can also donate to a non-profit organization. Tango Card value can be used via the web or from almost any mobile device. There are no fees or expiration dates of any kind. It’s great for the recipient, and even better for you because it is an entire gift card program delivered in one card allowing you to focus on your core business. Tango Card solutions are already used by Microsoft Bing, FedEx, Extole, Plink, beintoo, Lead Valu, Getty Images, and many others.
+## Incorporate the Tango Card ##
+Tango Card API allows you to incorporate the innovative the Tango Card into your reward, loyalty, and engagement applications. 
+
+Tango Card is the “exactly what you want” gift card and allows the recipient to use their value exactly how they want – they can select a premier gift card, they can divide their value among Brands, they can use some today and save the rest for another day. They can also donate to a non-profit organization. 
+
+Tango Card value can be used via the web or from almost any mobile device. There are no fees or expiration dates of any kind. It’s great for the recipient, and even better for you because it is an entire gift card program delivered in one card allowing you to focus on your core business. 
+
+Tango Card solutions are already used by Microsoft Bing, FedEx, Extole, Plink, beintoo, Lead Valu, Getty Images, and many others.
 
 <a name="open_account"></a>
 ## Open Tango Card Account ##
 
 In order to use the Tango Card API, it is required to open and fund a Tango Card account on https://www.tangocard.com
 
+<a name="open_account_register"></a>
 ### Register ###
 
 First, register to open a Tango Card account: <a href="https://www.tangocard.com/user/register" target="_blank">Register</a> 
 
 The provided 'username (email address)' and 'password' will be the same as what will be used for authenticating usage of the Tango Card API's methods.
 
+<a name="open_account_login"></a>
 ### Login ###
 
 Second, to verify availability of your production account by using login: <a href="https://www.tangocard.com/user/login" target="_blank">Login</a>
 
-### Fund Account ###
+<a name="open_account_add_funds"></a>
+### Add Funds ###
 
 Third, it order to purchase the Tango Card through the Tango Card API, there must be funds within your Tango Card account.
 
 Fund your account here either by 'wire transfer', 'check', or 'credit card': <a href="https://www.tangocard.com/user/addfunds" target="_blank">Add Funds</a>
 
-## Using Tango Card Account ##
+<a name="start_using"></a>
+## Start Using ##
 
 After opening and funding your Tango Card account, then you are ready to begin using the Tango Card API to access your account.
 
-### Purchase and Distribution ###
+<a name="start_using_purchase"></a>
+### Purchase and Distribution of Gift Cards ###
 Through the Tango Card API you can purchase Tango Card gift cards with your choice of delivery:
 <ul>
     <li>Have Tango Card service send gift cards directly to recipients via email which will include live gift card codes.
     <li>You take the returned live gift card codes for you to customize and redistribute.
 </ul>
 
-### Tango Card and Retailer Brand Gift Cards ###
+<a name="start_using_gift_cards"></a>
+### The Tango Card and other Retailer Brand Gift Cards ###
 
-The API is optimized for ordering the Tango Card.  If you have questions about potentially incorporating other brands or digital goods in your program please contact us at general@tangocard.com
+The API is optimized for ordering the Tango Card, which has SKU of ```"tango-card"```.
+
+If you have questions about potentially incorporating other brands or digital goods in your program please contact us at general@tangocard.com.
 
 <a name="sdk_support"></a>
 ## Tnngo Card API Support ##
