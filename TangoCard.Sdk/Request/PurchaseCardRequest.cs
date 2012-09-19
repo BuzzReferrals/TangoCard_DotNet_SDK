@@ -62,6 +62,7 @@ namespace TangoCard.Sdk.Request
         /// <param name="recipientEmail">           (optional) the recipient email. </param>
         /// <param name="giftMessage">              (optional) message describing the gift. </param>
         /// <param name="giftFrom">                 (optional) the gift from. </param>
+        /// <param name="companyIdentifier">        (optional) the name of the parent company providing this gift. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public PurchaseCardRequest(
@@ -74,7 +75,8 @@ namespace TangoCard.Sdk.Request
             string recipientName = null,
             string recipientEmail = null,
             string giftMessage = null,
-            string giftFrom = null
+            string giftFrom = null,
+            string companyIdentifier = null
             )
             : base(enumTangoCardServiceApi, username, password)
         {
@@ -156,6 +158,15 @@ namespace TangoCard.Sdk.Request
                 }
             }
 
+            // companyIdentifier
+            if (!String.IsNullOrEmpty(companyIdentifier))
+            {
+                if (companyIdentifier.Length > 255)
+                {
+                    throw new ArgumentException(message: "Parameter 'companyIdentifier' must have a length less than 256.");
+                }
+            }
+
             // -----------------------------------------------------------------
             // save inputs
             // -----------------------------------------------------------------
@@ -171,6 +182,10 @@ namespace TangoCard.Sdk.Request
                 {
                     this.GiftMessage = giftMessage;
                 }
+            }
+            if (!String.IsNullOrEmpty(companyIdentifier))
+            {
+                this.CompanyIdentifier = companyIdentifier;
             }
         }
 
@@ -236,6 +251,15 @@ namespace TangoCard.Sdk.Request
 
         [JsonProperty(PropertyName = "giftFrom")]
         public string GiftFrom {get;set;}
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the gift from. </summary>
+        ///
+        /// <value> The gift from. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [JsonProperty(PropertyName = "companyIdentifier")]
+        public string CompanyIdentifier { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the full pathname of the request file. </summary>

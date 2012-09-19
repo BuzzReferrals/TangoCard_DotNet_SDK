@@ -29,7 +29,7 @@ TangoCard .Net/C-Sharp SDK
         </ul>
     </li>
     <li><a href="#sdk_overview">Tango Card SDK Overview</a></li>
-    <li><a href="#sdk_requirements">SDK Requirements</a></li>
+    <li><a href="#sdk_requirements">Tango Card SDK Requirements</a></li>
     <li><a href="#tango_card_service_requests">Tango Card Service Requests</a>
         <ul>
             <li><a href="#tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
@@ -172,7 +172,7 @@ The Tango Card SDK, every Request has a corresponding success-case Response obje
 
 Available are two endpoints that provide the Tango Card Service API, as defined by `enum TangoCard.Sdk.Service.TangoCardServiceApiEnum` :
 <dl>
-    <dt>```INTEGRATION```</dt> 
+    <dt>INTEGRATION</dt> 
     <dd>
         <ul>
             <li>Expected to be used for development and testing purposes.</li>
@@ -193,7 +193,7 @@ Available are two endpoints that provide the Tango Card Service API, as defined 
             </li>
         </ul>
     </dd>
-    <dt>```PRODUCTION```</dt>
+    <dt>PRODUCTION</dt>
     <dd>
         <ul>
             <li>Performs actual card purchase requests.</li>
@@ -305,6 +305,7 @@ This request is defined by static method call `TangoCard.Sdk.TangoCardServiceApi
             giftMessage: "Happy Birthday",
             recipientEmail: "sally@example.com",
             recipientName: "Sally Example",
+            companyIndentifier: null,
             response: out response )  
         && (null != response)
     ) {
@@ -343,16 +344,19 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
   <dd>- Tango Card Service delivers by Email requested card. Set to true for email delivery, and false for no delivery.</dd>
 
   <dt>string recipientName</dt>
-  <dd>- Full name of recipient receiving gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
+  <dd>- Full name of recipient receiving gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
 
   <dt>string recipientEmail</dt>
-  <dd>- Valid email address of recipient receiving gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
+  <dd>- Valid email address of recipient receiving gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
 
   <dt>string giftMessage</dt>
-  <dd>- [Optional] Gift message to be applied to gift card's email. Set this value with either a string (length minumum 1 character to maximum of 255 characters) or null if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
+  <dd>- [Optional] Gift message to be applied to gift card's email. Set this optional parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) or null if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
 
   <dt>string giftFrom</dt>
-  <dd>- Full name of giver of gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if `tcSend` is true, or null if parameter `tcSend` is false.</dd>
+  <dd>- Full name of giver of gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
+  
+  <dt>string companyIdentifier</dt>
+  <dd>- The name of the parent company providing this gift. Set this optional parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
 
   <dt>TangoCard.Sdk.Response.Success.PurchaseCardResponse response</dt>
   <dd>- This <i>out</i> parameter will provide a valid success response object if this method returns true upon success.</dd>

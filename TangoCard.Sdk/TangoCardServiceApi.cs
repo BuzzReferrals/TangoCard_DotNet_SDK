@@ -93,6 +93,7 @@ namespace TangoCard.Sdk
         /// <param name="recipientEmail">           The recipient email. </param>
         /// <param name="giftMessage">              Message describing the gift. </param>
         /// <param name="giftFrom">                 The gift from. </param>
+        /// <param name="companyIdentifier">        The name of the parent company providing this gift.. </param>
         /// <param name="response">                 [out] The response. </param>
         ///
         /// <returns>   true if it succeeds, false if it fails. </returns>
@@ -109,6 +110,7 @@ namespace TangoCard.Sdk
             string recipientEmail,
             string giftMessage,
             string giftFrom,
+            string companyIdentifier,
             out PurchaseCardResponse response
             )
         {
@@ -124,6 +126,7 @@ namespace TangoCard.Sdk
                 recipientName: recipientName,
                 recipientEmail: recipientEmail,
                 giftMessage: giftMessage,
+                companyIdentifier: companyIdentifier,
                 giftFrom: giftFrom
             );
 

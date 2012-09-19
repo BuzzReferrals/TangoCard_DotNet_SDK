@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="a1371b95-4ae3-4576-a7f5-5cc47b22d7a4" Title="TangoCard.Sdk Namespace" Url="html/9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm">
-    <HelpTOCNode Id="fdc2ff8b-5728-401a-92f9-36e106f0bbff" Title="TangoCardServiceApi Class" Url="html/b11885dc-de55-3f98-1db8-c18738682c70.htm">
+  <HelpTOCNode Id="7f2f0738-2fd9-435c-8655-718554d28478" Title="TangoCard.Sdk Namespace" Url="html/9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm">
+    <HelpTOCNode Id="302c8d29-5dc8-498b-86f7-f13304037a13" Title="TangoCardServiceApi Class" Url="html/b11885dc-de55-3f98-1db8-c18738682c70.htm">
       <HelpTOCNode Title="TangoCardServiceApi Members" Url="html/432ef87e-eedd-571a-730b-a5c3ebc88ae1.htm" />
-      <HelpTOCNode Id="78b37bf6-7aa8-4fb4-9957-affd53ead19c" Title="TangoCardServiceApi Methods" Url="html/74300007-a011-2e65-6c53-467fd5a2c15d.htm">
+      <HelpTOCNode Id="5633e4e9-29ad-4350-9f37-cf00473305e3" Title="TangoCardServiceApi Methods" Url="html/74300007-a011-2e65-6c53-467fd5a2c15d.htm">
         <HelpTOCNode Title="GetAvailableBalance Method " Url="html/9d232d20-0b02-afc4-7471-828bdb27d9fc.htm" />
-        <HelpTOCNode Title="PurchaseCard Method " Url="html/90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm" />
+        <HelpTOCNode Title="PurchaseCard Method " Url="html/ac593ff3-baeb-ec40-9d17-5f03c4801984.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="abb30d88-a829-4b6c-842e-4b843011d816" Title="TangoCard.Sdk.Common Namespace" Url="html/7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm">
-    <HelpTOCNode Id="602e3768-d2e7-41ef-b879-3f7d8ae28a6a" Title="TangoCardSdkException Class" Url="html/5f341bcb-5701-3835-d2a0-6f20a7224c57.htm">
+  <HelpTOCNode Id="42e6b25f-333b-4a21-8a28-bd60724f8ae2" Title="TangoCard.Sdk.Common Namespace" Url="html/7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm">
+    <HelpTOCNode Id="dd31b9a1-1cf9-4971-a971-cd74b4609205" Title="TangoCardSdkException Class" Url="html/5f341bcb-5701-3835-d2a0-6f20a7224c57.htm">
       <HelpTOCNode Title="TangoCardSdkException Members" Url="html/e2552ad5-e1c2-d5e7-c506-64a3338c8559.htm" />
-      <HelpTOCNode Id="f9debf5f-e711-4e9d-aa6d-401238090d80" Title="TangoCardSdkException Constructor " Url="html/7b224b0e-5020-a6e1-5ee4-b73997473992.htm">
+      <HelpTOCNode Id="ed978b5b-3ea5-41ca-96dc-159cbdec8385" Title="TangoCardSdkException Constructor " Url="html/7b224b0e-5020-a6e1-5ee4-b73997473992.htm">
         <HelpTOCNode Title="TangoCardSdkException Constructor " Url="html/4659b26c-c522-c60d-f5c4-9c77fcd7c23e.htm" />
         <HelpTOCNode Title="TangoCardSdkException Constructor (String)" Url="html/b890e8c6-30a1-e62d-4e11-ec0dc8e76dc5.htm" />
         <HelpTOCNode Title="TangoCardSdkException Constructor (SerializationInfo, StreamingContext)" Url="html/65fa9c1b-7a8e-a428-5190-a0acc579dcf7.htm" />
@@ -24,23 +24,23 @@
       <HelpTOCNode Title="TangoCardSdkException Events" Url="html/1f27b2e6-ace6-4737-046c-5428a2cdec3c.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="416d5e71-a329-4ca4-a6f8-292705eb928b" Title="TangoCard.Sdk.Examples Namespace" Url="html/c1ec7979-0741-bde6-b9bc-59e1d7eb1a83.htm">
-    <HelpTOCNode Id="472e43d7-862f-4b20-9e13-bceab871ac65" Title="TangoCard_Store_Example Class" Url="html/8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm">
+  <HelpTOCNode Id="4d2e1f37-1d77-446b-a6ff-e886542c22c4" Title="TangoCard.Sdk.Examples Namespace" Url="html/c1ec7979-0741-bde6-b9bc-59e1d7eb1a83.htm">
+    <HelpTOCNode Id="2a5fdd60-634f-4e5f-90c8-b40c26e6479a" Title="TangoCard_Store_Example Class" Url="html/8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm">
       <HelpTOCNode Title="TangoCard_Store_Example Members" Url="html/072f2f60-b7d9-684c-0d00-22f9e1195907.htm" />
       <HelpTOCNode Title="TangoCard_Store_Example Constructor " Url="html/41a87f39-9078-c729-c301-0f1fc177ec84.htm" />
-      <HelpTOCNode Id="8e5ded58-1371-4084-8dad-20510d3c9464" Title="TangoCard_Store_Example Methods" Url="html/a690ab81-f8a3-d2ae-e8bf-a0495230e282.htm">
+      <HelpTOCNode Id="3998ca9a-ecb8-48bb-9950-6b9730dc0986" Title="TangoCard_Store_Example Methods" Url="html/a690ab81-f8a3-d2ae-e8bf-a0495230e282.htm">
         <HelpTOCNode Title="Execute Method " Url="html/ba951576-cadd-00f1-af58-4e359f981ea6.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="3994b2ec-2f56-4850-a3cc-9dd2cd0f423e" Title="TangoCard.Sdk.Request Namespace" Url="html/d0155dd8-7e99-31dd-5722-c2bdcdbfbcef.htm">
-    <HelpTOCNode Id="917db78b-1380-44a9-935d-5dd4003d2114" Title="BaseRequest Class" Url="html/4ba8200a-dead-6154-defb-91177308d5be.htm">
+  <HelpTOCNode Id="cd1bf734-0904-45ef-bccb-3b06ef7b950e" Title="TangoCard.Sdk.Request Namespace" Url="html/d0155dd8-7e99-31dd-5722-c2bdcdbfbcef.htm">
+    <HelpTOCNode Id="956c6a8f-f2f5-452a-b5aa-9be6d181a9a1" Title="BaseRequest Class" Url="html/4ba8200a-dead-6154-defb-91177308d5be.htm">
       <HelpTOCNode Title="BaseRequest Members" Url="html/317048c2-3844-7d1e-8f4c-dd705ba78c5c.htm" />
       <HelpTOCNode Title="BaseRequest Constructor " Url="html/4c60517f-9add-89f9-9d11-7bafdef02e86.htm" />
-      <HelpTOCNode Id="51062648-9fb1-4760-8a11-773351b862bf" Title="BaseRequest Methods" Url="html/0e9a5448-3282-bca4-3a90-4a890d643ec8.htm">
+      <HelpTOCNode Id="db042784-684c-4077-a8b6-53e2b8b3dbbf" Title="BaseRequest Methods" Url="html/0e9a5448-3282-bca4-3a90-4a890d643ec8.htm">
         <HelpTOCNode Title="Execute(T) Method " Url="html/b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="8b113929-781d-4bf1-9b2c-cb234a007d6b" Title="BaseRequest Properties" Url="html/a966c943-ef1d-b542-06a9-ba88588110ad.htm">
+      <HelpTOCNode Id="8cd2250f-46a6-4a2a-af7e-031916a8c1c1" Title="BaseRequest Properties" Url="html/a966c943-ef1d-b542-06a9-ba88588110ad.htm">
         <HelpTOCNode Title="Password Property " Url="html/08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm" />
         <HelpTOCNode Title="RequestAction Property " Url="html/bb157126-9975-6126-1f42-982a31b83fb2.htm" />
         <HelpTOCNode Title="TangoCardServiceApi Property " Url="html/48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm" />
@@ -48,115 +48,115 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="5230b2d7-034d-45e8-8cc6-381c67b03961" Title="TangoCard.Sdk.Response Namespace" Url="html/2b33f578-6679-7f23-08a0-4b36b707e937.htm">
+  <HelpTOCNode Id="e8fdccbb-8aac-490e-bcea-89e170723cdf" Title="TangoCard.Sdk.Response Namespace" Url="html/2b33f578-6679-7f23-08a0-4b36b707e937.htm">
     <HelpTOCNode Title="BaseResponse Interface" Url="html/c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm" />
-    <HelpTOCNode Id="35b5746b-4f13-44b9-b63a-6081d3f7e6f8" Title="ServiceResponse(T) Class" Url="html/0d286782-166d-41f3-bb2a-803567edda08.htm">
+    <HelpTOCNode Id="56326a8c-51f1-4aae-8a6c-90a0021ea609" Title="ServiceResponse(T) Class" Url="html/0d286782-166d-41f3-bb2a-803567edda08.htm">
       <HelpTOCNode Title="ServiceResponse(T) Members" Url="html/ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm" />
       <HelpTOCNode Title="ServiceResponse(T) Constructor " Url="html/7c659455-a41e-ff52-b8ba-4cc6210a51cf.htm" />
       <HelpTOCNode Title="ServiceResponse(T) Methods" Url="html/1e7bee31-e095-810e-5cfb-f2e2f52aa158.htm" />
-      <HelpTOCNode Id="2aead483-e8a5-4f90-ac62-92a1a8a4f44d" Title="ServiceResponse(T) Properties" Url="html/13e4be4e-99bc-e7a4-de83-c31b80202bd7.htm">
+      <HelpTOCNode Id="8edb549d-ca8d-451d-b01c-1e44ec9c2016" Title="ServiceResponse(T) Properties" Url="html/13e4be4e-99bc-e7a4-de83-c31b80202bd7.htm">
         <HelpTOCNode Title="Response Property " Url="html/f210f47d-e780-4591-bdbc-ce0aa83b7aeb.htm" />
         <HelpTOCNode Title="ResponseType Property " Url="html/896bdd9f-2e8f-9c95-df1d-c587890790ae.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ServiceResponseEnum Enumeration" Url="html/ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm" />
   </HelpTOCNode>
-  <HelpTOCNode Id="b0999c5f-9ab0-4c08-885a-c0c59dff6709" Title="TangoCard.Sdk.Response.Failure Namespace" Url="html/c16d35af-6c11-e447-dd79-f9f6b7699d51.htm">
-    <HelpTOCNode Id="4c75cc15-4430-48f6-831d-e02c3899f846" Title="FailureResponse Class" Url="html/181f70f2-8958-2ecf-7da4-a40756441ab6.htm">
+  <HelpTOCNode Id="6eb258ab-5e2d-47bb-bea3-165c39b7e2a1" Title="TangoCard.Sdk.Response.Failure Namespace" Url="html/c16d35af-6c11-e447-dd79-f9f6b7699d51.htm">
+    <HelpTOCNode Id="dc37f4bf-bfdb-4717-a9b3-96e402f2a7c2" Title="FailureResponse Class" Url="html/181f70f2-8958-2ecf-7da4-a40756441ab6.htm">
       <HelpTOCNode Title="FailureResponse Members" Url="html/20c1bc86-04f0-54a8-36a3-b5b067c3cdae.htm" />
       <HelpTOCNode Title="FailureResponse Constructor " Url="html/767dfc64-4495-91b1-4730-5cd15946eb15.htm" />
-      <HelpTOCNode Id="de3a708d-d1ee-4a7b-972a-62ca5abb2299" Title="FailureResponse Methods" Url="html/1596ba7c-13ac-643b-bf29-adef8fc3475d.htm">
+      <HelpTOCNode Id="7b334322-5355-4d86-bae4-e7278b5dd1c8" Title="FailureResponse Methods" Url="html/1596ba7c-13ac-643b-bf29-adef8fc3475d.htm">
         <HelpTOCNode Title="ToString Method " Url="html/ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5491d882-3e81-45e9-8bc7-65414c790659" Title="FailureResponse Properties" Url="html/f016491e-949c-f8a0-59ef-1b3c5a04c4b5.htm">
+      <HelpTOCNode Id="7e4d67dd-efdb-4912-a348-8307f7d71081" Title="FailureResponse Properties" Url="html/f016491e-949c-f8a0-59ef-1b3c5a04c4b5.htm">
         <HelpTOCNode Title="Message Property " Url="html/7ac281b4-34a1-f6ec-7fab-46736b40afce.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="836e4bed-fed4-4d45-8609-0b6bad596b1e" Title="InsufficientFundsResponse Class" Url="html/f80f8136-2ead-63ef-4323-f94de47723ab.htm">
+    <HelpTOCNode Id="1283800b-0940-41af-a65f-9140c4512bce" Title="InsufficientFundsResponse Class" Url="html/f80f8136-2ead-63ef-4323-f94de47723ab.htm">
       <HelpTOCNode Title="InsufficientFundsResponse Members" Url="html/84531e12-546e-fae4-dd7e-f56d39c3ccbb.htm" />
       <HelpTOCNode Title="InsufficientFundsResponse Constructor " Url="html/6e5085c4-c227-cfb6-bd9c-df1d4d1b09eb.htm" />
       <HelpTOCNode Title="InsufficientFundsResponse Methods" Url="html/7635c5c8-4726-a53a-cd28-6679aef47eea.htm" />
-      <HelpTOCNode Id="f2ba8809-9830-46c6-9774-5a142da0cadb" Title="InsufficientFundsResponse Properties" Url="html/7081929e-df89-6acb-161e-6926de37e4d2.htm">
+      <HelpTOCNode Id="1f9714ac-d171-4e53-b686-210c80fc66c5" Title="InsufficientFundsResponse Properties" Url="html/7081929e-df89-6acb-161e-6926de37e4d2.htm">
         <HelpTOCNode Title="AvailableBalance Property " Url="html/6f76932d-8f13-9a7b-8ffb-a86f4505a51f.htm" />
         <HelpTOCNode Title="Message Property " Url="html/8a6a19cc-a3e4-5fb3-8b22-1e43e6bd380d.htm" />
         <HelpTOCNode Title="OrderCost Property " Url="html/35edcbad-98fe-3926-613a-ea25b2cc7f64.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="bac45c9c-f0fc-406e-9d7b-74338bffa863" Title="InsufficientInventoryResponse Class" Url="html/a34219e0-1dc9-62b8-7850-903922739f1a.htm">
+    <HelpTOCNode Id="b02e0811-7036-4272-818b-58894e3522e8" Title="InsufficientInventoryResponse Class" Url="html/a34219e0-1dc9-62b8-7850-903922739f1a.htm">
       <HelpTOCNode Title="InsufficientInventoryResponse Members" Url="html/18950a39-6c5b-0999-f501-d4798e891ff7.htm" />
       <HelpTOCNode Title="InsufficientInventoryResponse Constructor " Url="html/d6acf6f0-ac2d-32a7-4497-a34dfb0f7af4.htm" />
       <HelpTOCNode Title="InsufficientInventoryResponse Methods" Url="html/9b4ca1b8-a8ad-f6ff-41bc-f25c3329af24.htm" />
-      <HelpTOCNode Id="ba02da03-1ef9-46b0-ad22-79656f8da685" Title="InsufficientInventoryResponse Properties" Url="html/8b39ab04-f0dd-ff5e-0608-a7ef0a1f330d.htm">
+      <HelpTOCNode Id="2bc92c13-4dcc-4ac1-9cf2-2b0ba4c61a81" Title="InsufficientInventoryResponse Properties" Url="html/8b39ab04-f0dd-ff5e-0608-a7ef0a1f330d.htm">
         <HelpTOCNode Title="Message Property " Url="html/fed4bb75-0814-e566-3cb5-af0b77a76fcc.htm" />
         <HelpTOCNode Title="Sku Property " Url="html/21ae91b3-74ec-0e94-a087-07892946c63a.htm" />
         <HelpTOCNode Title="Value Property " Url="html/3c9782bc-a02a-611b-efb4-640dd2a6ea4e.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f7a044b3-6213-4248-b43c-fec7b2534190" Title="InvalidCredentialsResponse Class" Url="html/c77ca27c-b553-9904-665d-6bf7eabc7819.htm">
+    <HelpTOCNode Id="1c436365-32f4-496d-aeaf-b13ec093041d" Title="InvalidCredentialsResponse Class" Url="html/c77ca27c-b553-9904-665d-6bf7eabc7819.htm">
       <HelpTOCNode Title="InvalidCredentialsResponse Members" Url="html/275361f9-a5df-8826-0433-413ccd3a7bea.htm" />
       <HelpTOCNode Title="InvalidCredentialsResponse Constructor " Url="html/576b652c-743e-3665-2ba1-cbcd987ad160.htm" />
       <HelpTOCNode Title="InvalidCredentialsResponse Methods" Url="html/e98c97e8-d4f8-bc00-66ca-ad9267b6b9b7.htm" />
-      <HelpTOCNode Id="d1dac2b0-6c56-41ff-b83b-cc9457279c89" Title="InvalidCredentialsResponse Properties" Url="html/a07cb93e-aad1-9b97-727f-a1421b368150.htm">
+      <HelpTOCNode Id="4d0e3e3e-2db3-4e5a-b777-b69506b0bf32" Title="InvalidCredentialsResponse Properties" Url="html/a07cb93e-aad1-9b97-727f-a1421b368150.htm">
         <HelpTOCNode Title="Message Property " Url="html/ec0f37fb-07bd-8b77-45ab-695b97c65cfa.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="73cf274a-fb8a-472d-89e2-1803f89db543" Title="InvalidInputResponse Class" Url="html/3fd28f2c-356d-4485-831e-ffad521c12c1.htm">
+    <HelpTOCNode Id="78c9d642-0ee6-4775-adde-374009c60776" Title="InvalidInputResponse Class" Url="html/3fd28f2c-356d-4485-831e-ffad521c12c1.htm">
       <HelpTOCNode Title="InvalidInputResponse Members" Url="html/db6166d4-254b-4c87-0a7d-865dc62e304a.htm" />
       <HelpTOCNode Title="InvalidInputResponse Constructor " Url="html/03df05cc-ce9b-fa2c-da9e-abca49919c00.htm" />
       <HelpTOCNode Title="InvalidInputResponse Methods" Url="html/085f41c6-685a-806c-b6e8-faac70cdcae6.htm" />
-      <HelpTOCNode Id="2d494532-f6d6-4ab2-9c66-7670cfbf909a" Title="InvalidInputResponse Properties" Url="html/ed42388b-2b04-f80d-b077-5d96d078e01c.htm">
+      <HelpTOCNode Id="9b1c5ca3-a074-46f6-b672-ee74f080db70" Title="InvalidInputResponse Properties" Url="html/ed42388b-2b04-f80d-b077-5d96d078e01c.htm">
         <HelpTOCNode Title="Invalid Property " Url="html/1d4f2041-893e-bcb1-cb02-dce1d39dfb59.htm" />
         <HelpTOCNode Title="Message Property " Url="html/054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d703e0d4-f6da-4192-84c7-88236ec9d2f3" Title="SystemFailureResponse Class" Url="html/2192db16-696a-3e5f-d806-a27ad9a2ece0.htm">
+    <HelpTOCNode Id="031474eb-c124-4ba9-9172-f6463371b398" Title="SystemFailureResponse Class" Url="html/2192db16-696a-3e5f-d806-a27ad9a2ece0.htm">
       <HelpTOCNode Title="SystemFailureResponse Members" Url="html/1533a398-f00a-c947-dfeb-c8b364a7cf71.htm" />
       <HelpTOCNode Title="SystemFailureResponse Constructor " Url="html/4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm" />
       <HelpTOCNode Title="SystemFailureResponse Methods" Url="html/ff8fdc97-0224-e54b-2261-297e14de6ad8.htm" />
-      <HelpTOCNode Id="285b965c-5dee-4f33-952c-bbff8297b62b" Title="SystemFailureResponse Properties" Url="html/bd599e3f-2b09-fdf9-e566-92c36db1592e.htm">
+      <HelpTOCNode Id="ee711544-5cf6-4305-8ad2-0292843ba927" Title="SystemFailureResponse Properties" Url="html/bd599e3f-2b09-fdf9-e566-92c36db1592e.htm">
         <HelpTOCNode Title="ErrorCode Property " Url="html/8af2dab2-3df2-2f35-e54e-9383a71d150d.htm" />
         <HelpTOCNode Title="Message Property " Url="html/13e825e0-46a9-2aaf-c567-aca66066b9c1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="ba17beea-fb61-4690-8171-41a9331520b1" Title="TangoCard.Sdk.Response.Success Namespace" Url="html/df252480-0d85-5335-d4be-602e26264f6e.htm">
-    <HelpTOCNode Id="10dfe78d-e885-47cc-a9a9-3340c7e86638" Title="GetAvailableBalanceResponse Class" Url="html/642b6d95-0ed8-d773-560c-62818d25aa47.htm">
+  <HelpTOCNode Id="280e0f94-d0e1-4928-b551-6d63ef0d2bdd" Title="TangoCard.Sdk.Response.Success Namespace" Url="html/df252480-0d85-5335-d4be-602e26264f6e.htm">
+    <HelpTOCNode Id="14d6c933-4846-4fa1-8254-eb37e5d6b2d5" Title="GetAvailableBalanceResponse Class" Url="html/642b6d95-0ed8-d773-560c-62818d25aa47.htm">
       <HelpTOCNode Title="GetAvailableBalanceResponse Members" Url="html/440b5ad2-169f-3589-0c8a-3ca003c53774.htm" />
       <HelpTOCNode Title="GetAvailableBalanceResponse Constructor " Url="html/cefc4cea-e990-6784-a6c4-6ae138cb79a9.htm" />
       <HelpTOCNode Title="GetAvailableBalanceResponse Methods" Url="html/77876329-dcac-9f29-f160-fd063a408cfd.htm" />
-      <HelpTOCNode Id="b1a56c49-a048-49cb-99f3-6cb5a62c1bab" Title="GetAvailableBalanceResponse Properties" Url="html/689963bf-b0f7-ba1f-7765-b97c7450165d.htm">
+      <HelpTOCNode Id="65a4955f-2af0-4352-bd6f-325cc99d1a3b" Title="GetAvailableBalanceResponse Properties" Url="html/689963bf-b0f7-ba1f-7765-b97c7450165d.htm">
         <HelpTOCNode Title="AvailableBalance Property " Url="html/f91562cc-24d0-4244-0db4-7e1cfb88c76a.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8afb5217-bbf5-41c1-8858-22369978b0ff" Title="PurchaseCardResponse Class" Url="html/86216453-165d-1fb6-da2d-ad21e242dd10.htm">
+    <HelpTOCNode Id="ad20501a-eb7c-41c8-87f5-893e0c83a023" Title="PurchaseCardResponse Class" Url="html/86216453-165d-1fb6-da2d-ad21e242dd10.htm">
       <HelpTOCNode Title="PurchaseCardResponse Members" Url="html/426f7447-88bf-ae45-9e87-4048599cc953.htm" />
       <HelpTOCNode Title="PurchaseCardResponse Constructor " Url="html/f4983791-12ee-ca79-98a0-232e4508f5c2.htm" />
       <HelpTOCNode Title="PurchaseCardResponse Methods" Url="html/150e6c01-ff75-2192-117c-b3a540ba7581.htm" />
-      <HelpTOCNode Id="b2b579e3-6e0f-4e0d-a3a5-541ffdb04149" Title="PurchaseCardResponse Properties" Url="html/fa2fbee7-84a3-09a0-bce2-28741e3991f9.htm">
+      <HelpTOCNode Id="973a1392-bdd1-4975-afa7-3a3318602ca6" Title="PurchaseCardResponse Properties" Url="html/fa2fbee7-84a3-09a0-bce2-28741e3991f9.htm">
         <HelpTOCNode Title="CardNumber Property " Url="html/d893d911-afcc-f060-14a1-962c4ee12de3.htm" />
         <HelpTOCNode Title="CardPin Property " Url="html/4123e900-bb7f-c406-32e5-fe6b2e7add91.htm" />
         <HelpTOCNode Title="CardToken Property " Url="html/110efa42-4671-4701-5f4b-cb532c31bf62.htm" />
         <HelpTOCNode Title="ReferenceOrderId Property " Url="html/b0262d3c-67db-c70e-baa7-375c74c05fc5.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="98ca8e21-df1d-47b9-98a8-f02b539e1bd0" Title="SuccessResponse Class" Url="html/292c8e63-bf7d-a7ac-2738-c2f4effda19f.htm">
+    <HelpTOCNode Id="02b46cd4-81d9-43ef-942c-b8f674a2668a" Title="SuccessResponse Class" Url="html/292c8e63-bf7d-a7ac-2738-c2f4effda19f.htm">
       <HelpTOCNode Title="SuccessResponse Members" Url="html/d31d044c-4cb9-404f-a862-b25a095f57b2.htm" />
       <HelpTOCNode Title="SuccessResponse Constructor " Url="html/698c8ade-2c83-1ee7-0b0e-311ce8c7ee5a.htm" />
       <HelpTOCNode Title="SuccessResponse Methods" Url="html/b1580b35-243b-0ac0-e18d-d8f26b315614.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="bfaa1e60-0b0c-4a58-84f5-e8b4abacb8d7" Title="TangoCard.Sdk.Service Namespace" Url="html/13fe4f3d-f077-1555-6443-aeeeefc386ae.htm">
+  <HelpTOCNode Id="218cf89e-3354-4e2d-a296-4e38e79b1940" Title="TangoCard.Sdk.Service Namespace" Url="html/13fe4f3d-f077-1555-6443-aeeeefc386ae.htm">
     <HelpTOCNode Title="TangoCardServiceApiEnum Enumeration" Url="html/a6633175-059a-ff88-7472-388db1fdade2.htm" />
-    <HelpTOCNode Id="db621875-9731-43a1-9e38-54fa91e23935" Title="TangoCardServiceException Class" Url="html/e7a64d89-1a05-f431-2a50-964f6a1763ed.htm">
+    <HelpTOCNode Id="04f9085d-2336-4957-af74-aaa2afa70199" Title="TangoCardServiceException Class" Url="html/e7a64d89-1a05-f431-2a50-964f6a1763ed.htm">
       <HelpTOCNode Title="TangoCardServiceException Members" Url="html/0c96e2e7-86ec-fc82-e84e-e640ccbc948d.htm" />
-      <HelpTOCNode Id="4bcac7e7-2dbe-4ac4-9826-0c27ffcd266d" Title="TangoCardServiceException Constructor " Url="html/e6434195-187b-a54a-adaf-cf098a520f29.htm">
+      <HelpTOCNode Id="11e5e4db-1d92-49d8-97a2-cb6b85408fec" Title="TangoCardServiceException Constructor " Url="html/e6434195-187b-a54a-adaf-cf098a520f29.htm">
         <HelpTOCNode Title="TangoCardServiceException Constructor (ServiceResponseEnum, FailureResponse)" Url="html/2d09cc40-ae21-bd44-ee83-26fd5febc5d5.htm" />
         <HelpTOCNode Title="TangoCardServiceException Constructor (ServiceResponseEnum, FailureResponse, String)" Url="html/4dcd3964-3b56-c56e-84af-c6323c0171a5.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="dc53c571-64f7-4b96-a670-bbd9094e9732" Title="TangoCardServiceException Methods" Url="html/87e33e91-6c5d-f529-2dd5-39ae65d29b99.htm">
+      <HelpTOCNode Id="f7534e10-6deb-4987-8453-4e384e1842ef" Title="TangoCardServiceException Methods" Url="html/87e33e91-6c5d-f529-2dd5-39ae65d29b99.htm">
         <HelpTOCNode Title="ThrowOnError Method " Url="html/5e251519-6297-b26e-fa2e-2231b6ca7285.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="893292e7-6e8b-496f-8dca-b06493cd6d1a" Title="TangoCardServiceException Properties" Url="html/cf2bddfc-848e-3050-a169-2b0457fe144c.htm">
+      <HelpTOCNode Id="ca7f9e8f-9e01-4370-bdd5-18c1ce476c6d" Title="TangoCardServiceException Properties" Url="html/cf2bddfc-848e-3050-a169-2b0457fe144c.htm">
         <HelpTOCNode Title="Message Property " Url="html/e6b97213-2079-7e82-12d2-2313ba8fb430.htm" />
         <HelpTOCNode Title="Response Property " Url="html/d6ba4458-7564-3b59-59b9-235dd4b0458e.htm" />
         <HelpTOCNode Title="ResponseType Property " Url="html/0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm" />
@@ -164,11 +164,11 @@
       <HelpTOCNode Title="TangoCardServiceException Events" Url="html/fea3aee9-3e3d-6d4f-4227-728690ed05a1.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="d7896698-ab58-435b-9598-6b269c41f6a7" Title="TangoCard.Sdk.Unittests Namespace" Url="html/9e965038-db1d-043e-38d6-bbdf648aed47.htm">
-    <HelpTOCNode Id="5c68e59a-5d19-49b0-9bfd-2b4b77f75ba7" Title="UnitTest_GetAvailableBalance Class" Url="html/28a375be-8d3a-d349-e263-caa08788b009.htm">
+  <HelpTOCNode Id="006f9a69-030a-4294-9275-d89c008cd4dd" Title="TangoCard.Sdk.Unittests Namespace" Url="html/9e965038-db1d-043e-38d6-bbdf648aed47.htm">
+    <HelpTOCNode Id="48becae3-52ae-4666-92a1-d8dc4eceed92" Title="UnitTest_GetAvailableBalance Class" Url="html/28a375be-8d3a-d349-e263-caa08788b009.htm">
       <HelpTOCNode Title="UnitTest_GetAvailableBalance Members" Url="html/76c1b3bb-808a-e14a-49f1-b69b1d682dff.htm" />
       <HelpTOCNode Title="UnitTest_GetAvailableBalance Constructor " Url="html/4feca5d0-6651-4fe0-4fb3-398d0fe14370.htm" />
-      <HelpTOCNode Id="c20328e1-e12c-4dcb-88f1-c8f5f85c20d8" Title="UnitTest_GetAvailableBalance Methods" Url="html/0e2156cb-eab1-27d2-2feb-8478fecb972b.htm">
+      <HelpTOCNode Id="866b81f1-38bd-4ae7-b47e-26152f2f28a8" Title="UnitTest_GetAvailableBalance Methods" Url="html/0e2156cb-eab1-27d2-2feb-8478fecb972b.htm">
         <HelpTOCNode Title="Test_GetAvailableBalance_Api Method " Url="html/b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm" />
         <HelpTOCNode Title="Test_GetAvailableBalance_InsufficientFunds Method " Url="html/28aed5a3-9622-9f7f-f430-453dd18d3806.htm" />
         <HelpTOCNode Title="Test_GetAvailableBalance_InvalidCredentials Method " Url="html/b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm" />
@@ -176,10 +176,10 @@
         <HelpTOCNode Title="TestInitialize_GetAvailableBalance Method " Url="html/9958fe3f-f151-8b16-bb3c-f460b26895e0.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="79a0f0c1-549f-4e78-a699-5312566fafd9" Title="UnitTest_PurchaseCard Class" Url="html/110a7d32-57c1-aa75-1612-48364f15cd5a.htm">
+    <HelpTOCNode Id="9667fcc5-28bc-4b41-b5e4-233e930c139e" Title="UnitTest_PurchaseCard Class" Url="html/110a7d32-57c1-aa75-1612-48364f15cd5a.htm">
       <HelpTOCNode Title="UnitTest_PurchaseCard Members" Url="html/36d298d5-bbee-39b3-64fc-fe616161469f.htm" />
       <HelpTOCNode Title="UnitTest_PurchaseCard Constructor " Url="html/87474c76-fcf8-df66-b37c-3ac1c2028d06.htm" />
-      <HelpTOCNode Id="afe600cb-42d8-45fd-8db3-775820b3c666" Title="UnitTest_PurchaseCard Methods" Url="html/92a445d7-71d8-94a1-d43d-e90dfe624fdf.htm">
+      <HelpTOCNode Id="a380cc92-7602-49c5-b4bf-394ef3176553" Title="UnitTest_PurchaseCard Methods" Url="html/92a445d7-71d8-94a1-d43d-e90dfe624fdf.htm">
         <HelpTOCNode Title="Test_PurchaseCard_InsufficientFunds Method " Url="html/d1e92f4f-43a0-fde5-0767-65825b662709.htm" />
         <HelpTOCNode Title="Test_PurchaseCard_InsufficientFunds_10000000 Method " Url="html/eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm" />
         <HelpTOCNode Title="Test_PurchaseCard_InvalidCredentials Method " Url="html/1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm" />

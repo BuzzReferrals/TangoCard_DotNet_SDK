@@ -157,6 +157,7 @@ namespace TangoCard.Sdk.Examples
                         recipientEmail: null,
                         giftFrom: null,
                         giftMessage: null,
+                        companyIdentifier: null,
                         response: out response
                     )  
                     && (null != response)
@@ -225,6 +226,7 @@ namespace TangoCard.Sdk.Examples
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out response
                     )
                     && (null != response)
@@ -296,6 +298,7 @@ namespace TangoCard.Sdk.Examples
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out response
                     )
                     && (null != response)

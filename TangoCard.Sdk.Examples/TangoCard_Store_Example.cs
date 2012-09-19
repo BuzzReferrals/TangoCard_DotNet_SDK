@@ -115,6 +115,7 @@ namespace TangoCard.Sdk.Examples
                         recipientEmail: null,
                         giftFrom: null,
                         giftMessage: null,
+                        companyIdentifier: null,
                         response: out response
                     )  
                     && (null != response)
@@ -161,8 +162,9 @@ namespace TangoCard.Sdk.Examples
                         tcSend: true,
                         giftFrom: "Bill Example",
                         giftMessage: "Happy Birthday",
-                        recipientEmail: "sally@example.com",
+                        recipientEmail: "jeff@tangocard.com",
                         recipientName: "Sally Example",
+                        companyIdentifier: "extole-espanol",
                         response: out response
                     )
                     && (null != response)
