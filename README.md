@@ -260,13 +260,13 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
 #### Parameters ####
 <dl>
   <dt>TangoCardServiceApiEnum enumTangoCardServiceApi</dt>
-  <dd>- INTEGRATION and PRODUCTION</dd>
+  <dd>- <code>INTEGRATION</code> or <code>PRODUCTION</code></dd>
   
   <dt>string username</dt>
-  <dd>- User email address, and the SDK Integration test username is defined in TangoCard.Sdk.Examples' configuration file *app.config* within *app_username*</dd>
+  <dd>- User email address, and the SDK Integration test username is defined within configuration file <code>app_config.properties</code> in setting <code>app_username</code></dd>
 
   <dt>string password</dt>
-  <dd>- User password, and the SDK Integration test password is defined in TangoCard.Sdk.Examples' configuration file *app.config* within *app_password*</dd>
+  <dd>- User password, and the SDK Integration test password is defined within configuration file <code>app_config.properties</code> in setting <code>app_password</code></dd>
 
   <dt>TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse response</dt>
   <dd>- This <i>out</i> parameter will provide a valid success response object if this method returns true upon success.</dd>
@@ -326,37 +326,37 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
 
 <dl>
   <dt>TangoCardServiceApiEnum enumTangoCardServiceApi</dt>
-  <dd>- INTEGRATION or PRODUCTION</dd>
+  <dd>- <code>INTEGRATION</code> or <code>PRODUCTION</code></dd>
 
   <dt>string username</dt>
-  <dd>- User email address, and a SDK Integration test username is defined in TangoCard.Sdk.Examples' configuration file *app.config* within *app_username*</dd>
+  <dd>- User email address, and a SDK Integration test username is defined within configuration file <code>config\app_config.ini</code> in setting <code>app_username</code></dd>
 
   <dt>string password</dt>
-  <dd>- User password, and a SDK Integration test password is defined in TangoCard.Sdk.Examples' configuration file *app.config* within *app_password*</dd>
+  <dd>- User password, and a SDK Integration test password is defined within configuration file <code>config\app_config.ini</code> in setting <code>app_password</code></dd>
 
   <dt>string cardSku</dt>
-  <dd>- Card brand request, and the Tango Card brand's card sku *tango-card* is defined in TangoCard.Sdk.Examples' configuration file *app.config* within *app_card_sku*</dd>
+  <dd>- Card brand request, and the Tango Card brand's card sku *tango-card* is defined in configuration file <code>config\app_config.ini</code> within <code>app_card_sku</code></dd>
 
   <dt>int cardValue</dt>
   <dd>- Card value in cents; a value of 100 (cent) is $1.00 dollar card. Minimum value is 1 (cent).</dd>
 
   <dt>boolean tcSend</dt>
-  <dd>- Tango Card Service delivers by Email requested card. Set to true for email delivery, and false for no delivery.</dd>
+  <dd>- Tango Card Service delivers by Email requested card. Set to <code>true</code> for email delivery, and <code>false</code> for no delivery.</dd>
 
   <dt>string recipientName</dt>
-  <dd>- Full name of recipient receiving gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
+  <dd>- Full name of recipient receiving gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
 
   <dt>string recipientEmail</dt>
-  <dd>- Valid email address of recipient receiving gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
+  <dd>- Valid email address of recipient receiving gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
 
   <dt>string giftMessage</dt>
-  <dd>- [Optional] Gift message to be applied to gift card's email. Set this optional parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) or null if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
+  <dd>- [Optional] Gift message to be applied to gift card's email. Set this optional parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) or null if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
 
   <dt>string giftFrom</dt>
-  <dd>- Full name of giver of gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
+  <dd>- Full name of giver of gift card. Set this parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
   
   <dt>string companyIdentifier</dt>
-  <dd>- The name of the parent company providing this gift. Set this optional parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if `tcSend` is true, or `null` if parameter `tcSend` is `false`.</dd>
+  <dd>- The name of the parent company providing this gift. Set this optional parameter with a value of either a string (length minimum 1 character to maximum of 255 characters) if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
 
   <dt>TangoCard.Sdk.Response.Success.PurchaseCardResponse response</dt>
   <dd>- This <i>out</i> parameter will provide a valid success response object if this method returns true upon success.</dd>
