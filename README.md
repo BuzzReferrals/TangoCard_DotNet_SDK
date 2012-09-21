@@ -1,4 +1,6 @@
-TangoCard .Net/C-Sharp SDK
+<h1>Tango Card .Net/C-Sharp SDK</h1>
+<h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
+<h4>Update: 2012-09-20</h4>
 =================
 
 # Table of Contents #
@@ -171,7 +173,7 @@ With the <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card
 
 Available are two endpoints that provide the <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a>, as defined by `enum TangoCard.Sdk.Service.TangoCardServiceApiEnum` :
 <dl>
-    <dt>INTEGRATION</dt> 
+    <dt><code>INTEGRATION</code></dt> 
     <dd>
         <ul>
             <li>Expected to be used for development and testing purposes.</li>
@@ -181,7 +183,7 @@ Available are two endpoints that provide the <a href="https://github.com/tangoca
                     <li>Send real emails (with fake codes), so only use recipient email addresses you control for testing purposes.</li>
                 </ul>
             </li>
-            <li>Endpoint URL: https://int.tangocard.com/Version2/[method]</li>
+            <li>Secure Endpoint URL: <code>https://int.tangocard.com/Version2</code></li>
             <li>Login to use our testing account through this endpoint is:
                 <dl>
                     <dt>Username:</dt>
@@ -192,7 +194,7 @@ Available are two endpoints that provide the <a href="https://github.com/tangoca
             </li>
         </ul>
     </dd>
-    <dt>PRODUCTION</dt>
+    <dt><code>PRODUCTION</code></dt>
     <dd>
         <ul>
             <li>Performs actual card purchase requests.</li>
@@ -202,7 +204,7 @@ Available are two endpoints that provide the <a href="https://github.com/tangoca
                     <li>Send real emails (with live codes), only use recipient email addresses you wish to deliver to.</li>
                 </ul>
             </li>
-            <li>Endpoint URL: https://api.tangocard.com/Version2/[method]</li>
+            <li>Endpoint URL: <code>https://api.tangocard.com/Version2</code></li>
             <li>Login to use your production account through this endpoint is:
                 <dl>
                     <dt>Username:</dt>
