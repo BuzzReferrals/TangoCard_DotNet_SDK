@@ -28,7 +28,12 @@
         </ul>
     </li>
     <li><a href="#sdk_overview">Tango Card SDK Overview</a></li>
-    <li><a href="#sdk_requirements">Tango Card SDK Requirements</a></li>
+    <li><a href="#sdk_requirements">Tango Card SDK Requirements</a>
+        <ul>
+            <li><a href="#sdk_requirements_environment">Environment Required</a></li>
+            <li><a href="#sdk_requirements_build">Binary Builds</a></li>
+        </ul>
+    </li>
     <li><a href="#tango_card_service_api_requests">Tango Card Service API Requests</a>
         <ul>
             <li><a href="#tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
@@ -159,16 +164,16 @@ The wrapper class `TangoCard.Sdk.TangoCardServiceApi` currently handles the foll
 <a name="sdk_requirements"></a>
 # Tango Card C# SDK Requirements #
 
-## Tango Card C# SDK Environment ##
+## Environment Required ##
 
 * [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
 * [Visual Studio 2010](http://www.microsoft.com/visualstudio/en-us/products/2010-editions)  
 * [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)
 
 <a name="sdk_requirements_build"></a>
-## Tango Card C# SDK DLL Builds ##
+## Binary Builds ##
 
-This SDK provides two builds:
+This SDK provides two binary builds:
 
 <dl>
     <dt><code>DEBUG</code></dt>
