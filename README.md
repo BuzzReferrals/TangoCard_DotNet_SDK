@@ -1,4 +1,4 @@
-<h1>Tango Card .Net/C-Sharp SDK</h1>
+<h1>Tango Card .Net/C# SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
 <h4>Update: 2012-09-25</h4>
 =================
@@ -190,7 +190,7 @@ This SDK provides two builds:
                 <li><code>\TangoCard_DotNet_SDK\master\bin\Release\TangoCard_DotNet_SDK.dll.config</code></li>
             </ul>
         </dl>
-<dl>
+</dl>
 
 <a name="tango_card_service_api_requests"></a>
 # Tango Card Service API Requests #
