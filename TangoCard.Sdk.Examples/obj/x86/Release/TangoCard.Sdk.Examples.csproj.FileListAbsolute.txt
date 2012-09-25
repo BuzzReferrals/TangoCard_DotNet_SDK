@@ -1,0 +1,10 @@
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\bin\Release\TangoCard_DotNet_SDK.dll.config
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\bin\Release\TangoCard.Sdk.Examples.exe.config
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\bin\Release\TangoCard.Sdk.Examples.exe
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\bin\Release\TangoCard.Sdk.Examples.pdb
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\bin\Release\TangoCard_DotNet_SDK.dll
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\bin\Release\Newtonsoft.Json.dll
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\bin\Release\TangoCard_DotNet_SDK.pdb
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\obj\x86\Release\ResolveAssemblyReference.cache
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\obj\x86\Release\TangoCard.Sdk.Examples.exe
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\obj\x86\Release\TangoCard.Sdk.Examples.pdb

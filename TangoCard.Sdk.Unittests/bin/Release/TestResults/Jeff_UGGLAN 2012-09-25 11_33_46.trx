@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="faf97058-e646-4f79-a970-0b6402f4ec4a" name="Jeff@UGGLAN 2012-09-25 11:33:46" runUser="ugglan\Jeff" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="ec364e42-595e-484e-b514-b207d0507c59">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="Jeff_UGGLAN 2012-09-25 11_33_46" />
+  </TestSettings>
+  <Times creation="2012-09-25T11:33:46.8592819-07:00" queuing="2012-09-25T11:33:47.5143194-07:00" start="2012-09-25T11:33:47.5813232-07:00" finish="2012-09-25T11:33:59.2279894-07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="11" executed="11" passed="11" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Test_PurchaseCard_InsufficientFunds" storage="tangocard.sdk.unittests.dll" id="deba0817-cbdc-6ef0-8ac9-ed202de95483">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="6c48061c-2731-49ca-b924-30c88010df0e" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_PurchaseCard, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_PurchaseCard_InsufficientFunds" />
+    </UnitTest>
+    <UnitTest name="Test_PurchaseCard_with_NoDelivery_Api" storage="tangocard.sdk.unittests.dll" id="82c3326d-81f5-aba8-e1bb-3a64ecece58f">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="df0fa4f0-305d-485f-a00b-21ae09268875" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_PurchaseCard, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_PurchaseCard_with_NoDelivery_Api" />
+    </UnitTest>
+    <UnitTest name="Test_PurchaseCard_InvalidCredentials" storage="tangocard.sdk.unittests.dll" id="8e238ebb-5605-3812-5fb7-769d1161d1e8">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="c6158ca3-86fc-4680-9d7a-209aeefbc1b9" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_PurchaseCard, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_PurchaseCard_InvalidCredentials" />
+    </UnitTest>
+    <UnitTest name="Test_GetAvailableBalance_InvalidCredentials" storage="tangocard.sdk.unittests.dll" id="9316568e-506c-ed6d-5077-25d70d0ecc30">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="fce748e6-97d7-4796-915b-e7dedebe92a9" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_GetAvailableBalance_InvalidCredentials" />
+    </UnitTest>
+    <UnitTest name="Test_PurchaseCard_InsufficientFunds_10000000" storage="tangocard.sdk.unittests.dll" id="c5fa947b-2454-14f3-3111-2ad4672d59c2">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="6b01e718-2a73-453d-8c78-194f6ddadcab" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_PurchaseCard, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_PurchaseCard_InsufficientFunds_10000000" />
+    </UnitTest>
+    <UnitTest name="Test_GetAvailableBalance_Api" storage="tangocard.sdk.unittests.dll" id="29f6a3cc-4238-b7f6-fe09-faef69b4c2d2">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="d7f270e5-e2f2-4e5b-a541-5e9e1f5042c9" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_GetAvailableBalance_Api" />
+    </UnitTest>
+    <UnitTest name="Test_PurchaseCard_InvalidInput_Sku" storage="tangocard.sdk.unittests.dll" id="41c93455-8c54-54d6-1c21-f886a3fe91ab">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="c389f37c-8910-4282-a0f9-699e41743a8c" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_PurchaseCard, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_PurchaseCard_InvalidInput_Sku" />
+    </UnitTest>
+    <UnitTest name="Test_PurchaseCard_with_Delivery" storage="tangocard.sdk.unittests.dll" id="18e4a4b0-321f-d8fe-e1dc-6bed9061c905">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="5812816f-80e0-4a30-9613-362ee5425fcc" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_PurchaseCard, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_PurchaseCard_with_Delivery" />
+    </UnitTest>
+    <UnitTest name="Test_PurchaseCard_with_NoDelivery" storage="tangocard.sdk.unittests.dll" id="aea2b97b-c820-26a0-f0d4-77175a63111a">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="5be0604e-0eda-4690-9563-72b232608f62" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_PurchaseCard, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_PurchaseCard_with_NoDelivery" />
+    </UnitTest>
+    <UnitTest name="Test_GetAvailableBalance_InsufficientFunds" storage="tangocard.sdk.unittests.dll" id="152bd078-e8ce-d8c5-5081-efc5af0ee103">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="d3a0a70d-f075-4f90-9aac-60693a8b9213" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_GetAvailableBalance_InsufficientFunds" />
+    </UnitTest>
+    <UnitTest name="Test_GetAvailableBalance_Request" storage="tangocard.sdk.unittests.dll" id="d1981100-7810-b4b9-afdd-48e37317502a">
+      <DeploymentItems>
+        <DeploymentItem filename="TangoCard.Sdk.Unittests\DeploymentItems\TangoCard_DotNet_SDK.dll.config" />
+      </DeploymentItems>
+      <Execution id="515fd02c-7678-4538-bde1-46aed7b9a7df" />
+      <TestMethod codeBase="C:/code/tangocarddev/TangoCard_DotNet_SDK/master/TangoCard.Sdk.Unittests/bin/Release/TangoCard.Sdk.Unittests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TangoCard.Sdk.Unittests.UnitTest_GetAvailableBalance, TangoCard.Sdk.Unittests, Version=1.0.4.0, Culture=neutral, PublicKeyToken=null" name="Test_GetAvailableBalance_Request" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="29f6a3cc-4238-b7f6-fe09-faef69b4c2d2" executionId="d7f270e5-e2f2-4e5b-a541-5e9e1f5042c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="152bd078-e8ce-d8c5-5081-efc5af0ee103" executionId="d3a0a70d-f075-4f90-9aac-60693a8b9213" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9316568e-506c-ed6d-5077-25d70d0ecc30" executionId="fce748e6-97d7-4796-915b-e7dedebe92a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d1981100-7810-b4b9-afdd-48e37317502a" executionId="515fd02c-7678-4538-bde1-46aed7b9a7df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="deba0817-cbdc-6ef0-8ac9-ed202de95483" executionId="6c48061c-2731-49ca-b924-30c88010df0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c5fa947b-2454-14f3-3111-2ad4672d59c2" executionId="6b01e718-2a73-453d-8c78-194f6ddadcab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8e238ebb-5605-3812-5fb7-769d1161d1e8" executionId="c6158ca3-86fc-4680-9d7a-209aeefbc1b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="41c93455-8c54-54d6-1c21-f886a3fe91ab" executionId="c389f37c-8910-4282-a0f9-699e41743a8c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="18e4a4b0-321f-d8fe-e1dc-6bed9061c905" executionId="5812816f-80e0-4a30-9613-362ee5425fcc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aea2b97b-c820-26a0-f0d4-77175a63111a" executionId="5be0604e-0eda-4690-9563-72b232608f62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="82c3326d-81f5-aba8-e1bb-3a64ecece58f" executionId="df0fa4f0-305d-485f-a00b-21ae09268875" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d7f270e5-e2f2-4e5b-a541-5e9e1f5042c9" testId="29f6a3cc-4238-b7f6-fe09-faef69b4c2d2" testName="Test_GetAvailableBalance_Api" computerName="UGGLAN" duration="00:00:01.0452003" startTime="2012-09-25T11:33:47.6273259-07:00" endTime="2012-09-25T11:33:49.0104050-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7f270e5-e2f2-4e5b-a541-5e9e1f5042c9">
+    </UnitTestResult>
+    <UnitTestResult executionId="d3a0a70d-f075-4f90-9aac-60693a8b9213" testId="152bd078-e8ce-d8c5-5081-efc5af0ee103" testName="Test_GetAvailableBalance_InsufficientFunds" computerName="UGGLAN" duration="00:00:00.6418503" startTime="2012-09-25T11:33:49.0114050-07:00" endTime="2012-09-25T11:33:49.6564419-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3a0a70d-f075-4f90-9aac-60693a8b9213">
+    </UnitTestResult>
+    <UnitTestResult executionId="fce748e6-97d7-4796-915b-e7dedebe92a9" testId="9316568e-506c-ed6d-5077-25d70d0ecc30" testName="Test_GetAvailableBalance_InvalidCredentials" computerName="UGGLAN" duration="00:00:00.5746644" startTime="2012-09-25T11:33:49.6644424-07:00" endTime="2012-09-25T11:33:50.2464757-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fce748e6-97d7-4796-915b-e7dedebe92a9">
+    </UnitTestResult>
+    <UnitTestResult executionId="515fd02c-7678-4538-bde1-46aed7b9a7df" testId="d1981100-7810-b4b9-afdd-48e37317502a" testName="Test_GetAvailableBalance_Request" computerName="UGGLAN" duration="00:00:00.5741395" startTime="2012-09-25T11:33:50.2494759-07:00" endTime="2012-09-25T11:33:50.8315091-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="515fd02c-7678-4538-bde1-46aed7b9a7df">
+    </UnitTestResult>
+    <UnitTestResult executionId="6c48061c-2731-49ca-b924-30c88010df0e" testId="deba0817-cbdc-6ef0-8ac9-ed202de95483" testName="Test_PurchaseCard_InsufficientFunds" computerName="UGGLAN" duration="00:00:00.7570263" startTime="2012-09-25T11:33:50.8375095-07:00" endTime="2012-09-25T11:33:51.6015532-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c48061c-2731-49ca-b924-30c88010df0e">
+    </UnitTestResult>
+    <UnitTestResult executionId="6b01e718-2a73-453d-8c78-194f6ddadcab" testId="c5fa947b-2454-14f3-3111-2ad4672d59c2" testName="Test_PurchaseCard_InsufficientFunds_10000000" computerName="UGGLAN" duration="00:00:00.6811700" startTime="2012-09-25T11:33:51.6065535-07:00" endTime="2012-09-25T11:33:52.2955929-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b01e718-2a73-453d-8c78-194f6ddadcab">
+    </UnitTestResult>
+    <UnitTestResult executionId="c6158ca3-86fc-4680-9d7a-209aeefbc1b9" testId="8e238ebb-5605-3812-5fb7-769d1161d1e8" testName="Test_PurchaseCard_InvalidCredentials" computerName="UGGLAN" duration="00:00:00.5710663" startTime="2012-09-25T11:33:52.3015932-07:00" endTime="2012-09-25T11:33:52.8816264-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6158ca3-86fc-4680-9d7a-209aeefbc1b9">
+    </UnitTestResult>
+    <UnitTestResult executionId="c389f37c-8910-4282-a0f9-699e41743a8c" testId="41c93455-8c54-54d6-1c21-f886a3fe91ab" testName="Test_PurchaseCard_InvalidInput_Sku" computerName="UGGLAN" duration="00:00:00.6047595" startTime="2012-09-25T11:33:52.8876267-07:00" endTime="2012-09-25T11:33:53.5006618-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c389f37c-8910-4282-a0f9-699e41743a8c">
+    </UnitTestResult>
+    <UnitTestResult executionId="5812816f-80e0-4a30-9613-362ee5425fcc" testId="18e4a4b0-321f-d8fe-e1dc-6bed9061c905" testName="Test_PurchaseCard_with_Delivery" computerName="UGGLAN" duration="00:00:01.9485485" startTime="2012-09-25T11:33:53.5056621-07:00" endTime="2012-09-25T11:33:55.4607739-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5812816f-80e0-4a30-9613-362ee5425fcc">
+    </UnitTestResult>
+    <UnitTestResult executionId="5be0604e-0eda-4690-9563-72b232608f62" testId="aea2b97b-c820-26a0-f0d4-77175a63111a" testName="Test_PurchaseCard_with_NoDelivery" computerName="UGGLAN" duration="00:00:01.8574242" startTime="2012-09-25T11:33:55.4657742-07:00" endTime="2012-09-25T11:33:57.3278807-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5be0604e-0eda-4690-9563-72b232608f62">
+    </UnitTestResult>
+    <UnitTestResult executionId="df0fa4f0-305d-485f-a00b-21ae09268875" testId="82c3326d-81f5-aba8-e1bb-3a64ecece58f" testName="Test_PurchaseCard_with_NoDelivery_Api" computerName="UGGLAN" duration="00:00:01.8638017" startTime="2012-09-25T11:33:57.3328810-07:00" endTime="2012-09-25T11:33:59.2029880-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df0fa4f0-305d-485f-a00b-21ae09268875">
+    </UnitTestResult>
+  </Results>
+</TestRun>

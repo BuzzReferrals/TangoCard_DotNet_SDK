@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="1.9.4.0" projectFile="C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Help\TangoCard.Sdk.Help.shfbproj" started="7/31/2012 12:25:57 PM">
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.4.0" projectFile="C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Help\TangoCard.Sdk.Help.shfbproj" started="9/25/2012 11:39:36 AM">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -8,17 +8,17 @@ Found Sandcastle tools in &#39;C:\Program Files (x86)\Sandcastle\&#39;
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
-Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\TangoCard.Sdk.csproj
-    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\TangoCard.Sdk.csproj&#39;
-Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Examples\TangoCard.Sdk.Examples.csproj
-    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Examples\TangoCard.Sdk.Examples.csproj&#39;
-Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\TangoCard.Sdk.Unittests.csproj
-    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\TangoCard.Sdk.Unittests.csproj&#39;
+Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk\TangoCard.Sdk.csproj
+    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk\TangoCard.Sdk.csproj&#39;
+Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\TangoCard.Sdk.Examples.csproj
+    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\TangoCard.Sdk.Examples.csproj&#39;
+Source: C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Unittests\TangoCard.Sdk.Unittests.csproj
+    Found project &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Unittests\TangoCard.Sdk.Unittests.csproj&#39;
 
 Parsing project files
-    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk\..\bin\Release\TangoCard_DotNet_SDK.dll&#39;
-    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Examples\bin\Release\TangoCard.Sdk.Examples.exe&#39;
-    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.Unittests.dll&#39;
+    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk\..\bin\Debug\TangoCard_DotNet_SDK.dll&#39;
+    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Examples\bin\Debug\TangoCard.Sdk.Examples.exe&#39;
+    Found assembly &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Unittests\bin\Debug\TangoCard.Sdk.Unittests.dll&#39;
 
 References to use:
     Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
@@ -34,11 +34,11 @@ SHFB: Warning BE0062: No XML comments files found.  The help file will not conta
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.1740
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0030
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
@@ -50,18 +50,18 @@ Generating reflection information...
   XslTransform (v2.7.0.0)
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
-    Last step completed in 00:00:01.3430
+    Last step completed in 00:00:06.8684
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0060
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     35 attribute nodes removed
     0 explicit interface implementations removed
     0 local and base class EII elements removed
-    Last step completed in 00:00:00.1700
+    Last step completed in 00:00:00.0980
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -73,128 +73,128 @@ Transforming reflection output...
   XslTransform (v2.7.0.0)
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
-    Last step completed in 00:00:01.0261
+    Last step completed in 00:00:03.0702
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
     No changes required
-    Last step completed in 00:00:00.0060
+    Last step completed in 00:00:00.0070
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\adm.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\adm_arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\adm_dev.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\adm_dev_arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\alert_caution.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\alert_note.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\alert_security.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\big_adm.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\big_arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\big_dev.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\big_kw.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\box.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\box.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\Caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\Caution.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\CFW.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\CFW.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\collall.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collapse.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\collapse.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collapse_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\collapse_all.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\copycode.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\copycode.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\copycodeHighlight.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\copycodeHighlight.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\dev.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\dev_arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dropdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\dropdown.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dropdownHover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\dropdownHover.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\drpdown.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown_orange.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\drpdown_orange.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown_orange_up.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\drpdown_orange_up.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpup.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\drpup.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\exp.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\exp.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\expall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\expall.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\expand_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\expand_all.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\filter1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\filter1a.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\filter1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\filter1c.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\footer.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\footer.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\gradient.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\gradient.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\greencheck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\greencheck.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\greychck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\greychck.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_prev_next.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\header_prev_next.jpg
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_blank.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\header_sql_tutorial_blank.jpg
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_logo.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\header_sql_tutorial_logo.GIF
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_adm.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_adm_arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_adm_dev.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_adm_dev_arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_dev.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_dev_arch.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\LastChild.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\LastChild.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\load.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\load.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\load_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\load_hover.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\note.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pencil.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pencil.GIF
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privclass.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privdelegate.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privenum.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privenumeration.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privevent.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privextension.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privfield.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privinterface.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privmethod.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privproperty.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privstructure.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protclass.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protdelegate.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protenum.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protenumeration.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protevent.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protextension.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protfield.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protinterface.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protmethod.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protoperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protoperator.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protproperty.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protstructure.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubclass.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubdelegate.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubenum.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubenumeration.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubevent.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubextension.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubfield.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubinterface.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubmethod.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\puboperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\puboperator.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubproperty.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubstructure.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\requirements1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\requirements1a.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\requirements1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\requirements1c.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\save.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\save.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\save_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\save_hover.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\security.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\seealso1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\seealso1a.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\seealso1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\seealso1c.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\slMobile.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\slMobile.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\static.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\static.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\xna.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\xna.gif
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\CheckboxMenu.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\CheckboxMenu.js
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\CommonUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\CommonUtilities.js
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\Dropdown.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\Dropdown.js
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\EventUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\EventUtilities.js
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\script_feedBack.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\script_feedBack.js
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\script_manifold.js
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\SplitScreen.js
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\styles\Presentation.css
-C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\styles\Whidbey\Presentation.css
-    Last step completed in 00:00:00.0930
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\adm.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\adm_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\adm_dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\adm_dev_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\alert_caution.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\alert_note.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\alert_security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\alert_security.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\big_adm.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\big_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\big_dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\big_kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\big_kw.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\box.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\box.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\Caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\Caution.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\CFW.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\CFW.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\collall.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collapse.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\collapse.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\collapse_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\collapse_all.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\copycode.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\copycode.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\copycodeHighlight.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\copycodeHighlight.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\dev_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dropdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\dropdown.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\dropdownHover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\dropdownHover.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\drpdown.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown_orange.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\drpdown_orange.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpdown_orange_up.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\drpdown_orange_up.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\drpup.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\drpup.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\exp.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\exp.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\expall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\expall.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\expand_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\expand_all.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\filter1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\filter1a.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\filter1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\filter1c.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\footer.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\footer.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\gradient.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\gradient.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\greencheck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\greencheck.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\greychck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\greychck.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_prev_next.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\header_prev_next.jpg
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_blank.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\header_sql_tutorial_blank.jpg
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\header_sql_tutorial_logo.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\header_sql_tutorial_logo.GIF
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_adm.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_adm_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_adm_dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_adm_dev_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_dev.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\kw_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_dev_arch.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\LastChild.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\LastChild.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\load.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\load.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\load_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\load_hover.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\note.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pencil.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pencil.GIF
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privenumeration.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privextension.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\privstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protenumeration.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protextension.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protoperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protoperator.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\protstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubclass.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubdelegate.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubenum.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubenumeration.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubevent.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubextension.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubfield.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubinterface.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubmethod.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\puboperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\puboperator.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubproperty.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\pubstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubstructure.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\requirements1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\requirements1a.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\requirements1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\requirements1c.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\save.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\save.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\save_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\save_hover.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\security.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\seealso1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\seealso1a.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\seealso1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\seealso1c.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\slMobile.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\slMobile.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\static.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\static.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\icons\xna.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\xna.gif
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\CheckboxMenu.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\CheckboxMenu.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\CommonUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\CommonUtilities.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\Dropdown.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\Dropdown.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\EventUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\EventUtilities.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\script_feedBack.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\script_feedBack.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\script_manifold.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\script_manifold.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\SplitScreen.js
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\styles\Presentation.css
+C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\styles\Whidbey\Presentation.css
+    Last step completed in 00:00:01.3131
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0050
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
@@ -207,17 +207,17 @@ Generating intermediate table of contents file...
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\CreateVSToc.xsl&#39;.
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00.2960
+    Last step completed in 00:00:00.3710
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0030
+    Last step completed in 00:00:00.0370
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\sandcastle.config
-    Last step completed in 00:00:00.1140
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\sandcastle.config
+    Last step completed in 00:00:00.2100
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -274,7 +274,7 @@ Building reference help topics...
   Info: CopyFromIndexComponent: Instantiating component.
   Info: CopyFromIndexComponent: Searching for files that match &#39;*.xml&#39; in &#39;C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0&#39;.
   Info: CopyFromIndexComponent: Searching for files that match &#39;*.xml&#39; in &#39;C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\2.0\Runtime\v4.0&#39;.
-  Info: CopyFromIndexComponent: Searching for files that match &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\_ProjNS_.xml&#39;.
+  Info: CopyFromIndexComponent: Searching for files that match &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\_ProjNS_.xml&#39;.
   Info: CopyFromIndexComponent: Indexed 145419 elements in 128 files.
   Info: CopyFromIndexComponent: Loaded 0 copy components.
   Info: ForEachComponent: Instantiating component.
@@ -329,26 +329,26 @@ Building reference help topics...
   Info: SharedContentComponent: Loading shared content file &#39;C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\feedBack_content.xml&#39;.
   Info: SharedContentComponent: Found 1 files in C:\Program Files (x86)\Sandcastle\Presentation\vs2005\content\feedback_content.xml.
   Info: SharedContentComponent: Searching for files that match &#39;SharedBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Loading shared content file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\SharedBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;roottopictitle&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\SharedBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;runningheadertext&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\SharedBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;locationinformation&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\SharedBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;assemblynameandmodule&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\SharedBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;copycode&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\SharedBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;locale&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Loading shared content file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;roottopictitle&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;runningheadertext&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;locationinformation&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;assemblynameandmodule&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;copycode&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\SharedBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;locale&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\SharedBuilderContent.xml&#39;.
   Info: SharedContentComponent: Found 1 files in SharedBuilderContent.xml.
   Info: SharedContentComponent: Searching for files that match &#39;PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Loading shared content file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;header&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;footer&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;fb_alias&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;fb_product&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;fb_body&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;fb_send&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;fb_headerfeedback&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;feedback_alias&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;feedback_product&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
-  Info: SharedContentComponent: Overriding shared content item &#39;feedback_body&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Loading shared content file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;header&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;footer&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_alias&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_product&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_body&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_send&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;fb_headerfeedback&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;feedback_alias&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;feedback_product&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
+  Info: SharedContentComponent: Overriding shared content item &#39;feedback_body&#39; with value in file &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\PresentationStyleBuilderContent.xml&#39;.
   Info: SharedContentComponent: Found 1 files in PresentationStyleBuilderContent.xml.
   Info: SharedContentComponent: Loaded 641 shared content items.
   Info: ResolveConceptualLinksComponent: Instantiating component.
@@ -356,7 +356,7 @@ Building reference help topics...
   Info: ResolveReferenceLinksComponent2: Instantiating component.
   Info: ResolveReferenceLinksComponent2: Creating MSDN URL resolver.
   Info: ResolveReferenceLinksComponent2: Searching directory &#39;C:\Program Files (x86)\Sandcastle\Data\Reflection&#39; for targets files of the form &#39;*.xml&#39;.
-  Info: ResolveReferenceLinksComponent2: Searching directory &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working&#39; for targets files of the form &#39;reflection.xml&#39;.
+  Info: ResolveReferenceLinksComponent2: Searching directory &#39;C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working&#39; for targets files of the form &#39;reflection.xml&#39;.
   Info: ResolveReferenceLinksComponent2: Loaded 194840 reference targets.
   Info: SaveComponent: Instantiating component.
   Info: BuildAssembler: Building topic N:TangoCard.Sdk
@@ -554,7 +554,7 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.Test_PurchaseCard_with_NoDelivery_Api
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.UnitTest_PurchaseCard.TestInitialize_PurchaseCard
   Info: Processed 144 topics
-    Last step completed in 00:00:29.7277
+    Last step completed in 00:00:51.4989
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
@@ -571,309 +571,309 @@ E-Mail: Eric@EWoodruff.us
 
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
-Processing website files in C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website
+Processing website files in C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website
 Processed 144 HTML files
 Sorting keywords and generating See Also indices
-Saving website keyword index to C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\WebKI.xml
-Saving website table of contents to C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\WebTOC.xml
-    Last step completed in 00:00:00.5440
+Saving website keyword index to C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\WebKI.xml
+Saving website table of contents to C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\WebTOC.xml
+    Last step completed in 00:00:00.4480
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0010
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
-    Last step completed in 00:00:00.6920
+    Last step completed in 00:00:00.7670
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_100.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_100.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_101.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_101.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_102.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_102.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_103.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_103.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_104.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_104.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_105.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_105.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_106.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_106.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_107.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_107.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_108.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_108.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_109.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_109.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_110.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_110.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_111.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_111.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_112.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_112.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_114.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_114.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_115.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_115.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_116.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_116.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_117.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_117.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_118.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_118.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_119.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_119.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_95.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_95.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_97.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_97.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_98.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_98.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_99.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_99.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\fti\FTI_Files.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\fti\FTI_Files.json
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\03df05cc-ce9b-fa2c-da9e-abca49919c00.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\03df05cc-ce9b-fa2c-da9e-abca49919c00.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\072f2f60-b7d9-684c-0d00-22f9e1195907.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\072f2f60-b7d9-684c-0d00-22f9e1195907.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\085f41c6-685a-806c-b6e8-faac70cdcae6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\085f41c6-685a-806c-b6e8-faac70cdcae6.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0c96e2e7-86ec-fc82-e84e-e640ccbc948d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0c96e2e7-86ec-fc82-e84e-e640ccbc948d.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0d286782-166d-41f3-bb2a-803567edda08.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0d286782-166d-41f3-bb2a-803567edda08.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0e2156cb-eab1-27d2-2feb-8478fecb972b.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0e2156cb-eab1-27d2-2feb-8478fecb972b.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\0e9a5448-3282-bca4-3a90-4a890d643ec8.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\0e9a5448-3282-bca4-3a90-4a890d643ec8.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\110a7d32-57c1-aa75-1612-48364f15cd5a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\110a7d32-57c1-aa75-1612-48364f15cd5a.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\110efa42-4671-4701-5f4b-cb532c31bf62.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\110efa42-4671-4701-5f4b-cb532c31bf62.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1132718b-e871-2fee-3b80-86fd0ea049c9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1132718b-e871-2fee-3b80-86fd0ea049c9.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\13e4be4e-99bc-e7a4-de83-c31b80202bd7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\13e4be4e-99bc-e7a4-de83-c31b80202bd7.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\13e825e0-46a9-2aaf-c567-aca66066b9c1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\13e825e0-46a9-2aaf-c567-aca66066b9c1.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\13fe4f3d-f077-1555-6443-aeeeefc386ae.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\13fe4f3d-f077-1555-6443-aeeeefc386ae.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\150e6c01-ff75-2192-117c-b3a540ba7581.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\150e6c01-ff75-2192-117c-b3a540ba7581.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1533a398-f00a-c947-dfeb-c8b364a7cf71.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1533a398-f00a-c947-dfeb-c8b364a7cf71.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1596ba7c-13ac-643b-bf29-adef8fc3475d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1596ba7c-13ac-643b-bf29-adef8fc3475d.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\181f70f2-8958-2ecf-7da4-a40756441ab6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\181f70f2-8958-2ecf-7da4-a40756441ab6.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\18950a39-6c5b-0999-f501-d4798e891ff7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\18950a39-6c5b-0999-f501-d4798e891ff7.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1d4f2041-893e-bcb1-cb02-dce1d39dfb59.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1d4f2041-893e-bcb1-cb02-dce1d39dfb59.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1e7bee31-e095-810e-5cfb-f2e2f52aa158.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1e7bee31-e095-810e-5cfb-f2e2f52aa158.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\1f27b2e6-ace6-4737-046c-5428a2cdec3c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\1f27b2e6-ace6-4737-046c-5428a2cdec3c.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\20c1bc86-04f0-54a8-36a3-b5b067c3cdae.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\20c1bc86-04f0-54a8-36a3-b5b067c3cdae.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\2192db16-696a-3e5f-d806-a27ad9a2ece0.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\2192db16-696a-3e5f-d806-a27ad9a2ece0.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\21ae91b3-74ec-0e94-a087-07892946c63a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\21ae91b3-74ec-0e94-a087-07892946c63a.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\275361f9-a5df-8826-0433-413ccd3a7bea.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\275361f9-a5df-8826-0433-413ccd3a7bea.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\28a375be-8d3a-d349-e263-caa08788b009.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\28a375be-8d3a-d349-e263-caa08788b009.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\28aed5a3-9622-9f7f-f430-453dd18d3806.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\28aed5a3-9622-9f7f-f430-453dd18d3806.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\292c8e63-bf7d-a7ac-2738-c2f4effda19f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\292c8e63-bf7d-a7ac-2738-c2f4effda19f.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\2b33f578-6679-7f23-08a0-4b36b707e937.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\2b33f578-6679-7f23-08a0-4b36b707e937.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\2d09cc40-ae21-bd44-ee83-26fd5febc5d5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\2d09cc40-ae21-bd44-ee83-26fd5febc5d5.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\2f144793-c1f3-d798-b9a9-d2ef1215cbf5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\2f144793-c1f3-d798-b9a9-d2ef1215cbf5.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\317048c2-3844-7d1e-8f4c-dd705ba78c5c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\317048c2-3844-7d1e-8f4c-dd705ba78c5c.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\34b7e44d-8860-0d2f-1c64-b2f0c8690763.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\34b7e44d-8860-0d2f-1c64-b2f0c8690763.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\35edcbad-98fe-3926-613a-ea25b2cc7f64.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\35edcbad-98fe-3926-613a-ea25b2cc7f64.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\36d298d5-bbee-39b3-64fc-fe616161469f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\36d298d5-bbee-39b3-64fc-fe616161469f.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\3857e9ba-eee1-4dbc-8f9a-c6663f7a6421.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\3857e9ba-eee1-4dbc-8f9a-c6663f7a6421.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\3c9782bc-a02a-611b-efb4-640dd2a6ea4e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\3c9782bc-a02a-611b-efb4-640dd2a6ea4e.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\3ea230c7-8df3-f6f3-24ce-9caafe1195b2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\3ea230c7-8df3-f6f3-24ce-9caafe1195b2.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\3fd28f2c-356d-4485-831e-ffad521c12c1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\3fd28f2c-356d-4485-831e-ffad521c12c1.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4123e900-bb7f-c406-32e5-fe6b2e7add91.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4123e900-bb7f-c406-32e5-fe6b2e7add91.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\41a87f39-9078-c729-c301-0f1fc177ec84.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\41a87f39-9078-c729-c301-0f1fc177ec84.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\426f7447-88bf-ae45-9e87-4048599cc953.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\426f7447-88bf-ae45-9e87-4048599cc953.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\432ef87e-eedd-571a-730b-a5c3ebc88ae1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\432ef87e-eedd-571a-730b-a5c3ebc88ae1.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\440b5ad2-169f-3589-0c8a-3ca003c53774.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\440b5ad2-169f-3589-0c8a-3ca003c53774.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4659b26c-c522-c60d-f5c4-9c77fcd7c23e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4659b26c-c522-c60d-f5c4-9c77fcd7c23e.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4ba8200a-dead-6154-defb-91177308d5be.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4ba8200a-dead-6154-defb-91177308d5be.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4c60517f-9add-89f9-9d11-7bafdef02e86.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4c60517f-9add-89f9-9d11-7bafdef02e86.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4dcd3964-3b56-c56e-84af-c6323c0171a5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4dcd3964-3b56-c56e-84af-c6323c0171a5.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\4feca5d0-6651-4fe0-4fb3-398d0fe14370.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\4feca5d0-6651-4fe0-4fb3-398d0fe14370.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\576b652c-743e-3665-2ba1-cbcd987ad160.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\576b652c-743e-3665-2ba1-cbcd987ad160.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\5e251519-6297-b26e-fa2e-2231b6ca7285.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\5e251519-6297-b26e-fa2e-2231b6ca7285.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\5f341bcb-5701-3835-d2a0-6f20a7224c57.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\5f341bcb-5701-3835-d2a0-6f20a7224c57.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\5f432f0d-d40d-8773-11fd-1d7034ea0ea4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\5f432f0d-d40d-8773-11fd-1d7034ea0ea4.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\642b6d95-0ed8-d773-560c-62818d25aa47.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\642b6d95-0ed8-d773-560c-62818d25aa47.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\65fa9c1b-7a8e-a428-5190-a0acc579dcf7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\65fa9c1b-7a8e-a428-5190-a0acc579dcf7.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\66211f2a-1e24-b2e1-e0c9-820f456d4447.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\66211f2a-1e24-b2e1-e0c9-820f456d4447.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\689963bf-b0f7-ba1f-7765-b97c7450165d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\689963bf-b0f7-ba1f-7765-b97c7450165d.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\698c8ade-2c83-1ee7-0b0e-311ce8c7ee5a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\698c8ade-2c83-1ee7-0b0e-311ce8c7ee5a.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\6e5085c4-c227-cfb6-bd9c-df1d4d1b09eb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\6e5085c4-c227-cfb6-bd9c-df1d4d1b09eb.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\6f76932d-8f13-9a7b-8ffb-a86f4505a51f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\6f76932d-8f13-9a7b-8ffb-a86f4505a51f.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7081929e-df89-6acb-161e-6926de37e4d2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7081929e-df89-6acb-161e-6926de37e4d2.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\74300007-a011-2e65-6c53-467fd5a2c15d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\74300007-a011-2e65-6c53-467fd5a2c15d.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7635c5c8-4726-a53a-cd28-6679aef47eea.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7635c5c8-4726-a53a-cd28-6679aef47eea.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\767dfc64-4495-91b1-4730-5cd15946eb15.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\767dfc64-4495-91b1-4730-5cd15946eb15.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\76c1b3bb-808a-e14a-49f1-b69b1d682dff.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\76c1b3bb-808a-e14a-49f1-b69b1d682dff.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\77876329-dcac-9f29-f160-fd063a408cfd.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\77876329-dcac-9f29-f160-fd063a408cfd.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7ac281b4-34a1-f6ec-7fab-46736b40afce.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7ac281b4-34a1-f6ec-7fab-46736b40afce.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7b224b0e-5020-a6e1-5ee4-b73997473992.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7b224b0e-5020-a6e1-5ee4-b73997473992.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\7c659455-a41e-ff52-b8ba-4cc6210a51cf.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\7c659455-a41e-ff52-b8ba-4cc6210a51cf.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\84531e12-546e-fae4-dd7e-f56d39c3ccbb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\84531e12-546e-fae4-dd7e-f56d39c3ccbb.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\86216453-165d-1fb6-da2d-ad21e242dd10.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\86216453-165d-1fb6-da2d-ad21e242dd10.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\86e354b8-43ed-d35b-c8fc-67c06c974580.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\86e354b8-43ed-d35b-c8fc-67c06c974580.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\87474c76-fcf8-df66-b37c-3ac1c2028d06.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\87474c76-fcf8-df66-b37c-3ac1c2028d06.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\87e33e91-6c5d-f529-2dd5-39ae65d29b99.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\87e33e91-6c5d-f529-2dd5-39ae65d29b99.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\896bdd9f-2e8f-9c95-df1d-c587890790ae.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\896bdd9f-2e8f-9c95-df1d-c587890790ae.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\8a6a19cc-a3e4-5fb3-8b22-1e43e6bd380d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\8a6a19cc-a3e4-5fb3-8b22-1e43e6bd380d.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\8af2dab2-3df2-2f35-e54e-9383a71d150d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\8af2dab2-3df2-2f35-e54e-9383a71d150d.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\8b39ab04-f0dd-ff5e-0608-a7ef0a1f330d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\8b39ab04-f0dd-ff5e-0608-a7ef0a1f330d.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\92a445d7-71d8-94a1-d43d-e90dfe624fdf.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\92a445d7-71d8-94a1-d43d-e90dfe624fdf.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\96a21b6b-13cb-5229-6643-e2e0785f2961.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\96a21b6b-13cb-5229-6643-e2e0785f2961.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9958fe3f-f151-8b16-bb3c-f460b26895e0.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9958fe3f-f151-8b16-bb3c-f460b26895e0.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9b4ca1b8-a8ad-f6ff-41bc-f25c3329af24.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9b4ca1b8-a8ad-f6ff-41bc-f25c3329af24.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9d232d20-0b02-afc4-7471-828bdb27d9fc.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9d232d20-0b02-afc4-7471-828bdb27d9fc.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\9e965038-db1d-043e-38d6-bbdf648aed47.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\9e965038-db1d-043e-38d6-bbdf648aed47.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a07cb93e-aad1-9b97-727f-a1421b368150.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a07cb93e-aad1-9b97-727f-a1421b368150.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a34219e0-1dc9-62b8-7850-903922739f1a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a34219e0-1dc9-62b8-7850-903922739f1a.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a6633175-059a-ff88-7472-388db1fdade2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a6633175-059a-ff88-7472-388db1fdade2.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a690ab81-f8a3-d2ae-e8bf-a0495230e282.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a690ab81-f8a3-d2ae-e8bf-a0495230e282.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\a966c943-ef1d-b542-06a9-ba88588110ad.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\a966c943-ef1d-b542-06a9-ba88588110ad.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b0262d3c-67db-c70e-baa7-375c74c05fc5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b0262d3c-67db-c70e-baa7-375c74c05fc5.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b11885dc-de55-3f98-1db8-c18738682c70.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b11885dc-de55-3f98-1db8-c18738682c70.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b1580b35-243b-0ac0-e18d-d8f26b315614.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b1580b35-243b-0ac0-e18d-d8f26b315614.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\b890e8c6-30a1-e62d-4e11-ec0dc8e76dc5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\b890e8c6-30a1-e62d-4e11-ec0dc8e76dc5.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ba951576-cadd-00f1-af58-4e359f981ea6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ba951576-cadd-00f1-af58-4e359f981ea6.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\bb157126-9975-6126-1f42-982a31b83fb2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\bb157126-9975-6126-1f42-982a31b83fb2.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\bd599e3f-2b09-fdf9-e566-92c36db1592e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\bd599e3f-2b09-fdf9-e566-92c36db1592e.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\c16d35af-6c11-e447-dd79-f9f6b7699d51.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\c16d35af-6c11-e447-dd79-f9f6b7699d51.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\c1ec7979-0741-bde6-b9bc-59e1d7eb1a83.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\c1ec7979-0741-bde6-b9bc-59e1d7eb1a83.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\c77ca27c-b553-9904-665d-6bf7eabc7819.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\c77ca27c-b553-9904-665d-6bf7eabc7819.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\cefc4cea-e990-6784-a6c4-6ae138cb79a9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\cefc4cea-e990-6784-a6c4-6ae138cb79a9.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\cf2bddfc-848e-3050-a169-2b0457fe144c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\cf2bddfc-848e-3050-a169-2b0457fe144c.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d0155dd8-7e99-31dd-5722-c2bdcdbfbcef.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d0155dd8-7e99-31dd-5722-c2bdcdbfbcef.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d1e92f4f-43a0-fde5-0767-65825b662709.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d1e92f4f-43a0-fde5-0767-65825b662709.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d31d044c-4cb9-404f-a862-b25a095f57b2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d31d044c-4cb9-404f-a862-b25a095f57b2.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d6acf6f0-ac2d-32a7-4497-a34dfb0f7af4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d6acf6f0-ac2d-32a7-4497-a34dfb0f7af4.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d6ba4458-7564-3b59-59b9-235dd4b0458e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d6ba4458-7564-3b59-59b9-235dd4b0458e.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\d893d911-afcc-f060-14a1-962c4ee12de3.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\d893d911-afcc-f060-14a1-962c4ee12de3.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\db6166d4-254b-4c87-0a7d-865dc62e304a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\db6166d4-254b-4c87-0a7d-865dc62e304a.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\df252480-0d85-5335-d4be-602e26264f6e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\df252480-0d85-5335-d4be-602e26264f6e.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e2552ad5-e1c2-d5e7-c506-64a3338c8559.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e2552ad5-e1c2-d5e7-c506-64a3338c8559.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e6434195-187b-a54a-adaf-cf098a520f29.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e6434195-187b-a54a-adaf-cf098a520f29.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e6b97213-2079-7e82-12d2-2313ba8fb430.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e6b97213-2079-7e82-12d2-2313ba8fb430.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e6da2878-eb85-9d30-60cd-51df3ad60240.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e6da2878-eb85-9d30-60cd-51df3ad60240.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e7a64d89-1a05-f431-2a50-964f6a1763ed.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e7a64d89-1a05-f431-2a50-964f6a1763ed.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\e98c97e8-d4f8-bc00-66ca-ad9267b6b9b7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\e98c97e8-d4f8-bc00-66ca-ad9267b6b9b7.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ec0f37fb-07bd-8b77-45ab-695b97c65cfa.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ec0f37fb-07bd-8b77-45ab-695b97c65cfa.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ed42388b-2b04-f80d-b077-5d96d078e01c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ed42388b-2b04-f80d-b077-5d96d078e01c.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f016491e-949c-f8a0-59ef-1b3c5a04c4b5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f016491e-949c-f8a0-59ef-1b3c5a04c4b5.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f210f47d-e780-4591-bdbc-ce0aa83b7aeb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f210f47d-e780-4591-bdbc-ce0aa83b7aeb.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f4983791-12ee-ca79-98a0-232e4508f5c2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f4983791-12ee-ca79-98a0-232e4508f5c2.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f80f8136-2ead-63ef-4323-f94de47723ab.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f80f8136-2ead-63ef-4323-f94de47723ab.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\f91562cc-24d0-4244-0db4-7e1cfb88c76a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\f91562cc-24d0-4244-0db4-7e1cfb88c76a.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\fa2fbee7-84a3-09a0-bce2-28741e3991f9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\fa2fbee7-84a3-09a0-bce2-28741e3991f9.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\fea3aee9-3e3d-6d4f-4227-728690ed05a1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\fea3aee9-3e3d-6d4f-4227-728690ed05a1.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\fed4bb75-0814-e566-3cb5-af0b77a76fcc.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\fed4bb75-0814-e566-3cb5-af0b77a76fcc.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\html\ff8fdc97-0224-e54b-2261-297e14de6ad8.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\html\ff8fdc97-0224-e54b-2261-297e14de6ad8.htm
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\adm.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\adm_arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\adm_dev.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\adm_dev_arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\alert_caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\alert_caution.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\alert_note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\alert_note.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\alert_security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\alert_security.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\big_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\big_adm.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\big_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\big_arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\big_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\big_dev.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\big_kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\big_kw.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\box.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\box.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\Caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\Caution.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\CFW.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\CFW.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\collall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\collall.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\collapse.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\collapse.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\collapse_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\collapse_all.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\copycode.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\copycode.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\copycodeHighlight.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\copycodeHighlight.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\dev.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\dev_arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\dropdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\dropdown.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\dropdownHover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\dropdownHover.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\drpdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\drpdown.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\drpdown_orange.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\drpdown_orange.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\drpdown_orange_up.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\drpdown_orange_up.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\drpup.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\drpup.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\exp.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\exp.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\expall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\expall.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\expand_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\expand_all.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\filter1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\filter1a.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\filter1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\filter1c.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\footer.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\footer.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\gradient.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\gradient.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\greencheck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\greencheck.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\greychck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\greychck.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\header_prev_next.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\header_prev_next.jpg
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\header_sql_tutorial_blank.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\header_sql_tutorial_blank.jpg
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\header_sql_tutorial_logo.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\header_sql_tutorial_logo.GIF
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\kw.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\kw_adm.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\kw_adm_arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\kw_adm_dev.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\kw_adm_dev_arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\kw_arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\kw_dev.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\kw_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\kw_dev_arch.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\LastChild.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\LastChild.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\load.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\load.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\load_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\load_hover.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\note.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pencil.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pencil.GIF
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privclass.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privdelegate.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privenum.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privenumeration.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privevent.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privextension.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privfield.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privinterface.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privmethod.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privproperty.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\privstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\privstructure.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protclass.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protdelegate.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protenum.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protenumeration.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protevent.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protextension.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protfield.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protinterface.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protmethod.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protoperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protoperator.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protproperty.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\protstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\protstructure.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubclass.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubdelegate.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubenum.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubenumeration.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubevent.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubextension.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubfield.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubinterface.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubmethod.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\puboperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\puboperator.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubproperty.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\pubstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\pubstructure.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\requirements1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\requirements1a.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\requirements1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\requirements1c.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\save.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\save.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\save_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\save_hover.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\security.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\seealso1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\seealso1a.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\seealso1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\seealso1c.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\slMobile.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\slMobile.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\static.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\static.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\icons\xna.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\icons\xna.gif
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\CheckboxMenu.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\scripts\CheckboxMenu.js
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\CommonUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\scripts\CommonUtilities.js
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\Dropdown.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\scripts\Dropdown.js
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\EventUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\scripts\EventUtilities.js
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\script_feedBack.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\scripts\script_feedBack.js
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\script_manifold.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\scripts\script_manifold.js
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\scripts\SplitScreen.js
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\styles\Presentation.css
-C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\Working\Output\Website\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\dev\doc\help\styles\Whidbey\Presentation.css
-    Last step completed in 00:00:00.2650
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_100.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_100.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_101.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_101.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_102.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_102.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_103.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_103.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_104.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_104.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_105.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_105.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_106.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_106.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_107.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_107.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_108.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_108.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_109.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_109.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_110.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_110.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_111.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_111.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_112.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_112.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_114.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_114.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_115.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_115.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_116.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_116.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_117.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_117.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_118.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_118.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_119.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_119.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_95.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_95.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_97.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_97.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_98.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_98.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_99.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_99.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\fti\FTI_Files.json -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\fti\FTI_Files.json
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\03df05cc-ce9b-fa2c-da9e-abca49919c00.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\03df05cc-ce9b-fa2c-da9e-abca49919c00.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\072f2f60-b7d9-684c-0d00-22f9e1195907.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\072f2f60-b7d9-684c-0d00-22f9e1195907.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\085f41c6-685a-806c-b6e8-faac70cdcae6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\085f41c6-685a-806c-b6e8-faac70cdcae6.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\0c96e2e7-86ec-fc82-e84e-e640ccbc948d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\0c96e2e7-86ec-fc82-e84e-e640ccbc948d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\0d286782-166d-41f3-bb2a-803567edda08.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\0d286782-166d-41f3-bb2a-803567edda08.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\0e2156cb-eab1-27d2-2feb-8478fecb972b.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\0e2156cb-eab1-27d2-2feb-8478fecb972b.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\0e9a5448-3282-bca4-3a90-4a890d643ec8.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\0e9a5448-3282-bca4-3a90-4a890d643ec8.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\110a7d32-57c1-aa75-1612-48364f15cd5a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\110a7d32-57c1-aa75-1612-48364f15cd5a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\110efa42-4671-4701-5f4b-cb532c31bf62.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\110efa42-4671-4701-5f4b-cb532c31bf62.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\1132718b-e871-2fee-3b80-86fd0ea049c9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\1132718b-e871-2fee-3b80-86fd0ea049c9.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\13e4be4e-99bc-e7a4-de83-c31b80202bd7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\13e4be4e-99bc-e7a4-de83-c31b80202bd7.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\13e825e0-46a9-2aaf-c567-aca66066b9c1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\13e825e0-46a9-2aaf-c567-aca66066b9c1.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\13fe4f3d-f077-1555-6443-aeeeefc386ae.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\13fe4f3d-f077-1555-6443-aeeeefc386ae.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\150e6c01-ff75-2192-117c-b3a540ba7581.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\150e6c01-ff75-2192-117c-b3a540ba7581.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\1533a398-f00a-c947-dfeb-c8b364a7cf71.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\1533a398-f00a-c947-dfeb-c8b364a7cf71.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\1596ba7c-13ac-643b-bf29-adef8fc3475d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\1596ba7c-13ac-643b-bf29-adef8fc3475d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\181f70f2-8958-2ecf-7da4-a40756441ab6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\181f70f2-8958-2ecf-7da4-a40756441ab6.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\18950a39-6c5b-0999-f501-d4798e891ff7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\18950a39-6c5b-0999-f501-d4798e891ff7.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\1d4f2041-893e-bcb1-cb02-dce1d39dfb59.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\1d4f2041-893e-bcb1-cb02-dce1d39dfb59.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\1e7bee31-e095-810e-5cfb-f2e2f52aa158.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\1e7bee31-e095-810e-5cfb-f2e2f52aa158.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\1f27b2e6-ace6-4737-046c-5428a2cdec3c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\1f27b2e6-ace6-4737-046c-5428a2cdec3c.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\20c1bc86-04f0-54a8-36a3-b5b067c3cdae.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\20c1bc86-04f0-54a8-36a3-b5b067c3cdae.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\2192db16-696a-3e5f-d806-a27ad9a2ece0.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\2192db16-696a-3e5f-d806-a27ad9a2ece0.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\21ae91b3-74ec-0e94-a087-07892946c63a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\21ae91b3-74ec-0e94-a087-07892946c63a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\275361f9-a5df-8826-0433-413ccd3a7bea.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\275361f9-a5df-8826-0433-413ccd3a7bea.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\28a375be-8d3a-d349-e263-caa08788b009.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\28a375be-8d3a-d349-e263-caa08788b009.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\28aed5a3-9622-9f7f-f430-453dd18d3806.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\28aed5a3-9622-9f7f-f430-453dd18d3806.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\292c8e63-bf7d-a7ac-2738-c2f4effda19f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\292c8e63-bf7d-a7ac-2738-c2f4effda19f.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\2b33f578-6679-7f23-08a0-4b36b707e937.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\2b33f578-6679-7f23-08a0-4b36b707e937.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\2d09cc40-ae21-bd44-ee83-26fd5febc5d5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\2d09cc40-ae21-bd44-ee83-26fd5febc5d5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\2f144793-c1f3-d798-b9a9-d2ef1215cbf5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\2f144793-c1f3-d798-b9a9-d2ef1215cbf5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\317048c2-3844-7d1e-8f4c-dd705ba78c5c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\317048c2-3844-7d1e-8f4c-dd705ba78c5c.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\34b7e44d-8860-0d2f-1c64-b2f0c8690763.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\34b7e44d-8860-0d2f-1c64-b2f0c8690763.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\35edcbad-98fe-3926-613a-ea25b2cc7f64.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\35edcbad-98fe-3926-613a-ea25b2cc7f64.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\36d298d5-bbee-39b3-64fc-fe616161469f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\36d298d5-bbee-39b3-64fc-fe616161469f.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\3857e9ba-eee1-4dbc-8f9a-c6663f7a6421.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\3857e9ba-eee1-4dbc-8f9a-c6663f7a6421.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\3c9782bc-a02a-611b-efb4-640dd2a6ea4e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\3c9782bc-a02a-611b-efb4-640dd2a6ea4e.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\3ea230c7-8df3-f6f3-24ce-9caafe1195b2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\3ea230c7-8df3-f6f3-24ce-9caafe1195b2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\3fd28f2c-356d-4485-831e-ffad521c12c1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\3fd28f2c-356d-4485-831e-ffad521c12c1.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\4123e900-bb7f-c406-32e5-fe6b2e7add91.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\4123e900-bb7f-c406-32e5-fe6b2e7add91.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\41a87f39-9078-c729-c301-0f1fc177ec84.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\41a87f39-9078-c729-c301-0f1fc177ec84.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\426f7447-88bf-ae45-9e87-4048599cc953.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\426f7447-88bf-ae45-9e87-4048599cc953.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\432ef87e-eedd-571a-730b-a5c3ebc88ae1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\432ef87e-eedd-571a-730b-a5c3ebc88ae1.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\440b5ad2-169f-3589-0c8a-3ca003c53774.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\440b5ad2-169f-3589-0c8a-3ca003c53774.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\4659b26c-c522-c60d-f5c4-9c77fcd7c23e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\4659b26c-c522-c60d-f5c4-9c77fcd7c23e.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\4ba8200a-dead-6154-defb-91177308d5be.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\4ba8200a-dead-6154-defb-91177308d5be.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\4c60517f-9add-89f9-9d11-7bafdef02e86.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\4c60517f-9add-89f9-9d11-7bafdef02e86.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\4dcd3964-3b56-c56e-84af-c6323c0171a5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\4dcd3964-3b56-c56e-84af-c6323c0171a5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\4feca5d0-6651-4fe0-4fb3-398d0fe14370.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\4feca5d0-6651-4fe0-4fb3-398d0fe14370.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\576b652c-743e-3665-2ba1-cbcd987ad160.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\576b652c-743e-3665-2ba1-cbcd987ad160.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\5e251519-6297-b26e-fa2e-2231b6ca7285.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\5e251519-6297-b26e-fa2e-2231b6ca7285.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\5f341bcb-5701-3835-d2a0-6f20a7224c57.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\5f341bcb-5701-3835-d2a0-6f20a7224c57.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\5f432f0d-d40d-8773-11fd-1d7034ea0ea4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\5f432f0d-d40d-8773-11fd-1d7034ea0ea4.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\642b6d95-0ed8-d773-560c-62818d25aa47.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\642b6d95-0ed8-d773-560c-62818d25aa47.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\65fa9c1b-7a8e-a428-5190-a0acc579dcf7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\65fa9c1b-7a8e-a428-5190-a0acc579dcf7.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\66211f2a-1e24-b2e1-e0c9-820f456d4447.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\66211f2a-1e24-b2e1-e0c9-820f456d4447.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\689963bf-b0f7-ba1f-7765-b97c7450165d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\689963bf-b0f7-ba1f-7765-b97c7450165d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\698c8ade-2c83-1ee7-0b0e-311ce8c7ee5a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\698c8ade-2c83-1ee7-0b0e-311ce8c7ee5a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\6e5085c4-c227-cfb6-bd9c-df1d4d1b09eb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\6e5085c4-c227-cfb6-bd9c-df1d4d1b09eb.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\6f76932d-8f13-9a7b-8ffb-a86f4505a51f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\6f76932d-8f13-9a7b-8ffb-a86f4505a51f.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\7081929e-df89-6acb-161e-6926de37e4d2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\7081929e-df89-6acb-161e-6926de37e4d2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\74300007-a011-2e65-6c53-467fd5a2c15d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\74300007-a011-2e65-6c53-467fd5a2c15d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\7635c5c8-4726-a53a-cd28-6679aef47eea.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\7635c5c8-4726-a53a-cd28-6679aef47eea.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\767dfc64-4495-91b1-4730-5cd15946eb15.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\767dfc64-4495-91b1-4730-5cd15946eb15.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\76c1b3bb-808a-e14a-49f1-b69b1d682dff.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\76c1b3bb-808a-e14a-49f1-b69b1d682dff.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\77876329-dcac-9f29-f160-fd063a408cfd.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\77876329-dcac-9f29-f160-fd063a408cfd.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\7ac281b4-34a1-f6ec-7fab-46736b40afce.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\7ac281b4-34a1-f6ec-7fab-46736b40afce.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\7b224b0e-5020-a6e1-5ee4-b73997473992.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\7b224b0e-5020-a6e1-5ee4-b73997473992.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\7c659455-a41e-ff52-b8ba-4cc6210a51cf.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\7c659455-a41e-ff52-b8ba-4cc6210a51cf.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\84531e12-546e-fae4-dd7e-f56d39c3ccbb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\84531e12-546e-fae4-dd7e-f56d39c3ccbb.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\86216453-165d-1fb6-da2d-ad21e242dd10.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\86216453-165d-1fb6-da2d-ad21e242dd10.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\86e354b8-43ed-d35b-c8fc-67c06c974580.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\86e354b8-43ed-d35b-c8fc-67c06c974580.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\87474c76-fcf8-df66-b37c-3ac1c2028d06.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\87474c76-fcf8-df66-b37c-3ac1c2028d06.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\87e33e91-6c5d-f529-2dd5-39ae65d29b99.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\87e33e91-6c5d-f529-2dd5-39ae65d29b99.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\896bdd9f-2e8f-9c95-df1d-c587890790ae.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\896bdd9f-2e8f-9c95-df1d-c587890790ae.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\8a6a19cc-a3e4-5fb3-8b22-1e43e6bd380d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\8a6a19cc-a3e4-5fb3-8b22-1e43e6bd380d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\8af2dab2-3df2-2f35-e54e-9383a71d150d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\8af2dab2-3df2-2f35-e54e-9383a71d150d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\8b39ab04-f0dd-ff5e-0608-a7ef0a1f330d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\8b39ab04-f0dd-ff5e-0608-a7ef0a1f330d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\92a445d7-71d8-94a1-d43d-e90dfe624fdf.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\92a445d7-71d8-94a1-d43d-e90dfe624fdf.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\96a21b6b-13cb-5229-6643-e2e0785f2961.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\96a21b6b-13cb-5229-6643-e2e0785f2961.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\9958fe3f-f151-8b16-bb3c-f460b26895e0.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\9958fe3f-f151-8b16-bb3c-f460b26895e0.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\9b4ca1b8-a8ad-f6ff-41bc-f25c3329af24.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\9b4ca1b8-a8ad-f6ff-41bc-f25c3329af24.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\9d232d20-0b02-afc4-7471-828bdb27d9fc.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\9d232d20-0b02-afc4-7471-828bdb27d9fc.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\9e965038-db1d-043e-38d6-bbdf648aed47.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\9e965038-db1d-043e-38d6-bbdf648aed47.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\a07cb93e-aad1-9b97-727f-a1421b368150.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\a07cb93e-aad1-9b97-727f-a1421b368150.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\a34219e0-1dc9-62b8-7850-903922739f1a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\a34219e0-1dc9-62b8-7850-903922739f1a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\a6633175-059a-ff88-7472-388db1fdade2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\a6633175-059a-ff88-7472-388db1fdade2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\a690ab81-f8a3-d2ae-e8bf-a0495230e282.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\a690ab81-f8a3-d2ae-e8bf-a0495230e282.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\a966c943-ef1d-b542-06a9-ba88588110ad.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\a966c943-ef1d-b542-06a9-ba88588110ad.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\b0262d3c-67db-c70e-baa7-375c74c05fc5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\b0262d3c-67db-c70e-baa7-375c74c05fc5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\b11885dc-de55-3f98-1db8-c18738682c70.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\b11885dc-de55-3f98-1db8-c18738682c70.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\b1580b35-243b-0ac0-e18d-d8f26b315614.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\b1580b35-243b-0ac0-e18d-d8f26b315614.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\b890e8c6-30a1-e62d-4e11-ec0dc8e76dc5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\b890e8c6-30a1-e62d-4e11-ec0dc8e76dc5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\ba951576-cadd-00f1-af58-4e359f981ea6.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\ba951576-cadd-00f1-af58-4e359f981ea6.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\bb157126-9975-6126-1f42-982a31b83fb2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\bb157126-9975-6126-1f42-982a31b83fb2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\bd599e3f-2b09-fdf9-e566-92c36db1592e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\bd599e3f-2b09-fdf9-e566-92c36db1592e.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\c16d35af-6c11-e447-dd79-f9f6b7699d51.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\c16d35af-6c11-e447-dd79-f9f6b7699d51.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\c1ec7979-0741-bde6-b9bc-59e1d7eb1a83.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\c1ec7979-0741-bde6-b9bc-59e1d7eb1a83.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\c77ca27c-b553-9904-665d-6bf7eabc7819.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\c77ca27c-b553-9904-665d-6bf7eabc7819.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\cefc4cea-e990-6784-a6c4-6ae138cb79a9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\cefc4cea-e990-6784-a6c4-6ae138cb79a9.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\cf2bddfc-848e-3050-a169-2b0457fe144c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\cf2bddfc-848e-3050-a169-2b0457fe144c.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\d0155dd8-7e99-31dd-5722-c2bdcdbfbcef.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\d0155dd8-7e99-31dd-5722-c2bdcdbfbcef.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\d1e92f4f-43a0-fde5-0767-65825b662709.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\d1e92f4f-43a0-fde5-0767-65825b662709.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\d31d044c-4cb9-404f-a862-b25a095f57b2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\d31d044c-4cb9-404f-a862-b25a095f57b2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\d6acf6f0-ac2d-32a7-4497-a34dfb0f7af4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\d6acf6f0-ac2d-32a7-4497-a34dfb0f7af4.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\d6ba4458-7564-3b59-59b9-235dd4b0458e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\d6ba4458-7564-3b59-59b9-235dd4b0458e.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\d893d911-afcc-f060-14a1-962c4ee12de3.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\d893d911-afcc-f060-14a1-962c4ee12de3.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\db6166d4-254b-4c87-0a7d-865dc62e304a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\db6166d4-254b-4c87-0a7d-865dc62e304a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\df252480-0d85-5335-d4be-602e26264f6e.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\df252480-0d85-5335-d4be-602e26264f6e.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\e2552ad5-e1c2-d5e7-c506-64a3338c8559.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\e2552ad5-e1c2-d5e7-c506-64a3338c8559.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\e6434195-187b-a54a-adaf-cf098a520f29.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\e6434195-187b-a54a-adaf-cf098a520f29.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\e6b97213-2079-7e82-12d2-2313ba8fb430.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\e6b97213-2079-7e82-12d2-2313ba8fb430.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\e6da2878-eb85-9d30-60cd-51df3ad60240.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\e6da2878-eb85-9d30-60cd-51df3ad60240.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\e7a64d89-1a05-f431-2a50-964f6a1763ed.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\e7a64d89-1a05-f431-2a50-964f6a1763ed.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\e98c97e8-d4f8-bc00-66ca-ad9267b6b9b7.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\e98c97e8-d4f8-bc00-66ca-ad9267b6b9b7.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\ec0f37fb-07bd-8b77-45ab-695b97c65cfa.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\ec0f37fb-07bd-8b77-45ab-695b97c65cfa.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\ed42388b-2b04-f80d-b077-5d96d078e01c.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\ed42388b-2b04-f80d-b077-5d96d078e01c.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\f016491e-949c-f8a0-59ef-1b3c5a04c4b5.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\f016491e-949c-f8a0-59ef-1b3c5a04c4b5.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\f210f47d-e780-4591-bdbc-ce0aa83b7aeb.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\f210f47d-e780-4591-bdbc-ce0aa83b7aeb.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\f4983791-12ee-ca79-98a0-232e4508f5c2.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\f4983791-12ee-ca79-98a0-232e4508f5c2.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\f80f8136-2ead-63ef-4323-f94de47723ab.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\f80f8136-2ead-63ef-4323-f94de47723ab.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\f91562cc-24d0-4244-0db4-7e1cfb88c76a.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\f91562cc-24d0-4244-0db4-7e1cfb88c76a.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\fa2fbee7-84a3-09a0-bce2-28741e3991f9.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\fa2fbee7-84a3-09a0-bce2-28741e3991f9.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\fea3aee9-3e3d-6d4f-4227-728690ed05a1.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\fea3aee9-3e3d-6d4f-4227-728690ed05a1.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\fed4bb75-0814-e566-3cb5-af0b77a76fcc.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\fed4bb75-0814-e566-3cb5-af0b77a76fcc.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\html\ff8fdc97-0224-e54b-2261-297e14de6ad8.htm -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\html\ff8fdc97-0224-e54b-2261-297e14de6ad8.htm
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\adm.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\adm_arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\adm_dev.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\adm_dev_arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\alert_caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\alert_caution.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\alert_note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\alert_note.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\alert_security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\alert_security.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\big_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\big_adm.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\big_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\big_arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\big_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\big_dev.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\big_kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\big_kw.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\box.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\box.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\Caution.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\Caution.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\CFW.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\CFW.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\collall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\collall.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\collapse.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\collapse.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\collapse_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\collapse_all.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\copycode.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\copycode.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\copycodeHighlight.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\copycodeHighlight.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\dev.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\dev_arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\dropdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\dropdown.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\dropdownHover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\dropdownHover.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\drpdown.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\drpdown.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\drpdown_orange.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\drpdown_orange.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\drpdown_orange_up.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\drpdown_orange_up.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\drpup.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\drpup.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\exp.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\exp.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\expall.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\expall.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\expand_all.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\expand_all.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\filter1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\filter1a.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\filter1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\filter1c.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\footer.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\footer.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\gradient.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\gradient.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\greencheck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\greencheck.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\greychck.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\greychck.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\header_prev_next.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\header_prev_next.jpg
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\header_sql_tutorial_blank.jpg -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\header_sql_tutorial_blank.jpg
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\header_sql_tutorial_logo.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\header_sql_tutorial_logo.GIF
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\kw.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_adm.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\kw_adm.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_adm_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\kw_adm_arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_adm_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\kw_adm_dev.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_adm_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\kw_adm_dev_arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\kw_arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_dev.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\kw_dev.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\kw_dev_arch.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\kw_dev_arch.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\LastChild.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\LastChild.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\load.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\load.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\load_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\load_hover.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\note.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\note.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pencil.GIF -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pencil.GIF
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privclass.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privdelegate.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privenum.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privenumeration.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privevent.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privextension.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privfield.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privinterface.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privmethod.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privproperty.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\privstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\privstructure.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protclass.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protdelegate.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protenum.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protenumeration.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protevent.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protextension.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protfield.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protinterface.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protmethod.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protoperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protoperator.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protproperty.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\protstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\protstructure.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubclass.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubclass.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubdelegate.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubdelegate.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubenum.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubenum.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubenumeration.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubenumeration.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubevent.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubevent.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubextension.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubextension.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubfield.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubfield.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubinterface.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubinterface.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubmethod.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubmethod.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\puboperator.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\puboperator.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubproperty.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubproperty.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\pubstructure.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\pubstructure.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\requirements1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\requirements1a.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\requirements1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\requirements1c.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\save.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\save.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\save_hover.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\save_hover.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\security.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\security.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\seealso1a.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\seealso1a.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\seealso1c.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\seealso1c.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\slMobile.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\slMobile.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\static.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\static.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\icons\xna.gif -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\icons\xna.gif
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\CheckboxMenu.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\scripts\CheckboxMenu.js
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\CommonUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\scripts\CommonUtilities.js
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\Dropdown.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\scripts\Dropdown.js
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\EventUtilities.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\scripts\EventUtilities.js
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\script_feedBack.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\scripts\script_feedBack.js
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\script_manifold.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\scripts\script_manifold.js
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\scripts\SplitScreen.js
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\styles\Presentation.css
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\styles\Whidbey\Presentation.css
+    Last step completed in 00:00:00.5810
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.0690
+    Last step completed in 00:00:00.0580
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 07/31/2012 12:26 PM.  Total time: 00:00:34.4689
+Build completed successfully at 09/25/2012 11:40 AM.  Total time: 00:01:05.8128
 
 </buildStep>
 </shfbBuild>

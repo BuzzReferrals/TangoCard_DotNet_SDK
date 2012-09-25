@@ -160,7 +160,7 @@ namespace TangoCard.Sdk.Examples
                         cardValue: cardValueTangoCardCents,
                         tcSend: true,
                         giftFrom: "Bill Example",
-                        giftMessage: "Happy Birthday",
+                        giftMessage: "Hello from Tango Card C#/.NET SDK:\nTango Card\nPhone: 1-877-55-TANGO\n601 Union Street, Suite 4200\nSeattle, WA 98101",
                         recipientEmail: "sally@example.com",
                         recipientName: "Sally Example",
                         response: out response

@@ -136,12 +136,13 @@ namespace TangoCard.Sdk.Service
                 StringBuilder postDataStringBuilder = new StringBuilder();
 
                 webRequest.Method = "POST";
-                webRequest.ContentType = "application/json";
+                webRequest.ContentType = "application/json; charset=utf-8";
 
-                string requestJsonSerialized = JsonConvert.SerializeObject(this._requestObject);
+                string requestJsonSerialized = JsonConvert.SerializeObject(this._requestObject);            
                 if (!String.IsNullOrEmpty(requestJsonSerialized))
                 {
-                    byte[] data = UTF8Encoding.UTF8.GetBytes(requestJsonSerialized);
+                    string requestUrlEncoded = requestJsonSerialized;
+                    byte[] data = UTF8Encoding.UTF8.GetBytes(requestUrlEncoded);
                     webRequest.ContentLength = data.Length;
                     using (Stream requestDataStream = webRequest.GetRequestStream())
                     {

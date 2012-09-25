@@ -1,6 +1,6 @@
 <h1>Tango Card .Net/C-Sharp SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-09-20</h4>
+<h4>Update: 2012-09-25</h4>
 =================
 
 # Table of Contents #
@@ -157,11 +157,40 @@ The wrapper class `TangoCard.Sdk.TangoCardServiceApi` currently handles the foll
 ![Tango Card Service Api](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/master/doc/images/tangocardserviceapi.png "Tango Card Service API")
 
 <a name="sdk_requirements"></a>
-# Tango Card SDK Requirements #
+# Tango Card C# SDK Requirements #
+
+## Tango Card C# SDK Environment ##
 
 * [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
 * [Visual Studio 2010](http://www.microsoft.com/visualstudio/en-us/products/2010-editions)  
-* [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)  
+* [Newtonsoft.JSON](http://james.newtonking.com/projects/json-net.aspx)
+
+<a name="sdk_requirements_build"></a>
+## Tango Card C# SDK DLL Builds ##
+
+This SDK provides two builds:
+
+<dl>
+    <dt><code>DEBUG</code></dt>
+        <dl>
+            Files required to be included within the web service's <code>bin</code> directory when running in debug mode:
+            <ul>
+                <li><code>\TangoCard_DotNet_SDK\master\bin\Debug\Newtonsoft.Json.dll</code></li>
+                <li><code>\TangoCard_DotNet_SDK\master\bin\Debug\TangoCard_DotNet_SDK.dll</code></li>
+                <li><code>\TangoCard_DotNet_SDK\master\bin\Debug\TangoCard_DotNet_SDK.dll.config</code></li>
+                <li><code>\TangoCard_DotNet_SDK\master\bin\Debug\TangoCard_DotNet_SDK.pdb</code></li>
+            </ul>
+        </dl>
+    <dt><code>RELEASE</code></dt>
+        <dl>
+            Files required to be included within the web service's <code>bin</code> directory when running in release mode:
+            <ul>
+                <li><code>\TangoCard_DotNet_SDK\master\bin\Release\Newtonsoft.Json.dll</code></li>
+                <li><code>\TangoCard_DotNet_SDK\master\bin\Release\TangoCard_DotNet_SDK.dll</code></li>
+                <li><code>\TangoCard_DotNet_SDK\master\bin\Release\TangoCard_DotNet_SDK.dll.config</code></li>
+            </ul>
+        </dl>
+<dl>
 
 <a name="tango_card_service_api_requests"></a>
 # Tango Card Service API Requests #
@@ -646,10 +675,11 @@ To run these unit tests requires installation of Visual Studio 2010 Professional
 
 Open a Visual Studio 2010 command prompt. 
 
-To do this, click Start, point to All Programs, point to Microsoft Visual Studio 2010, point to Visual Studio Tools, and then click Visual Studio 2010 Command Prompt.
+To do this, click Start, point to All Programs, point to Microsoft Visual Studio 2010, point to Visual Studio Tools, and then click <a href="http://msdn.microsoft.com/en-us/library/ms229859(v=vs.100).aspx" target="_blank" >`Visual Studio 2010 Command Prompt`</a> and perform unit test using <a href="http://msdn.microsoft.com/en-us/library/ms182489(v=vs.80).aspx" target="_blank">`MSTest`</a>.
 
 ```Text
-    MSTest /testcontainer:TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.Unittests.dll
+    > MSTest /testcontainer:TangoCard.Sdk.Unittests\bin\Release\TangoCard.Sdk.Unittests.dll
+    
     Microsoft (R) Test Execution Command Line Tool Version 10.0.30319.1
     Copyright (c) Microsoft Corporation. All rights reserved.
 

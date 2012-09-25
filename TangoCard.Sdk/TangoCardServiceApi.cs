@@ -68,11 +68,21 @@ namespace TangoCard.Sdk
            out GetAvailableBalanceResponse response
            )
         {
+            if (String.IsNullOrEmpty(username))
+            {
+                throw new System.ArgumentNullException("username");
+            }
+
+            if (String.IsNullOrEmpty(password))
+            {
+                throw new System.ArgumentNullException("password");
+            }
+
             // set up the request
             var request = new GetAvailableBalanceRequest
             (
                 enumTangoCardServiceApi: enumTangoCardServiceApi,
-                username: username,
+                username: username.Trim(),
                 password: password
             );
 
@@ -112,19 +122,29 @@ namespace TangoCard.Sdk
             out PurchaseCardResponse response
             )
         {
+            if (String.IsNullOrEmpty(username))
+            {
+                throw new System.ArgumentNullException("username");
+            }
+
+            if (String.IsNullOrEmpty(password))
+            {
+                throw new System.ArgumentNullException("password");
+            }
+
             // set up the request
             var request = new PurchaseCardRequest
             (
                 enumTangoCardServiceApi: enumTangoCardServiceApi,
-                username: username,
-                password: password,
-                cardSku: cardSku,
-                cardValue: cardValue,
-                tcSend: tcSend,
-                recipientName: recipientName,
-                recipientEmail: recipientEmail,
-                giftMessage: giftMessage,
-                giftFrom: giftFrom
+                username:       String.IsNullOrEmpty(username)          ? null : username.Trim(),
+                password:       password,
+                cardSku:        String.IsNullOrEmpty(cardSku)           ? null : cardSku.Trim(),
+                cardValue:      cardValue,
+                tcSend:         tcSend,
+                recipientName:  String.IsNullOrEmpty(recipientName)     ? null : recipientName.Trim(),
+                recipientEmail: String.IsNullOrEmpty(recipientEmail)    ? null : recipientEmail.Trim(),
+                giftMessage:    String.IsNullOrEmpty(giftMessage)       ? null : giftMessage.Trim().Replace(System.Environment.NewLine, "<br>"),
+                giftFrom:       String.IsNullOrEmpty(giftFrom)          ? null : giftFrom.Trim()
             );
 
             // make the request
