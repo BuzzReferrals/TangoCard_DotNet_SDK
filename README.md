@@ -25,7 +25,7 @@
             </li>
         </ul>
     </li>
-    <li><a href="#sdk_support">Tango Card PHP SDK and Service API Support</a>
+    <li><a href="#sdk_support">Tango Card C#/.NET 4.0 SDK and Service API Support</a>
         <ul>
             <li><a href="#sdk_support_contact">Contact Us</a></li>
             <li><a href="#sdk_support_resolve">Resolving Issues using Fiddler 2</a></li>
