@@ -1,7 +1,7 @@
-<h1>Tango Card .Net/C# SDK</h1>
+<h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
 <h4>Update: 2012-09-25</h4>
-=================
+===
 
 # Table of Contents #
 <ul>
@@ -23,17 +23,16 @@
                     <li><a href="#start_using_gift_cards">The Tango Card and other Retailer Brand Gift Cards</a></li>
                 </ul>
             </li>
-            <li><a href="#sdk_support">Tango Card SDKs Support</a></li>
-            <li><a href="#contact_us">Contact Us</a></li>
         </ul>
     </li>
-    <li><a href="#sdk_overview">Tango Card SDK Overview</a></li>
-    <li><a href="#sdk_requirements">Tango Card SDK Requirements</a>
+    <li><a href="#sdk_support">Tango Card PHP SDK and Service API Support</a>
         <ul>
-            <li><a href="#sdk_requirements_environment">Environment Required</a></li>
-            <li><a href="#sdk_requirements_build">Binary Builds</a></li>
+            <li><a href="#sdk_support_contact">Contact Us</a></li>
+            <li><a href="#sdk_support_resolve">Resolving Issues using Fiddler 2</a></li>
         </ul>
     </li>
+    <li><a href="#sdk_overview">Tango Card C#/.NET 4.0 SDK Overview</a></li>
+    <li><a href="#sdk_requirements">Tango Card C#/.NET 4.0 SDK Requirements</a></li>
     <li><a href="#tango_card_service_api_requests">Tango Card Service API Requests</a>
         <ul>
             <li><a href="#tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
@@ -136,15 +135,54 @@ The API is optimized for ordering the Tango Card, which has SKU of ```"tango-car
 If you have questions about potentially incorporating other brands or digital goods in your program please contact us at general@tangocard.com.
 
 <a name="sdk_support"></a>
-## Tango Card SDKs Support ##
-If you have any questions with the Tango Card SDKs, please contact us at sdk@tangocard.com.
+# Tango Card C#/.NET 4.0 SDK and Service API Support #
+If you have any questions with the Tango Card C#/.NET 4.0 SDK or our Service API, please contact us at sdk@tangocard.com.
 
-<a name="contact_us"></a>
+<a name="sdk_support_contact"></a>
 ## Contact Us ##
 To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 
+<a name="sdk_support_resolve"></a>
+## Resolving Issues using Fiddler 2 ##
+
+The best way to resolve any issues that pertain to using our Tango Card C#/.NET 4.0 SDK or our Service API is by using this freely available tool <a href="http://www.fiddler2.com/fiddler2/" target="_blank">`Fiddler 2 - Web Debugging Proxy`</a>, and provide us with the raw request and response bodies using its `Inspectors` tab feature.
+
+Using `Fiddler 2` will provide the most complete detail and the fast response from Tango Card by understanding if there is an issue on how a request was presented to our service, or if it is an issue with our service on how we replied with your request.
+
+### Fiddler 2 Example - Raw Request from Client - Get Available Balance ###
+
+```Text
+POST https://int.tangocard.com/Version2/GetAvailableBalance HTTP/1.1
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-us
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+Host: int.tangocard.com
+Content-Length: 69
+Connection: Keep-Alive
+Cache-Control: no-cache
+ 
+{"username":"third_party_int@tangocard.com","password":"integrateme"}
+```
+ 
+### Fiddler 2 Example - Raw Response from Service - Get Available Balance ###
+
+```Text
+HTTP/1.1 200 OK
+Date: Wed, 26 Sep 2012 04:30:36 GMT
+Server: Apache/2.2.22 (Ubuntu)
+X-Powered-By: PHP/5.3.10-1ubuntu3.3
+Access-Control-Allow-Origin: *
+Content-Length: 68
+Connection: close
+Content-Type: application/json
+ 
+{"responseType":"SUCCESS","response":{"availableBalance":873431432}}
+```
+
 <a name="sdk_overview"></a>
-# Tango Card SDK Overview #
+# Tango Card C#/.NET 4.0 SDK Overview #
 
 The Tango Card .NET 4.0/C# SDK is a wrapper around the <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a>.
 

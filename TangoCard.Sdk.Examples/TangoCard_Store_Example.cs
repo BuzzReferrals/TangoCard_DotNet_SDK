@@ -159,9 +159,9 @@ namespace TangoCard.Sdk.Examples
                         cardSku: "tango-card",
                         cardValue: cardValueTangoCardCents,
                         tcSend: true,
-                        giftFrom: "Bill Example",
+                        giftFrom: app_username,
                         giftMessage: "Hello from Tango Card C#/.NET SDK:\nTango Card\nPhone: 1-877-55-TANGO\n601 Union Street, Suite 4200\nSeattle, WA 98101",
-                        recipientEmail: "sally@example.com",
+                        recipientEmail: app_username,
                         recipientName: "Sally Example",
                         response: out response
                     )
