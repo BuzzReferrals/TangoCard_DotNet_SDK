@@ -119,7 +119,7 @@
   <HelpKINode Title="OrderCost property" Url="html/35edcbad-98fe-3926-613a-ea25b2cc7f64.htm" />
   <HelpKINode Title="Password property" Url="html/08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm" />
   <HelpKINode Title="PRODUCTION enumeration member" Url="html/a6633175-059a-ff88-7472-388db1fdade2.htm" />
-  <HelpKINode Title="PurchaseCard method" Url="html/90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm" />
+  <HelpKINode Title="PurchaseCard method" Url="html/ac593ff3-baeb-ec40-9d17-5f03c4801984.htm" />
   <HelpKINode Title="PurchaseCardResponse class" Url="html/426f7447-88bf-ae45-9e87-4048599cc953.htm" />
   <HelpKINode Title="PurchaseCardResponse class" Url="html/86216453-165d-1fb6-da2d-ad21e242dd10.htm" />
   <HelpKINode Title="PurchaseCardResponse class">
@@ -257,7 +257,7 @@
   </HelpKINode>
   <HelpKINode Title="TangoCardServiceApi property" Url="html/48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm" />
   <HelpKINode Title="TangoCardServiceApi.GetAvailableBalance method" Url="html/9d232d20-0b02-afc4-7471-828bdb27d9fc.htm" />
-  <HelpKINode Title="TangoCardServiceApi.PurchaseCard method" Url="html/90c17fcc-5e62-06d7-a00e-d54e7c799a6f.htm" />
+  <HelpKINode Title="TangoCardServiceApi.PurchaseCard method" Url="html/ac593ff3-baeb-ec40-9d17-5f03c4801984.htm" />
   <HelpKINode Title="TangoCardServiceApiEnum enumeration" Url="html/a6633175-059a-ff88-7472-388db1fdade2.htm" />
   <HelpKINode Title="TangoCardServiceException class" Url="html/0c96e2e7-86ec-fc82-e84e-e640ccbc948d.htm" />
   <HelpKINode Title="TangoCardServiceException class" Url="html/e7a64d89-1a05-f431-2a50-964f6a1763ed.htm" />

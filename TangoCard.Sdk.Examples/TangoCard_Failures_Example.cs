@@ -4,7 +4,7 @@
 //  
 //  Example code using Tango Card SDK forcing failures and then collecting responses.
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -157,6 +157,7 @@ namespace TangoCard.Sdk.Examples
                         recipientEmail: null,
                         giftFrom: null,
                         giftMessage: null,
+                        companyIdentifier: null,
                         response: out response
                     )  
                     && (null != response)
@@ -225,6 +226,7 @@ namespace TangoCard.Sdk.Examples
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out response
                     )
                     && (null != response)
@@ -296,6 +298,7 @@ namespace TangoCard.Sdk.Examples
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out response
                     )
                     && (null != response)
@@ -369,6 +372,7 @@ namespace TangoCard.Sdk.Examples
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out response
                     )
                     && (null != response)

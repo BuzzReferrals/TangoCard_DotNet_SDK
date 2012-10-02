@@ -2,7 +2,7 @@
 //  TangoCardServiceApi.cs
 //  TangoCard_DotNet_SDK
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -98,11 +98,12 @@ namespace TangoCard.Sdk
         /// <param name="password">                 The password. </param>
         /// <param name="cardSku">                  The card sku. </param>
         /// <param name="cardValue">                The card value. </param>
-        /// <param name="tcSend">                   true to tc send. </param>
+        /// <param name="tcSend">                   Determines if Tango Card Service will send an email with gift card information to recipient. </param>
         /// <param name="recipientName">            Name of the recipient. </param>
         /// <param name="recipientEmail">           The recipient email. </param>
         /// <param name="giftMessage">              Message describing the gift. </param>
         /// <param name="giftFrom">                 The gift from. </param>
+        /// <param name="companyIdentifier">        (optional) The Company identifier for which Email Template to use when sending Gift Card. </param>
         /// <param name="response">                 [out] The response. </param>
         ///
         /// <returns>   true if it succeeds, false if it fails. </returns>
@@ -119,6 +120,7 @@ namespace TangoCard.Sdk
             string recipientEmail,
             string giftMessage,
             string giftFrom,
+            string companyIdentifier,
             out PurchaseCardResponse response
             )
         {
@@ -136,15 +138,16 @@ namespace TangoCard.Sdk
             var request = new PurchaseCardRequest
             (
                 enumTangoCardServiceApi: enumTangoCardServiceApi,
-                username:       String.IsNullOrEmpty(username)          ? null : username.Trim(),
+                username:       username.Trim(),
                 password:       password,
-                cardSku:        String.IsNullOrEmpty(cardSku)           ? null : cardSku.Trim(),
+                cardSku:        cardSku.Trim(),
                 cardValue:      cardValue,
                 tcSend:         tcSend,
-                recipientName:  String.IsNullOrEmpty(recipientName)     ? null : recipientName.Trim(),
-                recipientEmail: String.IsNullOrEmpty(recipientEmail)    ? null : recipientEmail.Trim(),
-                giftMessage:    String.IsNullOrEmpty(giftMessage)       ? null : giftMessage.Trim().Replace(System.Environment.NewLine, "<br>"),
-                giftFrom:       String.IsNullOrEmpty(giftFrom)          ? null : giftFrom.Trim()
+                recipientName:  String.IsNullOrEmpty(recipientName)         ? null : recipientName.Trim(),
+                recipientEmail: String.IsNullOrEmpty(recipientEmail)        ? null : recipientEmail.Trim(),
+                giftMessage:    String.IsNullOrEmpty(giftMessage)           ? null : giftMessage.Trim().Replace(System.Environment.NewLine, "<br>"),
+                giftFrom:       String.IsNullOrEmpty(giftFrom)              ? null : giftFrom.Trim(),
+                companyIdentifier: String.IsNullOrEmpty(companyIdentifier)  ? null : companyIdentifier.Trim()
             );
 
             // make the request

@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-09-25</h4>
+<h4>Update: 2012-10-02</h4>
 ===
 
 # Table of Contents #
@@ -17,35 +17,37 @@
                     <li><a href="#open_account_add_funds">Add Funds</a></li>
                 </ul>
             </li>
-            <li><a href="#start_using">Start Using</a>
-                <ul>
-                    <li><a href="#start_using_purchase">Purchase and Distribution of Gift Cards</a></li>
-                    <li><a href="#start_using_gift_cards">The Tango Card and other Retailer Brand Gift Cards</a></li>
-                </ul>
-            </li>
         </ul>
     </li>
-    <li><a href="#sdk_support">Tango Card C#/.NET 4.0 SDK and Service API Support</a>
+    <li><a href="#puchasing_options">Understanding Gift Card Purchasing Options</a>
+        <ul>
+            <li><a href="#puchasing_options_distribution">Distribution of Gift Cards</a></li>
+            <li><a href="#puchasing_options_skus">The Tango Card and other Retailer Brand Gift Cards</a></li>
+            <li><a href="#puchasing_options_denominations">Gift Card Denominations</a></li>
+            <li><a href="#puchasing_options_templates">The Tango Card and custom Company Email Templates</a></li>
+        </ul>
+    </li>
+    <li><a href="#sdk_support">Tango Card SDKs and Service API Support</a>
         <ul>
             <li><a href="#sdk_support_contact">Contact Us</a></li>
             <li><a href="#sdk_support_resolve">Resolving Issues using Fiddler 2</a></li>
         </ul>
     </li>
-    <li><a href="#sdk_overview">Tango Card C#/.NET 4.0 SDK Overview</a></li>
-    <li><a href="#sdk_requirements">Tango Card C#/.NET 4.0 SDK Requirements</a></li>
+    <li><a href="#sdk_overview">SDK Overview</a></li>
+    <li><a href="#sdk_requirements">SDK Requirements</a></li>
     <li><a href="#tango_card_service_api_requests">Tango Card Service API Requests</a>
         <ul>
             <li><a href="#tango_card_service_api_endpoints">Tango Card Service API Endpoints</a></li>
             <li><a href="#tango_card_service_api_security">Tango Card Service API Security</a></li>
         </ul>
     </li>
-    <li><a href="#tango_card_sdk_methods">Tango Card SDK Methods</a>
+    <li><a href="#sdk_methods">SDK Methods</a>
         <ul>
             <li><a href="#get_available_balance">Get Available Balance</a></li>
             <li><a href="#purchase_card">Purchase Card</a></li>
         </ul>
     </li>
-    <li><a href="#tango_card_error_handling">Tango Card Error Handling</a>
+    <li><a href="#sdk_error_handling">SDK Error Handling</a>
         <ul>
             <li><a href="#service_failure_responses">Service Failure Responses</a></li>
             <li><a href="#sdk_error_responses">SDK Error Responses</a></li>
@@ -69,22 +71,30 @@
 <a name="introduction"></a>
 # Introduction #
 
-<a name="tango_card_sdk"></a>
-## Tango Card SDK ##
-Tango Card's SDK is flexible, secure, and straightforward. It allows any server to purchase the Tango Card and is intended for users requiring high volume transactions and processes.
+<a name="tango_card_sdks"></a>
+## Tango Card SDKs ##
+The Tango Card SDKs are flexible, secure, and straight forward. It allows any server to purchase the Tango Card and is intended for users requiring high volume transactions.
+
+there are several Tango Card SDKs currently available that use the `Tango Card Service API`:
+<ul>
+    <li><a href="https://github.com/tangocarddev/TangoCard_DotNet_SDK" target="_blank">Tango Card C#/.Net 4.0 SDK</a></li>
+    <li><a href="https://github.com/tangocarddev/TangoCard_PHP_SDK" target="_blank">Tango Card PHP SDK</a></li>
+    <li><a href="https://github.com/tangocarddev/TangoCard_Java_SDK" target="_blank">Tango Card Java SDK</a></li>
+    <li><a href="https://github.com/tangocarddev/TangoCard_Ruby_SDK" target="_blank">Tango Card Ruby SDK</a></li>
+</ul>
 
 <a name="tango_card_service_api"></a>
 ## Tango Card Service API ##
-For those developers who wish to develop directly with our Tango Card API endpoints and do not wish to use our available SDKs or need more detail of how our API is defined, the following document is available:
+For those developers who wish to develop directly with our `Tango Card Service API` endpoints and do not wish to use our available SDKs or need more detail of how our API is defined, the following document is available:
 <ul>
     <li><a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a></li>
 </ul>
 
 <a name="incorporate_tango_card"></a>
 ## Incorporate the Tango Card ##
-The Tango Card SDKs, through the <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a>, allows you to incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications. 
+The Tango Card SDKs, through our <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a>, allows you to incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.
 
-Tango Card is the “exactly what you want” gift card and allows the recipient to use their value exactly how they want – they can select a premier gift card, they can divide their value among Brands, they can use some today and save the rest for another day. They can also donate to a non-profit organization. 
+Tango Card is the "exactly what you want" gift card and allows the recipient to use their value exactly how they want – they can select a premier gift card, they can divide their value among Brands, they can use some today and save the rest for another day. They can also donate to a non-profit organization. 
 
 Tango Card value can be used via the web or from almost any mobile device. There are no fees or expiration dates of any kind. It’s great for the recipient, and even better for you because it is an entire gift card program delivered in one card allowing you to focus on your core business. 
 
@@ -114,29 +124,52 @@ Third, in order to purchase the Tango Card through the Tango Card SDKs, there mu
 
 Fund your account here either by 'wire transfer', 'check', or 'credit card': <a href="https://www.tangocard.com/user/addfunds" target="_blank">Add Funds</a>
 
-<a name="start_using"></a>
-## Start Using ##
+<a name="puchasing_options"></a>
+# Understanding Gift Card Purchasing Options #
 
-After opening and funding your Tango Card account, then you are ready to begin using the Tango Card SDK to access your account.
+After opening and funding your Tango Card account, then you are ready to begin using the Tango Card Service API to access your account for getting available balance and for purchasing gift cards.
 
-<a name="start_using_purchase"></a>
-### Purchase and Distribution of Gift Cards ###
-Through the Tango Card SDKs you can purchase Tango Card gift cards with your choice of delivery:
-<ul>
-    <li>Have Tango Card service send gift cards directly to recipients via email which will include live gift card codes.</li>
-    <li>You take the returned live gift card codes for you to customize and redistribute.</li>
-</ul>
+When you are ready to purchase a card, the Tango Card Service API has several options:
 
-<a name="start_using_gift_cards"></a>
-### The Tango Card and other Retailer Brand Gift Cards ###
+<dl>
+    <dt>
+    <a name="puchasing_options_distribution"></a>
+    Distribution of Digital Gift Cards - parameter <code>tcSend</code> - boolean - <b>required</b></dt>
+    <dd>
+        Through the Tango Card Service API you can purchase Tango Card gift cards with your choice of delivery:
+        <ul>
+            <li><code>tcSend = true</code> - Have Tango Card service send gift cards directly to recipients via email which will include live gift card codes.</li>
+            <li><code>tcSend = false</code> - You take the returned live gift card codes for you to customize and redistribute.</li>
+        </ul>
+    </dd>
+    
+    <dt>
+    <a name="puchasing_options_skus"></a>
+    The Tango Card and other Retailer Brand Gift Cards SKUs - parameter <code>cardSKU</code> - string - <b>required</b></dt>
+    <dd>The API is optimized for ordering the Tango Card, which is SKU <code>"tango-card"</code>.
 
-The API is optimized for ordering the Tango Card, which has SKU of ```"tango-card"```.
-
-If you have questions about potentially incorporating other brands or digital goods in your program please contact us at general@tangocard.com.
+    <br>If you have questions about potentially incorporating other brands or digital goods in your program, then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+    </dd>
+    
+    <dt>
+    <a name="puchasing_options_denominations"></a>
+    Gift Card Denominations - parameter <code>cardValue</code> - integer - <b>required</b></dt>
+    <dd>Each gift card SKU has it own allowed set of denominations that can to assigned to parameter <code>cardValue</code>.
+    <br/>For SKU <code>"tango-card"</code>, the available denomination in cents is between <code>1</code> ($0.01) to <code>100000</code> ($1000.00).
+    <br/>To find out about other available denominations for potentially incorporating other SKUs that can be assigned to parameter <code>cardValue</code>, then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+    </dd>
+    
+    <dt>
+    <a name="puchasing_options_templates"></a>
+    The Tango Card and custom Company Email Templates - parameter <code>companyIdentifier</code> - string - <b>optional</b></dt>
+    <dd>If you choose to have the Tango Card Service API send digital gift cards by setting <code>tcSend</code> to <code>true</code>, then by default the gift card information within a Tango Card email template.
+    <br>If you prefer to have the Tango Card Service API send the gift card information with a custom email template (with your own branding), then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+    </dd>
+</dl>
 
 <a name="sdk_support"></a>
-# Tango Card C#/.NET 4.0 SDK and Service API Support #
-If you have any questions with the Tango Card C#/.NET 4.0 SDK or our Service API, please contact us at sdk@tangocard.com.
+# Tango Card SDKs and Service API Support #
+If you have any questions with the Tango Card C#/.NET 4.0 SDK or our Service API, please contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
 
 <a name="sdk_support_contact"></a>
 ## Contact Us ##
@@ -145,9 +178,9 @@ To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
 <a name="sdk_support_resolve"></a>
 ## Resolving Issues using Fiddler 2 ##
 
-The best way to resolve any issues that pertain to using our Tango Card C#/.NET 4.0 SDK or our Service API is by using this freely available tool <a href="http://www.fiddler2.com/fiddler2/" target="_blank">`Fiddler 2 - Web Debugging Proxy`</a>, and provide us with the raw request and response bodies using its `Inspectors` tab feature.
+The best way to resolve any issues that pertain to using our Tango Card C#/.NET 4.0 SDK or our Tango Card Service API is by using this freely available tool <a href="http://www.fiddler2.com/fiddler2/" target="_blank">`Fiddler 2 - Web Debugging Proxy`</a>, and providing us with the raw request and response bodies using its `Inspectors` tab feature.
 
-Using `Fiddler 2` will provide the most complete detail and the fast response from Tango Card by understanding if there is an issue on how a request was presented to our service, or if it is an issue with our service on how we replied with your request.
+Using `Fiddler 2` will provide us with the most complete detail and the fastest response from Tango Card by understanding if there is an issue on how a request was presented to our service, or if it is an issue with our service on how we replied to your request.
 
 ### Fiddler 2 Example - Raw Request from Client - Get Available Balance ###
 
@@ -155,7 +188,7 @@ Using `Fiddler 2` will provide the most complete detail and the fast response fr
 POST https://int.tangocard.com/Version2/GetAvailableBalance HTTP/1.1
 Accept: application/json, text/javascript, */*; q=0.01
 Accept-Language: en-us
-Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Type: application/json; charset=UTF-8
 Accept-Encoding: gzip, deflate
 User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
 Host: int.tangocard.com
@@ -182,9 +215,9 @@ Content-Type: application/json
 ```
 
 <a name="sdk_overview"></a>
-# Tango Card C#/.NET 4.0 SDK Overview #
+# SDK Overview #
 
-The Tango Card .NET 4.0/C# SDK is a wrapper around the <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a>.
+The Tango Card C#/.NET 4.0 SDK is a wrapper around the <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a>.
 
 As such, it has two primary types of objects, Requests and Responses; which are handled by a wrapper class `TangoCard.Sdk.TangoCardServiceApi`.
 
@@ -200,7 +233,7 @@ The wrapper class `TangoCard.Sdk.TangoCardServiceApi` currently handles the foll
 ![Tango Card Service Api](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/master/doc/images/tangocardserviceapi.png "Tango Card Service API")
 
 <a name="sdk_requirements"></a>
-# Tango Card C# SDK Requirements #
+# SDK Requirements #
 
 ## Environment Required ##
 
@@ -238,7 +271,7 @@ This SDK provides two binary builds:
 <a name="tango_card_service_api_requests"></a>
 # Tango Card Service API Requests #
 
-With the <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a>, every request has a corresponding success-case response object. There are also several failure-case response objects which are shared between calls. The specifics of the request and response objects will be described in <a href="#tango_card_sdk_methods">Tango Card SDK Methods</a>.
+With the <a href="https://github.com/tangocarddev/General/blob/master/Tango_Card_Service_API.md" target="_blank">Tango Card Service API</a>, every request has a corresponding success-case response object. There are also several failure-case response objects which are shared between calls. The specifics of the request and response objects will be described in <a href="#sdk_methods">Tango Card SDK Methods</a>.
 
 <a name="tango_card_service_api_endpoints"></a>
 ## Tango Card Service API Endpoints ##
@@ -298,8 +331,8 @@ The use of SSL allows for securely transmitting data and prevents <a href="http:
 
 The lack of sessions and the inability to communicate with the API over HTTP prevents <a href="http://en.wikipedia.org/wiki/Session_hijacking" target="_blank">session hijacking</a> and <a href="http://en.wikipedia.org/wiki/Cross-site_request_forgery" target="_blank">cross-site request forgery</a>.
 
-<a name="tango_card_sdk_methods"></a>
-# Tango Card SDK Methods #
+<a name="sdk_methods"></a>
+# SDK Methods #
 
 <a name="get_available_balance"></a>
 ## Get Available Balance ##
@@ -334,17 +367,17 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
 
 #### Parameters ####
 <dl>
-  <dt>TangoCardServiceApiEnum enumTangoCardServiceApi</dt>
-  <dd>- INTEGRATION and PRODUCTION</dd>
+    <dt>[IN] * enumTangoCardServiceApi</dt>
+    <dd><code>TangoCardServiceApiEnum</code> - <b>required</b> - <code>INTEGRATION</code> or <code>PRODUCTION</code></dd>
   
-  <dt>string username</dt>
-  <dd>- User email address, and the SDK Integration test username is defined in TangoCard.Sdk.Examples' configuration file <code>app.config</code> within <code>app_username</code></dd>
+    <dt>[IN] * username</dt>
+    <dd>string - <b>required</b> - user account's username registered within Tango Card production website (https://www.tangocard.com).</dd>
 
-  <dt>string password</dt>
-  <dd>- User password, and the SDK Integration test password is defined in TangoCard.Sdk.Examples' configuration file <code>app.config</code> within <code>app_password</code></dd>
+    <dt>[IN] * password</dt>
+    <dd>string - <b>required</b> - user account's password registered within Tango Card production website (https://www.tangocard.com)</dd>
 
-  <dt>TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse response</dt>
-  <dd>- This <i>out</i> parameter will provide a valid success response object if this method returns <code>true</code> upon success.</dd>
+    <dt>[OUT] response</dt>
+    <dd><code>TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse</code> - This <i>out</i> parameter will provide a valid success response object if this method returns <code>true</code> upon success.</dd>
 </dl>
 
 ### `TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse` Properties ###
@@ -376,10 +409,11 @@ This request is defined by static method call `TangoCard.Sdk.TangoCardServiceApi
             cardSku: cardSku,
             cardValue: cardValueTangoCardCents,
             tcSend: true,
-            giftFrom: "Bill Example",
+            giftFrom: "Bill Company",
             giftMessage: "Happy Birthday",
             recipientEmail: "sally@example.com",
             recipientName: "Sally Example",
+            companyIdentifier: null,
             response: out response )  
         && (null != response)
     ) {
@@ -399,38 +433,41 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
 #### Parameters ###
 
 <dl>
-  <dt>TangoCardServiceApiEnum enumTangoCardServiceApi</dt>
-  <dd>- INTEGRATION or PRODUCTION</dd>
+    <dt>[IN] * enumTangoCardServiceApi</dt>
+    <dd><code>TangoCardServiceApiEnum</code> - <b>required</b> - <code>INTEGRATION</code> or <code>PRODUCTION</code></dd>
 
-  <dt>string username</dt>
-  <dd>- User email address, and a SDK Integration test username is defined in TangoCard.Sdk.Examples' configuration file <code>app.config</code> within <code>app_username</code></dd>
+    <dt>[IN] * username</dt>
+    <dd>string - <b>required</b> - user account's username registered within Tango Card production website (https://www.tangocard.com).</dd>
 
-  <dt>string password</dt>
-  <dd>- User password, and a SDK Integration test password is defined in TangoCard.Sdk.Examples' configuration file <code>app.config</code> within <code>app_password</code></dd>
+    <dt>[IN] * password</dt>
+    <dd>string - <b>required</b> - user account's password registered within Tango Card production website (https://www.tangocard.com)</dd>
 
-  <dt>string cardSku</dt>
-  <dd>- Card brand request, and the Tango Card brand's card sku *tango-card* is defined in TangoCard.Sdk.Examples' configuration file <code>app.config</code> within <code>app_card_sku</code></dd>
+    <dt>[IN] * cardSku</dt>
+    <dd>string - <b>required</b> - The SKU of the card to purchase. The SKU for the Tango Card is "tango-card". See: <a href="#puchasing_options_skus">Purchase Option of Gift Card Brands</a></dd>
 
-  <dt>int cardValue</dt>
-  <dd>- Card value in cents; a value of 100 (cent) is $1.00 dollar card. Minimum value is 1 (cent).</dd>
+    <dt>[IN] * cardValue</dt>
+    <dd>integer - <b>required</b> - The value of the card to purchase in cents (100 = $1.00). See: <a href="#puchasing_options_denominations">Purchase Option for Denominations</a></dd>
 
-  <dt>boolean tcSend</dt>
-  <dd>- Tango Card Service delivers by Email requested card. Set to <code>true</code> for email delivery, and <code>false</code> for no delivery.</dd>
+    <dt>[IN] * tcSend</dt>
+    <dd>boolean - <b>required</b> - Determines if Tango Card Service will send an email with gift card information to recipient. See: <a href="#puchasing_options_distribution">Purchase Option for Distribution</a>.</dd>
 
-  <dt>string recipientName</dt>
-  <dd>- Full name of recipient receiving gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
+    <dt>[IN] * recipientName</dt>
+    <dd>string (length 1 - 255) or null - <b>required</b> if parameter <code>tcSend</code> is <code>true</code>, else ignored - The name of the person receiving the card.</dd>
 
-  <dt>string recipientEmail</dt>
-  <dd>- Valid email address of recipient receiving gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
+    <dt>[IN] * recipientEmail</dt>
+    <dd>string (length 3 - 255) or null - <b>required</b> if parameter <code>tcSend</code> is <code>true</code>, else ignored - The email address of the person receiving the card.</dd>
 
-  <dt>string giftMessage</dt>
-  <dd>- [Optional] Gift message to be applied to gift card's email. Set this value with either a string (length minumum 1 character to maximum of 255 characters) or <code>null</code> if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
+    <dt>[IN] * giftMessage</dt>
+    <dd>string (length 1 - 255) or null - <b>required</b> if parameter <code>tcSend</code> is <code>true</code>, else ignored - A message from the sender of the card to the recipient. May be null, but must exist if tcSend = true.</dd>
 
-  <dt>string giftFrom</dt>
-  <dd>- Full name of giver of gift card. Set this value with either a string (length minumum 1 character to maximum of 255 characters) if <code>tcSend</code> is <code>true</code>, or <code>null</code> if parameter <code>tcSend</code> is <code>false</code>.</dd>
+    <dt>[IN] giftFrom</dt>
+    <dd>string (length 1 - 255) or null - <b>optional</b> if parameter <code>tcSend</code> is <code>true</code>, else ignored - The name of the person sending the card.</dd>
 
-  <dt>TangoCard.Sdk.Response.Success.PurchaseCardResponse response</dt>
-  <dd>- This <i>out</i> parameter will provide a valid success response object if this method returns <code>true</code> upon success.</dd>
+    <dt>[IN] companyIdentifer</dt>
+    <dd>string (length 1 - 255) or null - <b>optional</b> if parameter <code>tcSend</code> is <code>true</code>, else ignored - The email-template identifier. Ignored or value <code>null</code> will use the Tango Card Email Template. See: <a href="#puchasing_options_templates">Purchase Option for Email Templates</a>.</dd>
+
+    <dt>[OUT] response</dt>
+    <dd><code>TangoCard.Sdk.Response.Success.PurchaseCardResponse</code> - This <i>out</i> parameter will provide a valid success response object if this method returns <code>true</code> upon success.</dd>
 </dl>
 
 ### `TangoCard.Sdk.Response.Success.PurchaseCardResponse` Properties ###
@@ -449,8 +486,8 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
   <dd>- Card pin provided to the recipient used to validate provided Card number a redemption upon the www.tangocard.com site.</dd>
 </dl>
 
-<a name="tango_card_error_handling"></a>
-# Tango Card Error Handling #
+<a name="sdk_error_handling"></a>
+# SDK Error Handling #
 
 The Tango Card Service API SDK handles its errors by throwing the following exceptions:
 
@@ -755,7 +792,7 @@ To do this, click Start, point to All Programs, point to Microsoft Visual Studio
 <a name="sdk_development_environment"></a>
 # SDK Development Environment #
 
-This .NET 4.0 SDK was built using:
+This C#/.NET 4.0 SDK was built using:
 
 * [.NET 4.0](http://www.microsoft.com/en-us/download/details.aspx?id=17851)
 * [Visual Studio 2010 Ultimate](http://www.microsoft.com/visualstudio/en-us/products/2010-editions/ultimate/overview)
@@ -764,9 +801,4 @@ This .NET 4.0 SDK was built using:
 <a name="license"></a>
 # License #
 
-The Tango Card .NET 4.0/C# SDK is free to use, given some restrictions. Please see the LICENSE file for details.
-
-<a name="production_deployment"></a>
-# Production Deployment #
-
-When you're ready to go live, email [sales@tangocard.com](mailto:sales@tangocard.com). We'll get you set up with a contract and everything else you need, including linking your account so that transactions served via your integration will draw down on your Tango Card account. 
+The Tango Card C#/.NET 4.0 SDK is free to use, given some restrictions. Please see the LICENSE file for details.

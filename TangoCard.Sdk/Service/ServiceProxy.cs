@@ -2,7 +2,7 @@
 //  ServiceProxy.cs
 //  TangoCard_DotNet_SDK
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -138,7 +138,14 @@ namespace TangoCard.Sdk.Service
                 webRequest.Method = "POST";
                 webRequest.ContentType = "application/json; charset=utf-8";
 
-                string requestJsonSerialized = JsonConvert.SerializeObject(this._requestObject);            
+                Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings
+                {
+                    NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore,
+                    MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore,
+                    DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore
+                };
+
+                string requestJsonSerialized = JsonConvert.SerializeObject(this._requestObject, Formatting.None, jsonSettings);
                 if (!String.IsNullOrEmpty(requestJsonSerialized))
                 {
                     string requestUrlEncoded = requestJsonSerialized;
@@ -251,10 +258,12 @@ namespace TangoCard.Sdk.Service
                      */
                     responseJsonEncoded = responseJsonEncoded.Replace("0000-00-00 00:00:00", "0001-01-01 00:00:00");
 
-                    Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings();
-                    jsonSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
-                    jsonSettings.MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore;
-                    jsonSettings.DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore;
+                    Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings
+                    {
+                        NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore,
+                        MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore,
+                        DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore
+                    };
 
                     TangoCardServiceException.ThrowOnError(responseJsonEncoded, jsonSettings);
 

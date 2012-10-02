@@ -2,7 +2,7 @@
 //  PurchaseCardRequest.cs
 //  TangoCard_DotNet_SDK
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,11 +57,12 @@ namespace TangoCard.Sdk.Request
         /// <param name="password">                 The password. </param>
         /// <param name="cardSku">                  The card sku. </param>
         /// <param name="cardValue">                The card value. </param>
-        /// <param name="tcSend">                   (optional) the tc send. </param>
-        /// <param name="recipientName">            (optional) name of the recipient. </param>
-        /// <param name="recipientEmail">           (optional) the recipient email. </param>
-        /// <param name="giftMessage">              (optional) message describing the gift. </param>
-        /// <param name="giftFrom">                 (optional) the gift from. </param>
+        /// <param name="tcSend">                   Determines if Tango Card Service will send an email with gift card information to recipient. </param>
+        /// <param name="recipientName">            (optional) The name of the recipient. </param>
+        /// <param name="recipientEmail">           (optional) The recipient email. </param>
+        /// <param name="giftMessage">              (optional) The gift message. </param>
+        /// <param name="giftFrom">                 (optional) The gift from. </param>
+        /// <param name="companyIdentifier">        (optional) The Company identifier for which Email Template to use when sending Gift Card. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public PurchaseCardRequest(
@@ -74,7 +75,8 @@ namespace TangoCard.Sdk.Request
             string recipientName = null,
             string recipientEmail = null,
             string giftMessage = null,
-            string giftFrom = null
+            string giftFrom = null,
+            string companyIdentifier = null
             )
             : base(enumTangoCardServiceApi, username, password)
         {
@@ -154,6 +156,15 @@ namespace TangoCard.Sdk.Request
                         throw new ArgumentException(message: "Parameter 'giftMessage' must have a length less than 256.");
                     }
                 }
+
+                // companyIdentifier
+                if (!String.IsNullOrEmpty(companyIdentifier))
+                {
+                    if (companyIdentifier.Length > 255)
+                    {
+                        throw new ArgumentException(message: "Parameter 'companyIdentifier' must have a length less than 256.");
+                    }
+                }
             }
 
             // -----------------------------------------------------------------
@@ -170,6 +181,10 @@ namespace TangoCard.Sdk.Request
                 if (!String.IsNullOrEmpty(giftMessage))
                 {
                     this.GiftMessage = giftMessage;
+                }
+                if (!String.IsNullOrEmpty(companyIdentifier))
+                {
+                    this.CompanyIdentifier = companyIdentifier;
                 }
             }
         }
@@ -236,6 +251,15 @@ namespace TangoCard.Sdk.Request
 
         [JsonProperty(PropertyName = "giftFrom")]
         public string GiftFrom {get;set;}
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the company identifier which determines which email template to use. </summary>
+        ///
+        /// <value> The company identifier. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [JsonProperty(PropertyName = "companyIdentifier")]
+        public string CompanyIdentifier { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the full pathname of the request file. </summary>

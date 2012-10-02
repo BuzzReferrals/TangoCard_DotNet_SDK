@@ -4,7 +4,7 @@
 //
 //  VisualStudio 2010 Unit Test
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -93,6 +93,7 @@ namespace TangoCard.Sdk.Unittests
                     recipientEmail: null,
                     giftFrom: null,
                     giftMessage: null,
+                    companyIdentifier: null,
                     response: out responsePurchaseCard
                     );
 
@@ -144,6 +145,7 @@ namespace TangoCard.Sdk.Unittests
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out responsePurchaseCard
                     );
 
@@ -188,6 +190,7 @@ namespace TangoCard.Sdk.Unittests
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out responsePurchaseCard
                     );
 
@@ -231,6 +234,7 @@ namespace TangoCard.Sdk.Unittests
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out responsePurchaseCard
                     );
 
@@ -296,6 +300,7 @@ namespace TangoCard.Sdk.Unittests
                     recipientEmail: null,
                     giftFrom: null,
                     giftMessage: null,
+                    companyIdentifier: null,
                     response: out responsePurchaseCard
                     );
             }
@@ -398,6 +403,7 @@ namespace TangoCard.Sdk.Unittests
                         giftMessage: null,
                         recipientEmail: null,
                         recipientName: null,
+                        companyIdentifier: null,
                         response: out responsePurchaseCard
                     );
             }
@@ -500,6 +506,7 @@ namespace TangoCard.Sdk.Unittests
                         giftMessage: "Hello from Tango Card C#/.NET SDK:\nTango Card\nPhone: 1-877-55-TANGO\n601 Union Street, Suite 4200\nSeattle, WA 98101",
                         recipientEmail: "sally@example.com",
                         recipientName: "Sally Example",
+                        companyIdentifier: null,
                         response: out responsePurchaseCard
                     );
             }
