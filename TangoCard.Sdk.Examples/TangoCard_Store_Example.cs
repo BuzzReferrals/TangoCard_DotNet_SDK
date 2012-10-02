@@ -4,7 +4,7 @@
 //  
 //  Example code using Tango Card SDK to get available balance and purchase card.
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -59,6 +59,9 @@ namespace TangoCard.Sdk.Examples
 
             string app_username = ConfigurationManager.AppSettings["app_username"];
             string app_password = ConfigurationManager.AppSettings["app_password"];
+            string app_card_sku = ConfigurationManager.AppSettings["app_card_sku"];
+            string app_card_value = ConfigurationManager.AppSettings["app_card_value"];
+            string app_recipient_email = ConfigurationManager.AppSettings["app_recipient_email"];
 
             Console.ForegroundColor = ConsoleColor.Cyan;
             try
@@ -75,7 +78,7 @@ namespace TangoCard.Sdk.Examples
                 ) {
                     Console.ForegroundColor = ConsoleColor.Green;
                     double dollarsAvailableBalance = response.AvailableBalance / 100;
-                    Console.WriteLine("\n- Available Balance: {0:C}\n", dollarsAvailableBalance);
+                    Console.WriteLine("\n'{0}': Available Balance: {1}\n", app_username, response.AvailableBalance);
                     Console.ForegroundColor = ConsoleColor.Cyan;
                 }
                 else
@@ -95,7 +98,8 @@ namespace TangoCard.Sdk.Examples
 
             Console.WriteLine("===== End Get Available Balance ====\n\n\n");
 
-            int cardValueTangoCardCents = 100; // $1.00 
+            int cardValueTangoCardCents = 0; 
+            int.TryParse(app_card_value, out cardValueTangoCardCents);
 
             // Test Purchase Card no delivery
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -108,7 +112,7 @@ namespace TangoCard.Sdk.Examples
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: app_username,
                         password: app_password,
-                        cardSku: "tango-card",
+                        cardSku: app_card_sku,
                         cardValue: cardValueTangoCardCents,
                         tcSend: false,
                         recipientName: null,
@@ -157,20 +161,21 @@ namespace TangoCard.Sdk.Examples
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: app_username,
                         password: app_password,
-                        cardSku: "tango-card",
+                        cardSku: app_card_sku,
                         cardValue: cardValueTangoCardCents,
                         tcSend: true,
-                        giftFrom: "Bill Example",
-                        giftMessage: "Happy Birthday",
-                        recipientEmail: "jeff@tangocard.com",
+                        giftFrom: app_username,
+                        giftMessage: "Hello from Tango Card C#/.NET SDK:\nTango Card\nPhone: 1-877-55-TANGO\n601 Union Street, Suite 4200\nSeattle, WA 98101",
+                        recipientEmail: app_recipient_email,
                         recipientName: "Sally Example",
-                        companyIdentifier: "extole-espanol",
+                        companyIdentifier: null,
                         response: out response
                     )
                     && (null != response)
                 ) {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\n- Purchased Card (Delivery): {{ \nCard Number: {0}, \nCard Pin: {1}, \nCard Token {2}, \nOrder Number: {3} \n}}\n",
+                    Console.WriteLine("\n- Purchased Card (Delivery): {{ \nRecipient Email: '{0}', \nCard Number: {1}, \nCard Pin: {2}, \nCard Token {3}, \nOrder Number: {4} \n}}\n",
+                        app_recipient_email,
                         response.CardNumber,
                         response.CardPin,
                         response.CardToken,
@@ -209,7 +214,7 @@ namespace TangoCard.Sdk.Examples
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     double dollarsAvailableBalance = response.AvailableBalance / 100;
-                    Console.WriteLine("\n- Updated Available Balance: {0:C}\n", dollarsAvailableBalance);
+                    Console.WriteLine("\n'{0}': Updated Available Balance: {1}\n", app_username, response.AvailableBalance);
                     Console.ForegroundColor = ConsoleColor.Cyan;
                 }
                 else

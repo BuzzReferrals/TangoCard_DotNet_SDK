@@ -2,7 +2,7 @@
 //  PurchaseCardResponse.cs
 //  TangoCard_DotNet_SDK
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy

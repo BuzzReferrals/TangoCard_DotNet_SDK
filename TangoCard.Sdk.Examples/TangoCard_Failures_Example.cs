@@ -4,7 +4,7 @@
 //  
 //  Example code using Tango Card SDK forcing failures and then collecting responses.
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -291,7 +291,7 @@ namespace TangoCard.Sdk.Examples
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: app_username,
                         password: app_password,
-                        cardSku: "tango-card",
+                        cardSku: "amazon-gift-card",
                         cardValue: cardValue,
                         tcSend: false,
                         giftFrom: null,
@@ -340,5 +340,78 @@ namespace TangoCard.Sdk.Examples
             Console.WriteLine("===== End Purchase Card ====\n\n\n");
         }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Example purchase card insufficient funds. </summary>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        static public void Example_PurchaseCard_Sku()
+        {
+
+            int cardValue = 123; // $10000000.00
+
+            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
+
+            string app_username = ConfigurationManager.AppSettings["app_username"];
+            string app_password = ConfigurationManager.AppSettings["app_password"];
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            try
+            {
+                Console.WriteLine("======== Purchase Card ========");
+
+                PurchaseCardResponse response = null;
+                if (TangoCardServiceApi.PurchaseCard(
+                        enumTangoCardServiceApi: enumTangoCardServiceApi,
+                        username: app_username,
+                        password: app_password,
+                        cardSku: "tango-card",
+                        cardValue: cardValue,
+                        tcSend: false,
+                        giftFrom: null,
+                        giftMessage: null,
+                        recipientEmail: null,
+                        recipientName: null,
+                        companyIdentifier: null,
+                        response: out response
+                    )
+                    && (null != response)
+                )
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("=== Expected failure ===");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+            }
+            catch (TangoCardServiceException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("=== Tango Card Service Failure ===");
+                Console.WriteLine("Failure response type: {0}", ex.ResponseType.ToString());
+                Console.WriteLine("Failure response:      {0}", ex.Message);
+                if (ex.ResponseType.Equals(ServiceResponseEnum.INS_FUNDS))
+                {
+                    Console.WriteLine("AvailableBalance:      {0}", ((InsufficientFundsResponse)ex.Response).AvailableBalance);
+                    Console.WriteLine("OrderCost:             {0}", ((InsufficientFundsResponse)ex.Response).OrderCost);
+                }
+                Console.ForegroundColor = ConsoleColor.Cyan;
+            }
+            catch (TangoCardSdkException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("=== Tango Card SDK Failure ===");
+                Console.WriteLine("{0} :: {1}", ex.GetType().ToString(), ex.Message);
+                Console.ForegroundColor = ConsoleColor.Cyan;
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("=== Unexpected Error ===");
+                Console.WriteLine("{0} :: {1}", ex.GetType().ToString(), ex.Message);
+                Console.ForegroundColor = ConsoleColor.Cyan;
+            }
+
+            Console.WriteLine("===== End Purchase Card ====\n\n\n");
+        }
     }
 }

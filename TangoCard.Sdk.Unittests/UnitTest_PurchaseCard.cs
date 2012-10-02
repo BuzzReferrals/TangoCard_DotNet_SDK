@@ -4,7 +4,7 @@
 //
 //  VisualStudio 2010 Unit Test
 //  
-//  © 2012 Tango Card, Inc
+//  Copyright (c) 2012 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -503,7 +503,7 @@ namespace TangoCard.Sdk.Unittests
                         cardValue: cardValue,
                         tcSend: true,
                         giftFrom: "Bill Example",
-                        giftMessage: "Happy Birthday",
+                        giftMessage: "Hello from Tango Card C#/.NET SDK:\nTango Card\nPhone: 1-877-55-TANGO\n601 Union Street, Suite 4200\nSeattle, WA 98101",
                         recipientEmail: "sally@example.com",
                         recipientName: "Sally Example",
                         companyIdentifier: null,
