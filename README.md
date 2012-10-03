@@ -72,9 +72,9 @@
 
 <a name="tango_card_sdks"></a>
 ## Tango Card SDKs ##
-The Tango Card SDKs are flexible, secure, and straight forward. It allows any server to purchase the Tango Card and is intended for users requiring high volume transactions.
+The `Tango Card Service API` provides a flexible, secure, and straight forward solution for integrating into reward, loyalty, and engagement applications for purchasing the Tango Card from their funded Tango Card account on https://www.tangocard.com. 
 
-there are several Tango Card SDKs currently available that use the `Tango Card Service API`:
+There are several `Tango Card SDKs` currently available that use the `Tango Card Service API`:
 <ul>
     <li><a href="https://github.com/tangocarddev/TangoCard_DotNet_SDK" target="_blank">Tango Card C#/.Net 4.0 SDK</a></li>
     <li><a href="https://github.com/tangocarddev/TangoCard_PHP_SDK" target="_blank">Tango Card PHP SDK</a></li>
