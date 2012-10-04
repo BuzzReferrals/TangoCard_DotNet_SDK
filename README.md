@@ -85,7 +85,7 @@ There are several `Tango Card SDKs` currently available that use the `Tango Card
     <li><a href="https://github.com/tangocarddev/TangoCard_PHP_SDK" target="_blank">Tango Card PHP SDK</a></li>
     <li><a href="https://github.com/tangocarddev/TangoCard_Java_SDK" target="_blank">Tango Card Java SDK</a></li>
     <li><a href="https://github.com/tangocarddev/TangoCard_Ruby_SDK" target="_blank">Tango Card Ruby SDK</a></li>
-    <li><a href="https://github.com/tangocarddev/TangoCard_jQuery_SDK" target="_blank">Tango Card jQuery Plugin</a></li>
+    <li><a href="https://github.com/tangocarddev/TangoCard_jQuery_Plugin" target="_blank">Tango Card jQuery Plugin</a></li>
 </ul>
 
 <a name="tango_card_service_api"></a>
@@ -225,7 +225,7 @@ Content-Type: application/json
 <a name="sdk_support_resolve_jquery_diagnostic_tool"></a>
 ### Resolving Issues using Tango Card Diagnostic Tool ###
 
-Within our <a href="https://github.com/tangocarddev/TangoCard_jQuery_SDK" target="_blank"><code>Tango Card jQuery Plugin</code></a>, there is diagnostic tool which communicates with `Tango Card Service API` through <code><a href="http://api.jquery.com/jQuery.ajax/" target="_blank">jQuery.ajax()</a><code> calls. It is useful for making raw calls to our service.
+Within our <a href="https://github.com/tangocarddev/TangoCard_jQuery_Plugin" target="_blank"><code>Tango Card jQuery Plugin</code></a>, there is diagnostic tool which communicates with `Tango Card Service API` through <code><a href="http://api.jquery.com/jQuery.ajax/" target="_blank">jQuery.ajax()</a><code> calls. It is useful for making raw calls to our service.
 
 <a name="sdk_overview"></a>
 # SDK Overview #
