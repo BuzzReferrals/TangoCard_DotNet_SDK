@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-10-03</h4>
+<h4>Update: 2012-10-05</h4>
 ===
 
 # Table of Contents #
@@ -32,7 +32,7 @@
             <li><a href="#sdk_support_resolve">Resolving Issues</a>
                 <ul>
                     <li><a href="#sdk_support_resolve_fiddler_2">Fiddler 2</a></li>
-                    <li><a href="#sdk_support_resolve_jquery_diagnostic_tool">Tango Card Diagnostic Tool</a></li>
+                    <li><a href="#sdk_support_resolve_tc_diagnostic_tool">Tango Card Service API Diagnostic Tool</a></li>
                 </ul>
             </li>
         </ul>
@@ -184,7 +184,7 @@ If you have any issues using this SDK, such as bugs or change requests, then ple
 To expidite any issues you might be experiencing with our `Tango Card Service API` or our `Tango Card SDKs`, gather as much information by using the following two resolution approaches, and include the results when you contact us through <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
 
 <a name="sdk_support_resolve_fiddler_2"></a>
-### Resolving Issues using Fiddler 2 ###
+### Fiddler 2 ###
 
 The best way to resolve any issues that pertain to using our Tango Card SDKs or our Tango Card Service API is by using this freely available tool <a href="http://www.fiddler2.com/fiddler2/" target="_blank">`Fiddler 2 - Web Debugging Proxy`</a>, and providing us with the raw request and response bodies using its `Inspectors` tab feature.
 
@@ -222,10 +222,10 @@ Content-Type: application/json
 {"responseType":"SUCCESS","response":{"availableBalance":873431432}}
 ```
 
-<a name="sdk_support_resolve_jquery_diagnostic_tool"></a>
-### Resolving Issues using Tango Card Diagnostic Tool ###
+<a name="sdk_support_resolve_tc_diagnostic_tool"></a>
+### Tango Card Service API Diagnostic Tool ###
 
-Within our <a href="https://github.com/tangocarddev/TangoCard_jQuery_Plugin" target="_blank"><code>Tango Card jQuery Plugin</code></a>, there is diagnostic tool which communicates with `Tango Card Service API` through <a href="http://api.jquery.com/jQuery.ajax/" target="_blank"><code>jQuery.ajax()</code></a> calls. It is useful for making raw calls to our service.
+Within our <a href="https://github.com/tangocarddev/TangoCard_jQuery_Plugin" target="_blank"><code>Tango Card jQuery Plugin</code></a> examples, there is diagnostic tool which communicates with `Tango Card Service API` through <a href="http://api.jquery.com/jQuery.ajax/" target="_blank"><code>jQuery.ajax()</code></a> calls. It is useful for making raw calls to our service: <a href="https://github.com/tangocarddev/TangoCard_jQuery_Plugin#tango_card_service_api_diagnostic_tool" target="_blank">Tango Card Service API Diagnostic Tool</a>.
 
 <a name="sdk_overview"></a>
 # SDK Overview #
