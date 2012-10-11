@@ -225,10 +225,10 @@ namespace TangoCard.Sdk.Unittests
             {
                 isSuccess = TangoCardServiceApi.PurchaseCard(
                         enumTangoCardServiceApi: this._enumTangoCardServiceApi,
-                        username: this._app_username,
-                        password: this._app_password,
+                        username: "empty@tangocard.com",
+                        password: "password",
                         cardSku: "tango-card",
-                        cardValue: 10000000,    // $100000.00 value
+                        cardValue: 1000000000,    // $100000.00 value
                         tcSend: false,
                         giftFrom: null,
                         giftMessage: null,
@@ -313,6 +313,16 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsNotNull(responsePurchaseCard);
             Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
 
+            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
+            Assert.IsNotNull(referenceOrderId);
+            Assert.IsTrue(referenceOrderId is String);
+            Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
+
+            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
+            Assert.IsNotNull(cardToken);
+            Assert.IsTrue(cardToken is String);
+            Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
+
             var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
             Assert.IsNotNull(cardNumber);
             Assert.IsTrue(cardNumber is String);
@@ -322,16 +332,6 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsNotNull(cardPin);
             Assert.IsTrue(cardPin is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardPin));
-
-            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
-            Assert.IsNotNull(cardToken);
-            Assert.IsTrue(cardToken is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
-
-            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
-            Assert.IsNotNull(referenceOrderId);
-            Assert.IsTrue(referenceOrderId is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
 
             GetAvailableBalanceResponse responseUpdatedBalance = null;
             try
@@ -416,6 +416,16 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsNotNull(responsePurchaseCard);
             Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
 
+            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
+            Assert.IsNotNull(referenceOrderId);
+            Assert.IsTrue(referenceOrderId is String);
+            Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
+
+            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
+            Assert.IsNotNull(cardToken);
+            Assert.IsTrue(cardToken is String);
+            Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
+
             var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
             Assert.IsNotNull(cardNumber);
             Assert.IsTrue(cardNumber is String);
@@ -425,16 +435,6 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsNotNull(cardPin);
             Assert.IsTrue(cardPin is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardPin));
-
-            var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
-            Assert.IsNotNull(cardToken);
-            Assert.IsTrue(cardToken is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
-
-            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
-            Assert.IsNotNull(referenceOrderId);
-            Assert.IsTrue(referenceOrderId is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
 
             GetAvailableBalanceResponse responseUpdatedBalance = null;
             try
@@ -502,10 +502,10 @@ namespace TangoCard.Sdk.Unittests
                         cardSku: "tango-card",
                         cardValue: cardValue,
                         tcSend: true,
-                        giftFrom: "Bill Example",
+                        giftFrom: "Bill Support",
                         giftMessage: "Hello from Tango Card C#/.NET SDK:\nTango Card\nPhone: 1-877-55-TANGO\n601 Union Street, Suite 4200\nSeattle, WA 98101",
                         recipientEmail: "sally@example.com",
-                        recipientName: "Sally Example",
+                        recipientName: "Sally Customer",
                         companyIdentifier: null,
                         response: out responsePurchaseCard
                     );
@@ -519,21 +519,25 @@ namespace TangoCard.Sdk.Unittests
             Assert.IsNotNull(responsePurchaseCard);
             Assert.IsTrue(responsePurchaseCard is PurchaseCardResponse);
 
-            var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
-            Assert.IsNotNull(cardNumber);
-
-            var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
-            Assert.IsNotNull(cardPin);
+            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
+            Assert.IsNotNull(referenceOrderId);
+            Assert.IsTrue(referenceOrderId is String);
+            Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
 
             var cardToken = ((PurchaseCardResponse)responsePurchaseCard).CardToken;
             Assert.IsNotNull(cardToken);
             Assert.IsTrue(cardToken is String);
             Assert.IsTrue(!String.IsNullOrEmpty(cardToken));
 
-            var referenceOrderId = ((PurchaseCardResponse)responsePurchaseCard).ReferenceOrderId;
-            Assert.IsNotNull(referenceOrderId);
-            Assert.IsTrue(referenceOrderId is String);
-            Assert.IsTrue(!String.IsNullOrEmpty(referenceOrderId));
+            var cardNumber = ((PurchaseCardResponse)responsePurchaseCard).CardNumber;
+            Assert.IsNotNull(cardNumber);
+            Assert.IsTrue(cardNumber is String);
+            Assert.IsTrue(!String.IsNullOrEmpty(cardNumber));
+
+            var cardPin = ((PurchaseCardResponse)responsePurchaseCard).CardPin;
+            Assert.IsNotNull(cardPin);
+            Assert.IsTrue(cardPin is String);
+            Assert.IsTrue(!String.IsNullOrEmpty(cardPin));
 
             GetAvailableBalanceResponse responseUpdatedBalance = null;
             try

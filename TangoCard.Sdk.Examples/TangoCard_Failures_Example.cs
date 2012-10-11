@@ -54,19 +54,21 @@ namespace TangoCard.Sdk.Examples
 
         static public void Execute()
         {
-            Console.WriteLine("\n===============================\n");
-            Console.WriteLine(  "= Tango Card .NET SDK Example =\n");
-            Console.WriteLine(  "=   with Failures             =\n");
+            Console.WriteLine("\n===============================");
+            Console.WriteLine(  "= Tango Card .NET SDK Example =");
+            Console.WriteLine(  "=   with Failures             =");
             Console.WriteLine(  "===============================\n");
+
+            Console.WriteLine(String.Format("SDK Version: {0}\n", TangoCardServiceApi.GetVersion()));
 
             TangoCard_Failures_Example.Example_GetAvailableBalance_InvalidCredentials();
             TangoCard_Failures_Example.Example_PurchaseCard_InsufficientFunds();
             TangoCard_Failures_Example.Example_PurchaseCard_InvalidInput_Sku();
             TangoCard_Failures_Example.Example_PurchaseCard_InsufficientFunds_1000000000();
 
-            Console.WriteLine("\n===============================\n");
-            Console.WriteLine(  "=   The End                   =\n");
-            Console.WriteLine(  "===============================\n");
+            Console.WriteLine("\n===============================");
+            Console.WriteLine(  "=   The End                   =");
+            Console.WriteLine(  "===============================");
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

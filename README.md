@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-10-05</h4>
+<h4>Update: 2012-10-11</h4>
 ===
 
 # Table of Contents #
@@ -430,12 +430,15 @@ This request is defined by static method call `TangoCard.Sdk.TangoCardServiceApi
             response: out response )  
         && (null != response)
     ) {
-        Console.WriteLine("\n- Purchased Card (Delivery): {{ \nCard Number: {0}, \nCard Pin: {1}, \nCard Token {2}, \nOrder Number: {3} \n}}\n",
-            response.CardNumber,
-            response.CardPin,
-            response.CardToken,
-            response.ReferenceOrderId
-            );
+		Console.WriteLine("\n- Purchased Card (Delivery): {{ \n\tRecipient Email: '{0}', \n\tReference Order Id: '{1}', \n\tCard Token '{2}', \n\tCard Number: '{3}', \n\tCard Pin: '{4}', \n\tClaim Url: '{5}', \n\tChallenge Key: '{6}' \n}}\n",
+			app_recipient_email,
+			response.ReferenceOrderId,
+			response.CardToken,
+			response.CardNumber,
+			response.CardPin,
+			response.ClaimUrl,
+			response.ChallengeKey
+			);
     }
 ```
 
@@ -485,18 +488,35 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
 
 ### `TangoCard.Sdk.Response.Success.PurchaseCardResponse` Properties ###
 
+The purpose of providing `PurchaseCard()` response properties is if you so choose, then you may record digital gift purchase confirmation and card redemption information within your own database.
+
+Depending on how you set `TangoCard.Sdk.TangoCardServiceApi.PurchaseCard()` parameter `tcSend`:
 <dl>
-  <dt>String getReferenceOrderId</dt>
+<dt>If <code>tcSend = true</code></dt>
+<dd>Then both you (the gift card requester) and the gift card recipient are provided with all necessary redemption information to redeem the emailed digital gift card sent by our Tango Card Service.</dd>
+<dt>If <code>tcSend = false</code></dt>
+<dd>Then you (the gift card requester) are provided with all necessary card redemption information, and it is your choice on how you wish to deliver the digital gift card redemption information to gift card recipients.</dd>
+</dl>
+
+The `TangoCard.Sdk.Response.Success.PurchaseCardResponse` properties are: 
+<dl>
+  <dt>string ReferenceOrderId</dt>
   <dd>- Confirmation number of purchase.</dd>
   
-  <dt>String getCardToken</dt>
+  <dt>string CardToken</dt>
   <dd>- Card reference to the aforementioned purchase.</dd>
   
-  <dt>String getCardNumber</dt>
-  <dd>- Card number provided to the recipient to be used at redemption upon the www.tangocard.com site.</dd>
+  <dt>string CardNumber</dt>
+  <dd>- If available, the card number provided to the recipient to be used at redemption of eGift Card upon the www.tangocard.com site.</dd>
   
-  <dt>String getCardPin</dt>
-  <dd>- Card pin provided to the recipient used to validate provided Card number a redemption upon the www.tangocard.com site.</dd>
+  <dt>string CardPin</dt>
+  <dd>- If available, the card pin provided to the recipient used to validate provided eGift Card number a redemption upon the www.tangocard.com site.</dd>
+  
+  <dt>string ClaimUrl</dt>
+  <dd>- If available, the claim URL is an address to a web page on the World Wide Web. This URL can only be accessed through the email you received. It is a unique URL, meaning that it cannot be duplicated or altered.</dd>
+  
+  <dt>string ChallengeKey</dt>
+  <dd>- If available, the challenge key provides access, which can be found next to the aforementioned claim URL. You will be prompted to input your Challenge Key when you try to open your eGift Card.</dd>
 </dl>
 
 <a name="sdk_error_handling"></a>
@@ -673,85 +693,99 @@ Example of how the SDK handles various failure responses, such as:
 ```Text
     > TangoCard.Sdk.Examples\bin\Release\TangoCard.Sdk.Examples.exe
 
-    ===============================
-    = Tango Card .NET SDK Example =
-    ===============================
+	===============================
+	= Tango Card .NET SDK Example =
+	===============================
 
-    == Using app.config Credentials ====
+	SDK Version: 1.1.1
 
-    ======== Get Available Balance ========
-    - Available Balance: $8,755,447.00
-    ===== End Get Available Balance ====
+	== Using app.config Credentials ====
 
-    ===== Purchase Card (No Delivery) =====
-    - Purchased Card (No Delivery): {
-        Card Number: 7001-3040-0131-6599-211,
-        Card Pin: 801756,
-        Card Token 5017684fd1ffa1.17620500,
-        Order Number: 112-07212544-31
-        }
-    ===== End Purchase Card (No Delivery) ====
+	======== Get Available Balance ========
 
-    ======== Purchase Card (Delivery) ========
-    - Purchased Card (Delivery): {
-        Card Number: 7001-3040-0132-4383-910,
-        Card Pin: 817164,
-        Card Token 5017685081d0c4.28984626,
-        Order Number: 112-07212545-31
-        }
-    ======== End Purchase Card (Delivery) ========
+	'third_party_int@tangocard.com': Available Balance: 842193167
 
-    ======== Get Updated Available Balance ========
-    - Updated Available Balance: $8,755,445.00
-    ===== End Get Updated Available Balance ====
+	===== End Get Available Balance ====
 
-    ===============================
-    =   The End                   =
-    ===============================
+	===== Purchase Card (No Delivery) =====
 
-    ===============================
-    = Tango Card .NET SDK Example =
-    =   with Failures             =
-    ===============================
+	- Purchased Card (No Delivery): {
+			Reference Order Id: '112-10215850-11',
+			Card Token '5076eb21ab7f38.34919104',
+			Card Number: '7001-1040-0181-3103-915',
+			Card Pin: '614377',
+			Claim Url: '',
+			Challenge Key: '7001104001813103915'
+	}
 
-    == Using app.config Credentials ====
+	===== End Purchase Card (No Delivery) ====
 
-    ======== Get Available Balance ========
-    === Tango Card Service Failure ===
-    Failure response type: INV_CREDENTIAL
-    Failure response:      Provided user credentials are not valid.
-    ===== End Get Available Balance ====
+	======== Purchase Card (Delivery) ========
 
+	- Purchased Card (Delivery): {
+			Recipient Email: 'sally@example.com',
+			Reference Order Id: '112-10215851-11',
+			Card Token '5076eb2223b662.53903316',
+			Card Number: '7001-4040-0114-9399-715',
+			Card Pin: '795122',
+			Claim Url: '',
+			Challenge Key: '7001404001149399715'
+	}
 
-    == Using app.config Credentials ====
-    ======== Purchase Card ========
-    === Tango Card Service Failure ===
-    Failure response type: INS_FUNDS
-    Failure response:      Available Balance: 0, Order Cost: 100
-    AvailableBalance:      0
-    OrderCost:             100
-    ===== End Purchase Card ====
+	======== End Purchase Card (Delivery) ========
 
-    ======== Purchase Card ========
-    === Tango Card Service Failure ===
-    Failure response type: INV_INPUT
-    Failure response:      cardSku: SKU does not appear to be valid.,
-    Invalid:      cardSku: SKU does not appear to be valid.,
-    ===== End Purchase Card ====
+	======== Get Updated Available Balance ========
 
-    ======== Purchase Card ========
-    === Tango Card Service Failure ===
-    Failure response type: INS_FUNDS
-    Failure response:      Available Balance: 875544519, Order Cost: 1000000000
-    AvailableBalance:      875544519
-    OrderCost:             1000000000
-    ===== End Purchase Card ====
+	'third_party_int@tangocard.com': Updated Available Balance: 842192967
 
-    ===============================
-    =   The End                   =
-    ===============================
+	===== End Get Updated Available Balance ====
 
-    Press Any Key to Close this program.
+	===============================
+	=   The End                   =
+	===============================
+
+	===============================
+	= Tango Card .NET SDK Example =
+	=   with Failures             =
+	===============================
+
+	SDK Version: 1.1.1
+
+	== Using app.config Credentials ====
+
+	======== Get Available Balance ========
+	=== Tango Card Service Failure ===
+	Failure response type: INV_CREDENTIAL
+	Failure response:      Provided user credentials are not valid.
+	===== End Get Available Balance ====
+
+	== Using app.config Credentials ====
+
+	======== Purchase Card ========
+	=== Tango Card Service Failure ===
+	Failure response type: INS_FUNDS
+	Failure response:      Available Balance: 0, Order Cost: 100
+	AvailableBalance:      0
+	OrderCost:             100
+	===== End Purchase Card ====
+
+	======== Purchase Card ========
+	=== Tango Card Service Failure ===
+	Failure response type: INV_INPUT
+	Failure response:      cardSku: SKU does not appear to be valid.,
+	Invalid:      cardSku: SKU does not appear to be valid.,
+	===== End Purchase Card ====
+
+	======== Purchase Card ========
+	=== Tango Card Service Failure ===
+	Failure response type: SYS_ERROR
+	Failure response:      ErrorCode: TPC:PC:35
+	===== End Purchase Card ====
+
+	===============================
+	=   The End                   =
+	===============================
+	Press Any Key to Close this program.
 ```
 
 <a name="unittests"></a>

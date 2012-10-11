@@ -31,6 +31,7 @@ using System.Text;
 using TangoCard.Sdk.Service;
 using TangoCard.Sdk.Response.Success;
 using TangoCard.Sdk.Request;
+using TangoCard.Sdk.Common;
 
 namespace TangoCard.Sdk
 {
@@ -49,6 +50,19 @@ namespace TangoCard.Sdk
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         private TangoCardServiceApi() { }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets the version. </summary>
+        ///
+        /// <returns>   The version. </returns>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public static string GetVersion()
+        {
+            SdkConfig appConfig = SdkConfig.Instance;
+
+            return appConfig["tc_sdk_version"];
+        }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets an available balance. </summary>

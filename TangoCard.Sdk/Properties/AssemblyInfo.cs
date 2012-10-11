@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TangoCard_DotNet_SDK")]
 [assembly: AssemblyDescription(".NET 4.0 SDK for accessing Tango Card service.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tangocard")]
+[assembly: AssemblyCompany("www.tangocard.com")]
 [assembly: AssemblyProduct("TangoCard_DotNet_SDK")]
-[assembly: AssemblyCopyright("Copyright © Tangocard 2012")]
+[assembly: AssemblyCopyright("Copyright {c) Tangocard 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
