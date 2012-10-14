@@ -1,5 +1,5 @@
 ﻿//  
-//  SystemFailureResponse.cs
+//  SystemErrorResponse.cs
 //  TangoCard_DotNet_SDK
 //  
 //  Copyright (c) 2012 Tango Card, Inc
@@ -37,7 +37,7 @@ namespace TangoCard.Sdk.Response.Failure
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public class SystemFailureResponse : FailureResponse
+    public class SystemErrorResponse : FailureResponse
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets or sets the error code. </summary>

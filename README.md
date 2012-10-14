@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-10-11</h4>
+<h4>Update: 2012-10-14</h4>
 ===
 
 # Table of Contents #
@@ -541,7 +541,7 @@ The `Tango Card SERVICE API` handles its errors by returning the following failu
     <tr><td>Insufficient Inventory</td><td>INS_INV</td><td>`TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse`</td></tr> 
     <tr><td>Invalid Credentials</td><td>INV_CREDENTIAL</td><td>`TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse`</td></tr> 
     <tr><td>Invalid Input</td><td>INV_INPUT</td><td>`TangoCard.Sdk.Response.Failure.InvalidInputResponse`</td></tr>
-    <tr><td>System Failure</td><td>SYS_ERROR</td><td>`TangoCard.Sdk.Response.Failure.SystemFailureResponse`</td></tr>
+    <tr><td>System Failure</td><td>SYS_ERROR</td><td>`TangoCard.Sdk.Response.Failure.SystemErrorResponse`</td></tr>
 </table>
 
 Each of the aforementioned `Failure Responses` contains details as to the reason that the `Tango Card Service API` did not perform provided `Request`.
@@ -562,7 +562,7 @@ Each Request will have the following possible Failure Responses as a property va
             <table>
                 <tr><th>Failure Reponse Type</th><th>Failure Response</th></tr>
                 <tr><td>INV_CREDENTIAL</td><td>`InvalidCredentialsResponse`</td></tr> 
-                <tr><td>SYS_ERROR</td><td>`SystemFailureResponse`</td></tr>
+                <tr><td>SYS_ERROR</td><td>`SystemErrorResponse`</td></tr>
             </table>
         </td>
     </tr>
@@ -575,7 +575,7 @@ Each Request will have the following possible Failure Responses as a property va
                 <tr><td>INS_INV</td><td>`InsufficientInventoryResponse`</td></tr> 
                 <tr><td>INV_CREDENTIAL</td><td>`InvalidCredentialsResponse`</td></tr> 
                 <tr><td>INV_INPUT</td><td>`InvalidInputResponse`</td></tr>
-                <tr><td>SYS_ERROR</td><td>`SystemFailureResponse`</td></tr>
+                <tr><td>SYS_ERROR</td><td>`SystemErrorResponse`</td></tr>
             </table>
         </td>
     </tr>
