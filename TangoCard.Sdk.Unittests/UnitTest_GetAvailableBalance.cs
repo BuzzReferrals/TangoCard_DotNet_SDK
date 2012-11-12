@@ -146,7 +146,7 @@ namespace TangoCard.Sdk.Unittests
                         password: "password",
                         response: out response);
 
-                Assert.Fail(message: "Expected 'ServiceException' thrown");
+                Assert.Fail(message: "Expected 'TangoCardServiceException' thrown");
             }
             catch (TangoCardServiceException ex)
             {
@@ -161,6 +161,49 @@ namespace TangoCard.Sdk.Unittests
 
             Assert.IsFalse(isSuccess);
             Assert.IsNull(response);
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Tests get available balance invalid inputs nulls. </summary>
+        ///
+        /// <remarks>   Jeff, 11/12/2012. </remarks>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [TestMethod]
+        public void Test_GetAvailableBalance_InvalidInputs_Nulls()
+        {
+            bool isSuccess = false;
+            GetAvailableBalanceResponse response = null;
+            try
+            {
+                isSuccess = TangoCardServiceApi.GetAvailableBalance(
+                        enumTangoCardServiceApi: this._enumTangoCardServiceApi,
+                        username: null,
+                        password: null,
+                        response: out response);
+
+                Assert.Fail(message: "Expected 'TangoCardServiceException' thrown");
+            }
+            catch (TangoCardServiceException ex)
+            {
+                Assert.IsTrue(condition: ex.ResponseType.Equals(ServiceResponseEnum.INV_CREDENTIAL));
+                string message = ex.Message;
+                Assert.IsNotNull(message);
+            }
+            catch (ArgumentException ex)
+            {
+                string message = ex.Message;
+                Assert.IsNotNull(message);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(message: ex.Message);
+            }
+
+            Assert.IsTrue(isSuccess);
+            Assert.IsNotNull(response);
+            Assert.IsTrue(response is GetAvailableBalanceResponse);
+            Assert.IsTrue(((GetAvailableBalanceResponse)response).AvailableBalance == 0);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

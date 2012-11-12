@@ -27,16 +27,19 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response.Success
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// <summary>   Purchase card result. </summary>
+    /// <summary>   Purchase card response. </summary>
     ///
-    /// <seealso cref="TangoCard.Sdk.Response.BaseResponse"/>
+    /// <remarks>   Jeff, 11/12/2012. </remarks>
+    ///
+    /// <seealso cref="TangoCard.Sdk.Response.Success.SuccessResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     public class PurchaseCardResponse : SuccessResponse
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,7 +48,7 @@ namespace TangoCard.Sdk.Response.Success
         /// <value> The identifier of the reference order. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "referenceOrderId")]
+        [DataMember(Name = "referenceOrderId")]
         public string ReferenceOrderId { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,7 +57,7 @@ namespace TangoCard.Sdk.Response.Success
         /// <value> The card token. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "cardToken")]
+        [DataMember(Name = "cardToken")]
         public string CardToken { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -63,7 +66,7 @@ namespace TangoCard.Sdk.Response.Success
         /// <value> The card number. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "cardNumber")]
+        [DataMember(Name = "cardNumber")]
         public string CardNumber { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -72,7 +75,7 @@ namespace TangoCard.Sdk.Response.Success
         /// <value> The card pin. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "cardPin")]
+        [DataMember(Name = "cardPin")]
         public string CardPin { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -81,7 +84,7 @@ namespace TangoCard.Sdk.Response.Success
         /// <value> The claim url. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "claimUrl")]
+        [DataMember(Name = "claimUrl")]
         public string ClaimUrl { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -90,7 +93,7 @@ namespace TangoCard.Sdk.Response.Success
         /// <value> The challenge key. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "challengeKey")]
+        [DataMember(Name = "challengeKey")]
         public string ChallengeKey { get; set; }
     }
 }

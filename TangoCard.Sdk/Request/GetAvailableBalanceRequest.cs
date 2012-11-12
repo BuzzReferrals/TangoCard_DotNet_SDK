@@ -31,6 +31,8 @@ using System.Configuration;
 
 using TangoCard.Sdk.Response.Success;
 using TangoCard.Sdk.Service;
+using TangoCard.Sdk.Common;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Request
 {
@@ -40,6 +42,7 @@ namespace TangoCard.Sdk.Request
     /// <seealso cref="TangoCard.Sdk.Request.BaseRequest"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     internal class GetAvailableBalanceRequest : BaseRequest
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -70,7 +73,8 @@ namespace TangoCard.Sdk.Request
 
         public bool Execute(out GetAvailableBalanceResponse response)
         {
-            return base.Execute<GetAvailableBalanceResponse>(out response);
+            string requestSerialized = this.Serialize<GetAvailableBalanceRequest>();
+            return base.Execute<GetAvailableBalanceResponse>(requestSerialized, out response);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

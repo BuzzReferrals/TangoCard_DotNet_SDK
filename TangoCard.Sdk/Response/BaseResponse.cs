@@ -27,6 +27,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.Serialization;
+using Newtonsoft.Json.Linq;
 
 namespace TangoCard.Sdk.Response
 {
@@ -34,7 +36,13 @@ namespace TangoCard.Sdk.Response
     /// <summary>   Interface for base response. </summary>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public interface BaseResponse
+    [DataContract]
+    public class BaseResponse
     {
+        [DataMember(Name = "responseType")]
+        public string ResponseType { get; set; }
+
+        [DataMember(Name = "response")]
+        public Object Response { get; set; }
     }
 }

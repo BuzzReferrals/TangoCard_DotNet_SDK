@@ -25,21 +25,28 @@
 // 
 
 using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response.Success
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// <summary>   Get available balance result. </summary>
+    /// <summary>   Get available balance response. </summary>
     ///
-    /// <seealso cref="TangoCard.Sdk.Response.BaseResponse"/>
+    /// <remarks>   Jeff, 11/12/2012. </remarks>
+    ///
+    /// <seealso cref="TangoCard.Sdk.Response.Success.SuccessResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     public class GetAvailableBalanceResponse : SuccessResponse
     {
-        [JsonProperty(PropertyName = "availableBalance")]
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the available balance. </summary>
+        ///
+        /// <value> The available balance. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [DataMember(Name = "availableBalance")]
         public int AvailableBalance { get; set; }
     }
 }

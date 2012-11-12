@@ -34,6 +34,8 @@ using Newtonsoft.Json;
 using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Common;
 using TangoCard.Sdk.Service;
+using System.Runtime.Serialization;
+using TangoCard.Sdk.Response.Success;
 
 namespace TangoCard.Sdk.Request
 {
@@ -43,6 +45,7 @@ namespace TangoCard.Sdk.Request
     /// </summary>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     public abstract class BaseRequest
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -61,10 +64,9 @@ namespace TangoCard.Sdk.Request
             // validate inputs
             // -----------------------------------------------------------------
 
-            // enumTangoCardServiceApi
-            if (enumTangoCardServiceApi.Equals(TangoCardServiceApiEnum.UNDEFINED))
+            if ( !Enum.IsDefined( typeof(TangoCardServiceApiEnum), enumTangoCardServiceApi ) || enumTangoCardServiceApi.Equals(TangoCardServiceApiEnum.UNDEFINED)) 
             {
-                throw new ArgumentException(message: "Parameter 'enumTangoCardServiceApi' is not a defined service environment." );
+                throw new ArgumentException(message: "Parameter 'enumTangoCardServiceApi' is not a defined service environment.");
             }
 
             // username
@@ -89,7 +91,7 @@ namespace TangoCard.Sdk.Request
         ///
         /// <value> The username. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        [JsonProperty(PropertyName = "username")]
+        [DataMember(Name = "username", IsRequired = true)]
         public string Username { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,7 +100,7 @@ namespace TangoCard.Sdk.Request
         /// <value> The password. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "password")]
+        [DataMember(Name = "password", IsRequired = true)]
         public string Password { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -107,7 +109,6 @@ namespace TangoCard.Sdk.Request
         /// <value> The tango card service api. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonIgnore]
         public TangoCardServiceApiEnum TangoCardServiceApi { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -116,7 +117,6 @@ namespace TangoCard.Sdk.Request
         /// <value> The full pathname of the request file. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonIgnore]
         public abstract string RequestAction
         {
             get;
@@ -131,10 +131,10 @@ namespace TangoCard.Sdk.Request
         /// <returns>   true if it succeeds, false if it fails. </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public virtual bool Execute<T>(out T response) where T : BaseResponse
+        public virtual bool Execute<T>(string request, out T response) where T : SuccessResponse
         {
             var proxy = new ServiceProxy(this);
-            return proxy.ExecuteRequest<T>(out response);
+            return proxy.ExecuteRequest<T>(request, out response);
         }
     }
 }

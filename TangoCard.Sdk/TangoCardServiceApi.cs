@@ -82,21 +82,11 @@ namespace TangoCard.Sdk
            out GetAvailableBalanceResponse response
            )
         {
-            if (String.IsNullOrEmpty(username))
-            {
-                throw new System.ArgumentNullException("username");
-            }
-
-            if (String.IsNullOrEmpty(password))
-            {
-                throw new System.ArgumentNullException("password");
-            }
-
             // set up the request
             var request = new GetAvailableBalanceRequest
             (
                 enumTangoCardServiceApi: enumTangoCardServiceApi,
-                username: username.Trim(),
+                username: String.IsNullOrEmpty(username) ? null : username.Trim(),
                 password: password
             );
 
@@ -138,21 +128,11 @@ namespace TangoCard.Sdk
             out PurchaseCardResponse response
             )
         {
-            if (String.IsNullOrEmpty(username))
-            {
-                throw new System.ArgumentNullException("username");
-            }
-
-            if (String.IsNullOrEmpty(password))
-            {
-                throw new System.ArgumentNullException("password");
-            }
-
             // set up the request
             var request = new PurchaseCardRequest
             (
                 enumTangoCardServiceApi: enumTangoCardServiceApi,
-                username:       username.Trim(),
+                username:       String.IsNullOrEmpty(username) ? null : username.Trim(),
                 password:       password,
                 cardSku:        cardSku.Trim(),
                 cardValue:      cardValue,

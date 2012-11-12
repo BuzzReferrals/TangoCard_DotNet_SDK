@@ -28,6 +28,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response.Failure
 {
@@ -37,6 +38,7 @@ namespace TangoCard.Sdk.Response.Failure
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     public class InvalidCredentialsResponse : FailureResponse
     {
         private string _message = null;
@@ -47,7 +49,7 @@ namespace TangoCard.Sdk.Response.Failure
         /// <value> The message. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "message")]
+        [DataMember(Name = "message")]
         public override string Message
         {
             get

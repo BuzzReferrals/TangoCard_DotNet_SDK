@@ -31,6 +31,7 @@ using System.Web;
 using System.Reflection;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using TangoCard.Sdk.Common;
 using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Response.Failure;
 using TangoCard.Sdk.Response.Success;
@@ -125,48 +126,40 @@ namespace TangoCard.Sdk.Service
         /// <param name="jsonSettings"> The json settings. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public static void ThrowOnError(string responseJsonEncoded, Newtonsoft.Json.JsonSerializerSettings jsonSettings)
+        public static void ThrowOnError(ServiceResponseEnum enumResponseType, JObject responseJson)
         {
-            ServiceResponse<FailureResponse> responseService 
-                = JsonConvert.DeserializeObject<ServiceResponse<FailureResponse>>(responseJsonEncoded, jsonSettings);
-
-            switch (responseService.ResponseType)
+            switch (enumResponseType)
             {
                 case ServiceResponseEnum.SUCCESS:
                     break;
                 case ServiceResponseEnum.INS_FUNDS:
                     {
-                        ServiceResponse<InsufficientFundsResponse> responseServiceFailure 
-                            = JsonConvert.DeserializeObject<ServiceResponse<InsufficientFundsResponse>>(responseJsonEncoded, jsonSettings);
-                        throw new TangoCardServiceException(responseServiceFailure.ResponseType, responseServiceFailure.Response);
+                        InsufficientFundsResponse response = responseJson.Deserialize<InsufficientFundsResponse>();
+                        throw new TangoCardServiceException(enumResponseType, response);
                     }
                 case ServiceResponseEnum.INV_CREDENTIAL:
                     {
-                        ServiceResponse<InvalidCredentialsResponse> responseServiceFailure 
-                            = JsonConvert.DeserializeObject<ServiceResponse<InvalidCredentialsResponse>>(responseJsonEncoded, jsonSettings);
-                        throw new TangoCardServiceException(responseServiceFailure.ResponseType, responseServiceFailure.Response);
+                        InvalidCredentialsResponse response = responseJson.Deserialize<InvalidCredentialsResponse>();
+                        throw new TangoCardServiceException(enumResponseType, response);
                     }
                 case ServiceResponseEnum.SYS_ERROR:
                     {
-                        ServiceResponse<SystemErrorResponse> responseServiceFailure 
-                            = JsonConvert.DeserializeObject<ServiceResponse<SystemErrorResponse>>(responseJsonEncoded, jsonSettings);
-                        throw new TangoCardServiceException(responseServiceFailure.ResponseType, responseServiceFailure.Response);
+                        SystemErrorResponse response = responseJson.Deserialize<SystemErrorResponse>();
+                        throw new TangoCardServiceException(enumResponseType, response);
                     }
                 case ServiceResponseEnum.INV_INPUT:
                     {
-                        ServiceResponse<InvalidInputResponse> responseServiceFailure 
-                            = JsonConvert.DeserializeObject<ServiceResponse<InvalidInputResponse>>(responseJsonEncoded, jsonSettings);
-                        throw new TangoCardServiceException(responseServiceFailure.ResponseType, responseServiceFailure.Response);
+                        InvalidInputResponse response = responseJson.Deserialize<InvalidInputResponse>();
+                        throw new TangoCardServiceException(enumResponseType, response);
                     }
                 case ServiceResponseEnum.INS_INV:
                     {
-                        ServiceResponse<InsufficientInventoryResponse> responseServiceFailure 
-                            = JsonConvert.DeserializeObject<ServiceResponse<InsufficientInventoryResponse>>(responseJsonEncoded, jsonSettings);
-                        throw new TangoCardServiceException(responseServiceFailure.ResponseType, responseServiceFailure.Response);
+                        InsufficientInventoryResponse response = responseJson.Deserialize<InsufficientInventoryResponse>();
+                        throw new TangoCardServiceException(enumResponseType, response);
                     }
                 default:
                     {
-                        throw new Exception("Unknown error");
+                        throw new TangoCardSdkException(message: "Unknown handled response type");
                     }
             }
         }

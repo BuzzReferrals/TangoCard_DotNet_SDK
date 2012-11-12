@@ -29,15 +29,17 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 using TangoCard.Sdk.Response.Failure;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response
 {
+    [DataContract]
     public class ServiceResponse<T> where T : BaseResponse
     {
-        [JsonProperty(PropertyName = "responseType")]
+        [DataMember(Name = "responseType")]
         public ServiceResponseEnum ResponseType { get; set; }
 
-        [JsonProperty(PropertyName = "response")]
+        [DataMember(Name = "response")]
         public T Response { get; set; }
     }
 }

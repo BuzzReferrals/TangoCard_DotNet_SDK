@@ -13,25 +13,34 @@
     <HelpKINode Title="properties" Url="html/a966c943-ef1d-b542-06a9-ba88588110ad.htm" />
   </HelpKINode>
   <HelpKINode Title="BaseRequest.BaseRequest constructor" Url="html/4c60517f-9add-89f9-9d11-7bafdef02e86.htm" />
-  <HelpKINode Title="BaseRequest.Execute(Of T) method" Url="html/b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm" />
-  <HelpKINode Title="BaseRequest.Execute&lt;T&gt; method" Url="html/b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm" />
+  <HelpKINode Title="BaseRequest.Execute(Of T) method" Url="html/03816cb2-58db-47bd-4699-4842de625a1d.htm" />
+  <HelpKINode Title="BaseRequest.Execute&lt;T&gt; method" Url="html/03816cb2-58db-47bd-4699-4842de625a1d.htm" />
   <HelpKINode Title="BaseRequest.Password property" Url="html/08e1ed63-d2b9-1887-350e-4ab60ea6bb05.htm" />
   <HelpKINode Title="BaseRequest.RequestAction property" Url="html/bb157126-9975-6126-1f42-982a31b83fb2.htm" />
   <HelpKINode Title="BaseRequest.TangoCardServiceApi property" Url="html/48e7aa1d-b7fb-3bb8-625f-27fabbac2c80.htm" />
   <HelpKINode Title="BaseRequest.Username property" Url="html/1132718b-e871-2fee-3b80-86fd0ea049c9.htm" />
-  <HelpKINode Title="BaseResponse interface" Url="html/c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm" />
-  <HelpKINode Title="BaseResponse interface">
-    <HelpKINode Title="about BaseResponse interface" Url="html/c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm" />
+  <HelpKINode Title="BaseResponse class" Url="html/0cb7c264-7657-ba3a-0c7a-c17a81498225.htm" />
+  <HelpKINode Title="BaseResponse class" Url="html/c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm" />
+  <HelpKINode Title="BaseResponse class">
+    <HelpKINode Title="about BaseResponse class" Url="html/c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm" />
+    <HelpKINode Title="all members" Url="html/0cb7c264-7657-ba3a-0c7a-c17a81498225.htm" />
+    <HelpKINode Title="constructor" Url="html/118a28a3-db52-af2e-1bdf-44120c366ea4.htm" />
+    <HelpKINode Title="methods" Url="html/1fee1ce1-2e90-a0aa-d5ad-9b9bc88133bb.htm" />
+    <HelpKINode Title="properties" Url="html/e9aa4b62-16a0-13e4-a2d1-88082de58235.htm" />
   </HelpKINode>
+  <HelpKINode Title="BaseResponse.BaseResponse constructor" Url="html/118a28a3-db52-af2e-1bdf-44120c366ea4.htm" />
+  <HelpKINode Title="BaseResponse.Response property" Url="html/13fb2211-58d1-878a-5960-f5c838320e45.htm" />
+  <HelpKINode Title="BaseResponse.ResponseType property" Url="html/c809f998-8318-5b9c-04c6-26f55f8cf4cc.htm" />
   <HelpKINode Title="CardNumber property" Url="html/d893d911-afcc-f060-14a1-962c4ee12de3.htm" />
   <HelpKINode Title="CardPin property" Url="html/4123e900-bb7f-c406-32e5-fe6b2e7add91.htm" />
+  <HelpKINode Title="CardSku property" Url="html/414a5400-af2b-cff2-de33-d9f9cf4da3a3.htm" />
   <HelpKINode Title="CardToken property" Url="html/110efa42-4671-4701-5f4b-cb532c31bf62.htm" />
   <HelpKINode Title="ChallengeKey property" Url="html/f7079391-734d-bfdb-adf6-80dec6d3701e.htm" />
   <HelpKINode Title="ClaimUrl property" Url="html/4b67900f-c677-6e85-5edb-b6fe5634a544.htm" />
-  <HelpKINode Title="ErrorCode property" Url="html/8af2dab2-3df2-2f35-e54e-9383a71d150d.htm" />
+  <HelpKINode Title="ErrorCode property" Url="html/29c1ff2e-da2c-0f2f-d39c-49116fa6eeb0.htm" />
   <HelpKINode Title="Execute method" Url="html/ba951576-cadd-00f1-af58-4e359f981ea6.htm" />
-  <HelpKINode Title="Execute(Of T) method" Url="html/b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm" />
-  <HelpKINode Title="Execute&lt;T&gt; method" Url="html/b570ab0d-71cf-16fe-0438-e0d0bd6026f3.htm" />
+  <HelpKINode Title="Execute(Of T) method" Url="html/03816cb2-58db-47bd-4699-4842de625a1d.htm" />
+  <HelpKINode Title="Execute&lt;T&gt; method" Url="html/03816cb2-58db-47bd-4699-4842de625a1d.htm" />
   <HelpKINode Title="FailureResponse class" Url="html/181f70f2-8958-2ecf-7da4-a40756441ab6.htm" />
   <HelpKINode Title="FailureResponse class" Url="html/20c1bc86-04f0-54a8-36a3-b5b067c3cdae.htm" />
   <HelpKINode Title="FailureResponse class">
@@ -43,7 +52,6 @@
   </HelpKINode>
   <HelpKINode Title="FailureResponse.FailureResponse constructor" Url="html/767dfc64-4495-91b1-4730-5cd15946eb15.htm" />
   <HelpKINode Title="FailureResponse.Message property" Url="html/7ac281b4-34a1-f6ec-7fab-46736b40afce.htm" />
-  <HelpKINode Title="FailureResponse.ToString method" Url="html/ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm" />
   <HelpKINode Title="GetAvailableBalance method" Url="html/9d232d20-0b02-afc4-7471-828bdb27d9fc.htm" />
   <HelpKINode Title="GetAvailableBalanceResponse class" Url="html/440b5ad2-169f-3589-0c8a-3ca003c53774.htm" />
   <HelpKINode Title="GetAvailableBalanceResponse class" Url="html/642b6d95-0ed8-d773-560c-62818d25aa47.htm" />
@@ -57,6 +65,7 @@
   <HelpKINode Title="GetAvailableBalanceResponse.AvailableBalance property" Url="html/f91562cc-24d0-4244-0db4-7e1cfb88c76a.htm" />
   <HelpKINode Title="GetAvailableBalanceResponse.GetAvailableBalanceResponse constructor" Url="html/cefc4cea-e990-6784-a6c4-6ae138cb79a9.htm" />
   <HelpKINode Title="GetVersion method" Url="html/a801f5db-41e6-e54b-56ce-04800fa4dfb6.htm" />
+  <HelpKINode Title="GiftFrom property" Url="html/9b4bcaf1-a0dc-5465-e0a5-867ff217c6ec.htm" />
   <HelpKINode Title="InsufficientFundsResponse class" Url="html/84531e12-546e-fae4-dd7e-f56d39c3ccbb.htm" />
   <HelpKINode Title="InsufficientFundsResponse class" Url="html/f80f8136-2ead-63ef-4323-f94de47723ab.htm" />
   <HelpKINode Title="InsufficientFundsResponse class">
@@ -110,12 +119,27 @@
   <HelpKINode Title="InvalidInputResponse.Invalid property" Url="html/1d4f2041-893e-bcb1-cb02-dce1d39dfb59.htm" />
   <HelpKINode Title="InvalidInputResponse.InvalidInputResponse constructor" Url="html/03df05cc-ce9b-fa2c-da9e-abca49919c00.htm" />
   <HelpKINode Title="InvalidInputResponse.Message property" Url="html/054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm" />
+  <HelpKINode Title="InvalidInputResponseItems class" Url="html/4a4041e2-163f-a55a-7a30-e5ba991e5337.htm" />
+  <HelpKINode Title="InvalidInputResponseItems class" Url="html/d9415f4d-add1-493b-e752-fb3019bebe18.htm" />
+  <HelpKINode Title="InvalidInputResponseItems class">
+    <HelpKINode Title="about InvalidInputResponseItems class" Url="html/d9415f4d-add1-493b-e752-fb3019bebe18.htm" />
+    <HelpKINode Title="all members" Url="html/4a4041e2-163f-a55a-7a30-e5ba991e5337.htm" />
+    <HelpKINode Title="constructor" Url="html/4366f3e5-4df7-6a14-3387-c5918ec686ad.htm" />
+    <HelpKINode Title="methods" Url="html/a3e1e51d-646d-bbe0-8cf1-f699212f6ce3.htm" />
+    <HelpKINode Title="properties" Url="html/ea8bc199-f718-cc6d-df56-d3f9d968e86d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidInputResponseItems.CardSku property" Url="html/414a5400-af2b-cff2-de33-d9f9cf4da3a3.htm" />
+  <HelpKINode Title="InvalidInputResponseItems.GiftFrom property" Url="html/9b4bcaf1-a0dc-5465-e0a5-867ff217c6ec.htm" />
+  <HelpKINode Title="InvalidInputResponseItems.InvalidInputResponseItems constructor" Url="html/4366f3e5-4df7-6a14-3387-c5918ec686ad.htm" />
+  <HelpKINode Title="InvalidInputResponseItems.RecipientEmail property" Url="html/16f54259-79a6-7bc5-ec4a-8d986d389816.htm" />
+  <HelpKINode Title="InvalidInputResponseItems.RecipientName property" Url="html/d49af784-aa68-383e-9cc2-5681262a9a36.htm" />
+  <HelpKINode Title="InvalidInputResponseItems.TcSend property" Url="html/dc698a74-59b8-f791-c173-acc97012dc3f.htm" />
   <HelpKINode Title="INV_CREDENTIAL enumeration member" Url="html/ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm" />
   <HelpKINode Title="INV_INPUT enumeration member" Url="html/ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm" />
   <HelpKINode Title="Message property" Url="html/054490d0-f0cf-7d6b-b39d-be068d6aae9a.htm" />
-  <HelpKINode Title="Message property" Url="html/13e825e0-46a9-2aaf-c567-aca66066b9c1.htm" />
   <HelpKINode Title="Message property" Url="html/7ac281b4-34a1-f6ec-7fab-46736b40afce.htm" />
   <HelpKINode Title="Message property" Url="html/8a6a19cc-a3e4-5fb3-8b22-1e43e6bd380d.htm" />
+  <HelpKINode Title="Message property" Url="html/ae85c62c-3710-934d-41c5-25fa106c053f.htm" />
   <HelpKINode Title="Message property" Url="html/e6b97213-2079-7e82-12d2-2313ba8fb430.htm" />
   <HelpKINode Title="Message property" Url="html/ec0f37fb-07bd-8b77-45ab-695b97c65cfa.htm" />
   <HelpKINode Title="Message property" Url="html/fed4bb75-0814-e566-3cb5-af0b77a76fcc.htm" />
@@ -139,12 +163,16 @@
   <HelpKINode Title="PurchaseCardResponse.ClaimUrl property" Url="html/4b67900f-c677-6e85-5edb-b6fe5634a544.htm" />
   <HelpKINode Title="PurchaseCardResponse.PurchaseCardResponse constructor" Url="html/f4983791-12ee-ca79-98a0-232e4508f5c2.htm" />
   <HelpKINode Title="PurchaseCardResponse.ReferenceOrderId property" Url="html/b0262d3c-67db-c70e-baa7-375c74c05fc5.htm" />
+  <HelpKINode Title="RecipientEmail property" Url="html/16f54259-79a6-7bc5-ec4a-8d986d389816.htm" />
+  <HelpKINode Title="RecipientName property" Url="html/d49af784-aa68-383e-9cc2-5681262a9a36.htm" />
   <HelpKINode Title="ReferenceOrderId property" Url="html/b0262d3c-67db-c70e-baa7-375c74c05fc5.htm" />
   <HelpKINode Title="RequestAction property" Url="html/bb157126-9975-6126-1f42-982a31b83fb2.htm" />
+  <HelpKINode Title="Response property" Url="html/13fb2211-58d1-878a-5960-f5c838320e45.htm" />
   <HelpKINode Title="Response property" Url="html/d6ba4458-7564-3b59-59b9-235dd4b0458e.htm" />
   <HelpKINode Title="Response property" Url="html/f210f47d-e780-4591-bdbc-ce0aa83b7aeb.htm" />
   <HelpKINode Title="ResponseType property" Url="html/0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm" />
   <HelpKINode Title="ResponseType property" Url="html/896bdd9f-2e8f-9c95-df1d-c587890790ae.htm" />
+  <HelpKINode Title="ResponseType property" Url="html/c809f998-8318-5b9c-04c6-26f55f8cf4cc.htm" />
   <HelpKINode Title="ServiceResponse(Of T) class" Url="html/0d286782-166d-41f3-bb2a-803567edda08.htm" />
   <HelpKINode Title="ServiceResponse(Of T) class" Url="html/ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm" />
   <HelpKINode Title="ServiceResponse(Of T) class">
@@ -181,18 +209,18 @@
     <HelpKINode Title="methods" Url="html/b1580b35-243b-0ac0-e18d-d8f26b315614.htm" />
   </HelpKINode>
   <HelpKINode Title="SuccessResponse.SuccessResponse constructor" Url="html/698c8ade-2c83-1ee7-0b0e-311ce8c7ee5a.htm" />
-  <HelpKINode Title="SystemFailureResponse class" Url="html/1533a398-f00a-c947-dfeb-c8b364a7cf71.htm" />
-  <HelpKINode Title="SystemFailureResponse class" Url="html/2192db16-696a-3e5f-d806-a27ad9a2ece0.htm" />
-  <HelpKINode Title="SystemFailureResponse class">
-    <HelpKINode Title="about SystemFailureResponse class" Url="html/2192db16-696a-3e5f-d806-a27ad9a2ece0.htm" />
-    <HelpKINode Title="all members" Url="html/1533a398-f00a-c947-dfeb-c8b364a7cf71.htm" />
-    <HelpKINode Title="constructor" Url="html/4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm" />
-    <HelpKINode Title="methods" Url="html/ff8fdc97-0224-e54b-2261-297e14de6ad8.htm" />
-    <HelpKINode Title="properties" Url="html/bd599e3f-2b09-fdf9-e566-92c36db1592e.htm" />
+  <HelpKINode Title="SystemErrorResponse class" Url="html/9fa71199-084a-b9f9-c7fc-819a21b54217.htm" />
+  <HelpKINode Title="SystemErrorResponse class" Url="html/cf376967-e2d4-f653-bba6-7ff4f64caaba.htm" />
+  <HelpKINode Title="SystemErrorResponse class">
+    <HelpKINode Title="about SystemErrorResponse class" Url="html/9fa71199-084a-b9f9-c7fc-819a21b54217.htm" />
+    <HelpKINode Title="all members" Url="html/cf376967-e2d4-f653-bba6-7ff4f64caaba.htm" />
+    <HelpKINode Title="constructor" Url="html/10342ca7-e76c-9a74-3579-034e16b90476.htm" />
+    <HelpKINode Title="methods" Url="html/54c35598-fec9-2e1f-241e-777907a03508.htm" />
+    <HelpKINode Title="properties" Url="html/cce32e3c-4d07-cbe6-e68f-74abcad15d20.htm" />
   </HelpKINode>
-  <HelpKINode Title="SystemFailureResponse.ErrorCode property" Url="html/8af2dab2-3df2-2f35-e54e-9383a71d150d.htm" />
-  <HelpKINode Title="SystemFailureResponse.Message property" Url="html/13e825e0-46a9-2aaf-c567-aca66066b9c1.htm" />
-  <HelpKINode Title="SystemFailureResponse.SystemFailureResponse constructor" Url="html/4baf9c21-f203-d5ea-19c1-83499b7b7a6c.htm" />
+  <HelpKINode Title="SystemErrorResponse.ErrorCode property" Url="html/29c1ff2e-da2c-0f2f-d39c-49116fa6eeb0.htm" />
+  <HelpKINode Title="SystemErrorResponse.Message property" Url="html/ae85c62c-3710-934d-41c5-25fa106c053f.htm" />
+  <HelpKINode Title="SystemErrorResponse.SystemErrorResponse constructor" Url="html/10342ca7-e76c-9a74-3579-034e16b90476.htm" />
   <HelpKINode Title="SYS_ERROR enumeration member" Url="html/ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm" />
   <HelpKINode Title="TangoCard.Sdk namespace" Url="html/9b27c53f-cafc-4a12-a44e-bcdbadaca9e1.htm" />
   <HelpKINode Title="TangoCard.Sdk.Common namespace" Url="html/7ad77d80-b4f3-657d-1849-77c610b3a7c9.htm" />
@@ -205,7 +233,8 @@
   <HelpKINode Title="TangoCard.Sdk.Request.BaseRequest class" Url="html/317048c2-3844-7d1e-8f4c-dd705ba78c5c.htm" />
   <HelpKINode Title="TangoCard.Sdk.Request.BaseRequest class" Url="html/4ba8200a-dead-6154-defb-91177308d5be.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response namespace" Url="html/2b33f578-6679-7f23-08a0-4b36b707e937.htm" />
-  <HelpKINode Title="TangoCard.Sdk.Response.BaseResponse interface" Url="html/c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm" />
+  <HelpKINode Title="TangoCard.Sdk.Response.BaseResponse class" Url="html/0cb7c264-7657-ba3a-0c7a-c17a81498225.htm" />
+  <HelpKINode Title="TangoCard.Sdk.Response.BaseResponse class" Url="html/c1e6f086-7a37-ce95-b23d-4c8abc6a9ed2.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response.Failure namespace" Url="html/c16d35af-6c11-e447-dd79-f9f6b7699d51.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response.Failure.FailureResponse class" Url="html/181f70f2-8958-2ecf-7da4-a40756441ab6.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response.Failure.FailureResponse class" Url="html/20c1bc86-04f0-54a8-36a3-b5b067c3cdae.htm" />
@@ -217,8 +246,10 @@
   <HelpKINode Title="TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse class" Url="html/c77ca27c-b553-9904-665d-6bf7eabc7819.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response.Failure.InvalidInputResponse class" Url="html/3fd28f2c-356d-4485-831e-ffad521c12c1.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response.Failure.InvalidInputResponse class" Url="html/db6166d4-254b-4c87-0a7d-865dc62e304a.htm" />
-  <HelpKINode Title="TangoCard.Sdk.Response.Failure.SystemFailureResponse class" Url="html/1533a398-f00a-c947-dfeb-c8b364a7cf71.htm" />
-  <HelpKINode Title="TangoCard.Sdk.Response.Failure.SystemFailureResponse class" Url="html/2192db16-696a-3e5f-d806-a27ad9a2ece0.htm" />
+  <HelpKINode Title="TangoCard.Sdk.Response.Failure.InvalidInputResponseItems class" Url="html/4a4041e2-163f-a55a-7a30-e5ba991e5337.htm" />
+  <HelpKINode Title="TangoCard.Sdk.Response.Failure.InvalidInputResponseItems class" Url="html/d9415f4d-add1-493b-e752-fb3019bebe18.htm" />
+  <HelpKINode Title="TangoCard.Sdk.Response.Failure.SystemErrorResponse class" Url="html/9fa71199-084a-b9f9-c7fc-819a21b54217.htm" />
+  <HelpKINode Title="TangoCard.Sdk.Response.Failure.SystemErrorResponse class" Url="html/cf376967-e2d4-f653-bba6-7ff4f64caaba.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response.ServiceResponse(Of T) class" Url="html/0d286782-166d-41f3-bb2a-803567edda08.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response.ServiceResponse(Of T) class" Url="html/ec4be911-ba94-092d-6680-58b9d9ffe9fd.htm" />
   <HelpKINode Title="TangoCard.Sdk.Response.ServiceResponse&lt;T&gt; class" Url="html/0d286782-166d-41f3-bb2a-803567edda08.htm" />
@@ -279,7 +310,7 @@
   <HelpKINode Title="TangoCardServiceException.Response property" Url="html/d6ba4458-7564-3b59-59b9-235dd4b0458e.htm" />
   <HelpKINode Title="TangoCardServiceException.ResponseType property" Url="html/0a18aab6-83f9-31aa-91d4-e8e2222e0c92.htm" />
   <HelpKINode Title="TangoCardServiceException.TangoCardServiceException constructor" Url="html/e6434195-187b-a54a-adaf-cf098a520f29.htm" />
-  <HelpKINode Title="TangoCardServiceException.ThrowOnError method" Url="html/5e251519-6297-b26e-fa2e-2231b6ca7285.htm" />
+  <HelpKINode Title="TangoCardServiceException.ThrowOnError method" Url="html/20aabc5d-0c71-5898-5990-2d755b6e4407.htm" />
   <HelpKINode Title="TangoCard_Store_Example class" Url="html/072f2f60-b7d9-684c-0d00-22f9e1195907.htm" />
   <HelpKINode Title="TangoCard_Store_Example class" Url="html/8fad44df-2cec-fee8-e4c8-df9bce1dd84e.htm" />
   <HelpKINode Title="TangoCard_Store_Example class">
@@ -290,21 +321,25 @@
   </HelpKINode>
   <HelpKINode Title="TangoCard_Store_Example.Execute method" Url="html/ba951576-cadd-00f1-af58-4e359f981ea6.htm" />
   <HelpKINode Title="TangoCard_Store_Example.TangoCard_Store_Example constructor" Url="html/41a87f39-9078-c729-c301-0f1fc177ec84.htm" />
+  <HelpKINode Title="TcSend property" Url="html/dc698a74-59b8-f791-c173-acc97012dc3f.htm" />
   <HelpKINode Title="TestInitialize_GetAvailableBalance method" Url="html/9958fe3f-f151-8b16-bb3c-f460b26895e0.htm" />
   <HelpKINode Title="TestInitialize_PurchaseCard method" Url="html/3ea230c7-8df3-f6f3-24ce-9caafe1195b2.htm" />
   <HelpKINode Title="Test_GetAvailableBalance_Api method" Url="html/b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm" />
   <HelpKINode Title="Test_GetAvailableBalance_InsufficientFunds method" Url="html/28aed5a3-9622-9f7f-f430-453dd18d3806.htm" />
   <HelpKINode Title="Test_GetAvailableBalance_InvalidCredentials method" Url="html/b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm" />
+  <HelpKINode Title="Test_GetAvailableBalance_InvalidInputs_Nulls method" Url="html/1eb96f8b-69ab-3c44-f78b-17f5cfb5f16a.htm" />
   <HelpKINode Title="Test_GetAvailableBalance_Request method" Url="html/2f144793-c1f3-d798-b9a9-d2ef1215cbf5.htm" />
   <HelpKINode Title="Test_PurchaseCard_InsufficientFunds method" Url="html/d1e92f4f-43a0-fde5-0767-65825b662709.htm" />
   <HelpKINode Title="Test_PurchaseCard_InsufficientFunds_10000000 method" Url="html/eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm" />
   <HelpKINode Title="Test_PurchaseCard_InvalidCredentials method" Url="html/1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm" />
+  <HelpKINode Title="Test_PurchaseCard_InvalidCredentials_Nulls method" Url="html/d112911e-e25e-db94-1252-e71f9ce6a5c0.htm" />
+  <HelpKINode Title="Test_PurchaseCard_InvalidInputs_Nulls method" Url="html/dcbc250a-ddaf-9d57-ad4e-730bb831c7cf.htm" />
   <HelpKINode Title="Test_PurchaseCard_InvalidInput_Sku method" Url="html/5f432f0d-d40d-8773-11fd-1d7034ea0ea4.htm" />
+  <HelpKINode Title="Test_PurchaseCard_OptionalCompanyIdentifer method" Url="html/67690192-2e18-b9d0-aa6a-bafa0c7bf1f2.htm" />
   <HelpKINode Title="Test_PurchaseCard_with_Delivery method" Url="html/66211f2a-1e24-b2e1-e0c9-820f456d4447.htm" />
   <HelpKINode Title="Test_PurchaseCard_with_NoDelivery method" Url="html/86e354b8-43ed-d35b-c8fc-67c06c974580.htm" />
   <HelpKINode Title="Test_PurchaseCard_with_NoDelivery_Api method" Url="html/e6da2878-eb85-9d30-60cd-51df3ad60240.htm" />
-  <HelpKINode Title="ThrowOnError method" Url="html/5e251519-6297-b26e-fa2e-2231b6ca7285.htm" />
-  <HelpKINode Title="ToString method" Url="html/ff3e247f-a20d-79ca-6c8e-898427c2ceb4.htm" />
+  <HelpKINode Title="ThrowOnError method" Url="html/20aabc5d-0c71-5898-5990-2d755b6e4407.htm" />
   <HelpKINode Title="UNDEFINED enumeration member" Url="html/a6633175-059a-ff88-7472-388db1fdade2.htm" />
   <HelpKINode Title="UNDEFINED enumeration member" Url="html/ceb4ef90-2f76-117e-bf1d-5c683fd5c750.htm" />
   <HelpKINode Title="UnitTest_GetAvailableBalance class" Url="html/28a375be-8d3a-d349-e263-caa08788b009.htm" />
@@ -319,6 +354,7 @@
   <HelpKINode Title="UnitTest_GetAvailableBalance.Test_GetAvailableBalance_Api method" Url="html/b50d59ae-eaa1-14c7-56a1-a963c4d0ee0d.htm" />
   <HelpKINode Title="UnitTest_GetAvailableBalance.Test_GetAvailableBalance_InsufficientFunds method" Url="html/28aed5a3-9622-9f7f-f430-453dd18d3806.htm" />
   <HelpKINode Title="UnitTest_GetAvailableBalance.Test_GetAvailableBalance_InvalidCredentials method" Url="html/b82c9b4b-aec2-fdf3-a10d-a1e129fed2a6.htm" />
+  <HelpKINode Title="UnitTest_GetAvailableBalance.Test_GetAvailableBalance_InvalidInputs_Nulls method" Url="html/1eb96f8b-69ab-3c44-f78b-17f5cfb5f16a.htm" />
   <HelpKINode Title="UnitTest_GetAvailableBalance.Test_GetAvailableBalance_Request method" Url="html/2f144793-c1f3-d798-b9a9-d2ef1215cbf5.htm" />
   <HelpKINode Title="UnitTest_GetAvailableBalance.UnitTest_GetAvailableBalance constructor" Url="html/4feca5d0-6651-4fe0-4fb3-398d0fe14370.htm" />
   <HelpKINode Title="UnitTest_PurchaseCard class" Url="html/110a7d32-57c1-aa75-1612-48364f15cd5a.htm" />
@@ -333,7 +369,10 @@
   <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_InsufficientFunds method" Url="html/d1e92f4f-43a0-fde5-0767-65825b662709.htm" />
   <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_InsufficientFunds_10000000 method" Url="html/eef7a6f8-bed0-d9bb-92af-7efd95ad21f2.htm" />
   <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_InvalidCredentials method" Url="html/1cd4663d-4dd0-2e2f-cf5b-326eb1acb547.htm" />
+  <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_InvalidCredentials_Nulls method" Url="html/d112911e-e25e-db94-1252-e71f9ce6a5c0.htm" />
+  <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_InvalidInputs_Nulls method" Url="html/dcbc250a-ddaf-9d57-ad4e-730bb831c7cf.htm" />
   <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_InvalidInput_Sku method" Url="html/5f432f0d-d40d-8773-11fd-1d7034ea0ea4.htm" />
+  <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_OptionalCompanyIdentifer method" Url="html/67690192-2e18-b9d0-aa6a-bafa0c7bf1f2.htm" />
   <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_with_Delivery method" Url="html/66211f2a-1e24-b2e1-e0c9-820f456d4447.htm" />
   <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_with_NoDelivery method" Url="html/86e354b8-43ed-d35b-c8fc-67c06c974580.htm" />
   <HelpKINode Title="UnitTest_PurchaseCard.Test_PurchaseCard_with_NoDelivery_Api method" Url="html/e6da2878-eb85-9d30-60cd-51df3ad60240.htm" />

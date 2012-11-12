@@ -27,6 +27,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response.Failure
 {
@@ -36,6 +37,7 @@ namespace TangoCard.Sdk.Response.Failure
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     class WebFailureResponse : FailureResponse
     {
         private string _message = null;
