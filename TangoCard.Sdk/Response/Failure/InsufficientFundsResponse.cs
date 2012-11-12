@@ -28,6 +28,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response.Failure
 {
@@ -37,6 +38,7 @@ namespace TangoCard.Sdk.Response.Failure
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     public class InsufficientFundsResponse : FailureResponse
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,7 +47,7 @@ namespace TangoCard.Sdk.Response.Failure
         /// <value> The available balance. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "availableBalance")]
+        [DataMember(Name = "availableBalance")]
         public int AvailableBalance { get;set;}
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,7 +56,7 @@ namespace TangoCard.Sdk.Response.Failure
         /// <value> The order cost. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "orderCost")]
+        [DataMember(Name = "orderCost")]
         public int OrderCost { get;set;}
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -25,12 +25,12 @@
 // 
 
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response.Success
 {
-    public class SuccessResponse : BaseResponse
+    [DataContract]
+    public class SuccessResponse
     {
     }
 }

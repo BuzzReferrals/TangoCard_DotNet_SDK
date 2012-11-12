@@ -33,6 +33,8 @@ using Newtonsoft.Json;
 
 using TangoCard.Sdk.Response.Success;
 using TangoCard.Sdk.Service;
+using TangoCard.Sdk.Common;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Request
 {
@@ -42,6 +44,7 @@ namespace TangoCard.Sdk.Request
     /// <seealso cref="TangoCard.Sdk.Request.BaseRequest"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     internal class PurchaseCardRequest : BaseRequest
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -91,11 +94,11 @@ namespace TangoCard.Sdk.Request
             }
             if (cardSku.Length < 1)
             {
-                throw new ArgumentException( message: "Parameter 'cardSku' must have a length greater than zero.");
+                throw new ArgumentException(message: "Parameter 'cardSku' must have a length greater than zero.");
             }
             if (cardSku.Length > 255)
             {
-                throw new ArgumentException( message: "Parameter 'cardSku' must have a length less than 255.");
+                throw new ArgumentException(message: "Parameter 'cardSku' must have a length less than 255.");
             }
 
             // cardValue
@@ -113,11 +116,11 @@ namespace TangoCard.Sdk.Request
                 }
                 if (recipientName.Length < 1)
                 {
-                    throw new ArgumentException( message: "Parameter 'recipientName' must have a length greater than zero.");
+                    throw new ArgumentException(message: "Parameter 'recipientName' must have a length greater than zero.");
                 }
                 if (recipientName.Length > 255)
                 {
-                    throw new ArgumentException( message: "Parameter 'recipientName' must have a length less than 256.");
+                    throw new ArgumentException(message: "Parameter 'recipientName' must have a length less than 256.");
                 }
 
                 // recipientEmail
@@ -127,11 +130,11 @@ namespace TangoCard.Sdk.Request
                 }
                 if (recipientEmail.Length < 3)
                 {
-                    throw new ArgumentException( message: "Parameter 'recipientEmail' must have a length greater than two.");
+                    throw new ArgumentException(message: "Parameter 'recipientEmail' must have a length greater than two.");
                 }
                 if (recipientEmail.Length > 255)
                 {
-                    throw new ArgumentException( message: "Parameter 'recipientEmail' must have a length less than 256.");
+                    throw new ArgumentException(message: "Parameter 'recipientEmail' must have a length less than 256.");
                 }
 
                 // giftFrom
@@ -141,11 +144,11 @@ namespace TangoCard.Sdk.Request
                 }
                 if (giftFrom.Length < 1)
                 {
-                    throw new ArgumentException( message: "Parameter 'giftFrom' must have a length greater than zero.");
+                    throw new ArgumentException(message: "Parameter 'giftFrom' must have a length greater than zero.");
                 }
                 if (giftFrom.Length > 255)
                 {
-                    throw new ArgumentException( message: "Parameter 'giftFrom' must have a length less than 256.");
+                    throw new ArgumentException(message: "Parameter 'giftFrom' must have a length less than 256.");
                 }
 
                 // giftMessage
@@ -195,7 +198,7 @@ namespace TangoCard.Sdk.Request
         /// <value> The card sku. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "cardSku")]
+        [DataMember(Name = "cardSku", IsRequired = true)]
         public string CardSku { get;set;}
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -204,7 +207,7 @@ namespace TangoCard.Sdk.Request
         /// <value> The card value. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "cardValue")]
+        [DataMember(Name = "cardValue", IsRequired = true)]
         public int CardValue { get;set;}
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -213,7 +216,7 @@ namespace TangoCard.Sdk.Request
         /// <value> true if tc send, false if not. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "tcSend")]
+        [DataMember(Name = "tcSend", IsRequired = true)]
         public bool TcSend { get;set;}
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -222,7 +225,7 @@ namespace TangoCard.Sdk.Request
         /// <value> The name of the recipient. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "recipientName")]
+        [DataMember(Name = "recipientName", EmitDefaultValue = false, IsRequired = false)]
         public string RecipientName {get;set;}
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -231,7 +234,7 @@ namespace TangoCard.Sdk.Request
         /// <value> The recipient email. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "recipientEmail")]
+        [DataMember(Name = "recipientEmail", EmitDefaultValue = false, IsRequired = false)]
         public string RecipientEmail {get;set;}
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -240,7 +243,7 @@ namespace TangoCard.Sdk.Request
         /// <value> A message describing the gift. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "giftMessage")]
+        [DataMember(Name = "giftMessage", EmitDefaultValue = false, IsRequired = false)]
         public string GiftMessage { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -249,7 +252,7 @@ namespace TangoCard.Sdk.Request
         /// <value> The gift from. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "giftFrom")]
+        [DataMember(Name = "giftFrom", EmitDefaultValue = false, IsRequired = false)]
         public string GiftFrom {get;set;}
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -258,7 +261,7 @@ namespace TangoCard.Sdk.Request
         /// <value> The company identifier. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "companyIdentifier")]
+        [DataMember(Name = "companyIdentifier", EmitDefaultValue = false, IsRequired = false)]
         public string CompanyIdentifier { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -282,7 +285,8 @@ namespace TangoCard.Sdk.Request
 
         public bool Execute(out PurchaseCardResponse response) 
         {
-            return base.Execute<PurchaseCardResponse>(out response);
+            string requestSerialized = this.Serialize<PurchaseCardRequest>();
+            return base.Execute<PurchaseCardResponse>(requestSerialized, out response);
         }
     }
 }

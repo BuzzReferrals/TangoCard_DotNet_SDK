@@ -28,6 +28,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response.Failure
 {
@@ -37,6 +38,7 @@ namespace TangoCard.Sdk.Response.Failure
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     public class SystemErrorResponse : FailureResponse
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,7 +47,7 @@ namespace TangoCard.Sdk.Response.Failure
         /// <value> The error code. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "errorCode")]
+        [DataMember(Name = "errorCode")]
         public string ErrorCode { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

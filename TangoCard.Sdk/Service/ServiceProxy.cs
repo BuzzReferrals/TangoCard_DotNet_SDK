@@ -40,6 +40,9 @@ using TangoCard.Sdk.Common;
 using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Response.Failure;
 using System.Security.Cryptography.X509Certificates;
+using Newtonsoft.Json.Linq;
+using TangoCard.Sdk.Response.Success;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Service
 {
@@ -119,7 +122,7 @@ namespace TangoCard.Sdk.Service
         /// <param name="webRequest">   [in,out]. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private bool mapRequest(ref HttpWebRequest webRequest)
+        private bool mapRequest(string requestSerialized, ref HttpWebRequest webRequest)
         {
             if (null == webRequest)
             {
@@ -138,17 +141,9 @@ namespace TangoCard.Sdk.Service
                 webRequest.Method = "POST";
                 webRequest.ContentType = "application/json; charset=utf-8";
 
-                Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings
+                if (!String.IsNullOrEmpty(requestSerialized))
                 {
-                    NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore,
-                    MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore,
-                    DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore
-                };
-
-                string requestJsonSerialized = JsonConvert.SerializeObject(this._requestObject, Formatting.None, jsonSettings);
-                if (!String.IsNullOrEmpty(requestJsonSerialized))
-                {
-                    string requestUrlEncoded = requestJsonSerialized;
+                    string requestUrlEncoded = requestSerialized;
                     byte[] data = UTF8Encoding.UTF8.GetBytes(requestUrlEncoded);
                     webRequest.ContentLength = data.Length;
                     using (Stream requestDataStream = webRequest.GetRequestStream())
@@ -181,7 +176,7 @@ namespace TangoCard.Sdk.Service
         /// <returns>   . </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private bool postRequest(ref string responseJsonEncoded)
+        private bool postRequest(string requestSerialized, ref string bodyResponse)
         {
             if (String.IsNullOrEmpty(this._path))
             {
@@ -189,18 +184,18 @@ namespace TangoCard.Sdk.Service
             }
 
             bool isSuccess = false;
-            responseJsonEncoded = null;
+            bodyResponse = null;
             try
             {
                 HttpWebRequest webRequest = (HttpWebRequest) WebRequest.Create(this._path);
 
-                if (this.mapRequest(ref webRequest))
+                if (this.mapRequest(requestSerialized, ref webRequest))
                 {
                     HttpWebResponse response = (HttpWebResponse)webRequest.GetResponse();
                     using (Stream receiveStream = response.GetResponseStream())
                     {
                         StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-                        responseJsonEncoded = readStream.ReadToEnd();                        
+                        bodyResponse = readStream.ReadToEnd();                        
                     }
 
                     isSuccess = true;
@@ -219,7 +214,7 @@ namespace TangoCard.Sdk.Service
 
                     using (var streamReader = new StreamReader(response.GetResponseStream()))
                     {
-                        responseJsonEncoded = streamReader.ReadToEnd();
+                        bodyResponse = streamReader.ReadToEnd();
                     }
                 }
             }
@@ -236,42 +231,69 @@ namespace TangoCard.Sdk.Service
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Performs and request and returns the appropiate strongly-yyped Object. </summary>
+        /// <summary>   Executes the request operation. </summary>
         ///
-        /// <typeparam name="T">    . </typeparam>
+        /// <remarks>   Jeff, 11/12/2012. </remarks>
         ///
-        /// <returns>   . </returns>
+        /// <exception cref="TangoCardServiceException">    Thrown when a tango card service error
+        ///                                                 condition occurs. </exception>
+        /// <exception cref="TangoCardSdkException">        Thrown when a tango card sdk error condition
+        ///                                                 occurs. </exception>
+        ///
+        /// <typeparam name="T">    Generic type parameter. </typeparam>
+        /// <param name="response"> [out] The response. </param>
+        ///
+        /// <returns>   true if it succeeds, false if it fails. </returns>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public bool ExecuteRequest<T>(out T response) where T : BaseResponse
+        public bool ExecuteRequest<T>(string requestSerialized, out T response) where T : SuccessResponse
         {
             bool isSuccess = false;
             response = default(T);
-            string responseJsonEncoded = null;
+            string bodyResponse = null;
             try
             {
-                if (this.postRequest(ref responseJsonEncoded))
+                if (!this.postRequest(requestSerialized, ref bodyResponse))
                 {
-                    /*
-                     * Json Deserealizer cannot convert to valid DateTime, replacing in case 
-                     * this value exists replace.
-                     */
-                    responseJsonEncoded = responseJsonEncoded.Replace("0000-00-00 00:00:00", "0001-01-01 00:00:00");
-
-                    Newtonsoft.Json.JsonSerializerSettings jsonSettings = new Newtonsoft.Json.JsonSerializerSettings
-                    {
-                        NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore,
-                        MissingMemberHandling = Newtonsoft.Json.MissingMemberHandling.Ignore,
-                        DefaultValueHandling = Newtonsoft.Json.DefaultValueHandling.Ignore
-                    };
-
-                    TangoCardServiceException.ThrowOnError(responseJsonEncoded, jsonSettings);
-
-                    var responseService = JsonConvert.DeserializeObject<ServiceResponse<T>>(responseJsonEncoded, jsonSettings);
-
-                    response = responseService.Response;
-                    isSuccess = true;
+                    throw new TangoCardServiceException(responseType: ServiceResponseEnum.WEB_ERROR, response: null, message: "Failed to post reqeust.");
                 }
+
+                if (bodyResponse.IsNullOrEmpty())
+                {
+                    throw new TangoCardServiceException(responseType: ServiceResponseEnum.WEB_ERROR, response: null, message: "Empty body response.");
+                }
+
+                JObject responseJson = JObject.Parse(bodyResponse);
+
+                BaseResponse baseResponse = responseJson.Deserialize<BaseResponse>();
+
+                if (baseResponse.ResponseType.IsNullOrEmpty() || !(baseResponse.ResponseType is String))
+                {
+                    throw new TangoCardServiceException(responseType: ServiceResponseEnum.WEB_ERROR, response: null, message: "Response type is not defined.");
+                }
+
+                if ((null == baseResponse.Response))
+                {
+                    throw new TangoCardServiceException(responseType: ServiceResponseEnum.WEB_ERROR, response: null, message: "Response is not defined.");
+                }
+
+                JObject responseObject = (JObject)responseJson["response"];
+
+                ServiceResponseEnum enumResponseType = ServiceResponseEnum.UNDEFINED;
+
+                if (!Enum.TryParse(baseResponse.ResponseType, true, out enumResponseType))
+                {
+                    throw new TangoCardServiceException(responseType: ServiceResponseEnum.WEB_ERROR, response: null, message: "Unknown response type returned.");
+                }
+
+                if (!ServiceResponseEnum.SUCCESS.Equals(enumResponseType))
+                {
+                    TangoCardServiceException.ThrowOnError(enumResponseType, responseObject);
+                }
+
+                response = responseObject.Deserialize<T>();
+
+                isSuccess = true;
             }
             catch (WebException ex)
             {
@@ -280,6 +302,14 @@ namespace TangoCard.Sdk.Service
                     Message = String.Format("{0}: {1}", ex.Status, ex.Message)
                 };
                 throw new TangoCardServiceException(responseType: ServiceResponseEnum.WEB_ERROR, response: responseServiceFailure, message: ex.Message);
+            }
+            catch (InvalidDataContractException ex)
+            {
+                throw new TangoCardSdkException(ex.Message, ex);
+            }
+            catch (InvalidCastException ex)
+            {
+                throw new TangoCardSdkException(ex.Message, ex);
             }
             catch (TangoCardServiceException ex)
             {

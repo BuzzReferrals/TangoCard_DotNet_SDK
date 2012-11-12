@@ -28,35 +28,20 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace TangoCard.Sdk.Response.Failure
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Failure response. </summary>
     ///
-    /// <seealso cref="TangoCard.Sdk.Response.BaseResponse"/>
+    /// <remarks>   Jeff, 11/12/2012. </remarks>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public class FailureResponse : BaseResponse
+    [DataContract]
+    public class FailureResponse
     {
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>
-        /// Returns a <see cref="T:System.String" /> that represents the current
-        /// <see cref="T:System.Object" />.
-        /// </summary>
-        ///
-        /// <seealso cref="System.Object.ToString()"/>
-        ///
-        /// ### <returns>
-        /// A <see cref="T:System.String" /> that represents the current <see cref="T:System.Object" />.
-        /// </returns>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        public override string ToString()
-        {
-            return this.GetType().Name + ": " + JsonConvert.SerializeObject(this);
-        }
-
+        [DataMember(Name = "message")]
         public virtual string Message
         {
             get;

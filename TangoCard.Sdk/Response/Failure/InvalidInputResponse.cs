@@ -28,6 +28,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
+using TangoCard.Sdk.Common;
 
 namespace TangoCard.Sdk.Response.Failure
 {
@@ -37,6 +39,7 @@ namespace TangoCard.Sdk.Response.Failure
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    [DataContract]
     public class InvalidInputResponse : FailureResponse
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,8 +48,8 @@ namespace TangoCard.Sdk.Response.Failure
         /// <value> The invalid. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        [JsonProperty(PropertyName = "invalid")]
-        public Dictionary<string, string> Invalid { get; set; }
+        [DataMember(Name = "invalid")]
+        public InvalidInputResponseItems Invalid { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets the message. </summary>
@@ -58,17 +61,93 @@ namespace TangoCard.Sdk.Response.Failure
         {
             get
             {
-                string message = null;
-                foreach (string key in this.Invalid.Keys)
+                StringBuilder builder = new StringBuilder();
+                if (this.Invalid.TcSend.IsNotNullNorEmpty())
                 {
-                    message += String.Format("{0}: {1}, ", key, this.Invalid[key]);
+                    builder.Append(String.Format("tcSend: {0}", this.Invalid.TcSend));
                 }
-                return message;
+                if (this.Invalid.CardSku.IsNotNullNorEmpty())
+                {
+                    if (0 < builder.Length)
+                    {
+                        builder.Append(", ");
+                    }
+
+                    builder.Append(String.Format("cardSku: {0}", this.Invalid.CardSku));
+                }
+                if (this.Invalid.RecipientName.IsNotNullNorEmpty())
+                {
+                    if (0 < builder.Length)
+                    {
+                        builder.Append(", ");
+                    }
+
+                    builder.Append(String.Format("recipientName: {0}", this.Invalid.RecipientName));
+                }
+                if (this.Invalid.RecipientEmail.IsNotNullNorEmpty())
+                {
+                    if (0 < builder.Length)
+                    {
+                        builder.Append(", ");
+                    }
+
+                    builder.Append(String.Format("recipientEmail: {0}", this.Invalid.RecipientEmail));
+                }
+                if (this.Invalid.GiftFrom.IsNotNullNorEmpty())
+                {
+                    if (0 < builder.Length)
+                    {
+                        builder.Append(", ");
+                    }
+
+                    builder.Append(String.Format("giftFrom: {0}", this.Invalid.GiftFrom));
+                }
+
+                return builder.ToString();
             }
             set
             {
                 string ignore = value;
             }
         }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// <summary>   Invalid input response items. </summary>
+    ///
+    /// <remarks>   Jeff, 11/12/2012. </remarks>
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    [DataContract]
+    public class InvalidInputResponseItems
+    {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the tc send. </summary>
+        ///
+        /// <value> The tc send. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [DataMember(Name = "tcSend")]
+        public string TcSend { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the card sku. </summary>
+        ///
+        /// <value> The card sku. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [DataMember(Name = "cardSku")]
+        public string CardSku { get; set; }
+
+
+        [DataMember(Name = "recipientName")]
+        public string RecipientName { get; set; }
+
+
+        [DataMember(Name = "recipientEmail")]
+        public string RecipientEmail { get; set; }
+
+        [DataMember(Name = "giftFrom")]
+        public string GiftFrom { get; set; }
     }
 }

@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TangoCard_DotNet_SDK")]
-[assembly: AssemblyDescription(".NET 4.0 SDK for accessing Tango Card service.")]
+[assembly: AssemblyTitle("Tango Card .Net 4.0 SDK")]
+[assembly: AssemblyDescription(".NET 4.0 SDK for accessing Tango Card Service API.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("www.tangocard.com")]
+[assembly: AssemblyCompany("Tango Card, Inc.")]
 [assembly: AssemblyProduct("TangoCard_DotNet_SDK")]
-[assembly: AssemblyCopyright("Copyright {c) Tangocard 2012")]
+[assembly: AssemblyCopyright("Copyright (c) 2012 Tango Card, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,6 +32,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.2.0")]
+[assembly: AssemblyVersion("1.2.0.0")]
 
 
