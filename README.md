@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-10-02</h4>
+<h4>Update: 2012-10-14</h4>
 ===
 
 # Table of Contents #
@@ -29,8 +29,12 @@
     </li>
     <li><a href="#sdk_support">Tango Card SDKs and Service API Support</a>
         <ul>
-            <li><a href="#sdk_support_contact">Contact Us</a></li>
-            <li><a href="#sdk_support_resolve">Resolving Issues using Fiddler 2</a></li>
+            <li><a href="#sdk_support_resolve">Resolving Issues</a>
+                <ul>
+                    <li><a href="#sdk_support_resolve_fiddler_2">Fiddler 2</a></li>
+                    <li><a href="#sdk_support_resolve_tc_diagnostic_tool">Tango Card Service API Diagnostic Tool</a></li>
+                </ul>
+            </li>
         </ul>
     </li>
     <li><a href="#sdk_overview">SDK Overview</a></li>
@@ -59,13 +63,13 @@
             <li><a href="#lib">TangoCard.Sdk</a></li>
             <li><a href="#configuration_files">configuration files</a></li>
             <li><a href="#doc">doc</a></li>
-            <li><a href="#examples">TangoCard.Sdk.Examples</a></li>        
+            <li><a href="#examples">TangoCard.Sdk.Examples</a></li>
             <li><a href="#unittests">TangoCard.Sdk.Unittests</a></li>
         </ul>
     </li>
     <li><a href="#sdk_development_environment">SDK Development Environment</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#production_deployment">Production Deployment</a></li>
+    <li><a href="#contact_us">Contact Us</a></li>
 </ul>
 
 <a name="introduction"></a>
@@ -73,14 +77,15 @@
 
 <a name="tango_card_sdks"></a>
 ## Tango Card SDKs ##
-The Tango Card SDKs are flexible, secure, and straight forward. It allows any server to purchase the Tango Card and is intended for users requiring high volume transactions.
+The `Tango Card Service API` provides a flexible, secure, and straight forward solution for integrating into reward, loyalty, and engagement applications for purchasing the Tango Card from their funded Tango Card account on https://www.tangocard.com. 
 
-there are several Tango Card SDKs currently available that use the `Tango Card Service API`:
+There are several `Tango Card SDKs` currently available that use the `Tango Card Service API`:
 <ul>
     <li><a href="https://github.com/tangocarddev/TangoCard_DotNet_SDK" target="_blank">Tango Card C#/.Net 4.0 SDK</a></li>
     <li><a href="https://github.com/tangocarddev/TangoCard_PHP_SDK" target="_blank">Tango Card PHP SDK</a></li>
     <li><a href="https://github.com/tangocarddev/TangoCard_Java_SDK" target="_blank">Tango Card Java SDK</a></li>
     <li><a href="https://github.com/tangocarddev/TangoCard_Ruby_SDK" target="_blank">Tango Card Ruby SDK</a></li>
+    <li><a href="https://github.com/tangocarddev/TangoCard_jQuery_Plugin" target="_blank">Tango Card jQuery Plugin</a></li>
 </ul>
 
 <a name="tango_card_service_api"></a>
@@ -96,7 +101,7 @@ The Tango Card SDKs, through our <a href="https://github.com/tangocarddev/Genera
 
 Tango Card is the "exactly what you want" gift card and allows the recipient to use their value exactly how they want – they can select a premier gift card, they can divide their value among Brands, they can use some today and save the rest for another day. They can also donate to a non-profit organization. 
 
-Tango Card value can be used via the web or from almost any mobile device. There are no fees or expiration dates of any kind. It’s great for the recipient, and even better for you because it is an entire gift card program delivered in one card allowing you to focus on your core business. 
+Tango Card value can be used via the web or from almost any mobile device. There are no fees or expiration dates of any kind. It's great for the recipient, and even better for you because it is an entire gift card program delivered in one card allowing you to focus on your core business.
 
 Tango Card solutions are already used by Microsoft Bing, FedEx, Extole, Plink, beintoo, Lead Valu, Getty Images, and many others.
 
@@ -171,18 +176,21 @@ When you are ready to purchase a card, the Tango Card Service API has several op
 # Tango Card SDKs and Service API Support #
 If you have any questions with the Tango Card C#/.NET 4.0 SDK or our Service API, please contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
 
-<a name="sdk_support_contact"></a>
-## Contact Us ##
-To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
+If you have any issues using this SDK, such as bugs or change requests, then please do <a href="https://github.com/tangocarddev/TangoCard_DotNet_SDK/issues?state=open" target="_blank">Open Issue</a> in this repository.
 
 <a name="sdk_support_resolve"></a>
-## Resolving Issues using Fiddler 2 ##
+## Resolving Issues ##
 
-The best way to resolve any issues that pertain to using our Tango Card C#/.NET 4.0 SDK or our Tango Card Service API is by using this freely available tool <a href="http://www.fiddler2.com/fiddler2/" target="_blank">`Fiddler 2 - Web Debugging Proxy`</a>, and providing us with the raw request and response bodies using its `Inspectors` tab feature.
+To expidite any issues you might be experiencing with our `Tango Card Service API` or our `Tango Card SDKs`, gather as much information by using the following two resolution approaches, and include the results when you contact us through <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+
+<a name="sdk_support_resolve_fiddler_2"></a>
+### Fiddler 2 ###
+
+The best way to resolve any issues that pertain to using our Tango Card SDKs or our Tango Card Service API is by using this freely available tool <a href="http://www.fiddler2.com/fiddler2/" target="_blank">`Fiddler 2 - Web Debugging Proxy`</a>, and providing us with the raw request and response bodies using its `Inspectors` tab feature.
 
 Using `Fiddler 2` will provide us with the most complete detail and the fastest response from Tango Card by understanding if there is an issue on how a request was presented to our service, or if it is an issue with our service on how we replied to your request.
 
-### Fiddler 2 Example - Raw Request from Client - Get Available Balance ###
+#### Fiddler 2 Example - Raw Request from Client - Get Available Balance ####
 
 ```Text
 POST https://int.tangocard.com/Version2/GetAvailableBalance HTTP/1.1
@@ -199,7 +207,7 @@ Cache-Control: no-cache
 {"username":"third_party_int@tangocard.com","password":"integrateme"}
 ```
  
-### Fiddler 2 Example - Raw Response from Service - Get Available Balance ###
+#### Fiddler 2 Example - Raw Response from Service - Get Available Balance ####
 
 ```Text
 HTTP/1.1 200 OK
@@ -213,6 +221,11 @@ Content-Type: application/json
  
 {"responseType":"SUCCESS","response":{"availableBalance":873431432}}
 ```
+
+<a name="sdk_support_resolve_tc_diagnostic_tool"></a>
+### Tango Card Service API Diagnostic Tool ###
+
+Within our <a href="https://github.com/tangocarddev/TangoCard_jQuery_Plugin" target="_blank"><code>Tango Card jQuery Plugin</code></a> examples, there is diagnostic tool which communicates with `Tango Card Service API` through <a href="http://api.jquery.com/jQuery.ajax/" target="_blank"><code>jQuery.ajax()</code></a> calls. It is useful for making raw calls to our service: <a href="https://github.com/tangocarddev/TangoCard_jQuery_Plugin#tango_card_service_api_diagnostic_tool" target="_blank">Tango Card Service API Diagnostic Tool</a>.
 
 <a name="sdk_overview"></a>
 # SDK Overview #
@@ -369,7 +382,7 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
 <dl>
     <dt>[IN] * enumTangoCardServiceApi</dt>
     <dd><code>TangoCardServiceApiEnum</code> - <b>required</b> - <code>INTEGRATION</code> or <code>PRODUCTION</code></dd>
-  
+
     <dt>[IN] * username</dt>
     <dd>string - <b>required</b> - user account's username registered within Tango Card production website (https://www.tangocard.com).</dd>
 
@@ -417,12 +430,15 @@ This request is defined by static method call `TangoCard.Sdk.TangoCardServiceApi
             response: out response )  
         && (null != response)
     ) {
-        Console.WriteLine("\n- Purchased Card (Delivery): {{ \nCard Number: {0}, \nCard Pin: {1}, \nCard Token {2}, \nOrder Number: {3} \n}}\n",
-            response.CardNumber,
-            response.CardPin,
-            response.CardToken,
-            response.ReferenceOrderId
-            );
+		Console.WriteLine("\n- Purchased Card (Delivery): {{ \n\tRecipient Email: '{0}', \n\tReference Order Id: '{1}', \n\tCard Token '{2}', \n\tCard Number: '{3}', \n\tCard Pin: '{4}', \n\tClaim Url: '{5}', \n\tChallenge Key: '{6}' \n}}\n",
+			app_recipient_email,
+			response.ReferenceOrderId,
+			response.CardToken,
+			response.CardNumber,
+			response.CardPin,
+			response.ClaimUrl,
+			response.ChallengeKey
+			);
     }
 ```
 
@@ -472,24 +488,41 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
 
 ### `TangoCard.Sdk.Response.Success.PurchaseCardResponse` Properties ###
 
+The purpose of providing `PurchaseCard()` response properties is if you so choose, then you may record digital gift purchase confirmation and card redemption information within your own database.
+
+Depending on how you set `TangoCard.Sdk.TangoCardServiceApi.PurchaseCard()` parameter `tcSend`:
 <dl>
-  <dt>String getReferenceOrderId</dt>
+<dt>If <code>tcSend = true</code></dt>
+<dd>Then both you (the gift card requester) and the gift card recipient are provided with all necessary redemption information to redeem the emailed digital gift card sent by our Tango Card Service.</dd>
+<dt>If <code>tcSend = false</code></dt>
+<dd>Then you (the gift card requester) are provided with all necessary card redemption information, and it is your choice on how you wish to deliver the digital gift card redemption information to gift card recipients.</dd>
+</dl>
+
+The `TangoCard.Sdk.Response.Success.PurchaseCardResponse` properties are: 
+<dl>
+  <dt>string ReferenceOrderId</dt>
   <dd>- Confirmation number of purchase.</dd>
   
-  <dt>String getCardToken</dt>
+  <dt>string CardToken</dt>
   <dd>- Card reference to the aforementioned purchase.</dd>
   
-  <dt>String getCardNumber</dt>
-  <dd>- Card number provided to the recipient to be used at redemption upon the www.tangocard.com site.</dd>
+  <dt>string|null CardNumber</dt>
+  <dd>- If available, the card number provided to the recipient to be used at redemption of eGift Card upon the www.tangocard.com site.</dd>
   
-  <dt>String getCardPin</dt>
-  <dd>- Card pin provided to the recipient used to validate provided Card number a redemption upon the www.tangocard.com site.</dd>
+  <dt>string|null CardPin</dt>
+  <dd>- If available, the card pin provided to the recipient used to validate provided eGift Card number a redemption upon the www.tangocard.com site.</dd>
+  
+  <dt>string|null ClaimUrl</dt>
+  <dd>- If available, the claim URL is an address to a web page on the World Wide Web. This URL can only be accessed through the email you received. It is a unique URL, meaning that it cannot be duplicated or altered.</dd>
+  
+  <dt>string|null ChallengeKey</dt>
+  <dd>- If available, the challenge key provides access, which can be found next to the aforementioned claim URL. You will be prompted to input your Challenge Key when you try to open your eGift Card.</dd>
 </dl>
 
 <a name="sdk_error_handling"></a>
 # SDK Error Handling #
 
-The Tango Card Service API SDK handles its errors by throwing the following exceptions:
+The Tango Card C#/.NET 4.0 SDK handles its errors by throwing the following exceptions:
 
 * Custom `TangoCard.Sdk.Service.TangoCardServiceException` is thrown when the `Tango Card Service API` return a `Failure Response` for a given `Request`.
 * Custom `TangoCard.Sdk.Common.TangoCardSdkException` is thrown when the Tango Card SDK has detected an error within its code, regardless of any given Request.
@@ -500,7 +533,7 @@ The Tango Card Service API SDK handles its errors by throwing the following exce
 <a name="service_failure_responses"></a>
 ## Service Failure Responses ##
 
-A service will return the following failure responses as enumerated by `TangoCard.Sdk.Response.ServiceResponseEnum`:
+The `Tango Card SERVICE API` handles its errors by returning the following failure responses as enumerated by `TangoCard.Sdk.Response.ServiceResponseEnum`:
 
 <table>
     <tr><th>Failure</th><th>Failure Reponse Type</th><th>Failure Response Object</th></tr>
@@ -508,7 +541,7 @@ A service will return the following failure responses as enumerated by `TangoCar
     <tr><td>Insufficient Inventory</td><td>INS_INV</td><td>`TangoCard.Sdk.Response.Failure.InsufficientInventoryResponse`</td></tr> 
     <tr><td>Invalid Credentials</td><td>INV_CREDENTIAL</td><td>`TangoCard.Sdk.Response.Failure.InvalidCredentialsResponse`</td></tr> 
     <tr><td>Invalid Input</td><td>INV_INPUT</td><td>`TangoCard.Sdk.Response.Failure.InvalidInputResponse`</td></tr>
-    <tr><td>System Failure</td><td>SYS_ERROR</td><td>`TangoCard.Sdk.Response.Failure.SystemFailureResponse`</td></tr>
+    <tr><td>System Failure</td><td>SYS_ERROR</td><td>`TangoCard.Sdk.Response.Failure.SystemErrorResponse`</td></tr>
 </table>
 
 Each of the aforementioned `Failure Responses` contains details as to the reason that the `Tango Card Service API` did not perform provided `Request`.
@@ -529,7 +562,7 @@ Each Request will have the following possible Failure Responses as a property va
             <table>
                 <tr><th>Failure Reponse Type</th><th>Failure Response</th></tr>
                 <tr><td>INV_CREDENTIAL</td><td>`InvalidCredentialsResponse`</td></tr> 
-                <tr><td>SYS_ERROR</td><td>`SystemFailureResponse`</td></tr>
+                <tr><td>SYS_ERROR</td><td>`SystemErrorResponse`</td></tr>
             </table>
         </td>
     </tr>
@@ -542,7 +575,7 @@ Each Request will have the following possible Failure Responses as a property va
                 <tr><td>INS_INV</td><td>`InsufficientInventoryResponse`</td></tr> 
                 <tr><td>INV_CREDENTIAL</td><td>`InvalidCredentialsResponse`</td></tr> 
                 <tr><td>INV_INPUT</td><td>`InvalidInputResponse`</td></tr>
-                <tr><td>SYS_ERROR</td><td>`SystemFailureResponse`</td></tr>
+                <tr><td>SYS_ERROR</td><td>`SystemErrorResponse`</td></tr>
             </table>
         </td>
     </tr>
@@ -660,85 +693,99 @@ Example of how the SDK handles various failure responses, such as:
 ```Text
     > TangoCard.Sdk.Examples\bin\Release\TangoCard.Sdk.Examples.exe
 
-    ===============================
-    = Tango Card .NET SDK Example =
-    ===============================
+	===============================
+	= Tango Card .NET SDK Example =
+	===============================
 
-    == Using app.config Credentials ====
+	SDK Version: 1.1.1
 
-    ======== Get Available Balance ========
-    - Available Balance: $8,755,447.00
-    ===== End Get Available Balance ====
+	== Using app.config Credentials ====
 
-    ===== Purchase Card (No Delivery) =====
-    - Purchased Card (No Delivery): {
-        Card Number: 7001-3040-0131-6599-211,
-        Card Pin: 801756,
-        Card Token 5017684fd1ffa1.17620500,
-        Order Number: 112-07212544-31
-        }
-    ===== End Purchase Card (No Delivery) ====
+	======== Get Available Balance ========
 
-    ======== Purchase Card (Delivery) ========
-    - Purchased Card (Delivery): {
-        Card Number: 7001-3040-0132-4383-910,
-        Card Pin: 817164,
-        Card Token 5017685081d0c4.28984626,
-        Order Number: 112-07212545-31
-        }
-    ======== End Purchase Card (Delivery) ========
+	'third_party_int@tangocard.com': Available Balance: 842193167
 
-    ======== Get Updated Available Balance ========
-    - Updated Available Balance: $8,755,445.00
-    ===== End Get Updated Available Balance ====
+	===== End Get Available Balance ====
 
-    ===============================
-    =   The End                   =
-    ===============================
+	===== Purchase Card (No Delivery) =====
 
-    ===============================
-    = Tango Card .NET SDK Example =
-    =   with Failures             =
-    ===============================
+	- Purchased Card (No Delivery): {
+			Reference Order Id: '112-10215850-11',
+			Card Token '5076eb21ab7f38.34919104',
+			Card Number: '7001-1040-0181-3103-915',
+			Card Pin: '614377',
+			Claim Url: '',
+			Challenge Key: '7001104001813103915'
+	}
 
-    == Using app.config Credentials ====
+	===== End Purchase Card (No Delivery) ====
 
-    ======== Get Available Balance ========
-    === Tango Card Service Failure ===
-    Failure response type: INV_CREDENTIAL
-    Failure response:      Provided user credentials are not valid.
-    ===== End Get Available Balance ====
+	======== Purchase Card (Delivery) ========
 
+	- Purchased Card (Delivery): {
+			Recipient Email: 'sally@example.com',
+			Reference Order Id: '112-10215851-11',
+			Card Token '5076eb2223b662.53903316',
+			Card Number: '7001-4040-0114-9399-715',
+			Card Pin: '795122',
+			Claim Url: '',
+			Challenge Key: '7001404001149399715'
+	}
 
-    == Using app.config Credentials ====
-    ======== Purchase Card ========
-    === Tango Card Service Failure ===
-    Failure response type: INS_FUNDS
-    Failure response:      Available Balance: 0, Order Cost: 100
-    AvailableBalance:      0
-    OrderCost:             100
-    ===== End Purchase Card ====
+	======== End Purchase Card (Delivery) ========
 
-    ======== Purchase Card ========
-    === Tango Card Service Failure ===
-    Failure response type: INV_INPUT
-    Failure response:      cardSku: SKU does not appear to be valid.,
-    Invalid:      cardSku: SKU does not appear to be valid.,
-    ===== End Purchase Card ====
+	======== Get Updated Available Balance ========
 
-    ======== Purchase Card ========
-    === Tango Card Service Failure ===
-    Failure response type: INS_FUNDS
-    Failure response:      Available Balance: 875544519, Order Cost: 1000000000
-    AvailableBalance:      875544519
-    OrderCost:             1000000000
-    ===== End Purchase Card ====
+	'third_party_int@tangocard.com': Updated Available Balance: 842192967
 
-    ===============================
-    =   The End                   =
-    ===============================
+	===== End Get Updated Available Balance ====
 
-    Press Any Key to Close this program.
+	===============================
+	=   The End                   =
+	===============================
+
+	===============================
+	= Tango Card .NET SDK Example =
+	=   with Failures             =
+	===============================
+
+	SDK Version: 1.1.1
+
+	== Using app.config Credentials ====
+
+	======== Get Available Balance ========
+	=== Tango Card Service Failure ===
+	Failure response type: INV_CREDENTIAL
+	Failure response:      Provided user credentials are not valid.
+	===== End Get Available Balance ====
+
+	== Using app.config Credentials ====
+
+	======== Purchase Card ========
+	=== Tango Card Service Failure ===
+	Failure response type: INS_FUNDS
+	Failure response:      Available Balance: 0, Order Cost: 100
+	AvailableBalance:      0
+	OrderCost:             100
+	===== End Purchase Card ====
+
+	======== Purchase Card ========
+	=== Tango Card Service Failure ===
+	Failure response type: INV_INPUT
+	Failure response:      cardSku: SKU does not appear to be valid.,
+	Invalid:      cardSku: SKU does not appear to be valid.,
+	===== End Purchase Card ====
+
+	======== Purchase Card ========
+	=== Tango Card Service Failure ===
+	Failure response type: SYS_ERROR
+	Failure response:      ErrorCode: TPC:PC:35
+	===== End Purchase Card ====
+
+	===============================
+	=   The End                   =
+	===============================
+	Press Any Key to Close this program.
 ```
 
 <a name="unittests"></a>
@@ -801,4 +848,10 @@ This C#/.NET 4.0 SDK was built using:
 <a name="license"></a>
 # License #
 
-The Tango Card C#/.NET 4.0 SDK is free to use, given some restrictions. Please see the LICENSE file for details.
+The Tango Card C#/.NET 4.0 SDK is free to use, given some restrictions. Please see the <a href="https://github.com/tangocarddev/TangoCard_Java_SDK/blob/master/LICENSE.md" target="_blank">LICENSE</a> file for details.
+
+<a name="contact_us"></a>
+# Contact Us #
+If you have any questions about using this SDK, please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a> 
+
+To learn more about Tango Card integration solutions, call 1.877.55.TANGO.

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TangoCard_DotNet_SDK")]
 [assembly: AssemblyDescription(".NET 4.0 SDK for accessing Tango Card service.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tangocard")]
+[assembly: AssemblyCompany("www.tangocard.com")]
 [assembly: AssemblyProduct("TangoCard_DotNet_SDK")]
-[assembly: AssemblyCopyright("Copyright © Tangocard 2012")]
+[assembly: AssemblyCopyright("Copyright {c) Tangocard 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,6 +32,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.6.0")]
+[assembly: AssemblyVersion("1.1.2.0")]
 
 

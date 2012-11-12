@@ -148,8 +148,8 @@ namespace TangoCard.Sdk.Service
                     }
                 case ServiceResponseEnum.SYS_ERROR:
                     {
-                        ServiceResponse<SystemFailureResponse> responseServiceFailure 
-                            = JsonConvert.DeserializeObject<ServiceResponse<SystemFailureResponse>>(responseJsonEncoded, jsonSettings);
+                        ServiceResponse<SystemErrorResponse> responseServiceFailure 
+                            = JsonConvert.DeserializeObject<ServiceResponse<SystemErrorResponse>>(responseJsonEncoded, jsonSettings);
                         throw new TangoCardServiceException(responseServiceFailure.ResponseType, responseServiceFailure.Response);
                     }
                 case ServiceResponseEnum.INV_INPUT:

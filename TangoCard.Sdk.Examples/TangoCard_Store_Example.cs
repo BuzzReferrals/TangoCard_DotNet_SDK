@@ -48,9 +48,11 @@ namespace TangoCard.Sdk.Examples
     {
         static public void Execute()
         {
-            Console.WriteLine("\n===============================\n");
-            Console.WriteLine(  "= Tango Card .NET SDK Example =\n");
+            Console.WriteLine("\n===============================");
+            Console.WriteLine(  "= Tango Card .NET SDK Example =");
             Console.WriteLine(  "===============================\n");
+
+            Console.WriteLine(String.Format("SDK Version: {0}\n", TangoCardServiceApi.GetVersion()));
 
             Console.WriteLine("== Using app.config Credentials ====\n");
 
@@ -125,11 +127,13 @@ namespace TangoCard.Sdk.Examples
                     && (null != response)
                 ) {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\n- Purchased Card (No Delivery): {{ \nCard Number: {0}, \nCard Pin: {1}, \nCard Token {2}, \nOrder Number: {3} \n}}\n",
+                    Console.WriteLine("\n- Purchased Card (No Delivery): {{ \n\tReference Order Id: '{0}', \n\tCard Token '{1}', \n\tCard Number: '{2}', \n\tCard Pin: '{3}', \n\tClaim Url: '{4}', \n\tChallenge Key: '{5}' \n}}\n",
+                        response.ReferenceOrderId,
+                        response.CardToken,
                         response.CardNumber,
                         response.CardPin,
-                        response.CardToken,
-                        response.ReferenceOrderId
+                        response.ClaimUrl,
+                        response.ChallengeKey
                         );
                     Console.ForegroundColor = ConsoleColor.Cyan;
                 }
@@ -164,22 +168,24 @@ namespace TangoCard.Sdk.Examples
                         cardSku: app_card_sku,
                         cardValue: cardValueTangoCardCents,
                         tcSend: true,
-                        giftFrom: app_username,
+                        giftFrom: "Bill Support",
                         giftMessage: "Hello from Tango Card C#/.NET SDK:\nTango Card\nPhone: 1-877-55-TANGO\n601 Union Street, Suite 4200\nSeattle, WA 98101",
                         recipientEmail: app_recipient_email,
-                        recipientName: "Sally Example",
+                        recipientName: "Sally Customer",
                         companyIdentifier: null,
                         response: out response
                     )
                     && (null != response)
                 ) {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\n- Purchased Card (Delivery): {{ \nRecipient Email: '{0}', \nCard Number: {1}, \nCard Pin: {2}, \nCard Token {3}, \nOrder Number: {4} \n}}\n",
+                    Console.WriteLine("\n- Purchased Card (Delivery): {{ \n\tRecipient Email: '{0}', \n\tReference Order Id: '{1}', \n\tCard Token '{2}', \n\tCard Number: '{3}', \n\tCard Pin: '{4}', \n\tClaim Url: '{5}', \n\tChallenge Key: '{6}' \n}}\n",
                         app_recipient_email,
+                        response.ReferenceOrderId,
+                        response.CardToken,
                         response.CardNumber,
                         response.CardPin,
-                        response.CardToken,
-                        response.ReferenceOrderId
+                        response.ClaimUrl,
+                        response.ChallengeKey
                         );
                     Console.ForegroundColor = ConsoleColor.Cyan;
                 }
@@ -234,9 +240,9 @@ namespace TangoCard.Sdk.Examples
 
             Console.WriteLine("===== End Get Updated Available Balance ====\n\n\n");
 
-            Console.WriteLine("\n===============================\n");
-            Console.WriteLine(  "=   The End                   =\n");
-            Console.WriteLine(  "===============================\n");
+            Console.WriteLine("\n===============================");
+            Console.WriteLine(  "=   The End                   =");
+            Console.WriteLine(  "===============================");
         }
     }
 }
