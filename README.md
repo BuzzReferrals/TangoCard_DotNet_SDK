@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-11-12</h4>
+<h4>Update: 2012-11-13</h4>
 ===
 
 # Table of Contents #
@@ -697,7 +697,7 @@ Example of how the SDK handles various failure responses, such as:
 	= Tango Card .NET SDK Example =
 	===============================
 
-	SDK Version: 1.2.0
+	SDK Version: 1.2.2
 
 	== Using app.config Credentials ====
 
@@ -749,7 +749,7 @@ Example of how the SDK handles various failure responses, such as:
 	=   with Failures             =
 	===============================
 
-	SDK Version: 1.2.0
+	SDK Version: 1.2.2
 
 	== Using app.config Credentials ====
 

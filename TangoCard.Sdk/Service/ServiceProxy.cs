@@ -103,11 +103,10 @@ namespace TangoCard.Sdk.Service
                     throw new TangoCardSdkException(message: "Tango Card Service API URL was not assigned.");
                 }
 
-                this._controller = appConfig["tc_sdk_controller"];
-
                 this._requestObject = requestObject;
-                this._action = requestObject.RequestAction;
-                this._path = String.Format("{0}/{1}/{2}", this._base_url, this._controller, this._action);
+                this._controller    = requestObject.RequestController;
+                this._action        = requestObject.RequestAction;
+                this._path          = String.Format("{0}/{1}/{2}", this._base_url, this._controller, this._action);
             }
             catch (Exception ex)
             {

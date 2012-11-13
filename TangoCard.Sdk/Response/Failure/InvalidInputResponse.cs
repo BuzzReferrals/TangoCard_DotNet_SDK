@@ -31,10 +31,18 @@ using Newtonsoft.Json;
 using System.Runtime.Serialization;
 using TangoCard.Sdk.Common;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// namespace: TangoCard.Sdk.Response.Failure
+//
+// summary:	.
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
 namespace TangoCard.Sdk.Response.Failure
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Invalid input response. </summary>
+    ///
+    /// <remarks>   Jeff, 11/13/2012. </remarks>
     ///
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -52,7 +60,7 @@ namespace TangoCard.Sdk.Response.Failure
         public InvalidInputResponseItems Invalid { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets the message. </summary>
+        /// <summary>   Gets or sets the message. </summary>
         ///
         /// <value> The message. </value>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -74,6 +82,15 @@ namespace TangoCard.Sdk.Response.Failure
                     }
 
                     builder.Append(String.Format("cardSku: {0}", this.Invalid.CardSku));
+                }
+                if (this.Invalid.CardValue.IsNotNullNorEmpty())
+                {
+                    if (0 < builder.Length)
+                    {
+                        builder.Append(", ");
+                    }
+
+                    builder.Append(String.Format("cardValue: {0}", this.Invalid.CardValue));
                 }
                 if (this.Invalid.RecipientName.IsNotNullNorEmpty())
                 {
@@ -102,7 +119,15 @@ namespace TangoCard.Sdk.Response.Failure
 
                     builder.Append(String.Format("giftFrom: {0}", this.Invalid.GiftFrom));
                 }
+                if (this.Invalid.CompanyIdentifier.IsNotNullNorEmpty())
+                {
+                    if (0 < builder.Length)
+                    {
+                        builder.Append(", ");
+                    }
 
+                    builder.Append(String.Format("companyIdentifier: {0}", this.Invalid.CompanyIdentifier));
+                }
                 return builder.ToString();
             }
             set
@@ -139,15 +164,49 @@ namespace TangoCard.Sdk.Response.Failure
         [DataMember(Name = "cardSku")]
         public string CardSku { get; set; }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the card value. </summary>
+        ///
+        /// <value> The card value. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [DataMember(Name = "cardValue")]
+        public string CardValue { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the name of the recipient. </summary>
+        ///
+        /// <value> The name of the recipient. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [DataMember(Name = "recipientName")]
         public string RecipientName { get; set; }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the recipient email. </summary>
+        ///
+        /// <value> The recipient email. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [DataMember(Name = "recipientEmail")]
         public string RecipientEmail { get; set; }
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the gift from. </summary>
+        ///
+        /// <value> The gift from. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
         [DataMember(Name = "giftFrom")]
         public string GiftFrom { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets or sets the identifier of the company. </summary>
+        ///
+        /// <value> The identifier of the company. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [DataMember(Name = "companyIdentifier")]
+        public string CompanyIdentifier { get; set; }
     }
 }

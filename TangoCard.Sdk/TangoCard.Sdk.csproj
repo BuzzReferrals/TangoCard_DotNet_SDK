@@ -55,6 +55,7 @@
     <Compile Include="Request\Version2\PurchaseCardRequest.cs" />
     <Compile Include="Request\Version2\GetAvailableBalanceRequest.cs" />
     <Compile Include="Request\BaseRequest.cs" />
+    <Compile Include="Request\Version2\Version2Request.cs" />
     <Compile Include="Response\Success\SuccessResponse.cs" />
     <Compile Include="Response\Failure\FailureResponse.cs" />
     <Compile Include="Response\Failure\InsufficientFundsResponse.cs" />
@@ -81,6 +82,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

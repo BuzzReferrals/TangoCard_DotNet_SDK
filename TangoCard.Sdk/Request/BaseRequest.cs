@@ -49,16 +49,16 @@ namespace TangoCard.Sdk.Request
     public abstract class BaseRequest
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>Constructor</summary>
-        /// <param name="enumTangoCardServiceApi">The enum tango card service api.</param>
-        /// <param name="username">The username.</param>
-        /// <param name="password">The password.</param>
+        /// <summary>   Constructor. </summary>
+        ///
+        /// <exception cref="ArgumentException">    Thrown when one or more arguments have unsupported or
+        ///                                         illegal values. </exception>
+        ///
+        /// <param name="enumTangoCardServiceApi">  The enum tango card service api. </param>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public BaseRequest(
-            TangoCardServiceApiEnum enumTangoCardServiceApi,
-            string username, 
-            string password
+            TangoCardServiceApiEnum enumTangoCardServiceApi
         ) {
             // -----------------------------------------------------------------
             // validate inputs
@@ -69,39 +69,8 @@ namespace TangoCard.Sdk.Request
                 throw new ArgumentException(message: "Parameter 'enumTangoCardServiceApi' is not a defined service environment.");
             }
 
-            // username
-            if (String.IsNullOrEmpty(username))
-            {
-                throw new ArgumentNullException(paramName: "username" );
-            }
-
-            // password
-            if (String.IsNullOrEmpty(password))
-            {
-                throw new ArgumentNullException(paramName: "password" );
-            }
-
             this.TangoCardServiceApi = enumTangoCardServiceApi;
-            this.Username = username;
-            this.Password = password;
         }
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets the username. </summary>
-        ///
-        /// <value> The username. </value>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        [DataMember(Name = "username", IsRequired = true)]
-        public string Username { get; set; }
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>   Gets the password. </summary>
-        ///
-        /// <value> The password. </value>
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        [DataMember(Name = "password", IsRequired = true)]
-        public string Password { get; set; }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Gets or sets the tango card service api. </summary>
@@ -118,6 +87,17 @@ namespace TangoCard.Sdk.Request
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public abstract string RequestAction
+        {
+            get;
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   Gets the request controller. </summary>
+        ///
+        /// <value> The request controller. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public abstract string RequestController
         {
             get;
         }
