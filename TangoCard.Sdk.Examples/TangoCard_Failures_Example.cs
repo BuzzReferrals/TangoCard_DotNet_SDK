@@ -36,6 +36,7 @@ using System.Configuration;
 using TangoCard.Sdk.Common;
 using TangoCard.Sdk.Request;
 using TangoCard.Sdk.Response.Success;
+using TangoCard.Sdk.Response.Success.Version2;
 using TangoCard.Sdk.Service;
 using TangoCard.Sdk.Response.Failure;
 using TangoCard.Sdk.Response;

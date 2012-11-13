@@ -29,8 +29,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TangoCard.Sdk.Service;
+using TangoCard.Sdk.Response.Success.Version2;
 using TangoCard.Sdk.Response.Success;
 using TangoCard.Sdk.Request;
+using TangoCard.Sdk.Request.Version2;
 using TangoCard.Sdk.Common;
 
 namespace TangoCard.Sdk
