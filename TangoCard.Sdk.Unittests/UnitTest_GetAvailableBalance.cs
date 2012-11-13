@@ -182,7 +182,7 @@ namespace TangoCard.Sdk.Unittests
                         password: null,
                         response: out response);
 
-                Assert.Fail(message: "Expected 'TangoCardServiceException' thrown");
+                Assert.Fail(message: "Expected 'ArgumentNullException' thrown");
             }
             catch (TangoCardServiceException ex)
             {
@@ -200,10 +200,8 @@ namespace TangoCard.Sdk.Unittests
                 Assert.Fail(message: ex.Message);
             }
 
-            Assert.IsTrue(isSuccess);
-            Assert.IsNotNull(response);
-            Assert.IsTrue(response is GetAvailableBalanceResponse);
-            Assert.IsTrue(((GetAvailableBalanceResponse)response).AvailableBalance == 0);
+            Assert.IsFalse(isSuccess);
+            Assert.IsNull(response);
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

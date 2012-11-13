@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-10-14</h4>
+<h4>Update: 2012-11-12</h4>
 ===
 
 # Table of Contents #
@@ -393,10 +393,10 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
     <dd><code>TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse</code> - This <i>out</i> parameter will provide a valid success response object if this method returns <code>true</code> upon success.</dd>
 </dl>
 
-### `TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse` Properties ###
+### `[DataContract] TangoCard.Sdk.Response.Success.GetAvailableBalanceResponse` Properties ###
 
 <dl>
-  <dt>int getAvailableBalance</dt>
+  <dt>int AvailableBalance</dt>
   <dd>- Returns available balance of username's account in cents: 100 is $1.00 dollar.</dd>
 </dl>
 
@@ -486,7 +486,7 @@ Assuming success, the `out` parameter `response` will be an instance of `TangoCa
     <dd><code>TangoCard.Sdk.Response.Success.PurchaseCardResponse</code> - This <i>out</i> parameter will provide a valid success response object if this method returns <code>true</code> upon success.</dd>
 </dl>
 
-### `TangoCard.Sdk.Response.Success.PurchaseCardResponse` Properties ###
+### `[DataContract] TangoCard.Sdk.Response.Success.PurchaseCardResponse` Properties ###
 
 The purpose of providing `PurchaseCard()` response properties is if you so choose, then you may record digital gift purchase confirmation and card redemption information within your own database.
 
@@ -498,7 +498,7 @@ Depending on how you set `TangoCard.Sdk.TangoCardServiceApi.PurchaseCard()` para
 <dd>Then you (the gift card requester) are provided with all necessary card redemption information, and it is your choice on how you wish to deliver the digital gift card redemption information to gift card recipients.</dd>
 </dl>
 
-The `TangoCard.Sdk.Response.Success.PurchaseCardResponse` properties are: 
+The `[DataContract] TangoCard.Sdk.Response.Success.PurchaseCardResponse` properties are: 
 <dl>
   <dt>string ReferenceOrderId</dt>
   <dd>- Confirmation number of purchase.</dd>
@@ -697,7 +697,7 @@ Example of how the SDK handles various failure responses, such as:
 	= Tango Card .NET SDK Example =
 	===============================
 
-	SDK Version: 1.1.1
+	SDK Version: 1.2.0
 
 	== Using app.config Credentials ====
 
@@ -749,7 +749,7 @@ Example of how the SDK handles various failure responses, such as:
 	=   with Failures             =
 	===============================
 
-	SDK Version: 1.1.1
+	SDK Version: 1.2.0
 
 	== Using app.config Credentials ====
 
