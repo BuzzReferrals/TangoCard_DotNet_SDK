@@ -44,7 +44,7 @@ using TangoCard.Sdk.Response.Failure;
 using TangoCard.Sdk.Service;
 using System.Net;
 
-namespace TangoCard.Sdk.Unittests
+namespace TangoCard.Sdk.Unittests.Version2
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Purchase card unit test. </summary>

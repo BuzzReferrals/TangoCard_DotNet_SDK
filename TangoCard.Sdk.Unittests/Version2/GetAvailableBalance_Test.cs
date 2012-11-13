@@ -41,7 +41,7 @@ using TangoCard.Sdk.Response.Success.Version2;
 using TangoCard.Sdk.Response.Failure;
 using TangoCard.Sdk.Service;
 
-namespace TangoCard.Sdk.Unittests
+namespace TangoCard.Sdk.Unittests.Version2
 {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Get available balance unit test. </summary>
