@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-11-13</h4>
+<h4>Update: 2012-11-30</h4>
 ===
 
 # Table of Contents #
@@ -160,7 +160,7 @@ When you are ready to purchase a card, the Tango Card Service API has several op
     <a name="puchasing_options_denominations"></a>
     Gift Card Denominations - parameter <code>cardValue</code> - integer - <b>required</b></dt>
     <dd>Each gift card SKU has it own allowed set of denominations that can to assigned to parameter <code>cardValue</code>.
-    <br/>For SKU <code>"tango-card"</code>, the available denomination in cents is between <code>1</code> ($0.01) to <code>100000</code> ($1000.00).
+    <br/>For SKU <code>"tango-card"</code>, the available denomination in cents starting at <code>1 cents</code> ($0.01) to a maximum of user's available account balance (in cents).
     <br/>To find out about other available denominations for potentially incorporating other SKUs that can be assigned to parameter <code>cardValue</code>, then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
     </dd>
     
