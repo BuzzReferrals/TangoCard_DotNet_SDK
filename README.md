@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-11-30</h4>
+<h4>Update: 2012-12-01</h4>
 ===
 
 # Table of Contents #
@@ -153,7 +153,7 @@ When you are ready to purchase a card, the Tango Card Service API has several op
     The Tango Card and other Retailer Brand Gift Cards SKUs - parameter <code>cardSKU</code> - string - <b>required</b></dt>
     <dd>The API is optimized for ordering the Tango Card, which is SKU <code>"tango-card"</code>.
 
-    <br>If you have questions about potentially incorporating other brands or digital goods in your program, then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+    <br>If you have questions about potentially incorporating other brands or digital goods in your program, then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>. We will respond to inquiries within one business day.
     </dd>
     
     <dt>
@@ -161,27 +161,35 @@ When you are ready to purchase a card, the Tango Card Service API has several op
     Gift Card Denominations - parameter <code>cardValue</code> - integer - <b>required</b></dt>
     <dd>Each gift card SKU has it own allowed set of denominations that can to assigned to parameter <code>cardValue</code>.
     <br/>For SKU <code>"tango-card"</code>, the available denomination in cents starting at <code>1 cents</code> ($0.01) to a maximum of user's available account balance (in cents).
-    <br/>To find out about other available denominations for potentially incorporating other SKUs that can be assigned to parameter <code>cardValue</code>, then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+    <br/>To find out about other available denominations for potentially incorporating other SKUs that can be assigned to parameter <code>cardValue</code>, then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>. We will respond to inquiries within one business day.
     </dd>
     
     <dt>
     <a name="puchasing_options_templates"></a>
     The Tango Card and custom Company Email Templates - parameter <code>companyIdentifier</code> - string - <b>optional</b></dt>
     <dd>If you choose to have the Tango Card Service API send digital gift cards by setting <code>tcSend</code> to <code>true</code>, then by default the gift card information within a Tango Card email template.
-    <br>If you prefer to have the Tango Card Service API send the gift card information with a custom email template (with your own branding), then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+    <br>If you prefer to have the Tango Card Service API send the gift card information with a custom email template (with your own branding), then please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>. We will respond to inquiries within one business day.
     </dd>
 </dl>
 
 <a name="sdk_support"></a>
 # Tango Card SDKs and Service API Support #
-If you have any questions with the Tango Card C#/.NET 4.0 SDK or our Service API, please contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+If you have any questions with the Tango Card C#/.NET 4.0 SDK or our Service API, please contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>. We will respond to inquiries within one business day.
 
 If you have any issues using this SDK, such as bugs or change requests, then please do <a href="https://github.com/tangocarddev/TangoCard_DotNet_SDK/issues?state=open" target="_blank">Open Issue</a> in this repository.
 
 <a name="sdk_support_resolve"></a>
 ## Resolving Issues ##
 
-To expidite any issues you might be experiencing with our `Tango Card Service API` or our `Tango Card SDKs`, gather as much information by using the following two resolution approaches, and include the results when you contact us through <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>.
+To expidite any issues you might be experiencing with our `Tango Card Service API` or our `Tango Card SDKs`, gather as much information by using the following two resolution approaches, and include the results when you contact us through <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>. We will respond to inquiries within one business day.
+
+<a name="sdk_support_health_check"></a>
+### Service Health Check ###
+
+If you are having any issues with either INTEGRATION or PRODUCTION Tango Card Service API, check the endpoints' availability through a browser using the following health check URLs which should return a webpage with the text `"alive"`:
+
+* INTEGRATION: [https://int.tangocard.com/Health/check](https://int.tangocard.com/Health/check)
+* PRODUCTION: [https://api.tangocard.com/Health/check](https://api.tangocard.com/Health/check)
 
 <a name="sdk_support_resolve_fiddler_2"></a>
 ### Fiddler 2 ###
@@ -848,10 +856,11 @@ This C#/.NET 4.0 SDK was built using:
 <a name="license"></a>
 # License #
 
-The Tango Card C#/.NET 4.0 SDK is free to use, given some restrictions. Please see the <a href="https://github.com/tangocarddev/TangoCard_Java_SDK/blob/master/LICENSE.md" target="_blank">LICENSE</a> file for details.
+The Tango Card C#/.NET 4.0 SDK is free to use, given some restrictions. Please see the <a href="https://github.com/tangocarddev/TangoCard_DotNet_SDK/blob/master/LICENSE.md" target="_blank">LICENSE</a> file for details.
 
 <a name="contact_us"></a>
 # Contact Us #
-If you have any questions about using this SDK, please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a> 
 
-To learn more about Tango Card integration solutions, call 1.877.55.TANGO.
+If you have any questions about using this SDK, please do contact us at <a href="mailto:sdk@tangocard.com?Subject=Tango Card C#/.NET 4.0 SDK Question">sdk@tangocard.com</a>. We will respond to inquiries within one business day.
+
+To learn more about Tango Card integration solutions, call 1.877.55.TANGO (1.877.558.2646).
