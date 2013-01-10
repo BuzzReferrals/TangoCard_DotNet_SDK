@@ -80,8 +80,8 @@ namespace TangoCard.Sdk.Examples
         {
             Console.WriteLine("== Using app.config Credentials ====\n");
 
-            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
-            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum) Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
+            string app_tc_sdk_environment = ConfigurationManager.AppSettings["app_tc_sdk_environment"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum) Enum.Parse(typeof(TangoCardServiceApiEnum), app_tc_sdk_environment);
 
            string username = "burt@example.com";
            string password = "password";
@@ -91,7 +91,7 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Get Available Balance ========");
 
-                GetAvailableBalanceResponse response = null;
+                Version2_GetAvailableBalance_Response response = null;
                 if (TangoCardServiceApi.GetAvailableBalance(
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: username,
@@ -137,8 +137,8 @@ namespace TangoCard.Sdk.Examples
         {
             Console.WriteLine("== Using app.config Credentials ====\n");
 
-            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
-            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
+            string app_tc_sdk_environment = ConfigurationManager.AppSettings["app_tc_sdk_environment"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tc_sdk_environment);
 
             string username = "empty@tangocard.com";
             string password = "password";
@@ -148,7 +148,7 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Purchase Card ========");
 
-                PurchaseCardResponse response = null;
+                Version2_PurchaseCard_Response response = null;
                 if (TangoCardServiceApi.PurchaseCard(
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: username,
@@ -206,8 +206,8 @@ namespace TangoCard.Sdk.Examples
 
         static public void Example_PurchaseCard_InvalidInput_Sku()
         {
-            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
-            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
+            string app_tc_sdk_environment = ConfigurationManager.AppSettings["app_tc_sdk_environment"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tc_sdk_environment);
 
             string app_username = ConfigurationManager.AppSettings["app_username"];
             string app_password = ConfigurationManager.AppSettings["app_password"];
@@ -217,7 +217,7 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Purchase Card ========");
 
-                PurchaseCardResponse response = null;
+                Version2_PurchaseCard_Response response = null;
                 if (TangoCardServiceApi.PurchaseCard(
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: app_username,
@@ -278,8 +278,8 @@ namespace TangoCard.Sdk.Examples
 
             int cardValue = 1000000000; // $10000000.00
 
-            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
-            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
+            string app_tc_sdk_environment = ConfigurationManager.AppSettings["app_tc_sdk_environment"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tc_sdk_environment);
 
             string app_username = ConfigurationManager.AppSettings["app_username"];
             string app_password = ConfigurationManager.AppSettings["app_password"];
@@ -289,7 +289,7 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Purchase Card ========");
 
-                PurchaseCardResponse response = null;
+                Version2_PurchaseCard_Response response = null;
                 if (TangoCardServiceApi.PurchaseCard(
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: app_username,
@@ -349,11 +349,10 @@ namespace TangoCard.Sdk.Examples
 
         static public void Example_PurchaseCard_Sku()
         {
-
             int cardValue = 123; // $10000000.00
 
-            string app_tango_card_service_api = ConfigurationManager.AppSettings["app_tango_card_service_api"];
-            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tango_card_service_api);
+            string app_tc_sdk_environment = ConfigurationManager.AppSettings["app_tc_sdk_environment"];
+            TangoCardServiceApiEnum enumTangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), app_tc_sdk_environment);
 
             string app_username = ConfigurationManager.AppSettings["app_username"];
             string app_password = ConfigurationManager.AppSettings["app_password"];
@@ -363,7 +362,7 @@ namespace TangoCard.Sdk.Examples
             {
                 Console.WriteLine("======== Purchase Card ========");
 
-                PurchaseCardResponse response = null;
+                Version2_PurchaseCard_Response response = null;
                 if (TangoCardServiceApi.PurchaseCard(
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: app_username,

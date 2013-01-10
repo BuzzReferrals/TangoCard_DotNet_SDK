@@ -1,6 +1,6 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2012-12-01</h4>
+<h4>Update: 2013-01-10</h4>
 ===
 
 # Table of Contents #
@@ -534,7 +534,8 @@ The Tango Card C#/.NET 4.0 SDK handles its errors by throwing the following exce
 
 * Custom `TangoCard.Sdk.Service.TangoCardServiceException` is thrown when the `Tango Card Service API` return a `Failure Response` for a given `Request`.
 * Custom `TangoCard.Sdk.Common.TangoCardSdkException` is thrown when the Tango Card SDK has detected an error within its code, regardless of any given Request.
-* Standard `java.lang.IllegalArgumentException` is thrown due to parameter entry errors.
+* Standard `ArgumentException` and `ArgumentNullException` are thrown due to parameter entry errors.
+* Standard `InvalidDataContractException` is thown for any unexpected violation of `[DataContract]` expectations.
 
 ![Tango Card SDK Exceptions](https://github.com/tangocarddev/TangoCard_DotNet_SDK/raw/master/doc/images/tangocard_sdk_exceptions.png "Tango Card SDK Exceptions")
 
@@ -647,7 +648,11 @@ This section details the provided sources of this SDK.
 This is the heart of the SDK which contains the sources, and here is a listing of its directories:
 
 * TangoCard.Sdk\Common
+* TangoCard.Sdk\Dependencies
+* TangoCard.Sdk\Properties
+* TangoCard.Sdk\Properties\Settings.settings
 * TangoCard.Sdk\Request
+* TangoCard.Sdk\Request\Version2
 * TangoCard.Sdk\Response
 * TangoCard.Sdk\Response\Failure
 * TangoCard.Sdk\Response\Success

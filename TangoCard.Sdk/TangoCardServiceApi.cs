@@ -81,11 +81,11 @@ namespace TangoCard.Sdk
            TangoCardServiceApiEnum enumTangoCardServiceApi,
            string username,
            string password,
-           out GetAvailableBalanceResponse response
+           out Version2_GetAvailableBalance_Response response
            )
         {
             // set up the request
-            var request = new GetAvailableBalanceRequest
+            var request = new Version2_GetAvailableBalance_Request
             (
                 enumTangoCardServiceApi: enumTangoCardServiceApi,
                 username: String.IsNullOrEmpty(username) ? null : username.Trim(),
@@ -127,11 +127,11 @@ namespace TangoCard.Sdk
             string giftMessage,
             string giftFrom,
             string companyIdentifier,
-            out PurchaseCardResponse response
+            out Version2_PurchaseCard_Response response
             )
         {
             // set up the request
-            var request = new PurchaseCardRequest
+            var request = new Version2_PurchaseCard_Request
             (
                 enumTangoCardServiceApi: enumTangoCardServiceApi,
                 username:       String.IsNullOrEmpty(username) ? null : username.Trim(),

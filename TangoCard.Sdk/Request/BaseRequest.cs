@@ -58,18 +58,25 @@ namespace TangoCard.Sdk.Request
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public BaseRequest(
-            TangoCardServiceApiEnum enumTangoCardServiceApi
+            TangoCardServiceApiEnum enumTangoCardServiceApi = TangoCardServiceApiEnum.UNDEFINED
         ) {
             // -----------------------------------------------------------------
             // validate inputs
             // -----------------------------------------------------------------
-
-            if ( !Enum.IsDefined( typeof(TangoCardServiceApiEnum), enumTangoCardServiceApi ) || enumTangoCardServiceApi.Equals(TangoCardServiceApiEnum.UNDEFINED)) 
+            if (enumTangoCardServiceApi.Equals(TangoCardServiceApiEnum.UNDEFINED))
+            {
+                SdkConfig appConfig = SdkConfig.Instance;
+                string tc_sdk_environment_default = appConfig["tc_sdk_environment_default"];
+                this.TangoCardServiceApi = (TangoCardServiceApiEnum)Enum.Parse(typeof(TangoCardServiceApiEnum), tc_sdk_environment_default);
+            }
+            else if (!Enum.IsDefined(typeof(TangoCardServiceApiEnum), enumTangoCardServiceApi))
             {
                 throw new ArgumentException(message: "Parameter 'enumTangoCardServiceApi' is not a defined service environment.");
             }
-
-            this.TangoCardServiceApi = enumTangoCardServiceApi;
+            else
+            {
+                this.TangoCardServiceApi = enumTangoCardServiceApi;
+            }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////

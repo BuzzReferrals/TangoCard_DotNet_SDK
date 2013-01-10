@@ -52,10 +52,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Request\Version2\PurchaseCardRequest.cs" />
-    <Compile Include="Request\Version2\GetAvailableBalanceRequest.cs" />
+    <Compile Include="Request\Version2\Version2_PurchaseCard_Request.cs" />
+    <Compile Include="Request\Version2\Version2_GetAvailableBalance_Request.cs" />
     <Compile Include="Request\BaseRequest.cs" />
-    <Compile Include="Request\Version2\Version2Request.cs" />
+    <Compile Include="Request\Version2\Version2_Request.cs" />
     <Compile Include="Response\Success\SuccessResponse.cs" />
     <Compile Include="Response\Failure\FailureResponse.cs" />
     <Compile Include="Response\Failure\InsufficientFundsResponse.cs" />
@@ -65,8 +65,8 @@
     <Compile Include="Response\Failure\SystemErrorResponse.cs" />
     <Compile Include="Response\Failure\WebFailureResponse.cs" />
     <Compile Include="Response\ServiceResponseEnum.cs" />
-    <Compile Include="Response\Success\Version2\GetAvailableBalanceResponse.cs" />
-    <Compile Include="Response\Success\Version2\PurchaseCardResponse.cs" />
+    <Compile Include="Response\Success\Version2\Version2_GetAvailableBalance_Response.cs" />
+    <Compile Include="Response\Success\Version2\Version2_PurchaseCard_Response.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response\BaseResponse.cs" />
     <Compile Include="Response\ServiceResponse.cs" />
@@ -82,7 +82,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

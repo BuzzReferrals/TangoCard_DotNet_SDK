@@ -80,7 +80,6 @@ namespace TangoCard.Sdk.Service
             try
             {
                 SdkConfig appConfig = SdkConfig.Instance;
-
                 string version = appConfig["tc_sdk_version"];
 
                 this._base_url = null;
@@ -153,6 +152,10 @@ namespace TangoCard.Sdk.Service
 
                     isSuccess = true;
                 }
+            }
+            catch (WebException ex)
+            {
+                throw new TangoCardSdkException(message: ex.Message, innerException: ex);
             }
             catch (TangoCardSdkException ex)
             {
