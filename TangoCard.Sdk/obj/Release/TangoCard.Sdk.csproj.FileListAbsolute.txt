@@ -1,0 +1,5 @@
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\bin\Release\TangoCard_DotNet_SDK.dll.config
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\bin\Release\TangoCard_DotNet_SDK.dll
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\bin\Release\TangoCard_DotNet_SDK.pdb
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk\obj\Release\TangoCard_DotNet_SDK.dll
+C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk\obj\Release\TangoCard_DotNet_SDK.pdb

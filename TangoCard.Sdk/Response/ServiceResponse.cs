@@ -27,7 +27,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Newtonsoft.Json;
 using TangoCard.Sdk.Response.Failure;
 using System.Runtime.Serialization;
 

@@ -32,17 +32,16 @@ using System.IO;
 using System.Text;
 using System.Configuration;
 using System.Security;
-
-using Newtonsoft.Json;
+using System.Security.Cryptography.X509Certificates;
+using System.Runtime.Serialization;
 
 using TangoCard.Sdk;
 using TangoCard.Sdk.Common;
 using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Response.Failure;
-using System.Security.Cryptography.X509Certificates;
-using Newtonsoft.Json.Linq;
 using TangoCard.Sdk.Response.Success;
-using System.Runtime.Serialization;
+using Newtonsoft.Json.Linq;
+
 
 namespace TangoCard.Sdk.Service
 {

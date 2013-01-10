@@ -26,15 +26,14 @@
 
 using System;
 using System.Collections.Generic;
-
 using System.Web;
 using System.Reflection;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
+
 using TangoCard.Sdk.Common;
 using TangoCard.Sdk.Response;
 using TangoCard.Sdk.Response.Failure;
 using TangoCard.Sdk.Response.Success;
+using Newtonsoft.Json.Linq;
 
 namespace TangoCard.Sdk.Service
 {

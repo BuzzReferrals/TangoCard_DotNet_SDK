@@ -25,11 +25,11 @@
 // 
 
 using System;
-using Newtonsoft.Json.Linq;
 using System.Runtime.Serialization.Json;
 using System.IO;
 using System.Text;
 using System.Runtime.Serialization;
+using Newtonsoft.Json.Linq;
 
 namespace TangoCard.Sdk.Common
 {

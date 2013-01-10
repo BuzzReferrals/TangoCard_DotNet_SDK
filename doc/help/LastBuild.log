@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="1.9.4.0" projectFile="C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Help\TangoCard.Sdk.Help.shfbproj" started="1/10/2013 7:40:11 AM">
+<shfbBuild product="Sandcastle Help File Builder" version="1.9.4.0" projectFile="C:\code\tangocarddev\TangoCard_DotNet_SDK\master\TangoCard.Sdk.Help\TangoCard.Sdk.Help.shfbproj" started="1/10/2013 12:12:00 PM">
 <buildStep step="Initializing">
 </buildStep>
 <buildStep step="FindingTools">
@@ -22,7 +22,7 @@ Parsing project files
 
 References to use:
     Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL
-    Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL
+    Newtonsoft.Json
     System
     System.configuration
     System.Core
@@ -36,7 +36,7 @@ SHFB: Warning BE0062: No XML comments files found.  The help file will not conta
 </buildStep>
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
-    Last step completed in 00:00:00.0060
+    Last step completed in 00:00:00.0040
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
@@ -52,18 +52,18 @@ Generating reflection information...
   XslTransform (v2.7.0.0)
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
-    Last step completed in 00:00:05.9213
+    Last step completed in 00:00:03.7372
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0230
+    Last step completed in 00:00:00.0010
 </buildStep>
 <buildStep step="ApplyVisibilityProperties">
 Applying visibility properties to reflection information file
     63 attribute nodes removed
     0 explicit interface implementations removed
     0 local and base class EII elements removed
-    Last step completed in 00:00:00.1680
+    Last step completed in 00:00:00.1250
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
@@ -75,12 +75,12 @@ Transforming reflection output...
   XslTransform (v2.7.0.0)
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
-    Last step completed in 00:00:06.9294
+    Last step completed in 00:00:04.8173
 </buildStep>
 <buildStep step="ModifyHelpTopicFilenames">
 Modifying help topic filenames in reflection information file
     No changes required
-    Last step completed in 00:00:00.0090
+    Last step completed in 00:00:00.0070
 </buildStep>
 <buildStep step="CopyStandardContent">
 Copying standard help content...
@@ -191,7 +191,7 @@ C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\script_manifold.js
 C:\Program Files (x86)\Sandcastle\Presentation\vs2005\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\SplitScreen.js
 C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\styles\Presentation.css
 C:\Program Files (x86)\Sandcastle\Presentation\vs2005\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\styles\Whidbey\Presentation.css
-    Last step completed in 00:00:00.2180
+    Last step completed in 00:00:00.1300
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
@@ -209,17 +209,17 @@ Generating intermediate table of contents file...
   Copyright c 2006-2012, Microsoft Corporation, All Rights Reserved
   Info: Applying XSL transformation &#39;C:\Program Files (x86)\Sandcastle\ProductionTransforms\CreateVSToc.xsl&#39;.
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:03.7272
+    Last step completed in 00:00:02.4921
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.0040
+    Last step completed in 00:00:00.0190
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\sandcastle.config
-    Last step completed in 00:00:00.1550
+    Last step completed in 00:00:00.1210
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
@@ -595,13 +595,13 @@ Building reference help topics...
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.Version2.Version2_PurchaseCard_Test.Test_PurchaseCard_with_NoDelivery_Api
   Info: BuildAssembler: Building topic M:TangoCard.Sdk.Unittests.Version2.Version2_PurchaseCard_Test.TestInitialize_PurchaseCard
   Info: Processed 177 topics
-    Last step completed in 00:00:54.0651
+    Last step completed in 00:00:34.1430
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
 
 Clearing any prior web output
-    Last step completed in 00:00:01.0761
+    Last step completed in 00:00:00.0020
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -617,16 +617,16 @@ Processed 177 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\WebKI.xml
 Saving website table of contents to C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\WebTOC.xml
-    Last step completed in 00:00:01.6621
+    Last step completed in 00:00:00.9361
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0000
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
-    Last step completed in 00:00:01.0871
+    Last step completed in 00:00:00.6580
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
@@ -939,15 +939,15 @@ C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website
 C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\scripts\SplitScreen.js -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\scripts\SplitScreen.js
 C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\styles\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\styles\Presentation.css
 C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\Working\Output\Website\styles\Whidbey\Presentation.css -&gt; C:\code\tangocarddev\TangoCard_DotNet_SDK\master\doc\help\styles\Whidbey\Presentation.css
-    Last step completed in 00:00:01.7901
+    Last step completed in 00:00:01.0791
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.9091
+    Last step completed in 00:00:00.0980
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 01/10/2013 07:41 AM.  Total time: 00:01:17.9215
+Build completed successfully at 01/10/2013 12:12 PM.  Total time: 00:00:48.5748
 
 </buildStep>
 </shfbBuild>

@@ -29,8 +29,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Configuration;
 
-using Newtonsoft.Json;
-
 using TangoCard.Sdk.Response.Success;
 using TangoCard.Sdk.Response.Success.Version2;
 using TangoCard.Sdk.Service;
