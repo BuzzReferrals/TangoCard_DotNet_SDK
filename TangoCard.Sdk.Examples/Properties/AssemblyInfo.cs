@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TangoCard.Sdk.TestConsol")]
+[assembly: AssemblyTitle("TangoCard SDK TestConsole")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Unosquare")]
 [assembly: AssemblyProduct("TangoCard.Sdk.TestConsole")]
-[assembly: AssemblyCopyright("Copyright © Unosquare 2012")]
+[assembly: AssemblyCopyright("Copyright (c) 2013 Tango Card, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

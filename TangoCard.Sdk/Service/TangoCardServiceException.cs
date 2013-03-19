@@ -83,7 +83,9 @@ namespace TangoCard.Sdk.Service
         {
             get
             {
-                return Response.Message.Trim();
+                return ((null != Response) && !Response.Message.IsNullOrEmpty() ) 
+                    ? Response.Message.Trim() 
+                    : String.Empty;
             }
         }
 
