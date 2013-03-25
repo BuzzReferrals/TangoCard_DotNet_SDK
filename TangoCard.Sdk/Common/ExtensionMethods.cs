@@ -2,7 +2,7 @@
 //  SdkConfig.cs
 //  TangoCard_DotNet_SDK
 //  
-//  Copyright (c) 2012 Tango Card, Inc
+//  Copyright (c) 2013 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -38,7 +38,7 @@ namespace TangoCard.Sdk.Common
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   A string extension method that queries if a null or is empty. </summary>
         ///
-        /// <remarks>   Jeff, 11/12/2012. </remarks>
+        /// <remarks>   Jeff, 11/12/2013. </remarks>
         ///
         /// <param name="text"> The text to act on. </param>
         ///
@@ -53,7 +53,7 @@ namespace TangoCard.Sdk.Common
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   A string extension method that queries if a not null nor is empty. </summary>
         ///
-        /// <remarks>   Jeff, 11/05/2012. </remarks>
+        /// <remarks>   Jeff, 11/05/2013. </remarks>
         ///
         /// <param name="text"> The text to act on. </param>
         ///
@@ -68,7 +68,7 @@ namespace TangoCard.Sdk.Common
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   A JObject extension method that deserializes the given this JObject. </summary>
         ///
-        /// <remarks>   Jeff, 11/12/2012. </remarks>
+        /// <remarks>   Jeff, 11/12/2013. </remarks>
         ///
         /// <typeparam name="T">    Generic type parameter. </typeparam>
         /// <param name="jObject">  The jObject to act on. </param>
@@ -101,7 +101,7 @@ namespace TangoCard.Sdk.Common
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   A T extension method that serializes the given this T. </summary>
         ///
-        /// <remarks>   Jeff, 11/12/2012. </remarks>
+        /// <remarks>   Jeff, 11/12/2013. </remarks>
         ///
         /// <typeparam name="T">    Generic type parameter. </typeparam>
         /// <param name="tObject">  The tObject to act on. </param>

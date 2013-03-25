@@ -2,7 +2,7 @@
 //  PurchaseCardResponse.cs
 //  TangoCard_DotNet_SDK
 //  
-//  Copyright (c) 2012 Tango Card, Inc
+//  Copyright (c) 2013 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,7 +34,7 @@ namespace TangoCard.Sdk.Response.Success.Version2
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Purchase card response. </summary>
     ///
-    /// <remarks>   Jeff, 11/12/2012. </remarks>
+    /// <remarks>   Jeff, 11/12/2013. </remarks>
     ///
     /// <seealso cref="TangoCard.Sdk.Response.Success.SuccessResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -95,5 +95,14 @@ namespace TangoCard.Sdk.Response.Success.Version2
 
         [DataMember(Name = "challengeKey")]
         public string ChallengeKey { get; set; }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        /// <summary>   If available, gets or sets the event number. </summary>
+        ///
+        /// <value> The challenge key. </value>
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        [DataMember(Name = "eventNumber")]
+        public string EventNumber { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 //  ServiceProxy.cs
 //  TangoCard_DotNet_SDK
 //  
-//  Copyright (c) 2012 Tango Card, Inc
+//  Copyright (c) 2013 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -234,7 +234,7 @@ namespace TangoCard.Sdk.Service
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Executes the request operation. </summary>
         ///
-        /// <remarks>   Jeff, 11/12/2012. </remarks>
+        /// <remarks>   Jeff, 11/12/2013. </remarks>
         ///
         /// <exception cref="TangoCardServiceException">    Thrown when a tango card service error
         ///                                                 condition occurs. </exception>

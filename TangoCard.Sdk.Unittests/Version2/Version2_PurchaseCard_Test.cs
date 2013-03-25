@@ -4,7 +4,7 @@
 //
 //  VisualStudio 2010 Unit Test
 //  
-//  Copyright (c) 2012 Tango Card, Inc
+//  Copyright (c) 2013 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -128,7 +128,7 @@ namespace TangoCard.Sdk.Unittests.Version2
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Tests purchase card invalid credentials nulls. </summary>
         ///
-        /// <remarks>   Jeff, 11/12/2012. </remarks>
+        /// <remarks>   Jeff, 11/12/2013. </remarks>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]
@@ -571,7 +571,7 @@ namespace TangoCard.Sdk.Unittests.Version2
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         /// <summary>   Tests purchase card optional company identifer. </summary>
         ///
-        /// <remarks>   Jeff, 11/12/2012. </remarks>
+        /// <remarks>   Jeff, 11/12/2013. </remarks>
         ////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [TestMethod]

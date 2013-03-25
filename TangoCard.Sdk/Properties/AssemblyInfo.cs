@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tango Card, Inc.")]
 [assembly: AssemblyProduct("TangoCard_DotNet_SDK")]
-[assembly: AssemblyCopyright("Copyright (c) 2012 Tango Card, Inc.")]
+[assembly: AssemblyCopyright("Copyright (c) 2013 Tango Card, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,6 +32,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.3.1.0")]
+[assembly: AssemblyVersion("1.4.0.0")]
 
 

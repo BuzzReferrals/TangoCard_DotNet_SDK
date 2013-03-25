@@ -1,6 +1,7 @@
 <h1>Tango Card C#/.NET 4.0 SDK</h1>
 <h3>Incorporate the innovative Tango Card directly into your reward, loyalty, and engagement applications.</h3>
-<h4>Update: 2013-01-10</h4>
+<h4>Update: 2013-03-24</h4>
+<h4>Version: 1.4.0</h4>
 ===
 
 # Table of Contents #
@@ -438,14 +439,24 @@ This request is defined by static method call `TangoCard.Sdk.TangoCardServiceApi
             response: out response )  
         && (null != response)
     ) {
-		Console.WriteLine("\n- Purchased Card (Delivery): {{ \n\tRecipient Email: '{0}', \n\tReference Order Id: '{1}', \n\tCard Token '{2}', \n\tCard Number: '{3}', \n\tCard Pin: '{4}', \n\tClaim Url: '{5}', \n\tChallenge Key: '{6}' \n}}\n",
+		Console.WriteLine("\n- Purchased Card (Delivery): {{ " +
+				"\n\tRecipient Email: '{0}' " +
+				", \n\tReference Order Id: '{1}' " +
+				", \n\tCard Token '{2}' " +
+				", \n\tCard Number: '{3}' " +
+				", \n\tCard Pin: '{4}' " +
+				", \n\tClaim Url: '{5}' " +
+				", \n\tChallenge Key: '{6}' " +
+				", \n\tEvent Number: '{7}' " +
+				"  \n}}\n",
 			app_recipient_email,
 			response.ReferenceOrderId,
 			response.CardToken,
 			response.CardNumber,
 			response.CardPin,
 			response.ClaimUrl,
-			response.ChallengeKey
+			response.ChallengeKey,
+			response.EventNumber
 			);
     }
 ```
@@ -525,6 +536,9 @@ The `[DataContract] TangoCard.Sdk.Response.Success.PurchaseCardResponse` propert
   
   <dt>string|null ChallengeKey</dt>
   <dd>- If available, the challenge key provides access, which can be found next to the aforementioned claim URL. You will be prompted to input your Challenge Key when you try to open your eGift Card.</dd>
+  
+  <dt>string|null EventNumber</dt>
+  <dd>- If available depending upon provided card SKU, then the event number is used when replacing lost card.</dd>
 </dl>
 
 <a name="sdk_error_handling"></a>

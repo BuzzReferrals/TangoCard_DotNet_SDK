@@ -1,10 +1,10 @@
-﻿//  
+﻿//
 //  TangoCard_Store_Example.cs
 //  TangoCard_DotNet_SDK
-//  
+//
 //  Example code using Tango Card SDK to get available balance and purchase card.
-//  
-//  Copyright (c) 2012 Tango Card, Inc
+//
+//  Copyright (c) 2013 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -12,10 +12,10 @@
 //  in the Software without restriction, including without limitation the rights
 //  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 //  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions: 
+//  furnished to do so, subject to the following conditions:
 //
 //  The above copyright notice and this permission notice shall be included in
-//  all copies or substantial portions of the Software. 
+//  all copies or substantial portions of the Software.
 //
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -24,20 +24,14 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
-// 
-// 
+//
+//
 
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Configuration;
 
-using TangoCard.Sdk.Common;
-using TangoCard.Sdk.Request;
-using TangoCard.Sdk.Response.Success;
 using TangoCard.Sdk.Response.Success.Version2;
 using TangoCard.Sdk.Service;
-
 
 namespace TangoCard.Sdk.Examples
 {
@@ -50,8 +44,8 @@ namespace TangoCard.Sdk.Examples
         static public void Execute()
         {
             Console.WriteLine("\n===============================");
-            Console.WriteLine(  "= Tango Card .NET SDK Example =");
-            Console.WriteLine(  "===============================\n");
+            Console.WriteLine("= Tango Card .NET SDK Example =");
+            Console.WriteLine("===============================\n");
 
             Console.WriteLine(String.Format("SDK Version: {0}\n", TangoCardServiceApi.GetVersion()));
 
@@ -76,9 +70,10 @@ namespace TangoCard.Sdk.Examples
                         enumTangoCardServiceApi: enumTangoCardServiceApi,
                         username: app_username,
                         password: app_password,
-                        response: out response) 
+                        response: out response)
                         && (null != response)
-                ) {
+                )
+                {
                     Console.ForegroundColor = ConsoleColor.Green;
                     double dollarsAvailableBalance = response.AvailableBalance / 100;
                     Console.WriteLine("\n'{0}': Available Balance: {1}\n", app_username, response.AvailableBalance);
@@ -101,7 +96,7 @@ namespace TangoCard.Sdk.Examples
 
             Console.WriteLine("===== End Get Available Balance ====\n\n\n");
 
-            int cardValueTangoCardCents = 0; 
+            int cardValueTangoCardCents = 0;
             int.TryParse(app_card_value, out cardValueTangoCardCents);
 
             // Test Purchase Card no delivery
@@ -124,17 +119,27 @@ namespace TangoCard.Sdk.Examples
                         giftMessage: null,
                         companyIdentifier: null,
                         response: out response
-                    )  
+                    )
                     && (null != response)
-                ) {
+                )
+                {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\n- Purchased Card (No Delivery): {{ \n\tReference Order Id: '{0}', \n\tCard Token '{1}', \n\tCard Number: '{2}', \n\tCard Pin: '{3}', \n\tClaim Url: '{4}', \n\tChallenge Key: '{5}' \n}}\n",
+                    Console.WriteLine("\n- Purchased Card (No Delivery): {{ " +
+                        "\n\tReference Order Id: '{0}' " +
+                        ", \n\tCard Token '{1}' " +
+                        ", \n\tCard Number: '{2}' " +
+                        ", \n\tCard Pin: '{3}' " +
+                        ", \n\tClaim Url: '{4}' " +
+                        ", \n\tChallenge Key: '{5}'  " + +
+                        ", \n\tEvent Number: '{6}' " +
+                        "  \n}}\n",
                         response.ReferenceOrderId,
                         response.CardToken,
                         response.CardNumber,
                         response.CardPin,
                         response.ClaimUrl,
-                        response.ChallengeKey
+                        response.ChallengeKey,
+                        response.EventNumber
                         );
                     Console.ForegroundColor = ConsoleColor.Cyan;
                 }
@@ -177,16 +182,27 @@ namespace TangoCard.Sdk.Examples
                         response: out response
                     )
                     && (null != response)
-                ) {
+                )
+                {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\n- Purchased Card (Delivery): {{ \n\tRecipient Email: '{0}', \n\tReference Order Id: '{1}', \n\tCard Token '{2}', \n\tCard Number: '{3}', \n\tCard Pin: '{4}', \n\tClaim Url: '{5}', \n\tChallenge Key: '{6}' \n}}\n",
+                    Console.WriteLine("\n- Purchased Card (Delivery): {{ " +
+                            "\n\tRecipient Email: '{0}' " +
+                            ", \n\tReference Order Id: '{1}' " +
+                            ", \n\tCard Token '{2}' " +
+                            ", \n\tCard Number: '{3}' " +
+                            ", \n\tCard Pin: '{4}' " +
+                            ", \n\tClaim Url: '{5}' " +
+                            ", \n\tChallenge Key: '{6}' " +
+                            ", \n\tEvent Number: '{7}' " +
+                            "  \n}}\n",
                         app_recipient_email,
                         response.ReferenceOrderId,
                         response.CardToken,
                         response.CardNumber,
                         response.CardPin,
                         response.ClaimUrl,
-                        response.ChallengeKey
+                        response.ChallengeKey,
+                        response.EventNumber
                         );
                     Console.ForegroundColor = ConsoleColor.Cyan;
                 }
@@ -242,8 +258,8 @@ namespace TangoCard.Sdk.Examples
             Console.WriteLine("===== End Get Updated Available Balance ====\n\n\n");
 
             Console.WriteLine("\n===============================");
-            Console.WriteLine(  "=   The End                   =");
-            Console.WriteLine(  "===============================");
+            Console.WriteLine("=   The End                   =");
+            Console.WriteLine("===============================");
         }
     }
 }

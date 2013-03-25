@@ -2,7 +2,7 @@
 //  InvalidInputResponse.cs
 //  TangoCard_DotNet_SDK
 //  
-//  Copyright (c) 2012 Tango Card, Inc
+//  Copyright (c) 2013 Tango Card, Inc
 //  All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -41,7 +41,7 @@ namespace TangoCard.Sdk.Response.Failure
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Invalid input response. </summary>
     ///
-    /// <remarks>   Jeff, 11/13/2012. </remarks>
+    /// <remarks>   Jeff, 11/13/2013. </remarks>
     ///
     /// <seealso cref="TangoCard.Sdk.Response.Failure.FailureResponse"/>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -139,7 +139,7 @@ namespace TangoCard.Sdk.Response.Failure
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     /// <summary>   Invalid input response items. </summary>
     ///
-    /// <remarks>   Jeff, 11/12/2012. </remarks>
+    /// <remarks>   Jeff, 11/12/2013. </remarks>
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     [DataContract]
