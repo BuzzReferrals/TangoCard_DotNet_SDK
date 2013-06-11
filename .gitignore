@@ -1,0 +1,29 @@
+# ReSharper meta directory
+_ReSharper*
+
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+bin/
+obj/
+csx/
+
+# mstest test results
+TestResults/
+
+# Visual Studio Files
+*.suo
+UpgradeLog.XML
+_UpgradeReport_Files/
+*.user
+UpgradeLog2.XML
+*.dbmdl
+*.dbproj.schemaview
+
+# Windows Garbage.
+Thumbs.db
+
+Backup/
+
+# kdiff files
+*.orig
+*.debug.css
+*.build.csdef
